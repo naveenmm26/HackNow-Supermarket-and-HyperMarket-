@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input">
+  <sys_sg_input action="INSERT_OR_UPDATE">
+    <sys_id>436adf8f7a084d319354f14ed967eddd</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_input_436adf8f7a084d319354f14ed967eddd</sys_update_name>
+    <active>true</active>
+    <field>u_expiry_check</field>
+    <label>Expiry Check</label>
+    <mandatory>true</mandatory>
+    <order>900</order>
+    <parameter_screen>9013fd6b997f46ab9e64a505a30ed12e</parameter_screen>
+    <type>8dfb205517021010f2b43b9fadb9592e</type>
+  </sys_sg_input>
+</record_update>
