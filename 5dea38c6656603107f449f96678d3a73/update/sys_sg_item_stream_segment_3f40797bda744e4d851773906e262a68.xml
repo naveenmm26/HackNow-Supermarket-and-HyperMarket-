@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream_segment">
+  <sys_sg_item_stream_segment action="INSERT_OR_UPDATE">
+    <sys_id>3f40797bda744e4d851773906e262a68</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_item_stream_segment_3f40797bda744e4d851773906e262a68</sys_update_name>
+    <screen>44939fb4b63e451389f9cfcbd0201f08</screen>
+  </sys_sg_item_stream_segment>
+</record_update>

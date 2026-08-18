@@ -7,6 +7,6 @@
     <name>FG360 Create Product</name>
     <table>x_fresh_guard_360_product</table>
     <type>write_back</type>
-    <write_back_action_item>fg360-product-create-action-item</write_back_action_item>
+    <write_back_action_item>ba31b6131c514ef4beed554993d536e9</write_back_action_item>
   </sys_sg_button>
 </record_update>

@@ -8,6 +8,6 @@
     <name>FG360 Create Checklist Form Screen</name>
     <presentation_style>modal</presentation_style>
     <submit_label>Submit</submit_label>
-    <type>fg360-checklist-create-action-item</type>
+    <type>bc4d60d111c04d91952bdf1664625a67</type>
   </sys_sg_parameter_screen>
 </record_update>

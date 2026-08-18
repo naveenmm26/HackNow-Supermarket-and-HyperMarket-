@@ -4,7 +4,7 @@
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
     <sys_update_name>sys_sg_write_back_action_item_bc4d60d111c04d91952bdf1664625a67</sys_update_name>
     <name>FG360 Create Checklist Action Item</name>
-    <parameter_screen>fg360-checklist-create-param-screen</parameter_screen>
+    <parameter_screen>9013fd6b997f46ab9e64a505a30ed12e</parameter_screen>
     <table>x_fresh_guard_360_checklist</table>
     <template>u_status=draft^EQ</template>
     <type>new</type>

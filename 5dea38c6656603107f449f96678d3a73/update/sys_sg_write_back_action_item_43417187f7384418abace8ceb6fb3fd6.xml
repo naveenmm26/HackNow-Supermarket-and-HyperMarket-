@@ -4,7 +4,7 @@
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
     <sys_update_name>sys_sg_write_back_action_item_43417187f7384418abace8ceb6fb3fd6</sys_update_name>
     <name>FG360 Create Inspection Action Item</name>
-    <parameter_screen>fg360-inspection-create-param-screen</parameter_screen>
+    <parameter_screen>b8ebf41b12ba46fd9df5e16311d3a29f</parameter_screen>
     <table>x_fresh_guard_360_inspection</table>
     <template>u_status=scheduled^EQ</template>
     <type>new</type>

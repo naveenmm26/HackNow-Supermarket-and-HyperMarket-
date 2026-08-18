@@ -7,6 +7,6 @@
     <name>FG360 Create Inspection</name>
     <table>x_fresh_guard_360_inspection</table>
     <type>write_back</type>
-    <write_back_action_item>fg360-inspection-create-action-item</write_back_action_item>
+    <write_back_action_item>43417187f7384418abace8ceb6fb3fd6</write_back_action_item>
   </sys_sg_button>
 </record_update>

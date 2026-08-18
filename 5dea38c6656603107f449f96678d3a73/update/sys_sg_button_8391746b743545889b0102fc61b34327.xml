@@ -7,6 +7,6 @@
     <name>FG360 Create Checklist</name>
     <table>x_fresh_guard_360_checklist</table>
     <type>write_back</type>
-    <write_back_action_item>fg360-checklist-create-action-item</write_back_action_item>
+    <write_back_action_item>bc4d60d111c04d91952bdf1664625a67</write_back_action_item>
   </sys_sg_button>
 </record_update>

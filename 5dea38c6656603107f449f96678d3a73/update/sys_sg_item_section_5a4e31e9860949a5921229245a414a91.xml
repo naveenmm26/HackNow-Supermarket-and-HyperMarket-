@@ -4,6 +4,7 @@
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
     <sys_update_name>sys_sg_item_section_5a4e31e9860949a5921229245a414a91</sys_update_name>
     <access_control_type>user_roles</access_control_type>
+    <destination_screen>44939fb4b63e451389f9cfcbd0201f08</destination_screen>
     <hide_section_if_empty>false</hide_section_if_empty>
     <name>All Products</name>
     <orientation>horizontal</orientation>

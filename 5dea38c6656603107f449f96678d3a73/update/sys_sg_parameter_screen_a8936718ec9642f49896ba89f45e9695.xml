@@ -8,6 +8,6 @@
     <name>FG360 Create Product Form Screen</name>
     <presentation_style>modal</presentation_style>
     <submit_label>Submit</submit_label>
-    <type>fg360-product-create-action-item</type>
+    <type>ba31b6131c514ef4beed554993d536e9</type>
   </sys_sg_parameter_screen>
 </record_update>

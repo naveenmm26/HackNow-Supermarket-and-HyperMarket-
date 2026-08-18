@@ -5,6 +5,6 @@
     <sys_update_name>sys_sg_master_item_af7afd6031b84fd5a332b4770a265b87</sys_update_name>
     <datasource_table>x_fresh_guard_360_product</datasource_table>
     <name>FG360 All Products List Screen - List item config</name>
-    <view_config>fg360-all-products-view-config</view_config>
+    <view_config>0e7b9314fa6645a294b6c7b75caf4cca</view_config>
   </sys_sg_master_item>
 </record_update>
