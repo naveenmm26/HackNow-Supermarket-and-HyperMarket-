@@ -5,7 +5,7 @@
     <sys_update_name>sys_sg_data_item_8e86a9db19e203107f449316be92e16c</sys_update_name>
     <condition_type>declarative</condition_type>
     <name>FG360 Mobile - Open Food Safety Issues</name>
-    <query_condition>u_status!=resolved^u_status!=closed^sys_created_by=javascript:gs.getUserName()^EQ</query_condition>
+    <query_condition>u_status!=resolved^u_status!=closed^EQ</query_condition>
     <table>x_fresh_guard_360_issue</table>
   </sys_sg_data_item>
 </record_update>

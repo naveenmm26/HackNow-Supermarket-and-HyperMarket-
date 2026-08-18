@@ -5,7 +5,7 @@
     <sys_update_name>sys_sg_data_item_0286a9db19e203107f449316be92e168</sys_update_name>
     <condition_type>declarative</condition_type>
     <name>FG360 Mobile - Today Checklists</name>
-    <query_condition>sys_created_by=javascript:gs.getUserName()^EQ</query_condition>
+    <query_condition/>
     <table>x_fresh_guard_360_checklist</table>
   </sys_sg_data_item>
 </record_update>
