@@ -4,9 +4,9 @@
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
     <sys_update_name>sys_sg_input_b38d092e4ca949eda070ec5e93195c1f</sys_update_name>
     <active>true</active>
-    <field>u_storage_type</field>
     <label>Storage Type</label>
     <mandatory>true</mandatory>
+    <name>u_storage_type</name>
     <order>500</order>
     <parameter_screen>a8936718ec9642f49896ba89f45e9695</parameter_screen>
     <type>8dfb205517021010f2b43b9fadb9592e</type>

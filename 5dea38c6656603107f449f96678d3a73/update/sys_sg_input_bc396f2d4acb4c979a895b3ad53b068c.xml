@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input">
   <sys_sg_input action="INSERT_OR_UPDATE">
-    <sys_id>2a6919c2e5df481b8b5a1490ccccd7d2</sys_id>
+    <sys_id>bc396f2d4acb4c979a895b3ad53b068c</sys_id>
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
-    <sys_update_name>sys_sg_input_2a6919c2e5df481b8b5a1490ccccd7d2</sys_update_name>
+    <sys_update_name>sys_sg_input_bc396f2d4acb4c979a895b3ad53b068c</sys_update_name>
     <active>true</active>
-    <label>Equipment Cleanliness</label>
+    <label>Hygiene Check</label>
     <mandatory>true</mandatory>
-    <name>u_equip_check</name>
-    <order>1000</order>
+    <name>u_hygiene_check</name>
+    <order>500</order>
     <parameter_screen>9013fd6b997f46ab9e64a505a30ed12e</parameter_screen>
     <type>8dfb205517021010f2b43b9fadb9592e</type>
   </sys_sg_input>

@@ -4,9 +4,9 @@
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
     <sys_update_name>sys_sg_input_3e7bfe0251794a8594ef7dacab545baa</sys_update_name>
     <active>true</active>
-    <field>u_record_type</field>
     <label>Record Type</label>
     <mandatory>true</mandatory>
+    <name>u_record_type</name>
     <order>100</order>
     <parameter_screen>b8ebf41b12ba46fd9df5e16311d3a29f</parameter_screen>
     <type>8dfb205517021010f2b43b9fadb9592e</type>

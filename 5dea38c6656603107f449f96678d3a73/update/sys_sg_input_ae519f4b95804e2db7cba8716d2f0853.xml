@@ -4,9 +4,9 @@
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
     <sys_update_name>sys_sg_input_ae519f4b95804e2db7cba8716d2f0853</sys_update_name>
     <active>true</active>
-    <field>u_temp_check</field>
     <label>Temperature Check</label>
     <mandatory>true</mandatory>
+    <name>u_temp_check</name>
     <order>400</order>
     <parameter_screen>9013fd6b997f46ab9e64a505a30ed12e</parameter_screen>
     <type>8dfb205517021010f2b43b9fadb9592e</type>

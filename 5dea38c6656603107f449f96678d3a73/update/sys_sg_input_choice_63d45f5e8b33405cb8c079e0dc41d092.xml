@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input_choice">
+  <sys_sg_input_choice action="INSERT_OR_UPDATE">
+    <sys_id>63d45f5e8b33405cb8c079e0dc41d092</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_input_choice_63d45f5e8b33405cb8c079e0dc41d092</sys_update_name>
+    <input>7c5b75db0b484b9d86bbdf021aa4724d</input>
+    <label>Equipment Failure</label>
+    <order>700</order>
+    <value>equipment_failure</value>
+  </sys_sg_input_choice>
+</record_update>

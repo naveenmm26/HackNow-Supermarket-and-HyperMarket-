@@ -4,9 +4,9 @@
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
     <sys_update_name>sys_sg_input_1770873160ab40f1bf5375a6232187b1</sys_update_name>
     <active>true</active>
-    <field>u_department</field>
     <label>Department</label>
     <mandatory>true</mandatory>
+    <name>u_department</name>
     <order>200</order>
     <parameter_screen>9013fd6b997f46ab9e64a505a30ed12e</parameter_screen>
     <type>8dfb205517021010f2b43b9fadb9592e</type>

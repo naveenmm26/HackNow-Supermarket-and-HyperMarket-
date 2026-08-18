@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input_choice">
+  <sys_sg_input_choice action="INSERT_OR_UPDATE">
+    <sys_id>d2e7de18f79f4b45a0252db9fd60d313</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_input_choice_d2e7de18f79f4b45a0252db9fd60d313</sys_update_name>
+    <input>2a6919c2e5df481b8b5a1490ccccd7d2</input>
+    <label>N/A</label>
+    <order>300</order>
+    <value>n_a</value>
+  </sys_sg_input_choice>
+</record_update>

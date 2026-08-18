@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input_choice">
+  <sys_sg_input_choice action="INSERT_OR_UPDATE">
+    <sys_id>0f8ba7256c704a13879c4ef8408723f0</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_input_choice_0f8ba7256c704a13879c4ef8408723f0</sys_update_name>
+    <input>3e7bfe0251794a8594ef7dacab545baa</input>
+    <label>Audit</label>
+    <order>200</order>
+    <value>audit</value>
+  </sys_sg_input_choice>
+</record_update>

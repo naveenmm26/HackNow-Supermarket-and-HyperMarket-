@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input_choice">
+  <sys_sg_input_choice action="INSERT_OR_UPDATE">
+    <sys_id>ac83360dddfd4d7a944c326ab2aa06fa</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_input_choice_ac83360dddfd4d7a944c326ab2aa06fa</sys_update_name>
+    <input>7c5b75db0b484b9d86bbdf021aa4724d</input>
+    <label>Inspection Failure</label>
+    <order>300</order>
+    <value>inspection_failure</value>
+  </sys_sg_input_choice>
+</record_update>
