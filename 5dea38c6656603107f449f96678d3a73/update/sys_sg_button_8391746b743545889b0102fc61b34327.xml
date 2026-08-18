@@ -3,8 +3,14 @@
     <sys_id>8391746b743545889b0102fc61b34327</sys_id>
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
     <sys_update_name>sys_sg_button_8391746b743545889b0102fc61b34327</sys_update_name>
+    <condition_type>declarative</condition_type>
     <context>global</context>
+    <description>Create a new daily food safety checklist</description>
     <name>FG360 Create Checklist</name>
+    <preconditions>none</preconditions>
+    <refresh_screen_after_action>true</refresh_screen_after_action>
+    <roles>x_fresh_guard_360.admin,x_fresh_guard_360.food_safety_officer,x_fresh_guard_360.store_manager,x_fresh_guard_360.regional_manager,x_fresh_guard_360.maintenance</roles>
+    <show_confirmation>true</show_confirmation>
     <table>x_fresh_guard_360_checklist</table>
     <type>write_back</type>
     <write_back_action_item>bc4d60d111c04d91952bdf1664625a67</write_back_action_item>

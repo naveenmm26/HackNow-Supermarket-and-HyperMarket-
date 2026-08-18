@@ -3,8 +3,14 @@
     <sys_id>e20e0e3f8f6f4f7685e9e5eb40b12242</sys_id>
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
     <sys_update_name>sys_sg_button_e20e0e3f8f6f4f7685e9e5eb40b12242</sys_update_name>
+    <condition_type>declarative</condition_type>
     <context>global</context>
+    <description>Create a new food safety inspection record</description>
     <name>FG360 Create Inspection</name>
+    <preconditions>none</preconditions>
+    <refresh_screen_after_action>true</refresh_screen_after_action>
+    <roles>x_fresh_guard_360.admin,x_fresh_guard_360.food_safety_officer,x_fresh_guard_360.store_manager,x_fresh_guard_360.regional_manager,x_fresh_guard_360.maintenance</roles>
+    <show_confirmation>true</show_confirmation>
     <table>x_fresh_guard_360_inspection</table>
     <type>write_back</type>
     <write_back_action_item>43417187f7384418abace8ceb6fb3fd6</write_back_action_item>
