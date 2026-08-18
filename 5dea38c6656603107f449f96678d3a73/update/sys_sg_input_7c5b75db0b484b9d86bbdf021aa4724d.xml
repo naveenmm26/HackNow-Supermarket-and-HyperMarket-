@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input">
+  <sys_sg_input action="INSERT_OR_UPDATE">
+    <sys_id>7c5b75db0b484b9d86bbdf021aa4724d</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_input_7c5b75db0b484b9d86bbdf021aa4724d</sys_update_name>
+    <active>true</active>
+    <label>Issue Type</label>
+    <mandatory>true</mandatory>
+    <name>u_issue_type</name>
+    <order>300</order>
+    <parameter_screen>25ddb674e1f203107f44164868fe9520</parameter_screen>
+    <type>8dfb205517021010f2b43b9fadb9592e</type>
+  </sys_sg_input>
+</record_update>
