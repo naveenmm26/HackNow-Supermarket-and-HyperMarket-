@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input">
+  <sys_sg_input action="INSERT_OR_UPDATE">
+    <sys_id>6904cf0564a348b5b248ff4facc52739</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_input_6904cf0564a348b5b248ff4facc52739</sys_update_name>
+    <active>true</active>
+    <field>u_mfg_date</field>
+    <label>Manufacturing Date</label>
+    <mandatory>true</mandatory>
+    <order>900</order>
+    <parameter_screen>a8936718ec9642f49896ba89f45e9695</parameter_screen>
+    <type>2c0c605517021010f2b43b9fadb9590a</type>
+  </sys_sg_input>
+</record_update>

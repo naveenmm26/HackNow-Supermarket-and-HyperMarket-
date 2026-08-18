@@ -7,7 +7,7 @@
     <button>d34f8937656741c09ac9a06c1ca4f156</button>
     <disable_offline>false</disable_offline>
     <label>Create Product</label>
-    <location>footer</location>
+    <location>quick_action</location>
     <name>Create Product</name>
     <parent>b2c417e3e96a03107f44cf798e415961</parent>
     <parent_table>sys_sg_applet_launcher</parent_table>

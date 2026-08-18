@@ -7,7 +7,7 @@
     <button>e20e0e3f8f6f4f7685e9e5eb40b12242</button>
     <disable_offline>false</disable_offline>
     <label>Create Inspection</label>
-    <location>footer</location>
+    <location>quick_action</location>
     <name>Create Inspection</name>
     <parent>b2c417e3e96a03107f44cf798e415961</parent>
     <parent_table>sys_sg_applet_launcher</parent_table>

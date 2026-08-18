@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream_m2m_segment">
+  <sys_sg_item_stream_m2m_segment action="INSERT_OR_UPDATE">
+    <sys_id>ad754f96e09f40e89de729dc57d78ecf</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_item_stream_m2m_segment_ad754f96e09f40e89de729dc57d78ecf</sys_update_name>
+    <item_stream>dc57537a80ff470eb28c6696fb69d64d</item_stream>
+    <segment>3f40797bda744e4d851773906e262a68</segment>
+  </sys_sg_item_stream_m2m_segment>
+</record_update>

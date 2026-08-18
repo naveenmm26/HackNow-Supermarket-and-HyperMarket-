@@ -7,7 +7,7 @@
     <button>8391746b743545889b0102fc61b34327</button>
     <disable_offline>false</disable_offline>
     <label>Create Checklist</label>
-    <location>footer</location>
+    <location>quick_action</location>
     <name>Create Checklist</name>
     <parent>b2c417e3e96a03107f44cf798e415961</parent>
     <parent_table>sys_sg_applet_launcher</parent_table>
