@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_parameter_screen">
+  <sys_sg_parameter_screen action="INSERT_OR_UPDATE">
+    <sys_id>9013fd6b997f46ab9e64a505a30ed12e</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_parameter_screen_9013fd6b997f46ab9e64a505a30ed12e</sys_update_name>
+    <active>true</active>
+    <cancel_label>Cancel</cancel_label>
+    <name>FG360 Create Checklist Form Screen</name>
+    <presentation_style>modal</presentation_style>
+    <submit_label>Submit</submit_label>
+    <type>fg360-checklist-create-action-item</type>
+  </sys_sg_parameter_screen>
+</record_update>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button">
+  <sys_sg_button action="INSERT_OR_UPDATE">
+    <sys_id>d34f8937656741c09ac9a06c1ca4f156</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_button_d34f8937656741c09ac9a06c1ca4f156</sys_update_name>
+    <context>global</context>
+    <name>FG360 Create Product</name>
+    <table>x_fresh_guard_360_product</table>
+    <type>write_back</type>
+    <write_back_action_item>fg360-product-create-action-item</write_back_action_item>
+  </sys_sg_button>
+</record_update>

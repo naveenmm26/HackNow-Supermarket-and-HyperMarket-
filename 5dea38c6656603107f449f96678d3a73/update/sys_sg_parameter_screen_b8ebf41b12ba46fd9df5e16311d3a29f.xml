@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_parameter_screen">
+  <sys_sg_parameter_screen action="INSERT_OR_UPDATE">
+    <sys_id>b8ebf41b12ba46fd9df5e16311d3a29f</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_parameter_screen_b8ebf41b12ba46fd9df5e16311d3a29f</sys_update_name>
+    <active>true</active>
+    <cancel_label>Cancel</cancel_label>
+    <name>FG360 Create Inspection Form Screen</name>
+    <presentation_style>modal</presentation_style>
+    <submit_label>Submit</submit_label>
+    <type>fg360-inspection-create-action-item</type>
+  </sys_sg_parameter_screen>
+</record_update>

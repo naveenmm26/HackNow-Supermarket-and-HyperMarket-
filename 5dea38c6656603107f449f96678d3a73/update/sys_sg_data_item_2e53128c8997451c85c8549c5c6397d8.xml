@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_data_item">
+  <sys_sg_data_item action="INSERT_OR_UPDATE">
+    <sys_id>2e53128c8997451c85c8549c5c6397d8</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_data_item_2e53128c8997451c85c8549c5c6397d8</sys_update_name>
+    <active>true</active>
+    <name>FG360 Mobile - All Products</name>
+    <table>x_fresh_guard_360_product</table>
+  </sys_sg_data_item>
+</record_update>

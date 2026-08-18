@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_list_screen">
+  <sys_sg_list_screen action="INSERT_OR_UPDATE">
+    <sys_id>44939fb4b63e451389f9cfcbd0201f08</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_list_screen_44939fb4b63e451389f9cfcbd0201f08</sys_update_name>
+    <available_offline>false</available_offline>
+    <description>Complete product inventory list</description>
+    <fetch_type>on_demand</fetch_type>
+    <hide_filters>false</hide_filters>
+    <hide_screen_name>false</hide_screen_name>
+    <name>FG360 All Products List Screen</name>
+  </sys_sg_list_screen>
+</record_update>

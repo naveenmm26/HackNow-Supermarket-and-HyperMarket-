@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_form_screen">
+  <sys_sg_form_screen action="INSERT_OR_UPDATE">
+    <sys_id>609b322be96603107f44cf798e41596d</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_form_screen_609b322be96603107f44cf798e41596d</sys_update_name>
+    <name>Embedded Record Screen</name>
+    <override_context_with_data_item>false</override_context_with_data_item>
+    <segments_height>medium</segments_height>
+    <segments_min_width>medium</segments_min_width>
+    <use_view_config>false</use_view_config>
+  </sys_sg_form_screen>
+</record_update>
