@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_browser_screen">
+  <sys_sg_browser_screen action="INSERT_OR_UPDATE">
+    <sys_id>9edc1f78e1f603107f44164868fe9569</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_browser_screen_9edc1f78e1f603107f44164868fe9569</sys_update_name>
+    <external_browser>false</external_browser>
+    <fetch_type>background</fetch_type>
+    <hide_native_header>false</hide_native_header>
+    <name>FG360 Management Dashboard</name>
+    <relative_url>false</relative_url>
+    <url>/$pa_dashboard.do?sysparm_dashboard=8b9e0cc75c6203107f44f92d89894306</url>
+  </sys_sg_browser_screen>
+</record_update>

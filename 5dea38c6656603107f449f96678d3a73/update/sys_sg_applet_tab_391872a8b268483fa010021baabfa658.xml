@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_tab">
+  <sys_sg_applet_tab action="INSERT_OR_UPDATE">
+    <sys_id>391872a8b268483fa010021baabfa658</sys_id>
+    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
+    <sys_update_name>sys_sg_applet_tab_391872a8b268483fa010021baabfa658</sys_update_name>
+    <active>true</active>
+    <icon>d49c89a2b72200108223e126de11a9c4</icon>
+    <label>Store Ops</label>
+    <screen>b99c1378e1f603107f44164868fe9562</screen>
+  </sys_sg_applet_tab>
+</record_update>
