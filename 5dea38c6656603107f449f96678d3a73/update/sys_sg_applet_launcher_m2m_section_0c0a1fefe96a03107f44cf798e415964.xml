@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_launcher_m2m_section">
   <sys_sg_applet_launcher_m2m_section action="INSERT_OR_UPDATE">
-    <sys_id>25432515c4d64d23bcdc8ae334b6eb73</sys_id>
+    <sys_id>0c0a1fefe96a03107f44cf798e415964</sys_id>
     <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
-    <sys_update_name>sys_sg_applet_launcher_m2m_section_25432515c4d64d23bcdc8ae334b6eb73</sys_update_name>
+    <sys_update_name>sys_sg_applet_launcher_m2m_section_0c0a1fefe96a03107f44cf798e415964</sys_update_name>
     <applet_launcher>b2c417e3e96a03107f44cf798e415961</applet_launcher>
-    <order>9100</order>
-    <section>5a4e31e9860949a5921229245a414a91</section>
+    <order>100</order>
+    <section>8c0a1327e96a03107f44cf798e415967</section>
   </sys_sg_applet_launcher_m2m_section>
 </record_update>
