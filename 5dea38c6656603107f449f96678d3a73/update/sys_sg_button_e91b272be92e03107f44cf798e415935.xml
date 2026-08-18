@@ -5,6 +5,8 @@
     <sys_update_name>sys_sg_button_e91b272be92e03107f44cf798e415935</sys_update_name>
     <context>global</context>
     <name>FG360 Create Food Safety Issue</name>
+    <refresh_screen_after_action>true</refresh_screen_after_action>
+    <show_confirmation>true</show_confirmation>
     <table>x_fresh_guard_360_issue</table>
     <type>write_back</type>
     <write_back_action_item>71ddb674e1f203107f44164868fe9527</write_back_action_item>
