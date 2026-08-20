@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button_instance">
-  <sys_sg_button_instance action="INSERT_OR_UPDATE">
-    <sys_id>268797c6d7d64aacad46fa6c039d9519</sys_id>
-    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
-    <sys_update_name>sys_sg_button_instance_268797c6d7d64aacad46fa6c039d9519</sys_update_name>
-    <active>true</active>
-    <button>8391746b743545889b0102fc61b34327</button>
-    <disable_offline>false</disable_offline>
-    <label>Create Checklist</label>
-    <location>quick_action</location>
-    <name>Create Checklist</name>
-    <parent>b2c417e3e96a03107f44cf798e415961</parent>
-    <parent_table>sys_sg_applet_launcher</parent_table>
-  </sys_sg_button_instance>
+    <sys_sg_button_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <button display_value="FG360 Create Checklist">8391746b743545889b0102fc61b34327</button>
+        <color_theme/>
+        <description/>
+        <disable_offline>false</disable_offline>
+        <field_name/>
+        <icon/>
+        <label>Create Checklist</label>
+        <location>quick_action</location>
+        <name>Create Checklist</name>
+        <order/>
+        <parent>b2c417e3e96a03107f44cf798e415961</parent>
+        <parent_table>sys_sg_applet_launcher</parent_table>
+        <sys_class_name>sys_sg_button_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-18 08:48:56</sys_created_on>
+        <sys_id>268797c6d7d64aacad46fa6c039d9519</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Checklist</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_button_instance_268797c6d7d64aacad46fa6c039d9519</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 08:48:56</sys_updated_on>
+        <table/>
+    </sys_sg_button_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=268797c6d7d64aacad46fa6c039d9519"/>
 </record_update>

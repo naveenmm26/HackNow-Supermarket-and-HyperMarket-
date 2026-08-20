@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_form_segment">
+    <sys_sg_form_segment action="DELETE">
+        <embedded_screen display_value="FG360 Active Stores List Screen">69bb362be96603107f44cf798e41596a</embedded_screen>
+        <form display_value="Embedded Record Screen">609b322be96603107f44cf798e41596d</form>
+        <header_view_config display_value="FG360 Active Store Card">4328b663e96603107f44cf798e4159cc</header_view_config>
+        <is_sticky>false</is_sticky>
+        <order/>
+        <sys_class_name>sys_sg_form_segment</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 09:31:14</sys_created_on>
+        <sys_id>fb95e767e9ea03107f44cf798e415946</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_form_segment_fb95e767e9ea03107f44cf798e415946</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 09:31:14</sys_updated_on>
+    </sys_sg_form_segment>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_sg_form_segment_fb95e767e9ea03107f44cf798e415946</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_form_segment"><sys_sg_form_segment action="INSERT_OR_UPDATE"><embedded_screen display_value="FG360 Active Stores List Screen">69bb362be96603107f44cf798e41596a</embedded_screen><form display_value="Embedded Record Screen">609b322be96603107f44cf798e41596d</form><header_view_config display_value="FG360 Active Store Card">4328b663e96603107f44cf798e4159cc</header_view_config><is_sticky>false</is_sticky><order/><sys_class_name>sys_sg_form_segment</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-13 09:31:14</sys_created_on><sys_id>fb95e767e9ea03107f44cf798e415946</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package><sys_policy/><sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope><sys_update_name>sys_sg_form_segment_fb95e767e9ea03107f44cf798e415946</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-13 09:31:14</sys_updated_on></sys_sg_form_segment></record_update>]]></payload>
+        <payload_hash>-1281975364</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 09:31:14</sys_created_on>
+        <sys_id>f3952b67e9ea03107f44cf798e4159f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ffa7624f20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 09:31:14</sys_updated_on>
+        <type>Record screen segment</type>
+        <update_guid>f3952b6765ea0310bc256248d1b5f7f1</update_guid>
+        <update_guid_history>f3952b6765ea0310bc256248d1b5f7f1:-1281975364</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 09:32:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_form_segment">sys_sg_form_segment</sys_db_object>
+        <sys_id>a77d8410fe434d0892e4b439adfa1c40</sys_id>
+        <sys_metadata>fb95e767e9ea03107f44cf798e415946</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_sg_form_segment_fb95e767e9ea03107f44cf798e415946</sys_update_name>
+        <sys_update_version display_value="sys_sg_form_segment_fb95e767e9ea03107f44cf798e415946">f3952b67e9ea03107f44cf798e4159f2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 09:32:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

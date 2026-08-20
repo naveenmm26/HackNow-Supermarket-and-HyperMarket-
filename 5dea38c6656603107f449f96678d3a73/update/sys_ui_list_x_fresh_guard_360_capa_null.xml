@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_fresh_guard_360_capa" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_capa_id</element>
+            <list_id display_value="x_fresh_guard_360_capa" element="NULL" name="x_fresh_guard_360_capa" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">adecc036ed6e03107f44863610ff21f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_id>adecc036ed6e03107f44863610ff21f3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_assigned_to</element>
+            <list_id display_value="x_fresh_guard_360_capa" element="NULL" name="x_fresh_guard_360_capa" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">adecc036ed6e03107f44863610ff21f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_id>29ecc036ed6e03107f44863610ff21f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_completed_date</element>
+            <list_id display_value="x_fresh_guard_360_capa" element="NULL" name="x_fresh_guard_360_capa" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">adecc036ed6e03107f44863610ff21f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_id>adecc036ed6e03107f44863610ff21f4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_corrective_action</element>
+            <list_id display_value="x_fresh_guard_360_capa" element="NULL" name="x_fresh_guard_360_capa" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">adecc036ed6e03107f44863610ff21f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_id>25ecc036ed6e03107f44863610ff21f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_issue</element>
+            <list_id display_value="x_fresh_guard_360_capa" element="NULL" name="x_fresh_guard_360_capa" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">adecc036ed6e03107f44863610ff21f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_id>a9ecc036ed6e03107f44863610ff21f5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_preventive_action</element>
+            <list_id display_value="x_fresh_guard_360_capa" element="NULL" name="x_fresh_guard_360_capa" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">adecc036ed6e03107f44863610ff21f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_id>21ecc036ed6e03107f44863610ff21f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_priority</element>
+            <list_id display_value="x_fresh_guard_360_capa" element="NULL" name="x_fresh_guard_360_capa" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">adecc036ed6e03107f44863610ff21f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_id>a5ecc036ed6e03107f44863610ff21f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_root_cause</element>
+            <list_id display_value="x_fresh_guard_360_capa" element="NULL" name="x_fresh_guard_360_capa" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">adecc036ed6e03107f44863610ff21f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_id>2decc036ed6e03107f44863610ff21f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_status</element>
+            <list_id display_value="x_fresh_guard_360_capa" element="NULL" name="x_fresh_guard_360_capa" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">adecc036ed6e03107f44863610ff21f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_id>a1ecc036ed6e03107f44863610ff21f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_store</element>
+            <list_id display_value="x_fresh_guard_360_capa" element="NULL" name="x_fresh_guard_360_capa" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">adecc036ed6e03107f44863610ff21f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_id>29ecc036ed6e03107f44863610ff21f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_fresh_guard_360_capa</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:48:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>adecc036ed6e03107f44863610ff21f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_fresh_guard_360_capa</sys_name>
+            <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+            <sys_update_name>sys_ui_list_x_fresh_guard_360_capa_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:48:55</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

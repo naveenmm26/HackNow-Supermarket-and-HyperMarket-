@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_launcher_m2m_section">
-  <sys_sg_applet_launcher_m2m_section action="INSERT_OR_UPDATE">
-    <sys_id>3cbb5fa3e9aa03107f44cf798e415921</sys_id>
-    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
-    <sys_update_name>sys_sg_applet_launcher_m2m_section_3cbb5fa3e9aa03107f44cf798e415921</sys_update_name>
-    <applet_launcher>b2c417e3e96a03107f44cf798e415961</applet_launcher>
-    <order>300</order>
-    <section>bcbb9ba3e9aa03107f44cf798e4159ed</section>
-  </sys_sg_applet_launcher_m2m_section>
+    <sys_sg_applet_launcher_m2m_section action="INSERT_OR_UPDATE">
+        <applet_launcher display_value="Role-aware mobile home landing page">b2c417e3e96a03107f44cf798e415961</applet_launcher>
+        <order>300</order>
+        <section display_value="Pending Inspections">bcbb9ba3e9aa03107f44cf798e4159ed</section>
+        <sys_class_name>sys_sg_applet_launcher_m2m_section</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:47:53</sys_created_on>
+        <sys_id>3cbb5fa3e9aa03107f44cf798e415921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_applet_launcher_m2m_section_3cbb5fa3e9aa03107f44cf798e415921</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:47:53</sys_updated_on>
+    </sys_sg_applet_launcher_m2m_section>
 </record_update>

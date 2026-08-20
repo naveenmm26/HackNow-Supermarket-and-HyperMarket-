@@ -1,0 +1,1638 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="CMDB Dependent CI Deletion">5c509ec9538230108cabddeeff7b128b</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This subflow deletes the dependent and orphaned CIs associated with the input task</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>delete_dependent_configuration_items</internal_name>
+        <label_cache>[{"name":"a8a62096-4b25-4b05-8d80-be29af5802d1.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a8a62096-4b25-4b05-8d80-be29af5802d1.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"efaea7e2-597b-4dd4-8bac-1e5ea919c2a5"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"046bc6ab-8b81-477f-ab52-16c7338fa6da"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.error","label":"1➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"ad6bb1de-601b-4c7e-ad5f-4acc9b4b1854"}},{"name":"subflow.task","label":"Input➛Task","reference":"cmdb_data_management_task","reference_display":"CMDB Data Management Task","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"dfd222d8-7a2e-4346-a00a-2ecfff117d18","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"25034439-d7a3-4427-9f94-6e88f51b0aec"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f9aa4f44-f91c-41f9-9a26-c46827f327b0"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.error","label":"1➛Error","reference_display":"Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"6038b3ca-d5fd-4659-a01c-7a0c453d7b62"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"dad3163a-28b7-45f5-a67c-9f5c4811a07e"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"253321cd-9113-4e84-ac9e-3a71fc8874bb"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"bfc9bfd3-0601-4c0b-b5f9-ce2b84bfa38e"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"fe4fda70-91b1-4693-aed5-ea9b02f2a593"}}]</label_cache>
+        <master_snapshot>a0a350c2530230108cabddeeff7b128c</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Delete Orphaned Dependent CIs</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-16 22:44:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>40d0520d538230108cabddeeff7b1223</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Delete Orphaned Dependent CIs</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_40d0520d538230108cabddeeff7b1223</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:32:50</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=40d0520d538230108cabddeeff7b1223"/>
+    <sys_variable_value action="DELETE" query="document_key=40d0520d538230108cabddeeff7b1223"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223^id=40d0520d538230108cabddeeff7b1223"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=40d0520d538230108cabddeeff7b1223"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=40d0520d538230108cabddeeff7b1223^sys_idNOT IN8cd0520d538230108cabddeeff7b1223"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>40d0520d538230108cabddeeff7b1223</id>
+        <name>Delete Dependent Configuration Items</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-16 22:44:07</sys_created_on>
+        <sys_id>8cd0520d538230108cabddeeff7b1223</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-16 22:44:07</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=8cd0520d538230108cabddeeff7b1223"/>
+    <sys_hub_flow_input action="DELETE" query="model=40d0520d538230108cabddeeff7b1223^sys_idNOT IN44b25482530230108cabddeeff7b1276"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=dfd222d8-7a2e-4346-a00a-2ecfff117d18</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>cmdb_data_management_task</choice_table>
+        <column_label>Task</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>task</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Task</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Delete Orphaned Dependent CIs">40d0520d538230108cabddeeff7b1223</model>
+        <model_id>40d0520d538230108cabddeeff7b1223</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_40d0520d538230108cabddeeff7b1223</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="cmdb_data_management_task">cmdb_data_management_task</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:07:00</sys_created_on>
+        <sys_id>44b25482530230108cabddeeff7b1276</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:07:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=44b25482530230108cabddeeff7b1276"/>
+    <sys_hub_flow_output action="DELETE" query="model=40d0520d538230108cabddeeff7b1223^sys_idNOT IN1cb25482530230108cabddeeff7b1296,dcb25482530230108cabddeeff7b1280,dcb25482530230108cabddeeff7b129e"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=4b344e69-2895-4b36-9855-6fe6160c95ba</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Error Message</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>error_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Error Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Delete Orphaned Dependent CIs">40d0520d538230108cabddeeff7b1223</model>
+        <model_id>40d0520d538230108cabddeeff7b1223</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:07:00</sys_created_on>
+        <sys_id>1cb25482530230108cabddeeff7b1296</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:07:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=1cb25482530230108cabddeeff7b1296"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=1f33bb80-0fe9-48b2-a131-db9d8e2e249f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Error</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>error</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Delete Orphaned Dependent CIs">40d0520d538230108cabddeeff7b1223</model>
+        <model_id>40d0520d538230108cabddeeff7b1223</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:07:00</sys_created_on>
+        <sys_id>dcb25482530230108cabddeeff7b1280</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:07:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=dcb25482530230108cabddeeff7b1280"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=02f0d757-2f64-4406-9466-6c1eeff1eb7f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Notes</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>notes</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Notes</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Delete Orphaned Dependent CIs">40d0520d538230108cabddeeff7b1223</model>
+        <model_id>40d0520d538230108cabddeeff7b1223</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:07:00</sys_created_on>
+        <sys_id>dcb25482530230108cabddeeff7b129e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:07:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=dcb25482530230108cabddeeff7b129e"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=40d0520d538230108cabddeeff7b1223"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=40d0520d538230108cabddeeff7b1223"/>
+    <sys_hub_action_instance action="DELETE" query="flow=40d0520d538230108cabddeeff7b1223^sys_idNOT IN72c1e4ca530230108cabddeeff7b12bc,fc739c82530230108cabddeeff7b1241"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update CMDB Data Management Task">102aa5d77362201026f6aa114df6a740</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Orphaned Dependent CIs">40d0520d538230108cabddeeff7b1223</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>aeebc363-6150-42c4-ba9a-282c09625d01</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>72c1e4ca530230108cabddeeff7b12bc</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 00:13:35</sys_updated_on>
+        <ui_id>a8a62096-4b25-4b05-8d80-be29af5802d1</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=72c1e4ca530230108cabddeeff7b12bc"/>
+    <sys_element_mapping action="DELETE" query="id=72c1e4ca530230108cabddeeff7b12bc"/>
+    <sys_element_mapping action="DELETE">
+        <field>cmdb_task</field>
+        <id>72c1e4ca530230108cabddeeff7b12bc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>bac1e4ca530230108cabddeeff7b12bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:12:59</sys_updated_on>
+        <table>var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740</table>
+        <value>{{subflow.task}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>notes</field>
+        <id>72c1e4ca530230108cabddeeff7b12bc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>7ec1e4ca530230108cabddeeff7b12bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:12:59</sys_updated_on>
+        <table>var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740</table>
+        <value>{{4b61e84a-2249-4d01-a691-450a246cbe3c.notes}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=72c1e4ca530230108cabddeeff7b12bc"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=72c1e4ca530230108cabddeeff7b12bc"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete Orphaned Dependent CIs for Task">b1129c42530230108cabddeeff7b1275</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Orphaned Dependent CIs">40d0520d538230108cabddeeff7b1223</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:10:19</sys_created_on>
+        <sys_id>fc739c82530230108cabddeeff7b1241</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 00:13:35</sys_updated_on>
+        <ui_id>4b61e84a-2249-4d01-a691-450a246cbe3c</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=fc739c82530230108cabddeeff7b1241"/>
+    <sys_element_mapping action="DELETE" query="id=fc739c82530230108cabddeeff7b1241"/>
+    <sys_element_mapping action="DELETE">
+        <field>task</field>
+        <id>fc739c82530230108cabddeeff7b1241</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:10:19</sys_created_on>
+        <sys_id>fc739c82530230108cabddeeff7b1243</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:10:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b1129c42530230108cabddeeff7b1275</table>
+        <value>{{subflow.task}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=fc739c82530230108cabddeeff7b1241"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=fc739c82530230108cabddeeff7b1241"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=40d0520d538230108cabddeeff7b1223^sys_idNOT IN3ac1e4ca530230108cabddeeff7b12d7,f2c1e4ca530230108cabddeeff7b12b4"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">e09bf8c0539230108cabddeeff7b1252</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Delete Orphaned Dependent CIs">40d0520d538230108cabddeeff7b1223</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned>error,error_message,notes</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>3ac1e4ca530230108cabddeeff7b12d7</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 00:13:35</sys_updated_on>
+        <ui_id>b4d58db7-95ea-47da-8fb0-ab72efa3e648</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=3ac1e4ca530230108cabddeeff7b12d7"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>3ac1e4ca530230108cabddeeff7b12d7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>76c1e4ca530230108cabddeeff7b12db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:12:59</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Error">dcb25482530230108cabddeeff7b1280</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=3ac1e4ca530230108cabddeeff7b12d7"/>
+    <sys_element_mapping action="DELETE">
+        <field>error</field>
+        <id>3ac1e4ca530230108cabddeeff7b12d7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>f2c1e4ca530230108cabddeeff7b12db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:12:59</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223</table>
+        <value>{{4b61e84a-2249-4d01-a691-450a246cbe3c.error}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>error_message</field>
+        <id>3ac1e4ca530230108cabddeeff7b12d7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>7ec1e4ca530230108cabddeeff7b12da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:12:59</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223</table>
+        <value>{{4b61e84a-2249-4d01-a691-450a246cbe3c.error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>notes</field>
+        <id>3ac1e4ca530230108cabddeeff7b12d7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>32c1e4ca530230108cabddeeff7b12db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:12:59</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223</table>
+        <value>{{4b61e84a-2249-4d01-a691-450a246cbe3c.notes}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=3ac1e4ca530230108cabddeeff7b12d7"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=3ac1e4ca530230108cabddeeff7b12d7"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">ec9bf8c0539230108cabddeeff7b120a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Delete Orphaned Dependent CIs">40d0520d538230108cabddeeff7b1223</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>f2c1e4ca530230108cabddeeff7b12b4</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 00:13:35</sys_updated_on>
+        <ui_id>aeebc363-6150-42c4-ba9a-282c09625d01</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=f2c1e4ca530230108cabddeeff7b12b4"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>f2c1e4ca530230108cabddeeff7b12b4</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>b2c1e4ca530230108cabddeeff7b12b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:12:59</sys_updated_on>
+        <value>Check for error</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=f2c1e4ca530230108cabddeeff7b12b4"/>
+    <sys_element_mapping action="DELETE">
+        <field>condition</field>
+        <id>f2c1e4ca530230108cabddeeff7b12b4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>32c1e4ca530230108cabddeeff7b12b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:12:59</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{4b61e84a-2249-4d01-a691-450a246cbe3c.error}}=False</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>condition_name</field>
+        <id>f2c1e4ca530230108cabddeeff7b12b4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:12:59</sys_created_on>
+        <sys_id>7ec1e4ca530230108cabddeeff7b12b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:12:59</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223^id=f2c1e4ca530230108cabddeeff7b12b4"/>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=f2c1e4ca530230108cabddeeff7b12b4"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=f2c1e4ca530230108cabddeeff7b12b4"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=40d0520d538230108cabddeeff7b1223"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=40d0520d538230108cabddeeff7b1223"/>
+    <sys_hub_flow_variable action="DELETE" query="model=40d0520d538230108cabddeeff7b1223"/>
+    <sys_documentation action="DELETE">
+        <element>task</element>
+        <help/>
+        <hint/>
+        <label>Task</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_40d0520d538230108cabddeeff7b1223</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:07:00</sys_created_on>
+        <sys_id>14b25482530230108cabddeeff7b127e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_40d0520d538230108cabddeeff7b1223_task_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:07:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_40d0520d538230108cabddeeff7b1223"/>
+    <sys_documentation action="DELETE">
+        <element>error_message</element>
+        <help/>
+        <hint/>
+        <label>Error Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:07:00</sys_created_on>
+        <sys_id>18b25482530230108cabddeeff7b129d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Error Message</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223_error_message_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:07:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>error</element>
+        <help/>
+        <hint/>
+        <label>Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:07:00</sys_created_on>
+        <sys_id>54b25482530230108cabddeeff7b1295</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Error</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223_error_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:07:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>notes</element>
+        <help/>
+        <hint/>
+        <label>Notes</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:07:00</sys_created_on>
+        <sys_id>d8b25482530230108cabddeeff7b12a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notes</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223_notes_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:07:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="CMDB Dependent CI Deletion">5c509ec9538230108cabddeeff7b128b</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This subflow deletes the dependent and orphaned CIs associated with the input task</description>
+        <flow_priority/>
+        <internal_name>delete_dependent_configuration_items</internal_name>
+        <label_cache>[{"name":"a8a62096-4b25-4b05-8d80-be29af5802d1.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a8a62096-4b25-4b05-8d80-be29af5802d1.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"efaea7e2-597b-4dd4-8bac-1e5ea919c2a5"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"046bc6ab-8b81-477f-ab52-16c7338fa6da"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.error","label":"1➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"ad6bb1de-601b-4c7e-ad5f-4acc9b4b1854"}},{"name":"subflow.task","label":"Input➛Task","reference":"cmdb_data_management_task","reference_display":"CMDB Data Management Task","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"dfd222d8-7a2e-4346-a00a-2ecfff117d18","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"25034439-d7a3-4427-9f94-6e88f51b0aec"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f9aa4f44-f91c-41f9-9a26-c46827f327b0"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.error","label":"1➛Error","reference_display":"Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"6038b3ca-d5fd-4659-a01c-7a0c453d7b62"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"dad3163a-28b7-45f5-a67c-9f5c4811a07e"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"253321cd-9113-4e84-ac9e-3a71fc8874bb"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"bfc9bfd3-0601-4c0b-b5f9-ce2b84bfa38e"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"fe4fda70-91b1-4693-aed5-ea9b02f2a593"}}]</label_cache>
+        <master>true</master>
+        <name>Delete Orphaned Dependent CIs</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Delete Orphaned Dependent CIs">40d0520d538230108cabddeeff7b1223</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>a0a350c2530230108cabddeeff7b128c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 00:13:34</sys_updated_on>
+        <type>subflow</type>
+        <version/>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=a0a350c2530230108cabddeeff7b128c"/>
+    <sys_variable_value action="DELETE" query="document_key=a0a350c2530230108cabddeeff7b128c"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c^id=a0a350c2530230108cabddeeff7b128c"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=a0a350c2530230108cabddeeff7b128c"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=a0a350c2530230108cabddeeff7b128c^sys_idNOT INa0a350c2530230108cabddeeff7b128d"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>a0a350c2530230108cabddeeff7b128c</id>
+        <name>Delete Dependent Configuration Items</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:07</sys_created_on>
+        <sys_id>a0a350c2530230108cabddeeff7b128d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:11:07</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=a0a350c2530230108cabddeeff7b128d"/>
+    <sys_hub_flow_input action="DELETE" query="model=a0a350c2530230108cabddeeff7b128c^sys_idNOT INa8a350c2530230108cabddeeff7b128e"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=dfd222d8-7a2e-4346-a00a-2ecfff117d18</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>cmdb_data_management_task</choice_table>
+        <column_label>Task</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>task</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Task</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Delete Orphaned Dependent CIs">a0a350c2530230108cabddeeff7b128c</model>
+        <model_id>a0a350c2530230108cabddeeff7b128c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a0a350c2530230108cabddeeff7b128c</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="cmdb_data_management_task">cmdb_data_management_task</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:07</sys_created_on>
+        <sys_id>a8a350c2530230108cabddeeff7b128e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=a8a350c2530230108cabddeeff7b128e"/>
+    <sys_hub_flow_output action="DELETE" query="model=a0a350c2530230108cabddeeff7b128c^sys_idNOT IN34a350c2530230108cabddeeff7b12bc,e0a350c2530230108cabddeeff7b12ad,fca350c2530230108cabddeeff7b12ca"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=4b344e69-2895-4b36-9855-6fe6160c95ba</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Error Message</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>error_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Error Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Delete Orphaned Dependent CIs">a0a350c2530230108cabddeeff7b128c</model>
+        <model_id>a0a350c2530230108cabddeeff7b128c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:08</sys_created_on>
+        <sys_id>34a350c2530230108cabddeeff7b12bc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=34a350c2530230108cabddeeff7b12bc"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=1f33bb80-0fe9-48b2-a131-db9d8e2e249f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Error</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>error</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Delete Orphaned Dependent CIs">a0a350c2530230108cabddeeff7b128c</model>
+        <model_id>a0a350c2530230108cabddeeff7b128c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:08</sys_created_on>
+        <sys_id>e0a350c2530230108cabddeeff7b12ad</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=e0a350c2530230108cabddeeff7b12ad"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=02f0d757-2f64-4406-9466-6c1eeff1eb7f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Notes</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>notes</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Notes</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Delete Orphaned Dependent CIs">a0a350c2530230108cabddeeff7b128c</model>
+        <model_id>a0a350c2530230108cabddeeff7b128c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:08</sys_created_on>
+        <sys_id>fca350c2530230108cabddeeff7b12ca</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=fca350c2530230108cabddeeff7b12ca"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=a0a350c2530230108cabddeeff7b128c"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=a0a350c2530230108cabddeeff7b128c"/>
+    <sys_hub_action_instance action="DELETE" query="flow=a0a350c2530230108cabddeeff7b128c^sys_idNOT IN08d168ca530230108cabddeeff7b1221,78a350c2530230108cabddeeff7b12e2"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update CMDB Data Management Task">102aa5d77362201026f6aa114df6a740</action_type>
+        <action_type_parent display_value="Update CMDB Data Management Task">e3b921d77362201026f6aa114df6a742</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Orphaned Dependent CIs">a0a350c2530230108cabddeeff7b128c</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>aeebc363-6150-42c4-ba9a-282c09625d01</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:04</sys_created_on>
+        <sys_id>08d168ca530230108cabddeeff7b1221</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 00:13:34</sys_updated_on>
+        <ui_id>a8a62096-4b25-4b05-8d80-be29af5802d1</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=08d168ca530230108cabddeeff7b1221"/>
+    <sys_element_mapping action="DELETE" query="id=08d168ca530230108cabddeeff7b1221"/>
+    <sys_element_mapping action="DELETE">
+        <field>cmdb_task</field>
+        <id>08d168ca530230108cabddeeff7b1221</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:04</sys_created_on>
+        <sys_id>c4d168ca530230108cabddeeff7b1222</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740</table>
+        <value>{{subflow.task}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>notes</field>
+        <id>08d168ca530230108cabddeeff7b1221</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:04</sys_created_on>
+        <sys_id>88d168ca530230108cabddeeff7b1222</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740</table>
+        <value>{{4b61e84a-2249-4d01-a691-450a246cbe3c.notes}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=08d168ca530230108cabddeeff7b1221"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=08d168ca530230108cabddeeff7b1221"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete Orphaned Dependent CIs for Task">b1129c42530230108cabddeeff7b1275</action_type>
+        <action_type_parent display_value="Delete Orphaned Dependent CIs for Task">ea5e80c2534230108cabddeeff7b1202</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Orphaned Dependent CIs">a0a350c2530230108cabddeeff7b128c</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:08</sys_created_on>
+        <sys_id>78a350c2530230108cabddeeff7b12e2</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 00:13:34</sys_updated_on>
+        <ui_id>4b61e84a-2249-4d01-a691-450a246cbe3c</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=78a350c2530230108cabddeeff7b12e2"/>
+    <sys_element_mapping action="DELETE" query="id=78a350c2530230108cabddeeff7b12e2"/>
+    <sys_element_mapping action="DELETE">
+        <field>task</field>
+        <id>78a350c2530230108cabddeeff7b12e2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:08</sys_created_on>
+        <sys_id>b4a350c2530230108cabddeeff7b12e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:11:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b1129c42530230108cabddeeff7b1275</table>
+        <value>{{subflow.task}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=78a350c2530230108cabddeeff7b12e2"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=78a350c2530230108cabddeeff7b12e2"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=a0a350c2530230108cabddeeff7b128c^sys_idNOT IN44d168ca530230108cabddeeff7b1223,8cd168ca530230108cabddeeff7b1227"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">ec9bf8c0539230108cabddeeff7b120a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Delete Orphaned Dependent CIs">a0a350c2530230108cabddeeff7b128c</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:04</sys_created_on>
+        <sys_id>44d168ca530230108cabddeeff7b1223</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 00:13:34</sys_updated_on>
+        <ui_id>aeebc363-6150-42c4-ba9a-282c09625d01</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=44d168ca530230108cabddeeff7b1223"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>44d168ca530230108cabddeeff7b1223</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:05</sys_created_on>
+        <sys_id>80d168ca530230108cabddeeff7b1227</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:05</sys_updated_on>
+        <value>Check for error</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=44d168ca530230108cabddeeff7b1223"/>
+    <sys_element_mapping action="DELETE">
+        <field>condition</field>
+        <id>44d168ca530230108cabddeeff7b1223</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:05</sys_created_on>
+        <sys_id>00d168ca530230108cabddeeff7b1227</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:05</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{4b61e84a-2249-4d01-a691-450a246cbe3c.error}}=False</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>condition_name</field>
+        <id>44d168ca530230108cabddeeff7b1223</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:05</sys_created_on>
+        <sys_id>4cd168ca530230108cabddeeff7b1226</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:05</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c^id=44d168ca530230108cabddeeff7b1223"/>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=44d168ca530230108cabddeeff7b1223"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=44d168ca530230108cabddeeff7b1223"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">e09bf8c0539230108cabddeeff7b1252</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Delete Orphaned Dependent CIs">a0a350c2530230108cabddeeff7b128c</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned>error,error_message,notes</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:05</sys_created_on>
+        <sys_id>8cd168ca530230108cabddeeff7b1227</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 00:13:34</sys_updated_on>
+        <ui_id>b4d58db7-95ea-47da-8fb0-ab72efa3e648</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=8cd168ca530230108cabddeeff7b1227"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>8cd168ca530230108cabddeeff7b1227</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:05</sys_created_on>
+        <sys_id>8cd168ca530230108cabddeeff7b122b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:05</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Error">e0a350c2530230108cabddeeff7b12ad</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=8cd168ca530230108cabddeeff7b1227"/>
+    <sys_element_mapping action="DELETE">
+        <field>error</field>
+        <id>8cd168ca530230108cabddeeff7b1227</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:05</sys_created_on>
+        <sys_id>0cd168ca530230108cabddeeff7b122b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:05</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c</table>
+        <value>{{4b61e84a-2249-4d01-a691-450a246cbe3c.error}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>error_message</field>
+        <id>8cd168ca530230108cabddeeff7b1227</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:05</sys_created_on>
+        <sys_id>84d168ca530230108cabddeeff7b122b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:05</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c</table>
+        <value>{{4b61e84a-2249-4d01-a691-450a246cbe3c.error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>notes</field>
+        <id>8cd168ca530230108cabddeeff7b1227</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 17:13:05</sys_created_on>
+        <sys_id>48d168ca530230108cabddeeff7b122b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 17:13:05</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c</table>
+        <value>{{4b61e84a-2249-4d01-a691-450a246cbe3c.notes}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=8cd168ca530230108cabddeeff7b1227"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=8cd168ca530230108cabddeeff7b1227"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=a0a350c2530230108cabddeeff7b128c"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=a0a350c2530230108cabddeeff7b128c"/>
+    <sys_hub_flow_variable action="DELETE" query="model=a0a350c2530230108cabddeeff7b128c"/>
+    <sys_documentation action="DELETE">
+        <element>task</element>
+        <help/>
+        <hint/>
+        <label>Task</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a0a350c2530230108cabddeeff7b128c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:07</sys_created_on>
+        <sys_id>eca350c2530230108cabddeeff7b12a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_a0a350c2530230108cabddeeff7b128c_task_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:11:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_a0a350c2530230108cabddeeff7b128c"/>
+    <sys_documentation action="DELETE">
+        <element>error_message</element>
+        <help/>
+        <hint/>
+        <label>Error Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:08</sys_created_on>
+        <sys_id>bca350c2530230108cabddeeff7b12c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Error Message</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c_error_message_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:11:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>error</element>
+        <help/>
+        <hint/>
+        <label>Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:08</sys_created_on>
+        <sys_id>e0a350c2530230108cabddeeff7b12b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Error</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c_error_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:11:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>notes</element>
+        <help/>
+        <hint/>
+        <label>Notes</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:08</sys_created_on>
+        <sys_id>f8a350c2530230108cabddeeff7b12d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notes</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c_notes_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-19 16:11:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>40d0520d538230108cabddeeff7b1223</sys_id>
+        <latest_snapshot>a0a350c2530230108cabddeeff7b128c</latest_snapshot>
+        <compiler_build>glide-Wed_Aug_25_12_34_25_PDT_2021.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=40d0520d538230108cabddeeff7b1223"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=40d0520d538230108cabddeeff7b1223^sys_idNOT IN70a390c2530230108cabddeeff7b1200"/>
+    <sys_flow_subflow_plan action="DELETE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@1bf15ee0</plan>
+        <plan_id display_value="Delete Orphaned Dependent CIs">40d0520d538230108cabddeeff7b1223</plan_id>
+        <snapshot>a0a350c2530230108cabddeeff7b128c</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-19 16:11:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>70a390c2530230108cabddeeff7b1200</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-26 00:13:35</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_40d0520d538230108cabddeeff7b1223</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category display_value="CMDB Dependent CI Deletion"&gt;5c509ec9538230108cabddeeff7b128b&lt;/category&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;This subflow deletes the dependent and orphaned CIs associated with the input task&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority/&gt;&lt;generation_source/&gt;&lt;internal_name&gt;delete_dependent_configuration_items&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"a8a62096-4b25-4b05-8d80-be29af5802d1.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a8a62096-4b25-4b05-8d80-be29af5802d1.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"efaea7e2-597b-4dd4-8bac-1e5ea919c2a5"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"046bc6ab-8b81-477f-ab52-16c7338fa6da"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.error","label":"1➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"ad6bb1de-601b-4c7e-ad5f-4acc9b4b1854"}},{"name":"subflow.task","label":"Input➛Task","reference":"cmdb_data_management_task","reference_display":"CMDB Data Management Task","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"dfd222d8-7a2e-4346-a00a-2ecfff117d18","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"25034439-d7a3-4427-9f94-6e88f51b0aec"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f9aa4f44-f91c-41f9-9a26-c46827f327b0"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.error","label":"1➛Error","reference_display":"Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"6038b3ca-d5fd-4659-a01c-7a0c453d7b62"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"dad3163a-28b7-45f5-a67c-9f5c4811a07e"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"253321cd-9113-4e84-ac9e-3a71fc8874bb"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"bfc9bfd3-0601-4c0b-b5f9-ce2b84bfa38e"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"fe4fda70-91b1-4693-aed5-ea9b02f2a593"}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;a0a350c2530230108cabddeeff7b128c&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Delete Orphaned Dependent CIs&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-16 22:44:07&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;40d0520d538230108cabddeeff7b1223&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Delete Orphaned Dependent CIs&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_40d0520d538230108cabddeeff7b1223&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 10:32:50&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;updation_source/&gt;&lt;version/&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223^id=40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=40d0520d538230108cabddeeff7b1223^sys_idNOT IN8cd0520d538230108cabddeeff7b1223"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;40d0520d538230108cabddeeff7b1223&lt;/id&gt;&lt;name&gt;Delete Dependent Configuration Items&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-16 22:44:07&lt;/sys_created_on&gt;&lt;sys_id&gt;8cd0520d538230108cabddeeff7b1223&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-16 22:44:07&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=8cd0520d538230108cabddeeff7b1223"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=40d0520d538230108cabddeeff7b1223^sys_idNOT IN44b25482530230108cabddeeff7b1276"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=dfd222d8-7a2e-4346-a00a-2ecfff117d18&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;cmdb_data_management_task&lt;/choice_table&gt;&lt;column_label&gt;Task&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;task&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Task&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Delete Orphaned Dependent CIs"&gt;40d0520d538230108cabddeeff7b1223&lt;/model&gt;&lt;model_id&gt;40d0520d538230108cabddeeff7b1223&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_40d0520d538230108cabddeeff7b1223&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="cmdb_data_management_task"&gt;cmdb_data_management_task&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:07:00&lt;/sys_created_on&gt;&lt;sys_id&gt;44b25482530230108cabddeeff7b1276&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:07:01&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=44b25482530230108cabddeeff7b1276"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=40d0520d538230108cabddeeff7b1223^sys_idNOT IN1cb25482530230108cabddeeff7b1296,dcb25482530230108cabddeeff7b1280,dcb25482530230108cabddeeff7b129e"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=4b344e69-2895-4b36-9855-6fe6160c95ba&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Error Message&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;error_message&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Error Message&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Delete Orphaned Dependent CIs"&gt;40d0520d538230108cabddeeff7b1223&lt;/model&gt;&lt;model_id&gt;40d0520d538230108cabddeeff7b1223&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:07:00&lt;/sys_created_on&gt;&lt;sys_id&gt;1cb25482530230108cabddeeff7b1296&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:07:01&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1cb25482530230108cabddeeff7b1296"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=1f33bb80-0fe9-48b2-a131-db9d8e2e249f&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Error&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;error&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value=""&gt;boolean&lt;/internal_type&gt;&lt;label&gt;Error&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Delete Orphaned Dependent CIs"&gt;40d0520d538230108cabddeeff7b1223&lt;/model&gt;&lt;model_id&gt;40d0520d538230108cabddeeff7b1223&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:07:00&lt;/sys_created_on&gt;&lt;sys_id&gt;dcb25482530230108cabddeeff7b1280&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:07:01&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=dcb25482530230108cabddeeff7b1280"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=02f0d757-2f64-4406-9466-6c1eeff1eb7f&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Notes&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;notes&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Delete Orphaned Dependent CIs"&gt;40d0520d538230108cabddeeff7b1223&lt;/model&gt;&lt;model_id&gt;40d0520d538230108cabddeeff7b1223&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;3&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:07:00&lt;/sys_created_on&gt;&lt;sys_id&gt;dcb25482530230108cabddeeff7b129e&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:07:01&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=dcb25482530230108cabddeeff7b129e"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=40d0520d538230108cabddeeff7b1223^sys_idNOT IN72c1e4ca530230108cabddeeff7b12bc,fc739c82530230108cabddeeff7b1241"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Update CMDB Data Management Task"&gt;102aa5d77362201026f6aa114df6a740&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Delete Orphaned Dependent CIs"&gt;40d0520d538230108cabddeeff7b1223&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;aeebc363-6150-42c4-ba9a-282c09625d01&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;72c1e4ca530230108cabddeeff7b12bc&lt;/sys_id&gt;&lt;sys_mod_count&gt;28&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 00:13:35&lt;/sys_updated_on&gt;&lt;ui_id&gt;a8a62096-4b25-4b05-8d80-be29af5802d1&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=72c1e4ca530230108cabddeeff7b12bc"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=72c1e4ca530230108cabddeeff7b12bc"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;cmdb_task&lt;/field&gt;&lt;id&gt;72c1e4ca530230108cabddeeff7b12bc&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;bac1e4ca530230108cabddeeff7b12bd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:12:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740&lt;/table&gt;&lt;value&gt;{{subflow.task}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;notes&lt;/field&gt;&lt;id&gt;72c1e4ca530230108cabddeeff7b12bc&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;7ec1e4ca530230108cabddeeff7b12bd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:12:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740&lt;/table&gt;&lt;value&gt;{{4b61e84a-2249-4d01-a691-450a246cbe3c.notes}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=72c1e4ca530230108cabddeeff7b12bc"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=72c1e4ca530230108cabddeeff7b12bc"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Delete Orphaned Dependent CIs for Task"&gt;b1129c42530230108cabddeeff7b1275&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Delete Orphaned Dependent CIs"&gt;40d0520d538230108cabddeeff7b1223&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:10:19&lt;/sys_created_on&gt;&lt;sys_id&gt;fc739c82530230108cabddeeff7b1241&lt;/sys_id&gt;&lt;sys_mod_count&gt;40&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 00:13:35&lt;/sys_updated_on&gt;&lt;ui_id&gt;4b61e84a-2249-4d01-a691-450a246cbe3c&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=fc739c82530230108cabddeeff7b1241"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=fc739c82530230108cabddeeff7b1241"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task&lt;/field&gt;&lt;id&gt;fc739c82530230108cabddeeff7b1241&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:10:19&lt;/sys_created_on&gt;&lt;sys_id&gt;fc739c82530230108cabddeeff7b1243&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:10:19&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_b1129c42530230108cabddeeff7b1275&lt;/table&gt;&lt;value&gt;{{subflow.task}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=fc739c82530230108cabddeeff7b1241"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=fc739c82530230108cabddeeff7b1241"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=40d0520d538230108cabddeeff7b1223^sys_idNOT IN3ac1e4ca530230108cabddeeff7b12d7,f2c1e4ca530230108cabddeeff7b12b4"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;e09bf8c0539230108cabddeeff7b1252&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Delete Orphaned Dependent CIs"&gt;40d0520d538230108cabddeeff7b1223&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned&gt;error,error_message,notes&lt;/outputs_assigned&gt;&lt;outputs_to_assign/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;3ac1e4ca530230108cabddeeff7b12d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 00:13:35&lt;/sys_updated_on&gt;&lt;ui_id&gt;b4d58db7-95ea-47da-8fb0-ab72efa3e648&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=3ac1e4ca530230108cabddeeff7b12d7"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;3ac1e4ca530230108cabddeeff7b12d7&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;76c1e4ca530230108cabddeeff7b12db&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:12:59&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Error"&gt;dcb25482530230108cabddeeff7b1280&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=3ac1e4ca530230108cabddeeff7b12d7"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;error&lt;/field&gt;&lt;id&gt;3ac1e4ca530230108cabddeeff7b12d7&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;f2c1e4ca530230108cabddeeff7b12db&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:12:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223&lt;/table&gt;&lt;value&gt;{{4b61e84a-2249-4d01-a691-450a246cbe3c.error}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;error_message&lt;/field&gt;&lt;id&gt;3ac1e4ca530230108cabddeeff7b12d7&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;7ec1e4ca530230108cabddeeff7b12da&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:12:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223&lt;/table&gt;&lt;value&gt;{{4b61e84a-2249-4d01-a691-450a246cbe3c.error_message}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;notes&lt;/field&gt;&lt;id&gt;3ac1e4ca530230108cabddeeff7b12d7&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;32c1e4ca530230108cabddeeff7b12db&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:12:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223&lt;/table&gt;&lt;value&gt;{{4b61e84a-2249-4d01-a691-450a246cbe3c.notes}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=3ac1e4ca530230108cabddeeff7b12d7"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=3ac1e4ca530230108cabddeeff7b12d7"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;ec9bf8c0539230108cabddeeff7b120a&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Delete Orphaned Dependent CIs"&gt;40d0520d538230108cabddeeff7b1223&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;f2c1e4ca530230108cabddeeff7b12b4&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 00:13:35&lt;/sys_updated_on&gt;&lt;ui_id&gt;aeebc363-6150-42c4-ba9a-282c09625d01&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=f2c1e4ca530230108cabddeeff7b12b4"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;f2c1e4ca530230108cabddeeff7b12b4&lt;/document_key&gt;&lt;order&gt;10&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;b2c1e4ca530230108cabddeeff7b12b8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:12:59&lt;/sys_updated_on&gt;&lt;value&gt;Check for error&lt;/value&gt;&lt;variable display_value="Condition Label"&gt;f0af19c1c32632002841b63b12d3aea3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=f2c1e4ca530230108cabddeeff7b12b4"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition&lt;/field&gt;&lt;id&gt;f2c1e4ca530230108cabddeeff7b12b4&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;32c1e4ca530230108cabddeeff7b12b8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:12:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value&gt;{{4b61e84a-2249-4d01-a691-450a246cbe3c.error}}=False&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition_name&lt;/field&gt;&lt;id&gt;f2c1e4ca530230108cabddeeff7b12b4&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:12:59&lt;/sys_created_on&gt;&lt;sys_id&gt;7ec1e4ca530230108cabddeeff7b12b7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:12:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223^id=f2c1e4ca530230108cabddeeff7b12b4"/&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=f2c1e4ca530230108cabddeeff7b12b4"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=f2c1e4ca530230108cabddeeff7b12b4"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;task&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Task&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_40d0520d538230108cabddeeff7b1223&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:07:00&lt;/sys_created_on&gt;&lt;sys_id&gt;14b25482530230108cabddeeff7b127e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Task&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_40d0520d538230108cabddeeff7b1223_task_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:07:00&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;error_message&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Error Message&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:07:00&lt;/sys_created_on&gt;&lt;sys_id&gt;18b25482530230108cabddeeff7b129d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Error Message&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223_error_message_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:07:00&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;error&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Error&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:07:00&lt;/sys_created_on&gt;&lt;sys_id&gt;54b25482530230108cabddeeff7b1295&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Error&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223_error_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:07:00&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;notes&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:07:00&lt;/sys_created_on&gt;&lt;sys_id&gt;d8b25482530230108cabddeeff7b12a5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Notes&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223_notes_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:07:00&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category display_value="CMDB Dependent CI Deletion"&gt;5c509ec9538230108cabddeeff7b128b&lt;/category&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;This subflow deletes the dependent and orphaned CIs associated with the input task&lt;/description&gt;&lt;flow_priority/&gt;&lt;internal_name&gt;delete_dependent_configuration_items&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"a8a62096-4b25-4b05-8d80-be29af5802d1.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a8a62096-4b25-4b05-8d80-be29af5802d1.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"efaea7e2-597b-4dd4-8bac-1e5ea919c2a5"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"046bc6ab-8b81-477f-ab52-16c7338fa6da"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.error","label":"1➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"ad6bb1de-601b-4c7e-ad5f-4acc9b4b1854"}},{"name":"subflow.task","label":"Input➛Task","reference":"cmdb_data_management_task","reference_display":"CMDB Data Management Task","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"dfd222d8-7a2e-4346-a00a-2ecfff117d18","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"25034439-d7a3-4427-9f94-6e88f51b0aec"}},{"name":"4b61e84a-2249-4d01-a691-450a246cbe3c.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f9aa4f44-f91c-41f9-9a26-c46827f327b0"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.error","label":"1➛Error","reference_display":"Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","uiUniqueId":"6038b3ca-d5fd-4659-a01c-7a0c453d7b62"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"dad3163a-28b7-45f5-a67c-9f5c4811a07e"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"253321cd-9113-4e84-ac9e-3a71fc8874bb"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"bfc9bfd3-0601-4c0b-b5f9-ce2b84bfa38e"}},{"name":"b460d1db-da29-4f15-91b0-531742432e81.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"fe4fda70-91b1-4693-aed5-ea9b02f2a593"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Delete Orphaned Dependent CIs&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Delete Orphaned Dependent CIs"&gt;40d0520d538230108cabddeeff7b1223&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:07&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;a0a350c2530230108cabddeeff7b128c&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 00:13:34&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;version/&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c^id=a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=a0a350c2530230108cabddeeff7b128c^sys_idNOT INa0a350c2530230108cabddeeff7b128d"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;a0a350c2530230108cabddeeff7b128c&lt;/id&gt;&lt;name&gt;Delete Dependent Configuration Items&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:07&lt;/sys_created_on&gt;&lt;sys_id&gt;a0a350c2530230108cabddeeff7b128d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:11:07&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=a0a350c2530230108cabddeeff7b128d"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=a0a350c2530230108cabddeeff7b128c^sys_idNOT INa8a350c2530230108cabddeeff7b128e"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=dfd222d8-7a2e-4346-a00a-2ecfff117d18&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;cmdb_data_management_task&lt;/choice_table&gt;&lt;column_label&gt;Task&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;task&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Task&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Delete Orphaned Dependent CIs"&gt;a0a350c2530230108cabddeeff7b128c&lt;/model&gt;&lt;model_id&gt;a0a350c2530230108cabddeeff7b128c&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_a0a350c2530230108cabddeeff7b128c&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="cmdb_data_management_task"&gt;cmdb_data_management_task&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:07&lt;/sys_created_on&gt;&lt;sys_id&gt;a8a350c2530230108cabddeeff7b128e&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:05&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a8a350c2530230108cabddeeff7b128e"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=a0a350c2530230108cabddeeff7b128c^sys_idNOT IN34a350c2530230108cabddeeff7b12bc,e0a350c2530230108cabddeeff7b12ad,fca350c2530230108cabddeeff7b12ca"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=4b344e69-2895-4b36-9855-6fe6160c95ba&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Error Message&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;error_message&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Error Message&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Delete Orphaned Dependent CIs"&gt;a0a350c2530230108cabddeeff7b128c&lt;/model&gt;&lt;model_id&gt;a0a350c2530230108cabddeeff7b128c&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:08&lt;/sys_created_on&gt;&lt;sys_id&gt;34a350c2530230108cabddeeff7b12bc&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:05&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=34a350c2530230108cabddeeff7b12bc"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=1f33bb80-0fe9-48b2-a131-db9d8e2e249f&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Error&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;error&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value=""&gt;boolean&lt;/internal_type&gt;&lt;label&gt;Error&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Delete Orphaned Dependent CIs"&gt;a0a350c2530230108cabddeeff7b128c&lt;/model&gt;&lt;model_id&gt;a0a350c2530230108cabddeeff7b128c&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:08&lt;/sys_created_on&gt;&lt;sys_id&gt;e0a350c2530230108cabddeeff7b12ad&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:06&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e0a350c2530230108cabddeeff7b12ad"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=02f0d757-2f64-4406-9466-6c1eeff1eb7f&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Notes&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;notes&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Delete Orphaned Dependent CIs"&gt;a0a350c2530230108cabddeeff7b128c&lt;/model&gt;&lt;model_id&gt;a0a350c2530230108cabddeeff7b128c&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;3&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:08&lt;/sys_created_on&gt;&lt;sys_id&gt;fca350c2530230108cabddeeff7b12ca&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:06&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fca350c2530230108cabddeeff7b12ca"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=a0a350c2530230108cabddeeff7b128c^sys_idNOT IN08d168ca530230108cabddeeff7b1221,78a350c2530230108cabddeeff7b12e2"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Update CMDB Data Management Task"&gt;102aa5d77362201026f6aa114df6a740&lt;/action_type&gt;&lt;action_type_parent display_value="Update CMDB Data Management Task"&gt;e3b921d77362201026f6aa114df6a742&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Delete Orphaned Dependent CIs"&gt;a0a350c2530230108cabddeeff7b128c&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;aeebc363-6150-42c4-ba9a-282c09625d01&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:04&lt;/sys_created_on&gt;&lt;sys_id&gt;08d168ca530230108cabddeeff7b1221&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 00:13:34&lt;/sys_updated_on&gt;&lt;ui_id&gt;a8a62096-4b25-4b05-8d80-be29af5802d1&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=08d168ca530230108cabddeeff7b1221"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=08d168ca530230108cabddeeff7b1221"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;cmdb_task&lt;/field&gt;&lt;id&gt;08d168ca530230108cabddeeff7b1221&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:04&lt;/sys_created_on&gt;&lt;sys_id&gt;c4d168ca530230108cabddeeff7b1222&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:04&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740&lt;/table&gt;&lt;value&gt;{{subflow.task}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;notes&lt;/field&gt;&lt;id&gt;08d168ca530230108cabddeeff7b1221&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:04&lt;/sys_created_on&gt;&lt;sys_id&gt;88d168ca530230108cabddeeff7b1222&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:04&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740&lt;/table&gt;&lt;value&gt;{{4b61e84a-2249-4d01-a691-450a246cbe3c.notes}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=08d168ca530230108cabddeeff7b1221"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=08d168ca530230108cabddeeff7b1221"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Delete Orphaned Dependent CIs for Task"&gt;b1129c42530230108cabddeeff7b1275&lt;/action_type&gt;&lt;action_type_parent display_value="Delete Orphaned Dependent CIs for Task"&gt;ea5e80c2534230108cabddeeff7b1202&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Delete Orphaned Dependent CIs"&gt;a0a350c2530230108cabddeeff7b128c&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:08&lt;/sys_created_on&gt;&lt;sys_id&gt;78a350c2530230108cabddeeff7b12e2&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 00:13:34&lt;/sys_updated_on&gt;&lt;ui_id&gt;4b61e84a-2249-4d01-a691-450a246cbe3c&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=78a350c2530230108cabddeeff7b12e2"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=78a350c2530230108cabddeeff7b12e2"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task&lt;/field&gt;&lt;id&gt;78a350c2530230108cabddeeff7b12e2&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:08&lt;/sys_created_on&gt;&lt;sys_id&gt;b4a350c2530230108cabddeeff7b12e3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:11:08&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_b1129c42530230108cabddeeff7b1275&lt;/table&gt;&lt;value&gt;{{subflow.task}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=78a350c2530230108cabddeeff7b12e2"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=78a350c2530230108cabddeeff7b12e2"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=a0a350c2530230108cabddeeff7b128c^sys_idNOT IN44d168ca530230108cabddeeff7b1223,8cd168ca530230108cabddeeff7b1227"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;ec9bf8c0539230108cabddeeff7b120a&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Delete Orphaned Dependent CIs"&gt;a0a350c2530230108cabddeeff7b128c&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:04&lt;/sys_created_on&gt;&lt;sys_id&gt;44d168ca530230108cabddeeff7b1223&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 00:13:34&lt;/sys_updated_on&gt;&lt;ui_id&gt;aeebc363-6150-42c4-ba9a-282c09625d01&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=44d168ca530230108cabddeeff7b1223"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;44d168ca530230108cabddeeff7b1223&lt;/document_key&gt;&lt;order&gt;10&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:05&lt;/sys_created_on&gt;&lt;sys_id&gt;80d168ca530230108cabddeeff7b1227&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:05&lt;/sys_updated_on&gt;&lt;value&gt;Check for error&lt;/value&gt;&lt;variable display_value="Condition Label"&gt;f0af19c1c32632002841b63b12d3aea3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=44d168ca530230108cabddeeff7b1223"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition&lt;/field&gt;&lt;id&gt;44d168ca530230108cabddeeff7b1223&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:05&lt;/sys_created_on&gt;&lt;sys_id&gt;00d168ca530230108cabddeeff7b1227&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:05&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value&gt;{{4b61e84a-2249-4d01-a691-450a246cbe3c.error}}=False&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition_name&lt;/field&gt;&lt;id&gt;44d168ca530230108cabddeeff7b1223&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:05&lt;/sys_created_on&gt;&lt;sys_id&gt;4cd168ca530230108cabddeeff7b1226&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:05&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c^id=44d168ca530230108cabddeeff7b1223"/&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=44d168ca530230108cabddeeff7b1223"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=44d168ca530230108cabddeeff7b1223"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;e09bf8c0539230108cabddeeff7b1252&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Delete Orphaned Dependent CIs"&gt;a0a350c2530230108cabddeeff7b128c&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned&gt;error,error_message,notes&lt;/outputs_assigned&gt;&lt;outputs_to_assign/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:05&lt;/sys_created_on&gt;&lt;sys_id&gt;8cd168ca530230108cabddeeff7b1227&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 00:13:34&lt;/sys_updated_on&gt;&lt;ui_id&gt;b4d58db7-95ea-47da-8fb0-ab72efa3e648&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=8cd168ca530230108cabddeeff7b1227"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;8cd168ca530230108cabddeeff7b1227&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:05&lt;/sys_created_on&gt;&lt;sys_id&gt;8cd168ca530230108cabddeeff7b122b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:05&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Error"&gt;e0a350c2530230108cabddeeff7b12ad&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=8cd168ca530230108cabddeeff7b1227"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;error&lt;/field&gt;&lt;id&gt;8cd168ca530230108cabddeeff7b1227&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:05&lt;/sys_created_on&gt;&lt;sys_id&gt;0cd168ca530230108cabddeeff7b122b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:05&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c&lt;/table&gt;&lt;value&gt;{{4b61e84a-2249-4d01-a691-450a246cbe3c.error}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;error_message&lt;/field&gt;&lt;id&gt;8cd168ca530230108cabddeeff7b1227&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:05&lt;/sys_created_on&gt;&lt;sys_id&gt;84d168ca530230108cabddeeff7b122b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:05&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c&lt;/table&gt;&lt;value&gt;{{4b61e84a-2249-4d01-a691-450a246cbe3c.error_message}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;notes&lt;/field&gt;&lt;id&gt;8cd168ca530230108cabddeeff7b1227&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 17:13:05&lt;/sys_created_on&gt;&lt;sys_id&gt;48d168ca530230108cabddeeff7b122b&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 17:13:05&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c&lt;/table&gt;&lt;value&gt;{{4b61e84a-2249-4d01-a691-450a246cbe3c.notes}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=8cd168ca530230108cabddeeff7b1227"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=8cd168ca530230108cabddeeff7b1227"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;task&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Task&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_a0a350c2530230108cabddeeff7b128c&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:07&lt;/sys_created_on&gt;&lt;sys_id&gt;eca350c2530230108cabddeeff7b12a7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Task&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_a0a350c2530230108cabddeeff7b128c_task_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:11:07&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;error_message&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Error Message&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:08&lt;/sys_created_on&gt;&lt;sys_id&gt;bca350c2530230108cabddeeff7b12c6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Error Message&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c_error_message_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:11:08&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;error&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Error&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:08&lt;/sys_created_on&gt;&lt;sys_id&gt;e0a350c2530230108cabddeeff7b12b8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Error&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c_error_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:11:08&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;notes&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:08&lt;/sys_created_on&gt;&lt;sys_id&gt;f8a350c2530230108cabddeeff7b12d5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Notes&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c_notes_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-19 16:11:08&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a0a350c2530230108cabddeeff7b128c"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;40d0520d538230108cabddeeff7b1223&lt;/sys_id&gt;&lt;latest_snapshot&gt;a0a350c2530230108cabddeeff7b128c&lt;/latest_snapshot&gt;&lt;compiler_build&gt;glide-Wed_Aug_25_12_34_25_PDT_2021.zip&lt;/compiler_build&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=40d0520d538230108cabddeeff7b1223"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=40d0520d538230108cabddeeff7b1223^sys_idNOT IN70a390c2530230108cabddeeff7b1200"/&gt;&lt;sys_flow_subflow_plan action="INSERT_OR_UPDATE"&gt;&lt;plan&gt;com.snc.process_flow.engine.ProcessPlan@1bf15ee0&lt;/plan&gt;&lt;plan_id display_value="Delete Orphaned Dependent CIs"&gt;40d0520d538230108cabddeeff7b1223&lt;/plan_id&gt;&lt;snapshot&gt;a0a350c2530230108cabddeeff7b128c&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-08-19 16:11:08&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;70a390c2530230108cabddeeff7b1200&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-08-26 00:13:35&lt;/sys_updated_on&gt;&lt;/sys_flow_subflow_plan&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-392070168</payload_hash>
+        <record_name>Delete Orphaned Dependent CIs</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:32:54</sys_created_on>
+        <sys_id>b1f6587aedee03107f44863610ff2195</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb3b846e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:32:54</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>f1f6587a58ee03100fa6e0b44a8f5694</update_guid>
+        <update_guid_history>f1f6587a58ee03100fa6e0b44a8f5694:-392070168,29f6187a55ee0310a3918c90687cd7d2:1743827838</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:37:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>006d5751591341c880037569b1d5a384</sys_id>
+        <sys_metadata>40d0520d538230108cabddeeff7b1223</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Delete Orphaned Dependent CIs</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_40d0520d538230108cabddeeff7b1223</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_40d0520d538230108cabddeeff7b1223">b1f6587aedee03107f44863610ff2195</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:37:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

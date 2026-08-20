@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button_instance">
+    <sys_sg_button_instance action="DELETE">
+        <active>true</active>
+        <button display_value="FG360 Create Food Safety Issues">ab7b773ce1fa03107f44164868fe9580</button>
+        <color_theme/>
+        <description/>
+        <disable_offline>false</disable_offline>
+        <field_name/>
+        <icon display_value="Quick Action - Report an Issue">6587291d87423300e0ef0cf888cb0b1f</icon>
+        <label>Issue</label>
+        <location>footer</location>
+        <name>Issue</name>
+        <order/>
+        <parent>2e429bafe92a03107f44cf798e4159ec</parent>
+        <parent_table>sys_sg_list_screen</parent_table>
+        <sys_class_name>sys_sg_button_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 08:53:46</sys_created_on>
+        <sys_id>0e63444de13e03107f44164868fe9585</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Issue</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_button_instance_0e63444de13e03107f44164868fe9585</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 08:53:46</sys_updated_on>
+        <table/>
+    </sys_sg_button_instance>
+    <sys_translated_text action="DELETE" query="documentkey=0e63444de13e03107f44164868fe9585"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_sg_button_instance_0e63444de13e03107f44164868fe9585</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button_instance"><sys_sg_button_instance action="INSERT_OR_UPDATE"><active>true</active><button display_value="FG360 Create Food Safety Issues">ab7b773ce1fa03107f44164868fe9580</button><color_theme/><description/><disable_offline>false</disable_offline><field_name/><icon display_value="Quick Action - Report an Issue">6587291d87423300e0ef0cf888cb0b1f</icon><label>Issue</label><location>footer</location><name>Issue</name><order/><parent>2e429bafe92a03107f44cf798e4159ec</parent><parent_table>sys_sg_list_screen</parent_table><sys_class_name>sys_sg_button_instance</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-17 08:53:46</sys_created_on><sys_id>0e63444de13e03107f44164868fe9585</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Issue</sys_name><sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package><sys_policy/><sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope><sys_update_name>sys_sg_button_instance_0e63444de13e03107f44164868fe9585</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-17 08:53:46</sys_updated_on><table/></sys_sg_button_instance><sys_translated_text action="delete_multiple" query="documentkey=0e63444de13e03107f44164868fe9585"/></record_update>]]></payload>
+        <payload_hash>-146512413</payload_hash>
+        <record_name>Issue</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 08:53:46</sys_created_on>
+        <sys_id>de63444de13e03107f44164868fe9588</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a00eed48350000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 08:53:46</sys_updated_on>
+        <type>Function instance</type>
+        <update_guid>de63444db03e03101503cd9a2fa96687</update_guid>
+        <update_guid_history>de63444db03e03101503cd9a2fa96687:-146512413</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 08:56:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_button_instance">sys_sg_button_instance</sys_db_object>
+        <sys_id>312c27ad768345aa850c86804efbc2c4</sys_id>
+        <sys_metadata>0e63444de13e03107f44164868fe9585</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Issue</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_sg_button_instance_0e63444de13e03107f44164868fe9585</sys_update_name>
+        <sys_update_version display_value="sys_sg_button_instance_0e63444de13e03107f44164868fe9585">de63444de13e03107f44164868fe9588</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 08:56:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

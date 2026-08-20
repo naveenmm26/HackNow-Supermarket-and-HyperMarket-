@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_fresh_guard_360.FreshGuard360DashboardData</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>FreshGuard360DashboardData</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var FreshGuard360DashboardData = Class.create();
+FreshGuard360DashboardData.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getDashboardMetrics: function() {
+        var result = { kpis: {}, tables: {} };
+        result.kpis.totalStores = this._getCount("x_fresh_guard_360_store", "");
+        result.kpis.checklistsCompleted = this._getCount("x_fresh_guard_360_daily_checklist", "");
+        result.kpis.openIssues = this._getCount("x_fresh_guard_360_issue", "");
+        result.kpis.highRisks = this._getCount("x_fresh_guard_360_issue", "risk_level=high^ORrisk_level=critical^ORpriority=1^ORpriority=2");
+        result.kpis.overdueCapa = this._getCount("x_fresh_guard_360_capa", "status!=completed^status!=closed");
+        result.kpis.openMaintenance = this._getCount("x_fresh_guard_360_maintenance_ticket", "state!=3^state!=4");
+        return JSON.stringify(result);
+    },
+    _getCount: function(tableName, query) {
+        try {
+            var ga = new GlideAggregate(tableName);
+            if (query) ga.addEncodedQuery(query);
+            ga.addAggregate("COUNT");
+            ga.query();
+            return ga.next() ? parseInt(ga.getAggregate("COUNT"), 10) : 0;
+        } catch (e) { return 0; }
+    },
+    type: "FreshGuard360DashboardData"
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 16:24:31</sys_created_on>
+        <sys_id>16013a4b09a203107f446356e0e8d830</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FreshGuard360DashboardData</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_script_include_16013a4b09a203107f446356e0e8d830</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 16:36:11</sys_updated_on>
+    </sys_script_include>
+</record_update>

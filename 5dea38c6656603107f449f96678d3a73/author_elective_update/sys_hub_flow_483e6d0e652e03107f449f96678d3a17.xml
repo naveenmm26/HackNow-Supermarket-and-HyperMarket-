@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Automates daily food safety checklist processing, identifies inspection failures, auto-creates High-risk Food Safety Issues, and dispatches officer alerts.</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>x_fresh_guard_360_daily_checklist_processor</internal_name>
+        <label_cache/>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Fresh Guard 360 - Daily Checklist Submission &amp; Failure Handling</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 08:58:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>483e6d0e652e03107f449f96678d3a17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fresh Guard 360 - Daily Checklist Submission &amp; Failure Handling</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_483e6d0e652e03107f449f96678d3a17</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 08:58:32</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>1</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_variable_value action="DELETE" query="document_key=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=483e6d0e652e03107f449f96678d3a17^sys_idNOT IN803e6d0e652e03107f449f96678d3a1b"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>483e6d0e652e03107f449f96678d3a17</id>
+        <name>Fresh Guard 360 - Daily Checklist Submission &amp; Failure Handling</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 08:58:32</sys_created_on>
+        <sys_id>803e6d0e652e03107f449f96678d3a1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 08:58:32</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=803e6d0e652e03107f449f96678d3a1b"/>
+    <sys_hub_flow_input action="DELETE" query="model=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_hub_flow_output action="DELETE" query="model=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_hub_action_instance action="DELETE" query="flow=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_hub_flow_variable action="DELETE" query="model=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_483e6d0e652e03107f449f96678d3a17"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_483e6d0e652e03107f449f96678d3a17"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=483e6d0e652e03107f449f96678d3a17"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_483e6d0e652e03107f449f96678d3a17</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow"><sys_hub_flow action="INSERT_OR_UPDATE"><access>public</access><acls/><active>true</active><allow_high_security_roles>false</allow_high_security_roles><annotation/><attributes/><authored_on_release_version/><callable_by_client_api>false</callable_by_client_api><category/><compiler_build/><copied_from/><copied_from_name/><description>Automates daily food safety checklist processing, identifies inspection failures, auto-creates High-risk Food Safety Issues, and dispatches officer alerts.</description><display_name_after_preview/><flow_priority/><generation_source/><internal_name>x_fresh_guard_360_daily_checklist_processor</internal_name><label_cache/><latest_snapshot/><master_snapshot/><master_snapshot_digest/><name>Fresh Guard 360 - Daily Checklist Submission &amp; Failure Handling</name><natlang/><outputs/><pre_compiled>false</pre_compiled><remote_trigger_id/><run_as>user</run_as><run_with_roles/><sc_callable>false</sc_callable><show_draft_actions>false</show_draft_actions><show_triggered_flows>false</show_triggered_flows><status>draft</status><substatus/><sys_class_name>sys_hub_flow</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-08 08:58:32</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>483e6d0e652e03107f449f96678d3a17</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Fresh Guard 360 - Daily Checklist Submission &amp; Failure Handling</sys_name><sys_overrides/><sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package><sys_policy/><sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope><sys_update_name>sys_hub_flow_483e6d0e652e03107f449f96678d3a17</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-08 08:58:32</sys_updated_on><type>flow</type><updation_source/><version>1</version><version_record/></sys_hub_flow><sys_translated_text action="delete_multiple" query="documentkey=483e6d0e652e03107f449f96678d3a17"/><sys_variable_value action="delete_multiple" query="document_key=483e6d0e652e03107f449f96678d3a17"/><sys_hub_flow_stage action="delete_multiple" query="flow=483e6d0e652e03107f449f96678d3a17"/><sys_flow_cat_variable_model action="delete_multiple" query="id=483e6d0e652e03107f449f96678d3a17^sys_idNOT IN803e6d0e652e03107f449f96678d3a1b"/><sys_flow_cat_variable_model action="INSERT_OR_UPDATE"><id>483e6d0e652e03107f449f96678d3a17</id><name>Fresh Guard 360 - Daily Checklist Submission &amp; Failure Handling</name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-08 08:58:32</sys_created_on><sys_id>803e6d0e652e03107f449f96678d3a1b</sys_id><sys_mod_count>0</sys_mod_count><sys_scope/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-08 08:58:32</sys_updated_on></sys_flow_cat_variable_model><sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=803e6d0e652e03107f449f96678d3a1b"/><sys_hub_flow_input action="delete_multiple" query="model=483e6d0e652e03107f449f96678d3a17"/><sys_hub_flow_output action="delete_multiple" query="model=483e6d0e652e03107f449f96678d3a17"/><sys_hub_alias_mapping action="delete_multiple" query="source_id=483e6d0e652e03107f449f96678d3a17"/><sys_hub_trigger_instance action="delete_multiple" query="flow=483e6d0e652e03107f449f96678d3a17"/><sys_hub_action_instance action="delete_multiple" query="flow=483e6d0e652e03107f449f96678d3a17"/><sys_hub_flow_logic action="delete_multiple" query="flow=483e6d0e652e03107f449f96678d3a17"/><sys_hub_sub_flow_instance action="delete_multiple" query="flow=483e6d0e652e03107f449f96678d3a17"/><sys_hub_pill_compound action="delete_multiple" query="attached_to=483e6d0e652e03107f449f96678d3a17"/><sys_hub_flow_variable action="delete_multiple" query="model=483e6d0e652e03107f449f96678d3a17"/><sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_483e6d0e652e03107f449f96678d3a17"/><sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_483e6d0e652e03107f449f96678d3a17"/><sys_flow_trigger_plan action="delete_multiple" query="plan_id=483e6d0e652e03107f449f96678d3a17"/><sys_flow_subflow_plan action="delete_multiple" query="plan_id=483e6d0e652e03107f449f96678d3a17"/></record_update>]]></payload>
+        <payload_hash>2078956064</payload_hash>
+        <record_name>Fresh Guard 360 - Daily Checklist Submission &amp; Failure Handling</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 08:58:33</sys_created_on>
+        <sys_id>903e6d0e652e03107f449f96678d3a23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fe0986b010000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 08:58:33</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>503e6d0ea12e0310ae18ef94be1a4e22</update_guid>
+        <update_guid_history>503e6d0ea12e0310ae18ef94be1a4e22:2078956064</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 09:22:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>8a1617f9e03e435d9c94a41d3ae10639</sys_id>
+        <sys_metadata>483e6d0e652e03107f449f96678d3a17</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fresh Guard 360 - Daily Checklist Submission &amp; Failure Handling</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_483e6d0e652e03107f449f96678d3a17</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_483e6d0e652e03107f449f96678d3a17">903e6d0e652e03107f449f96678d3a23</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 09:22:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

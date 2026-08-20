@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_data_item">
-  <sys_sg_data_item action="INSERT_OR_UPDATE">
-    <sys_id>c286a9db19e203107f449316be92e17e</sys_id>
-    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
-    <sys_update_name>sys_sg_data_item_c286a9db19e203107f449316be92e17e</sys_update_name>
-    <condition_type>declarative</condition_type>
-    <name>FG360 Mobile - Near Expiry Products</name>
-    <query_condition>u_safety_status=expired^EQ</query_condition>
-    <table>x_fresh_guard_360_product</table>
-  </sys_sg_data_item>
+    <sys_sg_data_item action="INSERT_OR_UPDATE">
+        <condition_type>declarative</condition_type>
+        <description/>
+        <group_by/>
+        <instance_relative_url_qc/>
+        <name>FG360 Mobile - Near Expiry Products</name>
+        <offline_query_condition/>
+        <offline_query_condition_script/>
+        <query_condition table="x_fresh_guard_360_product">u_safety_status=expired^EQ<item display_value="Expired" endquery="false" field="u_safety_status" goto="false" newquery="false" operator="=" or="false" value="expired"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </query_condition>
+        <query_condition_script/>
+        <sys_class_name>sys_sg_data_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 05:37:28</sys_created_on>
+        <sys_id>c286a9db19e203107f449316be92e17e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>FG360 Mobile - Near Expiry Products</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_data_item_c286a9db19e203107f449316be92e17e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 05:00:19</sys_updated_on>
+        <table>x_fresh_guard_360_product</table>
+    </sys_sg_data_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=c286a9db19e203107f449316be92e17e"/>
 </record_update>

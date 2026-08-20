@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>package_private</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=6689378000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>create_level_2_result_from_level_1</internal_name>
+        <label_cache>[{"name":"subflow.level_one_sys_id","label":"Input➛level_one_sys_id","type":"string","base_type":"string","usedInstances":{"7106ab0e-7887-4a03-880b-e0d166125392":["level_one_sys_id"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"1cf7821d-3e93-414a-a04f-c06260a38ec6"}}]</label_cache>
+        <master_snapshot>bd3b23c5a3bb9e10883c25d1d71e61fe</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Create level 2 result from level 1</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:12:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>616a2345a3bb9e10883c25d1d71e61b0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Create level 2 result from level 1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_616a2345a3bb9e10883c25d1d71e61b0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:36:02</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_variable_value action="DELETE" query="document_key=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=616a2345a3bb9e10883c25d1d71e61b0^sys_idNOT IN656a2345a3bb9e10883c25d1d71e61b2"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>616a2345a3bb9e10883c25d1d71e61b0</id>
+        <name>Create level 2 result from level 1</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:12:20</sys_created_on>
+        <sys_id>656a2345a3bb9e10883c25d1d71e61b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-17 06:12:20</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=656a2345a3bb9e10883c25d1d71e61b2"/>
+    <sys_hub_flow_input action="DELETE" query="model=616a2345a3bb9e10883c25d1d71e61b0^sys_idNOT IN653bef85a3bb9e10883c25d1d71e6126"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1cf7821d-3e93-414a-a04f-c06260a38ec6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>level_one_sys_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>level_one_sys_id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create level 2 result from level 1">616a2345a3bb9e10883c25d1d71e61b0</model>
+        <model_id>616a2345a3bb9e10883c25d1d71e61b0</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_616a2345a3bb9e10883c25d1d71e61b0</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:15:53</sys_created_on>
+        <sys_id>653bef85a3bb9e10883c25d1d71e6126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Now Assist Skill Kit">3c4af9c2cbb27fe5ddfa33fe34444568</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-17 06:15:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=653bef85a3bb9e10883c25d1d71e6126"/>
+    <sys_hub_flow_output action="DELETE" query="model=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=616a2345a3bb9e10883c25d1d71e61b0^sys_idNOT INf93b23c5a3bb9e10883c25d1d71e61db"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create level 2 result from level 1">2c2bab85a3bb9e10883c25d1d71e6190</action_type>
+        <action_type_parent display_value="Create level 2 result from level 1">d38a6b45a3bb9e10883c25d1d71e61fd</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Create level 2 result from level 1">616a2345a3bb9e10883c25d1d71e61b0</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:15:53</sys_created_on>
+        <sys_id>f93b23c5a3bb9e10883c25d1d71e61db</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Assist Skill Kit">3c4af9c2cbb27fe5ddfa33fe34444568</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-05 16:21:58</sys_updated_on>
+        <ui_id>7106ab0e-7887-4a03-880b-e0d166125392</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41SW2vbMBT+L3p2jJ3GrZO3QSkUthbarS+lmCPpOBHIkqpL2izkv+8odjIIG/RR37l8l6PXPVOSrRgs5hx428AV50usq7a9EvNG1vKmxut6uWAFMzAgdWrcou6swS7sQkfDBduCTrm034fEe20/ysumw4HapApOw+7la91io7T0aNjq9a1gDjzRR/Rstb8oxZ3DTgNHTUufo1dmTeNfdXUa/Iet/xvOlFQJJzLrZVZWFww/IxqJRN6DDliwAYyEaP3ujHgE+Wj0X2CjTKRtLDd/BvWbVrdVVeXOHsmmwLF6fnZTkiMsNlYJfHRRWTMiEbieZoTVaTAPo5N8A+wh6Xi6ASEp0D50WXWWMWnqnzf24+lEeKfM0eBU1FaAPr8gUgw8RQz5Nkn9vAhnRL5fHgg1DsTYDeAcIZ3zdquOLCR6KNeaHmX+HqQuqLUpQWSHJaUJ5R3ht0f4BbzKdn/QGhrOdL+Mek94nz8AX3Ahq4bPqpr3s0UvmhlAu5zVtaz6pmpwXnN2OEbbvadsagxpiqMbE6WGILxy8RtJ2OLk/PD2B0geDmM9AwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=f93b23c5a3bb9e10883c25d1d71e61db"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_hub_flow_variable action="DELETE" query="model=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_documentation action="DELETE">
+        <element>level_one_sys_id</element>
+        <help/>
+        <hint/>
+        <label>level_one_sys_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_616a2345a3bb9e10883c25d1d71e61b0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:15:53</sys_created_on>
+        <sys_id>e53bef85a3bb9e10883c25d1d71e6129</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>level_one_sys_id</sys_name>
+        <sys_package display_value="Now Assist Skill Kit" source="sn_skill_builder">3c4af9c2cbb27fe5ddfa33fe34444568</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Now Assist Skill Kit">3c4af9c2cbb27fe5ddfa33fe34444568</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_616a2345a3bb9e10883c25d1d71e61b0_level_one_sys_id_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-17 06:15:53</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>package_private</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>create_level_2_result_from_level_1</internal_name>
+        <label_cache>[{"name":"subflow.level_one_sys_id","label":"Input➛level_one_sys_id","type":"string","base_type":"string","usedInstances":{"7106ab0e-7887-4a03-880b-e0d166125392":["level_one_sys_id"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"1cf7821d-3e93-414a-a04f-c06260a38ec6"}}]</label_cache>
+        <master>true</master>
+        <name>Create level 2 result from level 1</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Create level 2 result from level 1">616a2345a3bb9e10883c25d1d71e61b0</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:15:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bd3b23c5a3bb9e10883c25d1d71e61fe</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Now Assist Skill Kit">3c4af9c2cbb27fe5ddfa33fe34444568</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-05 16:21:59</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_variable_value action="DELETE" query="document_key=bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=bd3b23c5a3bb9e10883c25d1d71e61fe^sys_idNOT INbd3b23c5a3bb9e10883c25d1d71e61ff"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>bd3b23c5a3bb9e10883c25d1d71e61fe</id>
+        <name>Create level 2 result from level 1</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:15:54</sys_created_on>
+        <sys_id>bd3b23c5a3bb9e10883c25d1d71e61ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-17 06:15:54</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=bd3b23c5a3bb9e10883c25d1d71e61ff"/>
+    <sys_hub_flow_input action="DELETE" query="model=bd3b23c5a3bb9e10883c25d1d71e61fe^sys_idNOT INf13b63c5a3bb9e10883c25d1d71e6101"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1cf7821d-3e93-414a-a04f-c06260a38ec6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>level_one_sys_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>level_one_sys_id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create level 2 result from level 1">bd3b23c5a3bb9e10883c25d1d71e61fe</model>
+        <model_id>bd3b23c5a3bb9e10883c25d1d71e61fe</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_bd3b23c5a3bb9e10883c25d1d71e61fe</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:15:54</sys_created_on>
+        <sys_id>f13b63c5a3bb9e10883c25d1d71e6101</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Now Assist Skill Kit">3c4af9c2cbb27fe5ddfa33fe34444568</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-17 06:15:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=f13b63c5a3bb9e10883c25d1d71e6101"/>
+    <sys_hub_flow_output action="DELETE" query="model=bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=bd3b23c5a3bb9e10883c25d1d71e61fe^sys_idNOT IN393b63c5a3bb9e10883c25d1d71e610f"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create level 2 result from level 1">2c2bab85a3bb9e10883c25d1d71e6190</action_type>
+        <action_type_parent display_value="Create level 2 result from level 1">d38a6b45a3bb9e10883c25d1d71e61fd</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2c2bab85a3bb9e10883c25d1d71e6190</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Create level 2 result from level 1">bd3b23c5a3bb9e10883c25d1d71e61fe</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:15:54</sys_created_on>
+        <sys_id>393b63c5a3bb9e10883c25d1d71e610f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Assist Skill Kit">3c4af9c2cbb27fe5ddfa33fe34444568</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-17 06:15:54</sys_updated_on>
+        <ui_id>7106ab0e-7887-4a03-880b-e0d166125392</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41SXW/bMAz8L3p2DDuNVydvQ4sCA7YVaNe+FIVBSXQiQJZcfaTNjPz3UrGTDtkG9JHHI3l30tPAlGQrBos5B15XcMH5Esuiri/EvJKlvCzxS7lcsIwZ6JCYGreoG2uw8Tvf0HDGtqBjag2Dj7zV9jU/J+33RJPK9xp2j59ji43S0qFhq6fnjPXg6HxAx1bDWeuz+jVw1P828H9rYdenjg9OmfVUf58W3R9B62QSVmYM3wIaiaSoBe0xYx0YCcG63QlxCPLW6A9go0ygbSyR37z6TffqoigSs0VyKXDsnspmCnKE22sIQFKiCNFNVLGxSqAf85HYQtTh6k9sJNz2QVkzjgTg+jhtdezMzzETdlpwfDdCoicR2CerSftkpL3f2Ne7o8obZQ6pTE1tBehTBYGy4zEkPQOL6tdZzCPyV9CosaOLTQd9T0jTO7tVhyskusvXmoo8fSlS59Xa5CCSw5yeAPIbwq8P8CM4lez+oDU0nM49GPUS8Vv6SnzBhSwqPitK3s4WrahmAPVyVpayaKuiwnnJ2T5j9EeuNHj/ERS9UPMSk80xtimgZsw4jQin+vCVRG1xymL//A5RZ97hgwMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=393b63c5a3bb9e10883c25d1d71e610f"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_hub_flow_variable action="DELETE" query="model=bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_documentation action="DELETE">
+        <element>level_one_sys_id</element>
+        <help/>
+        <hint/>
+        <label>level_one_sys_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_bd3b23c5a3bb9e10883c25d1d71e61fe</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:15:54</sys_created_on>
+        <sys_id>f93b63c5a3bb9e10883c25d1d71e6108</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>level_one_sys_id</sys_name>
+        <sys_package display_value="Now Assist Skill Kit" source="sn_skill_builder">3c4af9c2cbb27fe5ddfa33fe34444568</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Now Assist Skill Kit">3c4af9c2cbb27fe5ddfa33fe34444568</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_bd3b23c5a3bb9e10883c25d1d71e61fe_level_one_sys_id_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-17 06:15:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_bd3b23c5a3bb9e10883c25d1d71e61fe"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>616a2345a3bb9e10883c25d1d71e61b0</sys_id>
+        <latest_snapshot>bd3b23c5a3bb9e10883c25d1d71e61fe</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=616a2345a3bb9e10883c25d1d71e61b0"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=616a2345a3bb9e10883c25d1d71e61b0^sys_idNOT IN4a3b63c5a3bb9e10883c25d1d71e6118"/>
+    <sys_flow_subflow_plan action="DELETE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@77c983a8</plan>
+        <plan_id display_value="Create level 2 result from level 1">616a2345a3bb9e10883c25d1d71e61b0</plan_id>
+        <snapshot>bd3b23c5a3bb9e10883c25d1d71e61fe</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-17 06:15:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4a3b63c5a3bb9e10883c25d1d71e6118</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-05 16:21:59</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_616a2345a3bb9e10883c25d1d71e61b0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=6689378000,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;27000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;create_level_2_result_from_level_1&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"subflow.level_one_sys_id","label":"Input➛level_one_sys_id","type":"string","base_type":"string","usedInstances":{"7106ab0e-7887-4a03-880b-e0d166125392":["level_one_sys_id"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"1cf7821d-3e93-414a-a04f-c06260a38ec6"}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;bd3b23c5a3bb9e10883c25d1d71e61fe&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Create level 2 result from level 1&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:12:20&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;616a2345a3bb9e10883c25d1d71e61b0&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Create level 2 result from level 1&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_616a2345a3bb9e10883c25d1d71e61b0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 10:36:02&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=616a2345a3bb9e10883c25d1d71e61b0^sys_idNOT IN656a2345a3bb9e10883c25d1d71e61b2"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;616a2345a3bb9e10883c25d1d71e61b0&lt;/id&gt;&lt;name&gt;Create level 2 result from level 1&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:12:20&lt;/sys_created_on&gt;&lt;sys_id&gt;656a2345a3bb9e10883c25d1d71e61b2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-17 06:12:20&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=656a2345a3bb9e10883c25d1d71e61b2"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=616a2345a3bb9e10883c25d1d71e61b0^sys_idNOT IN653bef85a3bb9e10883c25d1d71e6126"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1cf7821d-3e93-414a-a04f-c06260a38ec6&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;level_one_sys_id&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;level_one_sys_id&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Create level 2 result from level 1"&gt;616a2345a3bb9e10883c25d1d71e61b0&lt;/model&gt;&lt;model_id&gt;616a2345a3bb9e10883c25d1d71e61b0&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_616a2345a3bb9e10883c25d1d71e61b0&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:15:53&lt;/sys_created_on&gt;&lt;sys_id&gt;653bef85a3bb9e10883c25d1d71e6126&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Now Assist Skill Kit"&gt;3c4af9c2cbb27fe5ddfa33fe34444568&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-17 06:15:53&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=653bef85a3bb9e10883c25d1d71e6126"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=616a2345a3bb9e10883c25d1d71e61b0^sys_idNOT INf93b23c5a3bb9e10883c25d1d71e61db"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create level 2 result from level 1"&gt;2c2bab85a3bb9e10883c25d1d71e6190&lt;/action_type&gt;&lt;action_type_parent display_value="Create level 2 result from level 1"&gt;d38a6b45a3bb9e10883c25d1d71e61fd&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Create level 2 result from level 1"&gt;616a2345a3bb9e10883c25d1d71e61b0&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:15:53&lt;/sys_created_on&gt;&lt;sys_id&gt;f93b23c5a3bb9e10883c25d1d71e61db&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist Skill Kit"&gt;3c4af9c2cbb27fe5ddfa33fe34444568&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-05-05 16:21:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;7106ab0e-7887-4a03-880b-e0d166125392&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/41SW2vbMBT+L3p2jJ3GrZO3QSkUthbarS+lmCPpOBHIkqpL2izkv+8odjIIG/RR37l8l6PXPVOSrRgs5hx428AV50usq7a9EvNG1vKmxut6uWAFMzAgdWrcou6swS7sQkfDBduCTrm034fEe20/ysumw4HapApOw+7la91io7T0aNjq9a1gDjzRR/Rstb8oxZ3DTgNHTUufo1dmTeNfdXUa/Iet/xvOlFQJJzLrZVZWFww/IxqJRN6DDliwAYyEaP3ujHgE+Wj0X2CjTKRtLDd/BvWbVrdVVeXOHsmmwLF6fnZTkiMsNlYJfHRRWTMiEbieZoTVaTAPo5N8A+wh6Xi6ASEp0D50WXWWMWnqnzf24+lEeKfM0eBU1FaAPr8gUgw8RQz5Nkn9vAhnRL5fHgg1DsTYDeAcIZ3zdquOLCR6KNeaHmX+HqQuqLUpQWSHJaUJ5R3ht0f4BbzKdn/QGhrOdL+Mek94nz8AX3Ahq4bPqpr3s0UvmhlAu5zVtaz6pmpwXnN2OEbbvadsagxpiqMbE6WGILxy8RtJ2OLk/PD2B0geDmM9AwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=f93b23c5a3bb9e10883c25d1d71e61db"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;level_one_sys_id&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;level_one_sys_id&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_616a2345a3bb9e10883c25d1d71e61b0&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:15:53&lt;/sys_created_on&gt;&lt;sys_id&gt;e53bef85a3bb9e10883c25d1d71e6129&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;level_one_sys_id&lt;/sys_name&gt;&lt;sys_package display_value="Now Assist Skill Kit" source="sn_skill_builder"&gt;3c4af9c2cbb27fe5ddfa33fe34444568&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Now Assist Skill Kit"&gt;3c4af9c2cbb27fe5ddfa33fe34444568&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_616a2345a3bb9e10883c25d1d71e61b0_level_one_sys_id_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-17 06:15:53&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;27000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;internal_name&gt;create_level_2_result_from_level_1&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"subflow.level_one_sys_id","label":"Input➛level_one_sys_id","type":"string","base_type":"string","usedInstances":{"7106ab0e-7887-4a03-880b-e0d166125392":["level_one_sys_id"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"1cf7821d-3e93-414a-a04f-c06260a38ec6"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Create level 2 result from level 1&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Create level 2 result from level 1"&gt;616a2345a3bb9e10883c25d1d71e61b0&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:15:54&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;bd3b23c5a3bb9e10883c25d1d71e61fe&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Now Assist Skill Kit"&gt;3c4af9c2cbb27fe5ddfa33fe34444568&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-05-05 16:21:59&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=bd3b23c5a3bb9e10883c25d1d71e61fe^sys_idNOT INbd3b23c5a3bb9e10883c25d1d71e61ff"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;bd3b23c5a3bb9e10883c25d1d71e61fe&lt;/id&gt;&lt;name&gt;Create level 2 result from level 1&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:15:54&lt;/sys_created_on&gt;&lt;sys_id&gt;bd3b23c5a3bb9e10883c25d1d71e61ff&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-17 06:15:54&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=bd3b23c5a3bb9e10883c25d1d71e61ff"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=bd3b23c5a3bb9e10883c25d1d71e61fe^sys_idNOT INf13b63c5a3bb9e10883c25d1d71e6101"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1cf7821d-3e93-414a-a04f-c06260a38ec6&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;level_one_sys_id&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;level_one_sys_id&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Create level 2 result from level 1"&gt;bd3b23c5a3bb9e10883c25d1d71e61fe&lt;/model&gt;&lt;model_id&gt;bd3b23c5a3bb9e10883c25d1d71e61fe&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_bd3b23c5a3bb9e10883c25d1d71e61fe&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:15:54&lt;/sys_created_on&gt;&lt;sys_id&gt;f13b63c5a3bb9e10883c25d1d71e6101&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Now Assist Skill Kit"&gt;3c4af9c2cbb27fe5ddfa33fe34444568&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-17 06:15:54&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f13b63c5a3bb9e10883c25d1d71e6101"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=bd3b23c5a3bb9e10883c25d1d71e61fe^sys_idNOT IN393b63c5a3bb9e10883c25d1d71e610f"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create level 2 result from level 1"&gt;2c2bab85a3bb9e10883c25d1d71e6190&lt;/action_type&gt;&lt;action_type_parent display_value="Create level 2 result from level 1"&gt;d38a6b45a3bb9e10883c25d1d71e61fd&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2c2bab85a3bb9e10883c25d1d71e6190&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Create level 2 result from level 1"&gt;bd3b23c5a3bb9e10883c25d1d71e61fe&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:15:54&lt;/sys_created_on&gt;&lt;sys_id&gt;393b63c5a3bb9e10883c25d1d71e610f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist Skill Kit"&gt;3c4af9c2cbb27fe5ddfa33fe34444568&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-17 06:15:54&lt;/sys_updated_on&gt;&lt;ui_id&gt;7106ab0e-7887-4a03-880b-e0d166125392&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/41SXW/bMAz8L3p2DDuNVydvQ4sCA7YVaNe+FIVBSXQiQJZcfaTNjPz3UrGTDtkG9JHHI3l30tPAlGQrBos5B15XcMH5Esuiri/EvJKlvCzxS7lcsIwZ6JCYGreoG2uw8Tvf0HDGtqBjag2Dj7zV9jU/J+33RJPK9xp2j59ji43S0qFhq6fnjPXg6HxAx1bDWeuz+jVw1P828H9rYdenjg9OmfVUf58W3R9B62QSVmYM3wIaiaSoBe0xYx0YCcG63QlxCPLW6A9go0ygbSyR37z6TffqoigSs0VyKXDsnspmCnKE22sIQFKiCNFNVLGxSqAf85HYQtTh6k9sJNz2QVkzjgTg+jhtdezMzzETdlpwfDdCoicR2CerSftkpL3f2Ne7o8obZQ6pTE1tBehTBYGy4zEkPQOL6tdZzCPyV9CosaOLTQd9T0jTO7tVhyskusvXmoo8fSlS59Xa5CCSw5yeAPIbwq8P8CM4lez+oDU0nM49GPUS8Vv6SnzBhSwqPitK3s4WrahmAPVyVpayaKuiwnnJ2T5j9EeuNHj/ERS9UPMSk80xtimgZsw4jQin+vCVRG1xymL//A5RZ97hgwMAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=393b63c5a3bb9e10883c25d1d71e610f"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;level_one_sys_id&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;level_one_sys_id&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_bd3b23c5a3bb9e10883c25d1d71e61fe&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:15:54&lt;/sys_created_on&gt;&lt;sys_id&gt;f93b63c5a3bb9e10883c25d1d71e6108&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;level_one_sys_id&lt;/sys_name&gt;&lt;sys_package display_value="Now Assist Skill Kit" source="sn_skill_builder"&gt;3c4af9c2cbb27fe5ddfa33fe34444568&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Now Assist Skill Kit"&gt;3c4af9c2cbb27fe5ddfa33fe34444568&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_bd3b23c5a3bb9e10883c25d1d71e61fe_level_one_sys_id_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-17 06:15:54&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_bd3b23c5a3bb9e10883c25d1d71e61fe"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;616a2345a3bb9e10883c25d1d71e61b0&lt;/sys_id&gt;&lt;latest_snapshot&gt;bd3b23c5a3bb9e10883c25d1d71e61fe&lt;/latest_snapshot&gt;&lt;compiler_build/&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=616a2345a3bb9e10883c25d1d71e61b0"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=616a2345a3bb9e10883c25d1d71e61b0^sys_idNOT IN4a3b63c5a3bb9e10883c25d1d71e6118"/&gt;&lt;sys_flow_subflow_plan action="INSERT_OR_UPDATE"&gt;&lt;plan&gt;com.snc.process_flow.engine.ProcessPlan@77c983a8&lt;/plan&gt;&lt;plan_id display_value="Create level 2 result from level 1"&gt;616a2345a3bb9e10883c25d1d71e61b0&lt;/plan_id&gt;&lt;snapshot&gt;bd3b23c5a3bb9e10883c25d1d71e61fe&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-17 06:15:54&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;4a3b63c5a3bb9e10883c25d1d71e6118&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-05-05 16:21:59&lt;/sys_updated_on&gt;&lt;/sys_flow_subflow_plan&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1110482739</payload_hash>
+        <record_name>Create level 2 result from level 1</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:36:02</sys_created_on>
+        <sys_id>3fa7d4beedee03107f44863610ff21b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb3e65930000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:36:02</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>7fa7d4be03ee0310327d98ac2be80bb1</update_guid>
+        <update_guid_history>7fa7d4be03ee0310327d98ac2be80bb1:1110482739,fba7d4be5dee03109fe674ea3707b69d:-964723660</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:39:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>21d0d665ec2146cc931b903555b865a4</sys_id>
+        <sys_metadata>616a2345a3bb9e10883c25d1d71e61b0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create level 2 result from level 1</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_616a2345a3bb9e10883c25d1d71e61b0</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_616a2345a3bb9e10883c25d1d71e61b0">3fa7d4beedee03107f44863610ff21b2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:39:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

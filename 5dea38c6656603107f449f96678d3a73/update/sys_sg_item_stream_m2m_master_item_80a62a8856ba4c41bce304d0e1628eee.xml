@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream_m2m_master_item">
-  <sys_sg_item_stream_m2m_master_item action="INSERT_OR_UPDATE">
-    <sys_id>80a62a8856ba4c41bce304d0e1628eee</sys_id>
-    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
-    <sys_update_name>sys_sg_item_stream_m2m_master_item_80a62a8856ba4c41bce304d0e1628eee</sys_update_name>
-    <item_stream>dc57537a80ff470eb28c6696fb69d64d</item_stream>
-    <master_item>af7afd6031b84fd5a332b4770a265b87</master_item>
-  </sys_sg_item_stream_m2m_master_item>
+    <sys_sg_item_stream_m2m_master_item action="INSERT_OR_UPDATE">
+        <item_stream display_value="">dc57537a80ff470eb28c6696fb69d64d</item_stream>
+        <master_item display_value="FG360 All Products List Screen - List item config">af7afd6031b84fd5a332b4770a265b87</master_item>
+        <sys_class_name>sys_sg_item_stream_m2m_master_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-18 06:59:16</sys_created_on>
+        <sys_id>80a62a8856ba4c41bce304d0e1628eee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_item_stream_m2m_master_item_80a62a8856ba4c41bce304d0e1628eee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 06:59:16</sys_updated_on>
+    </sys_sg_item_stream_m2m_master_item>
 </record_update>

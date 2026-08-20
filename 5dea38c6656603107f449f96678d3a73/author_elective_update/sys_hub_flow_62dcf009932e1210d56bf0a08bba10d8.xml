@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation>(Re)join a conference call by sending a SMS containing the conference call code.</annotation>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=80593000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="Notify">368d077293041210e4cfca32b3891851</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description>(Re)join a conference call by sending a SMS containing the conference call code.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>join_conference_call_via_sms</internal_name>
+        <label_cache>[{"name":"subflow.notify_message.phone_number","label":"Input➛Notify Message➛Phone number","reference":"","reference_display":"Phone number","type":"phone_number_e164","base_type":"phone_number_e164","parent_table_name":"notify_message","column_name":"phone_number","usedInstances":{"0e026b14-6b6d-49af-99a5-3b860b5f3585":[null],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["phone_number"]}},{"name":"subflow.notify_message.body","label":"Input➛Notify Message➛Body","reference":"","reference_display":"Body","type":"string","base_type":"string","parent_table_name":"notify_message","column_name":"body","usedInstances":{}},{"name":"flow_variable.code","label":"Flow Variables➛Code","type":"string","base_type":"string","usedInstances":{"46c4e904-688c-4f63-a2d6-067b6d615ef1":["conditions"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"622f7677-f8e9-4dbb-87e9-301ed14dac23"}},{"name":"46c4e904-688c-4f63-a2d6-067b6d615ef1.Record","label":"2 - Look Up Record➛Notify Conference Call Record","reference":"notify_conference_call","reference_display":"Notify Conference Call","type":"reference","base_type":"reference","usedInstances":{"91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0":["condition"],"4d6e9bd2-5954-4495-80eb-379a1e9f21ab":["notify_conference_call"],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_conference_call"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.notify_message","label":"Input➛Notify Message","reference":"notify_message","reference_display":"Notify Message","type":"reference","base_type":"reference","column_name":"","usedInstances":{"4c4732e1-cecb-412a-b6b1-011b8fc2c561":["notify_number"],"0e026b14-6b6d-49af-99a5-3b860b5f3585":["message",null],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number","phone_number"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"e45679b3-7020-4403-8c9e-7f4e06540dfb","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.notify_message.notify_number","label":"Input➛Notify Message➛Notify number","reference":"notify_number","reference_display":"Notify Phone Number","type":"reference","base_type":"reference","parent_table_name":"notify_message","column_name":"notify_number","usedInstances":{"4c4732e1-cecb-412a-b6b1-011b8fc2c561":["notify_number"],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number"]}},{"name":"subflow.notify_message.notify_number.number","label":"Input➛Notify Message➛Notify number➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"notify_number","column_name":"number","usedInstances":{"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number"]}}]</label_cache>
+        <master_snapshot>09950901936e1210d56bf0a08bba10b7</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Join Conference Call Via SMS</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:15:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>62dcf009932e1210d56bf0a08bba10d8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Join Conference Call Via SMS</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_62dcf009932e1210d56bf0a08bba10d8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:36:08</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_variable_value action="DELETE" query="document_key=62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT INaadcf009932e1210d56bf0a08bba10db"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>62dcf009932e1210d56bf0a08bba10d8</id>
+        <name>Join Conference Call Via SMS</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:15:36</sys_created_on>
+        <sys_id>aadcf009932e1210d56bf0a08bba10db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 14:15:36</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=aadcf009932e1210d56bf0a08bba10db"/>
+    <sys_hub_flow_input action="DELETE" query="model=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT INaf53498d932e1210d56bf0a08bba1039"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=e45679b3-7020-4403-8c9e-7f4e06540dfb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>notify_message</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>notify_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Notify Message</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</model>
+        <model_id>62dcf009932e1210d56bf0a08bba10d8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_62dcf009932e1210d56bf0a08bba10d8</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="notify_message">notify_message</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:44:05</sys_created_on>
+        <sys_id>af53498d932e1210d56bf0a08bba1039</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 14:44:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=af53498d932e1210d56bf0a08bba1039"/>
+    <sys_hub_flow_output action="DELETE" query="model=62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT IN3f53498d932e1210d56bf0a08bba107e,6e32681193e61210d56bf0a08bba1002,fb53498d932e1210d56bf0a08bba1090"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:44:05</sys_created_on>
+        <sys_id>3f53498d932e1210d56bf0a08bba107e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:48</sys_updated_on>
+        <ui_id>46c4e904-688c-4f63-a2d6-067b6d615ef1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VYy27bOhD9FUFrx5X8kp3dRQIDBdoEaNNucgOCEqmYKE2qFOXUMfzvHUqk7PipOA6QLjmc4Zwzcziifb/wGfEvfTIKRulo1B9GQdDtBsFg0E1wGMfdQRIHMe75LV/gKQVPjWNOYTnDvDBrITVL5yiRIqWKioSiBHMODoTlGcfzn9bvpvTzrmo/76rySyaME7D4l/cPLT/DCvJoqvzLxcaWnmcUcRxTDsfdGRjejcHUakzhRfA2JZPALZGojpaKGCxBy6d/NBWEQqoU85y2/CkWBGup5rVFUUxuBV8ZJkxoONE3zn9y9gzHDwPjZ2tQ7SUTyRJ6m2kmRWWpEFWbkhdTcVMhNWWlKS64dmUFS5FTRGhmwJlsNnX6fSKfvrlEYyZKHnaTS2hSvcJaKxYXmuam6JTTKRyEpjjLmHhEmZIzVgYDlmn7kcOinXL5BElz9ijaODHA21AL3B6D/bo0/8SKGRZf4RgIBkCMQ1tRVd1cFqqkP0MJL/JyQ2GRV2f5y7JG6HdhUFasLT9UlQgc8kSxTP8HATNqqSxbTs79g1oYrXoPuiXM5MzXNJ1IQv8vIJQsFiXTmSXTNjvL5ba6G0ScpvOrdXxNue0M3kXYKv6FzSo+PJvie0Hw3prXqvh4kj8m4orwESWH5GC3yaqxuVQaVZVbk/K2VE+W4phRTl6M3AbgXPCtUZUXz/fhtUpMTY6N2dv5d2bvh9QhACKoKiwTnInyGwdAzyPQ/kENxOFGw8s+r+RZ2nCebMsUe1p6z6fPzbKvTqgNQLrA74DIu6tQ7gDuJqY73mq0ezaNdjt7NAoKuV/UMOvy7Kike7OYHjn/Z+OPN/1BRmsB4fKh1vjVaTnD1+bsmJwbl7D7qlu4LqFq53qPks78UNpzq1rveY0nEGrzoepWoidGHqleZXdeROonzH/t2rdXrb4sJb03P7rCgw/weO3RxVI0hT6xDF6CiiYghRxhRVEqC0GQfQOuZGP6ljKVa+u8PSy+UV0o4Um4W56eUK/09mrvc4yQBuxc4OfUc/QshtwDel5Jz6vpva4YewZP74zPtEaDZ4wZL2sMj/ZsrUlUKan2DJ8j7TnQ54aTqSGo8Kyg3j66dgl75wg7gvWf+AX41vGSUBz3OngQdcMwCMKARMEwisLhIE4HOOqlqxuFUC4SmH9wcgrCgOORE4Lrarg9Q+x4PPHvCAj+NC7HaKsxXBd8LYX57diJtGfwQps9h/c4IzsXYik5xWKlzv77D4aP8o9Fwe42i1CZvuzqznt9nQv2Q7DfBf1suj+kQWcYkuRiGIXRRS8lg4sRwf0LPIr7UZfQpJee/sF9+AsJ6OmRthMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=3f53498d932e1210d56bf0a08bba107e"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Call the sms sender">75c1a01193e61210d56bf0a08bba102c</action_type>
+        <action_type_parent display_value="Call the sms sender">62cfd0d993a61210d56bf0a08bba10d3</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 06:57:45</sys_created_on>
+        <sys_id>6e32681193e61210d56bf0a08bba1002</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:48</sys_updated_on>
+        <ui_id>3bf1625c-4848-4cc1-a6d7-3340f949bfa5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2VyW7bMBCGXyXQ2RIoa7VvRYoABdqkSNpcgkDgMrIJUJQiUUlcw+/eoSW5XupsCJpLT4KGM5z5f/KTbpaOFM7USQT3KfH9SQCxP/aJiGKWE0pSxqhPxrkzcjQtADN1aWS+yHRbMKgxfE9Va+PLZdOyXJUPXp9RQNPQGXg7BV73WK2wUsimUnRx/eYN+FwqUYN2pje3I6eiNU5ocKjpcm/JLCrIFGWgsM+VqaWeYflLhQ+F5+s5Ts4H5UcMsc0w3AxtylrYmfyRA48GtABsm1PVwMgpqBbUlPXCmZq6xUANVFxotdhkzKU2uJljcx8b+Qt3TgkhNjMH1MehW+XzUnK4qIwsdRcxlKlhsVRtoc+7ca3xkNNWmcF4jLQNZAIqO53t1zfPr+blw+XQ6EzqtZB+UZWcqs0bNSiXtQYa634rf+yZ0EW+7h8BKCiwY1bQqsJIVtXlvVx3waELb6bwxbN3Aqdr5Ex7lFuFHrpGvTOMf16Hr2ktrdxvuM36DFr5U8u7Fr7YIxZURITEgesnnLshI4GbhuC70YQTMpmMk4AzZ7W2NLtrrajOpN6OrHMUExpey8p8whHuoVe+GvUA5f5T9ygI/9yXal5qeAU/2/mv4uag8D14eYHOofC77X+Ay578I7SM/9PyQbQkZBKSNKVunNLUDRMAN2VJ6EbUF2nCwoBF70DLk1/dIDn4uvJS98ZmaKTa4SaMeQgTEuLEKfKdI+l0LGKXxAmLRexHkPveJXC8Wn/j581gbM56w8bzqvb+JacbWSennaznZPe81Fu9e2SC90ImGO8Cc3SW4xgdL/kwuLYd2+Vr+xz/CWJBzAPGeOQKzhNELMEfUuKnbprjL0lAHMcBfzNit78BVa3NdNMJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=6e32681193e61210d56bf0a08bba1002"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Send SMS">04a8fed89f681210e9f6328dda0a1c9d</action_type>
+        <action_type_parent display_value="Send SMS">9d1a6f849f641210e9f6328dda0a1c8b</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>4d6bc47c-31bd-43b0-b4eb-1077942c31b6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:44:05</sys_created_on>
+        <sys_id>fb53498d932e1210d56bf0a08bba1090</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>0e026b14-6b6d-49af-99a5-3b860b5f3585</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=fb53498d932e1210d56bf0a08bba1090"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT IN0b85c501936e1210d56bf0a08bba10f8,bb53498d932e1210d56bf0a08bba108f,f753498d932e1210d56bf0a08bba1080,ff53498d932e1210d56bf0a08bba107c,ff53498d932e1210d56bf0a08bba108e"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">a24035959f221210e9f6328dda0a1cc4</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>4d6bc47c-31bd-43b0-b4eb-1077942c31b6</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:36</sys_created_on>
+        <sys_id>0b85c501936e1210d56bf0a08bba10f8</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>cdb68988-718f-4310-a8fc-9c664e0c97b0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">e64035959f221210e9f6328dda0a1cc2</block>
+        <comment/>
+        <connected_to>91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:44:05</sys_created_on>
+        <sys_id>bb53498d932e1210d56bf0a08bba108f</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>4d6bc47c-31bd-43b0-b4eb-1077942c31b6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">ea4035959f221210e9f6328dda0a1cbf</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:44:05</sys_created_on>
+        <sys_id>f753498d932e1210d56bf0a08bba1080</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:48</sys_updated_on>
+        <ui_id>91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VUXWvbMBT9K8PPjvH30ryVbYXC2owmFMYo5lqSEzFZ8iQ5aRby33fljySsKRvb3vZmnat7zzlXB+891dqmtWapro3hK+nNvjz5HpcOw++9J6Fm3swjSlJuuZJFB/jeBkTrCvhJuWkE7B5PCFlzQTUbpjWgsccy7c32P5XsrmGFgJIJbFxYzeUK2znFUxVCFV2RiCRxnsRhGE/TqMyTMoppAgwSvDc2vhvFvfnYIf6rqh0f4mZkUpo6WVHoe+zZMkkZUlcgDPO9GiQFq/TuiGgGdC7FCVhzaXvHNTwb/h1nx1nmLlYMPZLjOhQnbN44JT1ioRRjUYm2lve9YLdNVkEr7Nk2W8MKyhqnztEN3NVirbYPI9ENl52ToSgUAXE8gUW/ZWuZcS/ABKtxUFFD0+AWikarDe+aUUsdrAQegkqoLZK6SARAnPAAlwHBDeLvO/gRNHcu7nAMNvcySzCcFF18cJzVaOHQraP41jpBvcHBStFvAy8Yonljr5FnwwbVB/9l9s5it9+nOUnZVZhO8umUTNIqTyYQ03wS5m/LnOZRxqooeGAEn/hwuF3cz5cf7j4tP7/M69+M+hdBv4KsyqIwuxz0NL8U9AsRfz3d8S/S7Z7pN8MdhuF/mm5uij6lg7eO/I/D/eSS3DOYPiCUEW5QyNJht+P/1xV2+NKcnENbpb86Cyfs8ANoAdWuyQUAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">2e4035959f221210e9f6328dda0a1cbd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</flow>
+        <flow_variables_assigned>code</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:44:05</sys_created_on>
+        <sys_id>ff53498d932e1210d56bf0a08bba107c</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:48</sys_updated_on>
+        <ui_id>de29a1c6-f9fb-4656-806e-2fdc4235b883</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW8TMRT8K5ZPUNLtJmmbND1FgopKQCVSeiHVyrt+mxi89uKPtqHKf+e9/UhLkLhxQOop67E9b2b87DxyG0Mdg7+2c+/VyvDZ19sBV4Yw/H7kRlTAZ7ywEviA3wkdaYifUvlai83NE1KslZYOOo5aONwawPHZ495U2NSQaZGDxo2L4JRZ4XYlcVSWJ+Pjs6k8G49gOBqm8uQ0L1ORTvNcDNPJCa7rN3aSfhdI1DjyPal1khSkAw4PAYwELFIK7WHAK2GkCNZtdogDIa+MfgLWyoTWWyUevPqJ1NM0TWllCWin2Dm3qoCrOihrWiSIXPeTVsfKfGplUnBQiqjDs+Cih0xCTfKoXle8XKzt/ee+0IUyjZNuUttC6N1IBPSbxwCewo7qei+FFvmwnzhoqLBiVom6RiSrnb1TTRUUXSUrjYOk1PYe1VFzJKIghwnGJpILxN828I1wiux+RBrcTOW+GPUjwiWd6OloVE5OJ5PDcgpnh8cyzw+nE/wap0OQw2MpitGYb5tIsx+RTLUhdXFkbaK4wBdO1WGOEu7QXHAReqzpMDp//P3bKn50sDQHB/OiAO8ZGTiaN44YOWLRYwgsrIGVMmsQm3+DIiRs0RCwKvrAHIToDBOsuQsJI8Yr6jJmYpXjj/LMlqWHwPINezNkyrB3zlnH3mPDaSqxgDbHRsydUJrSY7ZpH8+6i8VijcJqh1Jpz5InS85EiReql0fb4UFUtYYZqnHMr60LeCYFW8Y0Hct+YYIHvlqBS4rosJlC0iykQ218YdVz4uqc7VgIPFqapSFuynef1se86Y72uUiMDarcZBUqFitIcis3VLl69RqZOnKiOefb7faWHpO2b9qHprn+f9znlwfn5cH5jx+cf3RzJBTKYzDXlMJl/2dNExvsTlU8h+6t+061nrDtL/lPPFL2BwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">664035959f221210e9f6328dda0a1cc1</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:44:05</sys_created_on>
+        <sys_id>ff53498d932e1210d56bf0a08bba108e</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>1b07acc7-b6fa-48b1-b619-92fc9130269b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_hub_flow_variable action="DELETE" query="model=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT INff53498d932e1210d56bf0a08bba1075"/>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=622f7677-f8e9-4dbb-87e9-301ed14dac23</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>code</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Code</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</model>
+        <model_id>62dcf009932e1210d56bf0a08bba10d8</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_62dcf009932e1210d56bf0a08bba10d8</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:44:05</sys_created_on>
+        <sys_id>ff53498d932e1210d56bf0a08bba1075</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 14:44:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="DELETE">
+        <element>notify_message</element>
+        <help/>
+        <hint/>
+        <label>Notify Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_62dcf009932e1210d56bf0a08bba10d8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:44:05</sys_created_on>
+        <sys_id>3753498d932e1210d56bf0a08bba1043</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notify Message</sys_name>
+        <sys_package display_value="Notify" source="com.snc.notify">13cd2cf4045a43107f44c21ce62279bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_62dcf009932e1210d56bf0a08bba10d8_notify_message_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 14:44:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation>(Re)join a conference call by sending a SMS containing the conference call code.</annotation>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="Notify">368d077293041210e4cfca32b3891851</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description>(Re)join a conference call by sending a SMS containing the conference call code.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>join_conference_call_via_sms</internal_name>
+        <label_cache>[{"name":"subflow.notify_message.phone_number","label":"Input➛Notify Message➛Phone number","reference":"","reference_display":"Phone number","type":"phone_number_e164","base_type":"phone_number_e164","parent_table_name":"notify_message","column_name":"phone_number","usedInstances":{"0e026b14-6b6d-49af-99a5-3b860b5f3585":[null],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["phone_number"]}},{"name":"subflow.notify_message.body","label":"Input➛Notify Message➛Body","reference":"","reference_display":"Body","type":"string","base_type":"string","parent_table_name":"notify_message","column_name":"body","usedInstances":{}},{"name":"flow_variable.code","label":"Flow Variables➛Code","type":"string","base_type":"string","usedInstances":{"46c4e904-688c-4f63-a2d6-067b6d615ef1":["conditions"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"622f7677-f8e9-4dbb-87e9-301ed14dac23"}},{"name":"46c4e904-688c-4f63-a2d6-067b6d615ef1.Record","label":"2 - Look Up Record➛Notify Conference Call Record","reference":"notify_conference_call","reference_display":"Notify Conference Call","type":"reference","base_type":"reference","usedInstances":{"91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0":["condition"],"4d6e9bd2-5954-4495-80eb-379a1e9f21ab":["notify_conference_call"],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_conference_call"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.notify_message","label":"Input➛Notify Message","reference":"notify_message","reference_display":"Notify Message","type":"reference","base_type":"reference","column_name":"","usedInstances":{"4c4732e1-cecb-412a-b6b1-011b8fc2c561":["notify_number"],"0e026b14-6b6d-49af-99a5-3b860b5f3585":["message",null],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number","phone_number"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"e45679b3-7020-4403-8c9e-7f4e06540dfb","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.notify_message.notify_number","label":"Input➛Notify Message➛Notify number","reference":"notify_number","reference_display":"Notify Phone Number","type":"reference","base_type":"reference","parent_table_name":"notify_message","column_name":"notify_number","usedInstances":{"4c4732e1-cecb-412a-b6b1-011b8fc2c561":["notify_number"],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number"]}},{"name":"subflow.notify_message.notify_number.number","label":"Input➛Notify Message➛Notify number➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"notify_number","column_name":"number","usedInstances":{"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number"]}}]</label_cache>
+        <master>true</master>
+        <name>Join Conference Call Via SMS</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>09950901936e1210d56bf0a08bba10b7</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=09950901936e1210d56bf0a08bba10b7"/>
+    <sys_variable_value action="DELETE" query="document_key=09950901936e1210d56bf0a08bba10b7"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=09950901936e1210d56bf0a08bba10b7"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=09950901936e1210d56bf0a08bba10b7^sys_idNOT IN89950901936e1210d56bf0a08bba10b8"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>09950901936e1210d56bf0a08bba10b7</id>
+        <name>Join Conference Call Via SMS</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:44</sys_created_on>
+        <sys_id>89950901936e1210d56bf0a08bba10b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 14:53:44</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=89950901936e1210d56bf0a08bba10b8"/>
+    <sys_hub_flow_input action="DELETE" query="model=09950901936e1210d56bf0a08bba10b7^sys_idNOT IN89950901936e1210d56bf0a08bba10b9"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=e45679b3-7020-4403-8c9e-7f4e06540dfb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>notify_message</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>notify_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Notify Message</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Join Conference Call Via SMS">09950901936e1210d56bf0a08bba10b7</model>
+        <model_id>09950901936e1210d56bf0a08bba10b7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_09950901936e1210d56bf0a08bba10b7</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="notify_message">notify_message</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:44</sys_created_on>
+        <sys_id>89950901936e1210d56bf0a08bba10b9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 14:53:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=89950901936e1210d56bf0a08bba10b9"/>
+    <sys_hub_flow_output action="DELETE" query="model=09950901936e1210d56bf0a08bba10b7"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=09950901936e1210d56bf0a08bba10b7"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=09950901936e1210d56bf0a08bba10b7"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=09950901936e1210d56bf0a08bba10b7^sys_idNOT IN0442a81193e61210d56bf0a08bba1014,51950901936e1210d56bf0a08bba10db,55950901936e1210d56bf0a08bba10dd"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Call the sms sender">75c1a01193e61210d56bf0a08bba102c</action_type>
+        <action_type_parent display_value="Call the sms sender">62cfd0d993a61210d56bf0a08bba10d3</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>75c1a01193e61210d56bf0a08bba102c</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">09950901936e1210d56bf0a08bba10b7</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-17 06:57:51</sys_created_on>
+        <sys_id>0442a81193e61210d56bf0a08bba1014</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>3bf1625c-4848-4cc1-a6d7-3340f949bfa5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2VXU/bMBSG/wrydRM5TZqkvZuKkCZtMAHbDUKVP05aS44TEgfoKv77jpu09GMFOjEupl1FPj623/ccP/HNgihJRiSRImA0CIYhxEE/oHIQ84wymnLOAtrPSI8YlgNmmsKqbD4xTc6hwvA9042LLxZ1wzNdPPhdRg51zabgby3w28/TE66Uqi41m//44w3ETGlZgSGjm9seKVmFCi2KGi12pt5qUTMOGlPPlyeenK88HrBu56UL17ZSZtqNv3RbXK2CRSWdpKBH4NGCkYBaMqZr6JGcGclsUc3JyFYNBipg8sLo+TpjpozFzYjLfazVTzwupZS6zAzQnoB2dj28ZlzDaVvYdio7ZZahmkbYpurSxaxQAuq2OBIy1mg73oy1CRelVYVpl1i3cbe60E1uztuakPUGqz5ipKlhIqF0bp3+zkx2NSseLldKz5RZFqab1IVgej1iFsvHG+v0LEijrncq3Ub2ag0acjxxkrOyxMikrIp7tTwFRef+VOPAd1cM1dVqanwmnEMfu8D8M4yfLsM/WKWc3a+4zbLRjfpu1F0Dn909kkwOKI1DL0iE8CJOQy+NIPAGQ0HpcNhPQsHJU4/U83qsWV0/Fwq7NLlrnM22bF2BJm2N3RJRqdJ+QlH30NXiqdcRmgUvXd8wer6m5awwcASgm/lHgbm38Dgg3+BoBeQ3d9IejztGj8Gx/x/HfwTHhA4jmqbMi1OWelEC4KU8ibwBC2Sa8Cjkg7+C44uvSZjsvRqiMF2pJ1havQVmFIsIhjRCDyn+UjL8ubC+jD0aJzyWcTCALPAvQeDl/R2gx5P3uvidp3C8Vn8ybtW/5q6j8ZmMbSAvN+Idk+F7MRn2t4k8qPEQpwdNvzO9B4V9ANPZFbBKzM4UaHcl1n/RA6xv9nEb981OfgjxYSxCzsXAk0IkSHyCD3ASpF6a4RMsIY7jULwj8be/AJnxom8kCwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=0442a81193e61210d56bf0a08bba1014"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">09950901936e1210d56bf0a08bba10b7</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:45</sys_created_on>
+        <sys_id>51950901936e1210d56bf0a08bba10db</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>46c4e904-688c-4f63-a2d6-067b6d615ef1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYXW/iOhD9K1GeKTfhK9C3KxDSSntbadu7L7sry4mdYq2xs47TLkX89zuOnYAgBaILUqt99HjsOTNzzsTwbe0z4t/6ZBJM0slkOI6CoN8PgtGon+AwjvujJA5iPPA7vsBLCp4ax5zC8hnzwqyF1CxdoUSKlCoqEooSzDk4EJZnHK++Or+70s+b1n7e1PolC8YJWPzbbz86foYVxNFU+bfrva1zgXIcUw6ujw7pHnC9yuolKves7fPuMe/ObkhFDJSg49PfmgpCAUOKeU47/hILgrVUq9qiKCb3gm8NCyY03Ogb5985e4W448D4uRLYvXpZRp7ZstmtdIY1ftCqSHShnHuykCyhua0JoSkuuJ7u2qzDfaaZFPaITd2elrxYijtbEr++oOoSWIqcIkIzk6xB71JJHxby5UuFdM5EWRe3ySX0vF5hrRWLC23wrH3K6RIuQkucZUw8oUzJZ1YeBizL7hOHRTfl8gWC5uxJdHFigHehtrg7B/usNH/Fipks/oFr4DAAYhxYgmwbc1mospzPKOFFXm4oLHJ7l7/p+Pkqn3Kc59vMoezoV2Fw2zq4jJEtmjmSKJbpv+GKZ+qS23QqvQyP0nCypR0IgzCDIt8RTSIJ/V7AUbJel7k/u/S6ZmezOZTPGSdaCul0BpWQprspNKXlJHVg+9x0gZNUeDFJDYLgo4kKgr8/TbVXiS3BCamE5CjRyJZTuVQa2VruaOVQC625fgaEiuv3hp1evHoLlaN6yignTV+PudnY+3r0/tyvx7skOgAiyHaQCc5E+RwAoNdSwPAo/eJwj2slxbb8L204Tw51gD0tvdfWajgDTqWGB4jtPVo8DRCruV9SZn/mV0Yngv7FRNDvXU4E6zrVupgNda9egaajlf+r8cf7/kDDnQPhpklkrWKGbWP2Noci7rdS8S7h7M7sDd5d+Kn4hio71xwDCzjq4iGrYfTCyBPV2+iVF5H6BfOfTftOmKhqVJneFZ6d4dFfP/HOs5OlaAmdYxm8jhVNgBw5woqiVBaCIPcu3hLJdDJlKtfO+XDYfKGgH+FJEKenF9Qrvb3au+UH+XQeVSk/pV6ViIuWe5CIVybi1Ym0S7vN4Bpc8KF6jcE1x4yXHYGfPdlOS6lSUr0xvE408wgrzpxsZ4IKLwrq/4++Jhk0jsATWD/Eb+jLj6eE4njQw6OoH4ZBEAYkCsZRFI5HcTrC0SDd6hShXCQwUeHmFKgC16OKGlWfw8MZ5AZuu1lzBqiKgTMpzG/sXqQ9gwra61WoTuN2MyWWklMs9obKIyD/a15+FWq6Dt/lYPkQfyoV7HG/2tbUWO9rPR8K9q9gvwr6ydBsTIPeOCTJzTgKo5tBSkY3E4KHN3gSD6M+ockgveSL4Md/pizZ17oVAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=51950901936e1210d56bf0a08bba10db"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Send SMS">04a8fed89f681210e9f6328dda0a1c9d</action_type>
+        <action_type_parent display_value="Send SMS">9d1a6f849f641210e9f6328dda0a1c8b</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>04a8fed89f681210e9f6328dda0a1c9d</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">09950901936e1210d56bf0a08bba10b7</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>4d6bc47c-31bd-43b0-b4eb-1077942c31b6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:45</sys_created_on>
+        <sys_id>55950901936e1210d56bf0a08bba10dd</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>0e026b14-6b6d-49af-99a5-3b860b5f3585</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=55950901936e1210d56bf0a08bba10dd"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=09950901936e1210d56bf0a08bba10b7"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=09950901936e1210d56bf0a08bba10b7^sys_idNOT IN51950901936e1210d56bf0a08bba10da,95950901936e1210d56bf0a08bba10d9,d9950901936e1210d56bf0a08bba10d6,d9950901936e1210d56bf0a08bba10d7,d9950901936e1210d56bf0a08bba10d8"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">a24035959f221210e9f6328dda0a1cc4</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">09950901936e1210d56bf0a08bba10b7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>4d6bc47c-31bd-43b0-b4eb-1077942c31b6</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:45</sys_created_on>
+        <sys_id>51950901936e1210d56bf0a08bba10da</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>cdb68988-718f-4310-a8fc-9c664e0c97b0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">e64035959f221210e9f6328dda0a1cc2</block>
+        <comment/>
+        <connected_to>91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">09950901936e1210d56bf0a08bba10b7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:45</sys_created_on>
+        <sys_id>95950901936e1210d56bf0a08bba10d9</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>4d6bc47c-31bd-43b0-b4eb-1077942c31b6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">2e4035959f221210e9f6328dda0a1cbd</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">09950901936e1210d56bf0a08bba10b7</flow>
+        <flow_variables_assigned>code</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:45</sys_created_on>
+        <sys_id>d9950901936e1210d56bf0a08bba10d6</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>de29a1c6-f9fb-4656-806e-2fdc4235b883</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VS08bMRD+K8inVgqrTQJ5wAkRISG1RSopl4JWs+txYtVrL34A2yj/nfF6k1Aq9dwDp/V843l8n2e0G2aCb4J3S3PhnFxpdvbzYcCkjhidN0xydsbYgGmokU6V4UjWE6iAycGlaxS0dwekWkvFLfa5GrAU6tGys807V5dbiNPxyXzG5+MRDkfDnJ9OSpFDPitLGObTU0qooERFVy9T8T9b8W0TLeet1Kve/tIH3O5AY3lsIB8wfPGoOVJlAcrhgNWgOXhj2z1iEfiNVgdgLbVP1Gp4cfI31ZvleR5vCiQ2VU98by6hVLhIwiSXWIAHaidUPti9TkZW6JIWHAUE5S/fYunCTeOl0SnEx8R9tFGh1t+SFmyf4M07BIcFxybSjf33ZMTt2jx/33V6JXWnTO9UpgK1t8CTfmXwsZ8NC3L5TuqE/CU2KqypYlFD0xBSNNY8ya4KNV1nK0VGJpR5pu7izGVQRYYZPQNkV4QvOvgOrIx0v1IaCo7lfmj5GPA6js1kNBLTyXR6LGY4Pz7hZXk8m9JpnA+RD084VKMx2w6Ya92lAucOQtErFY8h0kyy9QIVSeMYUlnZ+Atq6olC6M1wh3UjHMeOvv+6Rfthj+LFo/uQ52N+JHjRsXOh7IinBcu08VK0RY3OwQqz0vA2IxXrT5/P77VFGhXdpTln2+32Ia5dkuRjNT9W82M1/6vV5FhJR1J183W9+39GR0tLIau30LOxv2KtA7Z9Bca/nHCJBwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">ea4035959f221210e9f6328dda0a1cbf</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">09950901936e1210d56bf0a08bba10b7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:45</sys_created_on>
+        <sys_id>d9950901936e1210d56bf0a08bba10d7</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvH30ryVZIVC24wmFMYo5lqSEzHZ8iw5aRby33dlO05YM7ayPu7NOtK9OufoHrwnqjFVY/RSXWstViWZfH12iCgtht97UkLByYRQVTJhhCrTFnDIBmRjN/CTCV1J2D2dELoWktW871ZBjTWG12Sy/2VLMCzIPcj9K+rTMEjCwPOCceRnSZj5AQuBQ4gNJWRc4tHpkcaHuxZxfsvP7CqLa1OLctWv7/ouiyOoamZZ+Z5D+IvhJePIJwepuUMKKBkYVe8GpObA5qU8AWtRmk5wAS9a/MALgzi2B3OOEmnvxrBcQib5rHOr28pnYADpNNQ09WCeEpTrziDGc2ikmZ5j3YF5ZeV2JcY27quVbIryoXOFDA3OHqfRPGW8smot/V5Lvlir7eOR6Y0oW2f6TakoyGEFBv3LGmP57AmXvMBGaQFVha6mVa02oi1GLoW7krhwc6m2eKmdMBeoJe6iueDeID5r4SeohVVxj22wuKOZgRY0bacR26FNnBwcond6KkHrk0h0OP3eWIqd5F5c2vljS2gtKnONN294r+PgvB7us7ne76OERvzKi0bJeExHUZ6EIwhYMvKSj1nCEj/mue8+copDdDjcLh7my0/3n5dfXgfiX1q9LUlXEOex78WXkxQll5J0IUNvjE/wh/jYd/vL9Hie9z8+7xIfodNu6Htt7eXvmJ5nG5XuzsFrKjRSa5/p9vgHsRs7HDBBz6Gtqr9ZUSfs8BOCg6lbiwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">664035959f221210e9f6328dda0a1cc1</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Join Conference Call Via SMS">09950901936e1210d56bf0a08bba10b7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:45</sys_created_on>
+        <sys_id>d9950901936e1210d56bf0a08bba10d8</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:49</sys_updated_on>
+        <ui_id>1b07acc7-b6fa-48b1-b619-92fc9130269b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=09950901936e1210d56bf0a08bba10b7"/>
+    <sys_hub_flow_variable action="DELETE" query="model=09950901936e1210d56bf0a08bba10b7^sys_idNOT IN91950901936e1210d56bf0a08bba10d1"/>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=622f7677-f8e9-4dbb-87e9-301ed14dac23</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>code</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Code</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Join Conference Call Via SMS">09950901936e1210d56bf0a08bba10b7</model>
+        <model_id>09950901936e1210d56bf0a08bba10b7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_09950901936e1210d56bf0a08bba10b7</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:45</sys_created_on>
+        <sys_id>91950901936e1210d56bf0a08bba10d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 14:53:45</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="DELETE">
+        <element>notify_message</element>
+        <help/>
+        <hint/>
+        <label>Notify Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_09950901936e1210d56bf0a08bba10b7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:44</sys_created_on>
+        <sys_id>11950901936e1210d56bf0a08bba10c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notify Message</sys_name>
+        <sys_package display_value="Notify" source="com.snc.notify">13cd2cf4045a43107f44c21ce62279bb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_09950901936e1210d56bf0a08bba10b7_notify_message_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-16 14:53:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_09950901936e1210d56bf0a08bba10b7"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_09950901936e1210d56bf0a08bba10b7"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>62dcf009932e1210d56bf0a08bba10d8</sys_id>
+        <latest_snapshot>09950901936e1210d56bf0a08bba10b7</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=62dcf009932e1210d56bf0a08bba10d8"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT IN69950901936e1210d56bf0a08bba10f6"/>
+    <sys_flow_subflow_plan action="DELETE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@5c3f45c8</plan>
+        <plan_id display_value="Join Conference Call Via SMS">62dcf009932e1210d56bf0a08bba10d8</plan_id>
+        <snapshot>09950901936e1210d56bf0a08bba10b7</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 14:53:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>69950901936e1210d56bf0a08bba10f6</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-17 12:38:50</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_62dcf009932e1210d56bf0a08bba10d8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation&gt;(Re)join a conference call by sending a SMS containing the conference call code.&lt;/annotation&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=80593000,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;27000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category display_value="Notify"&gt;368d077293041210e4cfca32b3891851&lt;/category&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;(Re)join a conference call by sending a SMS containing the conference call code.&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;join_conference_call_via_sms&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"subflow.notify_message.phone_number","label":"Input➛Notify Message➛Phone number","reference":"","reference_display":"Phone number","type":"phone_number_e164","base_type":"phone_number_e164","parent_table_name":"notify_message","column_name":"phone_number","usedInstances":{"0e026b14-6b6d-49af-99a5-3b860b5f3585":[null],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["phone_number"]}},{"name":"subflow.notify_message.body","label":"Input➛Notify Message➛Body","reference":"","reference_display":"Body","type":"string","base_type":"string","parent_table_name":"notify_message","column_name":"body","usedInstances":{}},{"name":"flow_variable.code","label":"Flow Variables➛Code","type":"string","base_type":"string","usedInstances":{"46c4e904-688c-4f63-a2d6-067b6d615ef1":["conditions"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"622f7677-f8e9-4dbb-87e9-301ed14dac23"}},{"name":"46c4e904-688c-4f63-a2d6-067b6d615ef1.Record","label":"2 - Look Up Record➛Notify Conference Call Record","reference":"notify_conference_call","reference_display":"Notify Conference Call","type":"reference","base_type":"reference","usedInstances":{"91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0":["condition"],"4d6e9bd2-5954-4495-80eb-379a1e9f21ab":["notify_conference_call"],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_conference_call"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.notify_message","label":"Input➛Notify Message","reference":"notify_message","reference_display":"Notify Message","type":"reference","base_type":"reference","column_name":"","usedInstances":{"4c4732e1-cecb-412a-b6b1-011b8fc2c561":["notify_number"],"0e026b14-6b6d-49af-99a5-3b860b5f3585":["message",null],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number","phone_number"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"e45679b3-7020-4403-8c9e-7f4e06540dfb","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.notify_message.notify_number","label":"Input➛Notify Message➛Notify number","reference":"notify_number","reference_display":"Notify Phone Number","type":"reference","base_type":"reference","parent_table_name":"notify_message","column_name":"notify_number","usedInstances":{"4c4732e1-cecb-412a-b6b1-011b8fc2c561":["notify_number"],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number"]}},{"name":"subflow.notify_message.notify_number.number","label":"Input➛Notify Message➛Notify number➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"notify_number","column_name":"number","usedInstances":{"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number"]}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;09950901936e1210d56bf0a08bba10b7&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Join Conference Call Via SMS&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:15:36&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Join Conference Call Via SMS&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_62dcf009932e1210d56bf0a08bba10d8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 10:36:08&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT INaadcf009932e1210d56bf0a08bba10db"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/id&gt;&lt;name&gt;Join Conference Call Via SMS&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:15:36&lt;/sys_created_on&gt;&lt;sys_id&gt;aadcf009932e1210d56bf0a08bba10db&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 14:15:36&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=aadcf009932e1210d56bf0a08bba10db"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT INaf53498d932e1210d56bf0a08bba1039"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=e45679b3-7020-4403-8c9e-7f4e06540dfb&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;notify_message&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;notify_message&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Notify Message&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/model&gt;&lt;model_id&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_62dcf009932e1210d56bf0a08bba10d8&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="notify_message"&gt;notify_message&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:44:05&lt;/sys_created_on&gt;&lt;sys_id&gt;af53498d932e1210d56bf0a08bba1039&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 14:44:06&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=af53498d932e1210d56bf0a08bba1039"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT IN3f53498d932e1210d56bf0a08bba107e,6e32681193e61210d56bf0a08bba1002,fb53498d932e1210d56bf0a08bba1090"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Look Up Record"&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/action_type&gt;&lt;action_type_parent display_value="Look Up Record"&gt;b93f42810b30030085c083eb37673a63&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:44:05&lt;/sys_created_on&gt;&lt;sys_id&gt;3f53498d932e1210d56bf0a08bba107e&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:48&lt;/sys_updated_on&gt;&lt;ui_id&gt;46c4e904-688c-4f63-a2d6-067b6d615ef1&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/9VYy27bOhD9FUFrx5X8kp3dRQIDBdoEaNNucgOCEqmYKE2qFOXUMfzvHUqk7PipOA6QLjmc4Zwzcziifb/wGfEvfTIKRulo1B9GQdDtBsFg0E1wGMfdQRIHMe75LV/gKQVPjWNOYTnDvDBrITVL5yiRIqWKioSiBHMODoTlGcfzn9bvpvTzrmo/76rySyaME7D4l/cPLT/DCvJoqvzLxcaWnmcUcRxTDsfdGRjejcHUakzhRfA2JZPALZGojpaKGCxBy6d/NBWEQqoU85y2/CkWBGup5rVFUUxuBV8ZJkxoONE3zn9y9gzHDwPjZ2tQ7SUTyRJ6m2kmRWWpEFWbkhdTcVMhNWWlKS64dmUFS5FTRGhmwJlsNnX6fSKfvrlEYyZKHnaTS2hSvcJaKxYXmuam6JTTKRyEpjjLmHhEmZIzVgYDlmn7kcOinXL5BElz9ijaODHA21AL3B6D/bo0/8SKGRZf4RgIBkCMQ1tRVd1cFqqkP0MJL/JyQ2GRV2f5y7JG6HdhUFasLT9UlQgc8kSxTP8HATNqqSxbTs79g1oYrXoPuiXM5MzXNJ1IQv8vIJQsFiXTmSXTNjvL5ba6G0ScpvOrdXxNue0M3kXYKv6FzSo+PJvie0Hw3prXqvh4kj8m4orwESWH5GC3yaqxuVQaVZVbk/K2VE+W4phRTl6M3AbgXPCtUZUXz/fhtUpMTY6N2dv5d2bvh9QhACKoKiwTnInyGwdAzyPQ/kENxOFGw8s+r+RZ2nCebMsUe1p6z6fPzbKvTqgNQLrA74DIu6tQ7gDuJqY73mq0ezaNdjt7NAoKuV/UMOvy7Kike7OYHjn/Z+OPN/1BRmsB4fKh1vjVaTnD1+bsmJwbl7D7qlu4LqFq53qPks78UNpzq1rveY0nEGrzoepWoidGHqleZXdeROonzH/t2rdXrb4sJb03P7rCgw/weO3RxVI0hT6xDF6CiiYghRxhRVEqC0GQfQOuZGP6ljKVa+u8PSy+UV0o4Um4W56eUK/09mrvc4yQBuxc4OfUc/QshtwDel5Jz6vpva4YewZP74zPtEaDZ4wZL2sMj/ZsrUlUKan2DJ8j7TnQ54aTqSGo8Kyg3j66dgl75wg7gvWf+AX41vGSUBz3OngQdcMwCMKARMEwisLhIE4HOOqlqxuFUC4SmH9wcgrCgOORE4Lrarg9Q+x4PPHvCAj+NC7HaKsxXBd8LYX57diJtGfwQps9h/c4IzsXYik5xWKlzv77D4aP8o9Fwe42i1CZvuzqznt9nQv2Q7DfBf1suj+kQWcYkuRiGIXRRS8lg4sRwf0LPIr7UZfQpJee/sF9+AsJ6OmRthMAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=3f53498d932e1210d56bf0a08bba107e"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Call the sms sender"&gt;75c1a01193e61210d56bf0a08bba102c&lt;/action_type&gt;&lt;action_type_parent display_value="Call the sms sender"&gt;62cfd0d993a61210d56bf0a08bba10d3&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;4&lt;/order&gt;&lt;parent_ui_id&gt;91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-17 06:57:45&lt;/sys_created_on&gt;&lt;sys_id&gt;6e32681193e61210d56bf0a08bba1002&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:48&lt;/sys_updated_on&gt;&lt;ui_id&gt;3bf1625c-4848-4cc1-a6d7-3340f949bfa5&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+2VyW7bMBCGXyXQ2RIoa7VvRYoABdqkSNpcgkDgMrIJUJQiUUlcw+/eoSW5XupsCJpLT4KGM5z5f/KTbpaOFM7USQT3KfH9SQCxP/aJiGKWE0pSxqhPxrkzcjQtADN1aWS+yHRbMKgxfE9Va+PLZdOyXJUPXp9RQNPQGXg7BV73WK2wUsimUnRx/eYN+FwqUYN2pje3I6eiNU5ocKjpcm/JLCrIFGWgsM+VqaWeYflLhQ+F5+s5Ts4H5UcMsc0w3AxtylrYmfyRA48GtABsm1PVwMgpqBbUlPXCmZq6xUANVFxotdhkzKU2uJljcx8b+Qt3TgkhNjMH1MehW+XzUnK4qIwsdRcxlKlhsVRtoc+7ca3xkNNWmcF4jLQNZAIqO53t1zfPr+blw+XQ6EzqtZB+UZWcqs0bNSiXtQYa634rf+yZ0EW+7h8BKCiwY1bQqsJIVtXlvVx3waELb6bwxbN3Aqdr5Ex7lFuFHrpGvTOMf16Hr2ktrdxvuM36DFr5U8u7Fr7YIxZURITEgesnnLshI4GbhuC70YQTMpmMk4AzZ7W2NLtrrajOpN6OrHMUExpey8p8whHuoVe+GvUA5f5T9ygI/9yXal5qeAU/2/mv4uag8D14eYHOofC77X+Ay578I7SM/9PyQbQkZBKSNKVunNLUDRMAN2VJ6EbUF2nCwoBF70DLk1/dIDn4uvJS98ZmaKTa4SaMeQgTEuLEKfKdI+l0LGKXxAmLRexHkPveJXC8Wn/j581gbM56w8bzqvb+JacbWSennaznZPe81Fu9e2SC90ImGO8Cc3SW4xgdL/kwuLYd2+Vr+xz/CWJBzAPGeOQKzhNELMEfUuKnbprjL0lAHMcBfzNit78BVa3NdNMJAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=6e32681193e61210d56bf0a08bba1002"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Send SMS"&gt;04a8fed89f681210e9f6328dda0a1c9d&lt;/action_type&gt;&lt;action_type_parent display_value="Send SMS"&gt;9d1a6f849f641210e9f6328dda0a1c8b&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;7&lt;/order&gt;&lt;parent_ui_id&gt;4d6bc47c-31bd-43b0-b4eb-1077942c31b6&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:44:05&lt;/sys_created_on&gt;&lt;sys_id&gt;fb53498d932e1210d56bf0a08bba1090&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;0e026b14-6b6d-49af-99a5-3b860b5f3585&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;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&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=fb53498d932e1210d56bf0a08bba1090"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT IN0b85c501936e1210d56bf0a08bba10f8,bb53498d932e1210d56bf0a08bba108f,f753498d932e1210d56bf0a08bba1080,ff53498d932e1210d56bf0a08bba107c,ff53498d932e1210d56bf0a08bba108e"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;a24035959f221210e9f6328dda0a1cc4&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="End"&gt;d176605ea76103004f27b0d2187901c7&lt;/logic_definition&gt;&lt;order&gt;8&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;4d6bc47c-31bd-43b0-b4eb-1077942c31b6&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:36&lt;/sys_created_on&gt;&lt;sys_id&gt;0b85c501936e1210d56bf0a08bba10f8&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;cdb68988-718f-4310-a8fc-9c664e0c97b0&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;e64035959f221210e9f6328dda0a1cc2&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;6&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:44:05&lt;/sys_created_on&gt;&lt;sys_id&gt;bb53498d932e1210d56bf0a08bba108f&lt;/sys_id&gt;&lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;4d6bc47c-31bd-43b0-b4eb-1077942c31b6&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;ea4035959f221210e9f6328dda0a1cbf&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;3&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:44:05&lt;/sys_created_on&gt;&lt;sys_id&gt;f753498d932e1210d56bf0a08bba1080&lt;/sys_id&gt;&lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:48&lt;/sys_updated_on&gt;&lt;ui_id&gt;91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+VUXWvbMBT9K8PPjvH30ryVbYXC2owmFMYo5lqSEzFZ8iQ5aRby33fljySsKRvb3vZmnat7zzlXB+891dqmtWapro3hK+nNvjz5HpcOw++9J6Fm3swjSlJuuZJFB/jeBkTrCvhJuWkE7B5PCFlzQTUbpjWgsccy7c32P5XsrmGFgJIJbFxYzeUK2znFUxVCFV2RiCRxnsRhGE/TqMyTMoppAgwSvDc2vhvFvfnYIf6rqh0f4mZkUpo6WVHoe+zZMkkZUlcgDPO9GiQFq/TuiGgGdC7FCVhzaXvHNTwb/h1nx1nmLlYMPZLjOhQnbN44JT1ioRRjUYm2lve9YLdNVkEr7Nk2W8MKyhqnztEN3NVirbYPI9ENl52ToSgUAXE8gUW/ZWuZcS/ABKtxUFFD0+AWikarDe+aUUsdrAQegkqoLZK6SARAnPAAlwHBDeLvO/gRNHcu7nAMNvcySzCcFF18cJzVaOHQraP41jpBvcHBStFvAy8Yonljr5FnwwbVB/9l9s5it9+nOUnZVZhO8umUTNIqTyYQ03wS5m/LnOZRxqooeGAEn/hwuF3cz5cf7j4tP7/M69+M+hdBv4KsyqIwuxz0NL8U9AsRfz3d8S/S7Z7pN8MdhuF/mm5uij6lg7eO/I/D/eSS3DOYPiCUEW5QyNJht+P/1xV2+NKcnENbpb86Cyfs8ANoAdWuyQUAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;2e4035959f221210e9f6328dda0a1cbd&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/flow&gt;&lt;flow_variables_assigned&gt;code&lt;/flow_variables_assigned&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Set Flow Variables"&gt;4f787d1e0f9b0010ecf0cc52ff767ea0&lt;/logic_definition&gt;&lt;order&gt;1&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:44:05&lt;/sys_created_on&gt;&lt;sys_id&gt;ff53498d932e1210d56bf0a08bba107c&lt;/sys_id&gt;&lt;sys_mod_count&gt;20&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:48&lt;/sys_updated_on&gt;&lt;ui_id&gt;de29a1c6-f9fb-4656-806e-2fdc4235b883&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1VTW8TMRT8K5ZPUNLtJmmbND1FgopKQCVSeiHVyrt+mxi89uKPtqHKf+e9/UhLkLhxQOop67E9b2b87DxyG0Mdg7+2c+/VyvDZ19sBV4Yw/H7kRlTAZ7ywEviA3wkdaYifUvlai83NE1KslZYOOo5aONwawPHZ495U2NSQaZGDxo2L4JRZ4XYlcVSWJ+Pjs6k8G49gOBqm8uQ0L1ORTvNcDNPJCa7rN3aSfhdI1DjyPal1khSkAw4PAYwELFIK7WHAK2GkCNZtdogDIa+MfgLWyoTWWyUevPqJ1NM0TWllCWin2Dm3qoCrOihrWiSIXPeTVsfKfGplUnBQiqjDs+Cih0xCTfKoXle8XKzt/ee+0IUyjZNuUttC6N1IBPSbxwCewo7qei+FFvmwnzhoqLBiVom6RiSrnb1TTRUUXSUrjYOk1PYe1VFzJKIghwnGJpILxN828I1wiux+RBrcTOW+GPUjwiWd6OloVE5OJ5PDcgpnh8cyzw+nE/wap0OQw2MpitGYb5tIsx+RTLUhdXFkbaK4wBdO1WGOEu7QXHAReqzpMDp//P3bKn50sDQHB/OiAO8ZGTiaN44YOWLRYwgsrIGVMmsQm3+DIiRs0RCwKvrAHIToDBOsuQsJI8Yr6jJmYpXjj/LMlqWHwPINezNkyrB3zlnH3mPDaSqxgDbHRsydUJrSY7ZpH8+6i8VijcJqh1Jpz5InS85EiReql0fb4UFUtYYZqnHMr60LeCYFW8Y0Hct+YYIHvlqBS4rosJlC0iykQ218YdVz4uqc7VgIPFqapSFuynef1se86Y72uUiMDarcZBUqFitIcis3VLl69RqZOnKiOefb7faWHpO2b9qHprn+f9znlwfn5cH5jx+cf3RzJBTKYzDXlMJl/2dNExvsTlU8h+6t+061nrDtL/lPPFL2BwAA&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;664035959f221210e9f6328dda0a1cc1&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="End"&gt;d176605ea76103004f27b0d2187901c7&lt;/logic_definition&gt;&lt;order&gt;5&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:44:05&lt;/sys_created_on&gt;&lt;sys_id&gt;ff53498d932e1210d56bf0a08bba108e&lt;/sys_id&gt;&lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;1b07acc7-b6fa-48b1-b619-92fc9130269b&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT INff53498d932e1210d56bf0a08bba1075"/&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=622f7677-f8e9-4dbb-87e9-301ed14dac23&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;code&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Code&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/model&gt;&lt;model_id&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_62dcf009932e1210d56bf0a08bba10d8&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;0&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:44:05&lt;/sys_created_on&gt;&lt;sys_id&gt;ff53498d932e1210d56bf0a08bba1075&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 14:44:05&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;notify_message&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Notify Message&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_62dcf009932e1210d56bf0a08bba10d8&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:44:05&lt;/sys_created_on&gt;&lt;sys_id&gt;3753498d932e1210d56bf0a08bba1043&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Notify Message&lt;/sys_name&gt;&lt;sys_package display_value="Notify" source="com.snc.notify"&gt;13cd2cf4045a43107f44c21ce62279bb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_62dcf009932e1210d56bf0a08bba10d8_notify_message_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 14:44:05&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation&gt;(Re)join a conference call by sending a SMS containing the conference call code.&lt;/annotation&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;27000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category display_value="Notify"&gt;368d077293041210e4cfca32b3891851&lt;/category&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;(Re)join a conference call by sending a SMS containing the conference call code.&lt;/description&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;internal_name&gt;join_conference_call_via_sms&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"subflow.notify_message.phone_number","label":"Input➛Notify Message➛Phone number","reference":"","reference_display":"Phone number","type":"phone_number_e164","base_type":"phone_number_e164","parent_table_name":"notify_message","column_name":"phone_number","usedInstances":{"0e026b14-6b6d-49af-99a5-3b860b5f3585":[null],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["phone_number"]}},{"name":"subflow.notify_message.body","label":"Input➛Notify Message➛Body","reference":"","reference_display":"Body","type":"string","base_type":"string","parent_table_name":"notify_message","column_name":"body","usedInstances":{}},{"name":"flow_variable.code","label":"Flow Variables➛Code","type":"string","base_type":"string","usedInstances":{"46c4e904-688c-4f63-a2d6-067b6d615ef1":["conditions"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"622f7677-f8e9-4dbb-87e9-301ed14dac23"}},{"name":"46c4e904-688c-4f63-a2d6-067b6d615ef1.Record","label":"2 - Look Up Record➛Notify Conference Call Record","reference":"notify_conference_call","reference_display":"Notify Conference Call","type":"reference","base_type":"reference","usedInstances":{"91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0":["condition"],"4d6e9bd2-5954-4495-80eb-379a1e9f21ab":["notify_conference_call"],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_conference_call"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.notify_message","label":"Input➛Notify Message","reference":"notify_message","reference_display":"Notify Message","type":"reference","base_type":"reference","column_name":"","usedInstances":{"4c4732e1-cecb-412a-b6b1-011b8fc2c561":["notify_number"],"0e026b14-6b6d-49af-99a5-3b860b5f3585":["message",null],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number","phone_number"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"e45679b3-7020-4403-8c9e-7f4e06540dfb","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.notify_message.notify_number","label":"Input➛Notify Message➛Notify number","reference":"notify_number","reference_display":"Notify Phone Number","type":"reference","base_type":"reference","parent_table_name":"notify_message","column_name":"notify_number","usedInstances":{"4c4732e1-cecb-412a-b6b1-011b8fc2c561":["notify_number"],"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number"]}},{"name":"subflow.notify_message.notify_number.number","label":"Input➛Notify Message➛Notify number➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"notify_number","column_name":"number","usedInstances":{"3bf1625c-4848-4cc1-a6d7-3340f949bfa5":["notify_number"]}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Join Conference Call Via SMS&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:44&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;09950901936e1210d56bf0a08bba10b7&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=09950901936e1210d56bf0a08bba10b7"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=09950901936e1210d56bf0a08bba10b7"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=09950901936e1210d56bf0a08bba10b7"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=09950901936e1210d56bf0a08bba10b7^sys_idNOT IN89950901936e1210d56bf0a08bba10b8"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;09950901936e1210d56bf0a08bba10b7&lt;/id&gt;&lt;name&gt;Join Conference Call Via SMS&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:44&lt;/sys_created_on&gt;&lt;sys_id&gt;89950901936e1210d56bf0a08bba10b8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 14:53:44&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=89950901936e1210d56bf0a08bba10b8"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=09950901936e1210d56bf0a08bba10b7^sys_idNOT IN89950901936e1210d56bf0a08bba10b9"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=e45679b3-7020-4403-8c9e-7f4e06540dfb&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;notify_message&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;notify_message&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Notify Message&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Join Conference Call Via SMS"&gt;09950901936e1210d56bf0a08bba10b7&lt;/model&gt;&lt;model_id&gt;09950901936e1210d56bf0a08bba10b7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_09950901936e1210d56bf0a08bba10b7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="notify_message"&gt;notify_message&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:44&lt;/sys_created_on&gt;&lt;sys_id&gt;89950901936e1210d56bf0a08bba10b9&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 14:53:44&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=89950901936e1210d56bf0a08bba10b9"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=09950901936e1210d56bf0a08bba10b7"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=09950901936e1210d56bf0a08bba10b7"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=09950901936e1210d56bf0a08bba10b7"/&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=09950901936e1210d56bf0a08bba10b7^sys_idNOT IN0442a81193e61210d56bf0a08bba1014,51950901936e1210d56bf0a08bba10db,55950901936e1210d56bf0a08bba10dd"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Call the sms sender"&gt;75c1a01193e61210d56bf0a08bba102c&lt;/action_type&gt;&lt;action_type_parent display_value="Call the sms sender"&gt;62cfd0d993a61210d56bf0a08bba10d3&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;75c1a01193e61210d56bf0a08bba102c&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;09950901936e1210d56bf0a08bba10b7&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;4&lt;/order&gt;&lt;parent_ui_id&gt;91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-17 06:57:51&lt;/sys_created_on&gt;&lt;sys_id&gt;0442a81193e61210d56bf0a08bba1014&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;3bf1625c-4848-4cc1-a6d7-3340f949bfa5&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+2VXU/bMBSG/wrydRM5TZqkvZuKkCZtMAHbDUKVP05aS44TEgfoKv77jpu09GMFOjEupl1FPj623/ccP/HNgihJRiSRImA0CIYhxEE/oHIQ84wymnLOAtrPSI8YlgNmmsKqbD4xTc6hwvA9042LLxZ1wzNdPPhdRg51zabgby3w28/TE66Uqi41m//44w3ETGlZgSGjm9seKVmFCi2KGi12pt5qUTMOGlPPlyeenK88HrBu56UL17ZSZtqNv3RbXK2CRSWdpKBH4NGCkYBaMqZr6JGcGclsUc3JyFYNBipg8sLo+TpjpozFzYjLfazVTzwupZS6zAzQnoB2dj28ZlzDaVvYdio7ZZahmkbYpurSxaxQAuq2OBIy1mg73oy1CRelVYVpl1i3cbe60E1uztuakPUGqz5ipKlhIqF0bp3+zkx2NSseLldKz5RZFqab1IVgej1iFsvHG+v0LEijrncq3Ub2ag0acjxxkrOyxMikrIp7tTwFRef+VOPAd1cM1dVqanwmnEMfu8D8M4yfLsM/WKWc3a+4zbLRjfpu1F0Dn909kkwOKI1DL0iE8CJOQy+NIPAGQ0HpcNhPQsHJU4/U83qsWV0/Fwq7NLlrnM22bF2BJm2N3RJRqdJ+QlH30NXiqdcRmgUvXd8wer6m5awwcASgm/lHgbm38Dgg3+BoBeQ3d9IejztGj8Gx/x/HfwTHhA4jmqbMi1OWelEC4KU8ibwBC2Sa8Cjkg7+C44uvSZjsvRqiMF2pJ1havQVmFIsIhjRCDyn+UjL8ubC+jD0aJzyWcTCALPAvQeDl/R2gx5P3uvidp3C8Vn8ybtW/5q6j8ZmMbSAvN+Idk+F7MRn2t4k8qPEQpwdNvzO9B4V9ANPZFbBKzM4UaHcl1n/RA6xv9nEb981OfgjxYSxCzsXAk0IkSHyCD3ASpF6a4RMsIY7jULwj8be/AJnxom8kCwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=0442a81193e61210d56bf0a08bba1014"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Look Up Record"&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/action_type&gt;&lt;action_type_parent display_value="Look Up Record"&gt;b93f42810b30030085c083eb37673a63&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;09950901936e1210d56bf0a08bba10b7&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:45&lt;/sys_created_on&gt;&lt;sys_id&gt;51950901936e1210d56bf0a08bba10db&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;46c4e904-688c-4f63-a2d6-067b6d615ef1&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+VYXW/iOhD9K1GeKTfhK9C3KxDSSntbadu7L7sry4mdYq2xs47TLkX89zuOnYAgBaILUqt99HjsOTNzzsTwbe0z4t/6ZBJM0slkOI6CoN8PgtGon+AwjvujJA5iPPA7vsBLCp4ax5zC8hnzwqyF1CxdoUSKlCoqEooSzDk4EJZnHK++Or+70s+b1n7e1PolC8YJWPzbbz86foYVxNFU+bfrva1zgXIcUw6ujw7pHnC9yuolKves7fPuMe/ObkhFDJSg49PfmgpCAUOKeU47/hILgrVUq9qiKCb3gm8NCyY03Ogb5985e4W448D4uRLYvXpZRp7ZstmtdIY1ftCqSHShnHuykCyhua0JoSkuuJ7u2qzDfaaZFPaITd2elrxYijtbEr++oOoSWIqcIkIzk6xB71JJHxby5UuFdM5EWRe3ySX0vF5hrRWLC23wrH3K6RIuQkucZUw8oUzJZ1YeBizL7hOHRTfl8gWC5uxJdHFigHehtrg7B/usNH/Fipks/oFr4DAAYhxYgmwbc1mospzPKOFFXm4oLHJ7l7/p+Pkqn3Kc59vMoezoV2Fw2zq4jJEtmjmSKJbpv+GKZ+qS23QqvQyP0nCypR0IgzCDIt8RTSIJ/V7AUbJel7k/u/S6ZmezOZTPGSdaCul0BpWQprspNKXlJHVg+9x0gZNUeDFJDYLgo4kKgr8/TbVXiS3BCamE5CjRyJZTuVQa2VruaOVQC625fgaEiuv3hp1evHoLlaN6yignTV+PudnY+3r0/tyvx7skOgAiyHaQCc5E+RwAoNdSwPAo/eJwj2slxbb8L204Tw51gD0tvdfWajgDTqWGB4jtPVo8DRCruV9SZn/mV0Yngv7FRNDvXU4E6zrVupgNda9egaajlf+r8cf7/kDDnQPhpklkrWKGbWP2Noci7rdS8S7h7M7sDd5d+Kn4hio71xwDCzjq4iGrYfTCyBPV2+iVF5H6BfOfTftOmKhqVJneFZ6d4dFfP/HOs5OlaAmdYxm8jhVNgBw5woqiVBaCIPcu3hLJdDJlKtfO+XDYfKGgH+FJEKenF9Qrvb3au+UH+XQeVSk/pV6ViIuWe5CIVybi1Ym0S7vN4Bpc8KF6jcE1x4yXHYGfPdlOS6lSUr0xvE408wgrzpxsZ4IKLwrq/4++Jhk0jsATWD/Eb+jLj6eE4njQw6OoH4ZBEAYkCsZRFI5HcTrC0SDd6hShXCQwUeHmFKgC16OKGlWfw8MZ5AZuu1lzBqiKgTMpzG/sXqQ9gwra61WoTuN2MyWWklMs9obKIyD/a15+FWq6Dt/lYPkQfyoV7HG/2tbUWO9rPR8K9q9gvwr6ydBsTIPeOCTJzTgKo5tBSkY3E4KHN3gSD6M+ockgveSL4Md/pizZ17oVAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=51950901936e1210d56bf0a08bba10db"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Send SMS"&gt;04a8fed89f681210e9f6328dda0a1c9d&lt;/action_type&gt;&lt;action_type_parent display_value="Send SMS"&gt;9d1a6f849f641210e9f6328dda0a1c8b&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;04a8fed89f681210e9f6328dda0a1c9d&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;09950901936e1210d56bf0a08bba10b7&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;7&lt;/order&gt;&lt;parent_ui_id&gt;4d6bc47c-31bd-43b0-b4eb-1077942c31b6&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:45&lt;/sys_created_on&gt;&lt;sys_id&gt;55950901936e1210d56bf0a08bba10dd&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;0e026b14-6b6d-49af-99a5-3b860b5f3585&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;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&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=55950901936e1210d56bf0a08bba10dd"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=09950901936e1210d56bf0a08bba10b7"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=09950901936e1210d56bf0a08bba10b7^sys_idNOT IN51950901936e1210d56bf0a08bba10da,95950901936e1210d56bf0a08bba10d9,d9950901936e1210d56bf0a08bba10d6,d9950901936e1210d56bf0a08bba10d7,d9950901936e1210d56bf0a08bba10d8"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;a24035959f221210e9f6328dda0a1cc4&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;09950901936e1210d56bf0a08bba10b7&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="End"&gt;d176605ea76103004f27b0d2187901c7&lt;/logic_definition&gt;&lt;order&gt;8&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;4d6bc47c-31bd-43b0-b4eb-1077942c31b6&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:45&lt;/sys_created_on&gt;&lt;sys_id&gt;51950901936e1210d56bf0a08bba10da&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;cdb68988-718f-4310-a8fc-9c664e0c97b0&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;e64035959f221210e9f6328dda0a1cc2&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;09950901936e1210d56bf0a08bba10b7&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;6&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:45&lt;/sys_created_on&gt;&lt;sys_id&gt;95950901936e1210d56bf0a08bba10d9&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;4d6bc47c-31bd-43b0-b4eb-1077942c31b6&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;2e4035959f221210e9f6328dda0a1cbd&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;09950901936e1210d56bf0a08bba10b7&lt;/flow&gt;&lt;flow_variables_assigned&gt;code&lt;/flow_variables_assigned&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Set Flow Variables"&gt;4f787d1e0f9b0010ecf0cc52ff767ea0&lt;/logic_definition&gt;&lt;order&gt;1&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:45&lt;/sys_created_on&gt;&lt;sys_id&gt;d9950901936e1210d56bf0a08bba10d6&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;de29a1c6-f9fb-4656-806e-2fdc4235b883&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1VS08bMRD+K8inVgqrTQJ5wAkRISG1RSopl4JWs+txYtVrL34A2yj/nfF6k1Aq9dwDp/V843l8n2e0G2aCb4J3S3PhnFxpdvbzYcCkjhidN0xydsbYgGmokU6V4UjWE6iAycGlaxS0dwekWkvFLfa5GrAU6tGys807V5dbiNPxyXzG5+MRDkfDnJ9OSpFDPitLGObTU0qooERFVy9T8T9b8W0TLeet1Kve/tIH3O5AY3lsIB8wfPGoOVJlAcrhgNWgOXhj2z1iEfiNVgdgLbVP1Gp4cfI31ZvleR5vCiQ2VU98by6hVLhIwiSXWIAHaidUPti9TkZW6JIWHAUE5S/fYunCTeOl0SnEx8R9tFGh1t+SFmyf4M07BIcFxybSjf33ZMTt2jx/33V6JXWnTO9UpgK1t8CTfmXwsZ8NC3L5TuqE/CU2KqypYlFD0xBSNNY8ya4KNV1nK0VGJpR5pu7izGVQRYYZPQNkV4QvOvgOrIx0v1IaCo7lfmj5GPA6js1kNBLTyXR6LGY4Pz7hZXk8m9JpnA+RD084VKMx2w6Ya92lAucOQtErFY8h0kyy9QIVSeMYUlnZ+Atq6olC6M1wh3UjHMeOvv+6Rfthj+LFo/uQ52N+JHjRsXOh7IinBcu08VK0RY3OwQqz0vA2IxXrT5/P77VFGhXdpTln2+32Ia5dkuRjNT9W82M1/6vV5FhJR1J183W9+39GR0tLIau30LOxv2KtA7Z9Bca/nHCJBwAA&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;ea4035959f221210e9f6328dda0a1cbf&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;09950901936e1210d56bf0a08bba10b7&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;3&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:45&lt;/sys_created_on&gt;&lt;sys_id&gt;d9950901936e1210d56bf0a08bba10d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvH30ryVZIVC24wmFMYo5lqSEzHZ8iw5aRby33dlO05YM7ayPu7NOtK9OufoHrwnqjFVY/RSXWstViWZfH12iCgtht97UkLByYRQVTJhhCrTFnDIBmRjN/CTCV1J2D2dELoWktW871ZBjTWG12Sy/2VLMCzIPcj9K+rTMEjCwPOCceRnSZj5AQuBQ4gNJWRc4tHpkcaHuxZxfsvP7CqLa1OLctWv7/ouiyOoamZZ+Z5D+IvhJePIJwepuUMKKBkYVe8GpObA5qU8AWtRmk5wAS9a/MALgzi2B3OOEmnvxrBcQib5rHOr28pnYADpNNQ09WCeEpTrziDGc2ikmZ5j3YF5ZeV2JcY27quVbIryoXOFDA3OHqfRPGW8smot/V5Lvlir7eOR6Y0oW2f6TakoyGEFBv3LGmP57AmXvMBGaQFVha6mVa02oi1GLoW7krhwc6m2eKmdMBeoJe6iueDeID5r4SeohVVxj22wuKOZgRY0bacR26FNnBwcond6KkHrk0h0OP3eWIqd5F5c2vljS2gtKnONN294r+PgvB7us7ne76OERvzKi0bJeExHUZ6EIwhYMvKSj1nCEj/mue8+copDdDjcLh7my0/3n5dfXgfiX1q9LUlXEOex78WXkxQll5J0IUNvjE/wh/jYd/vL9Hie9z8+7xIfodNu6Htt7eXvmJ5nG5XuzsFrKjRSa5/p9vgHsRs7HDBBz6Gtqr9ZUSfs8BOCg6lbiwYAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;664035959f221210e9f6328dda0a1cc1&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Join Conference Call Via SMS"&gt;09950901936e1210d56bf0a08bba10b7&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="End"&gt;d176605ea76103004f27b0d2187901c7&lt;/logic_definition&gt;&lt;order&gt;5&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;91a26ab8-f8a4-46d2-8a48-ea38f9ddb0a0&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:45&lt;/sys_created_on&gt;&lt;sys_id&gt;d9950901936e1210d56bf0a08bba10d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:49&lt;/sys_updated_on&gt;&lt;ui_id&gt;1b07acc7-b6fa-48b1-b619-92fc9130269b&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=09950901936e1210d56bf0a08bba10b7"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=09950901936e1210d56bf0a08bba10b7^sys_idNOT IN91950901936e1210d56bf0a08bba10d1"/&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=622f7677-f8e9-4dbb-87e9-301ed14dac23&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;code&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Code&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Join Conference Call Via SMS"&gt;09950901936e1210d56bf0a08bba10b7&lt;/model&gt;&lt;model_id&gt;09950901936e1210d56bf0a08bba10b7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_09950901936e1210d56bf0a08bba10b7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;0&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:45&lt;/sys_created_on&gt;&lt;sys_id&gt;91950901936e1210d56bf0a08bba10d1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 14:53:45&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;notify_message&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Notify Message&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_09950901936e1210d56bf0a08bba10b7&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:44&lt;/sys_created_on&gt;&lt;sys_id&gt;11950901936e1210d56bf0a08bba10c7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Notify Message&lt;/sys_name&gt;&lt;sys_package display_value="Notify" source="com.snc.notify"&gt;13cd2cf4045a43107f44c21ce62279bb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_09950901936e1210d56bf0a08bba10b7_notify_message_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-16 14:53:44&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_09950901936e1210d56bf0a08bba10b7"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_09950901936e1210d56bf0a08bba10b7"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/sys_id&gt;&lt;latest_snapshot&gt;09950901936e1210d56bf0a08bba10b7&lt;/latest_snapshot&gt;&lt;compiler_build/&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=62dcf009932e1210d56bf0a08bba10d8"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=62dcf009932e1210d56bf0a08bba10d8^sys_idNOT IN69950901936e1210d56bf0a08bba10f6"/&gt;&lt;sys_flow_subflow_plan action="INSERT_OR_UPDATE"&gt;&lt;plan&gt;com.snc.process_flow.engine.ProcessPlan@5c3f45c8&lt;/plan&gt;&lt;plan_id display_value="Join Conference Call Via SMS"&gt;62dcf009932e1210d56bf0a08bba10d8&lt;/plan_id&gt;&lt;snapshot&gt;09950901936e1210d56bf0a08bba10b7&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-16 14:53:45&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;69950901936e1210d56bf0a08bba10f6&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-17 12:38:50&lt;/sys_updated_on&gt;&lt;/sys_flow_subflow_plan&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1865030289</payload_hash>
+        <record_name>Join Conference Call Via SMS</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:36:09</sys_created_on>
+        <sys_id>2db798beedee03107f44863610ff21ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb3e80170000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:36:09</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>6db798bee1ee0310cc6c27e3f0b600c9</update_guid>
+        <update_guid_history>6db798bee1ee0310cc6c27e3f0b600c9:1865030289,6db798be3aee0310f6696590afee55a6:-1608900459</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:39:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>74a9a2ff9a224120ab1e20c02f528199</sys_id>
+        <sys_metadata>62dcf009932e1210d56bf0a08bba10d8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Join Conference Call Via SMS</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_62dcf009932e1210d56bf0a08bba10d8</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_62dcf009932e1210d56bf0a08bba10d8">2db798beedee03107f44863610ff21ca</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:39:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

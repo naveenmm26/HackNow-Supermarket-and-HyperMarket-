@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_fresh_guard_360_fg360_store_ops_dashboard.do</endpoint>
+        <html><![CDATA[<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root { --bg-main: #f8fafc; --header-bg: #0f172a; --card-bg: #ffffff; --text-main: #0f172a; --text-muted: #64748b; --border-color: #e2e8f0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Inter", sans-serif; background-color: var(--bg-main); color: var(--text-main); line-height: 1.5; padding-bottom: 80px; position: relative; min-height: 100vh; }
+        .app-header { background-color: var(--header-bg); color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; height: 60px; border-bottom: 1px solid #1e293b; }
+        .header-title h1 { font-size: 1.2rem; font-weight: 700; color: #f8fafc; }
+        .header-title p { font-size: 0.75rem; color: #94a3b8; }
+        .header-controls { display: flex; align-items: center; gap: 12px; }
+        .store-selector { background: #1e293b; color: #ffffff; border: 1px solid #334155; border-radius: 6px; padding: 6px 12px; font-size: 0.82rem; font-weight: 600; font-family: inherit; outline: none; cursor: pointer; }
+        .store-selector option { background: #0f172a; color: #ffffff; }
+        .btn-refresh { background: #2563eb; color: #ffffff; border: none; border-radius: 6px; padding: 6px 14px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .btn-refresh:hover { background: #1d4ed8; }
+        .dashboard-container { padding: 20px 24px; max-width: 1600px; margin: 0 auto; }
+        /* KPI Grid */
+        .kpi-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 20px; }
+        .kpi-card { background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border-color); padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+        .kpi-top { display: flex; align-items: center; gap: 12px; }
+        .kpi-icon { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem; }
+        .icon-green { background-color: #dcfce7; color: #16a34a; }
+        .icon-orange { background-color: #ffedd5; color: #ea580c; }
+        .icon-red { background-color: #fee2e2; color: #dc2626; }
+        .icon-yellow { background-color: #fef3c7; color: #d97706; }
+        .icon-purple { background-color: #f3e8ff; color: #9333ea; }
+        .icon-cyan { background-color: #e0f2fe; color: #0284c7; }
+        .kpi-label { font-size: 0.76rem; font-weight: 600; color: var(--text-muted); display: block; }
+        .kpi-value { font-size: 1.55rem; font-weight: 800; color: var(--text-main); line-height: 1.2; }
+        .kpi-subtext { font-size: 0.7rem; color: #64748b; font-weight: 500; display: block; margin-top: 2px; }
+        /* Grid Rows */
+        .reports-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+        .card-report { background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border-color); padding: 18px; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid #f1f5f9; }
+        .card-header h3 { font-size: 0.92rem; font-weight: 700; color: var(--text-main); }
+        .card-body { flex: 1; position: relative; }
+        .chart-body-donut { display: flex; align-items: center; gap: 14px; }
+        .chart-container { width: 140px; height: 140px; position: relative; flex-shrink: 0; }
+        .chart-container-full { width: 100%; height: 180px; position: relative; }
+        /* Tables */
+        .table-body { overflow-x: auto; max-height: 190px; }
+        .report-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; text-align: left; }
+        .report-table th { background-color: #f8fafc; color: var(--text-muted); font-weight: 600; padding: 8px 10px; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; }
+        .report-table td { padding: 8px 10px; border-bottom: 1px solid #f1f5f9; color: var(--text-main); }
+        .badge { padding: 3px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; display: inline-block; }
+        .badge-warning { background-color: #fef3c7; color: #d97706; }
+        .badge-danger { background-color: #fee2e2; color: #dc2626; }
+        .badge-success { background-color: #dcfce7; color: #16a34a; }
+        .badge-info { background-color: #dbeafe; color: #2563eb; }
+        /* Store Summary Card */
+        .store-summary-card { background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border-color); padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); margin-bottom: 20px; }
+        .store-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 14px; }
+        .summary-item label { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; display: block; uppercase; }
+        .summary-item strong { font-size: 0.95rem; color: var(--text-main); font-weight: 700; display: block; margin-top: 2px; }
+        /* AI Widget */
+        .ai-floating-btn { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #4f46e5); color: #ffffff; border: 3px solid #ffffff; box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4); font-weight: 800; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 9999; transition: transform 0.2s ease; }
+        .ai-floating-btn:hover { transform: scale(1.08); }
+        .ai-drawer { position: fixed; bottom: 96px; right: 24px; width: 420px; height: 580px; background: #ffffff; border-radius: 16px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25); border: 1px solid var(--border-color); display: none; flex-direction: column; overflow: hidden; z-index: 9999; }
+        .ai-drawer.active { display: flex; }
+        .ai-header { background: var(--header-bg); color: #ffffff; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; }
+        .ai-header h3 { font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .ai-close { background: none; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer; }
+        .ai-body { flex: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; background: #f8fafc; }
+        .chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 0.83rem; line-height: 1.45; white-space: pre-wrap; }
+        .msg-ai { background: #ffffff; border: 1px solid #e2e8f0; color: #1e293b; align-self: flex-start; border-bottom-left-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .msg-user { background: #2563eb; color: #ffffff; align-self: flex-end; border-bottom-right-radius: 2px; }
+        .suggested-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+        .chip-btn { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; padding: 5px 10px; border-radius: 16px; font-size: 0.74rem; font-weight: 600; cursor: pointer; }
+        .chip-btn:hover { background: #dbeafe; }
+        .ai-footer { padding: 12px; background: #ffffff; border-top: 1px solid #e2e8f0; display: flex; gap: 8px; }
+        .ai-input { flex: 1; border: 1px solid #cbd5e1; border-radius: 20px; padding: 8px 14px; font-size: 0.83rem; outline: none; }
+        .ai-send-btn { background: #2563eb; color: #ffffff; border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-title">
+            <h1>Fresh Guard 360 - Store Operations Dashboard</h1>
+            <p>Store-level Food Safety &amp; Operations Monitoring</p>
+        </div>
+        <div class="header-controls">
+            <select id="activeStoreSelector" class="store-selector" title="Select Authorized Store">
+                <option value="Store 1">Store 1 (NYC Downtown - Ramesh)</option>
+                <option value="Store 2">Store 2 (Brooklyn North - Priya)</option>
+                <option value="Store 3">Store 3 (Queens Central)</option>
+                <option value="Store 4">Store 4 (Manhattan)</option>
+            </select>
+            <button class="btn-refresh" onclick="window.location.reload();">]]>🔄<![CDATA[ Refresh</button>
+        </div>
+    </header>
+    <main class="dashboard-container">
+        <!-- TOP KPI SECTION -->
+        <div class="kpi-grid">
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-green">✅</div><div><span class="kpi-label">Today's Checklist Completion</span><span class="kpi-value" id="kpiChecklist">94.7%</span><span class="kpi-subtext">18 / 19 Completed</span></div></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-orange">⚠️</div><div><span class="kpi-label">Open Food Safety Issues</span><span class="kpi-value" id="kpiIssues">4</span><span class="kpi-subtext">Requires Review</span></div></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-red">]]>🛡<![CDATA[️</div><div><span class="kpi-label">High / Critical Risks</span><span class="kpi-value" id="kpiRisks">2</span><span class="kpi-subtext">Action Required</span></div></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-yellow">⚠️</div><div><span class="kpi-label">Near-Expiry Products</span><span class="kpi-value" id="kpiExpiry">5</span><span class="kpi-subtext">Expiring in 48h</span></div></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-purple">]]>📋<![CDATA[</div><div><span class="kpi-label">Overdue CAPA</span><span class="kpi-value" id="kpiCapa">1</span><span class="kpi-subtext">Action Plan Due</span></div></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-cyan">]]>🔧<![CDATA[</div><div><span class="kpi-label">Open Maintenance Tickets</span><span class="kpi-value" id="kpiTickets">3</span><span class="kpi-subtext">Pending Repair</span></div></div></div>
+        </div>
+        <!-- ROW 1: DAILY FOOD SAFETY -->
+        <div class="reports-row">
+            <div class="card-report">
+                <div class="card-header"><h3>FG360 - Store Food Safety Status</h3></div>
+                <div class="card-body chart-body-donut">
+                    <div class="chart-container"><canvas id="c1"></canvas></div>
+                    <div class="custom-legend">
+                        <div class="legend-item"><span class="legend-color" style="background:#22c55e"></span> Completed (18) <span class="pct">94.7%</span></div>
+                        <div class="legend-item"><span class="legend-color" style="background:#ef4444"></span> Failed (1) <span class="pct">5.3%</span></div>
+                        <div class="legend-item"><span class="legend-color" style="background:#f59e0b"></span> Pending (0) <span class="pct">0%</span></div>
+                        <div class="legend-item"><span class="legend-color" style="background:#3b82f6"></span> Submitted (19) <span class="pct">100%</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-report">
+                <div class="card-header"><h3>FG360 - Food Safety Issues by Store</h3></div>
+                <div class="card-body"><div class="chart-container-full"><canvas id="c2"></canvas></div></div>
+            </div>
+            <div class="card-report">
+                <div class="card-header"><h3>FG360 - Food Safety Risk Level</h3></div>
+                <div class="card-body chart-body-donut">
+                    <div class="chart-container"><canvas id="c3"></canvas></div>
+                    <div class="custom-legend">
+                        <div class="legend-item"><span class="legend-color" style="background:#ef4444"></span> Critical (1) <span class="pct">25%</span></div>
+                        <div class="legend-item"><span class="legend-color" style="background:#f97316"></span> High (1) <span class="pct">25%</span></div>
+                        <div class="legend-item"><span class="legend-color" style="background:#f59e0b"></span> Medium (1) <span class="pct">25%</span></div>
+                        <div class="legend-item"><span class="legend-color" style="background:#22c55e"></span> Low (1) <span class="pct">25%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ROW 2: PRODUCTS AND CAPA -->
+        <div class="reports-row">
+            <div class="card-report">
+                <div class="card-header"><h3>FG360 - Near Expiry and Expired Products</h3></div>
+                <div class="card-body table-body">
+                    <table class="report-table">
+                        <thead><tr><th>Product</th><th>Batch</th><th>Expiry</th><th>Status</th><th>Supplier</th></tr></thead>
+                        <tbody id="nearExpiryTbody">
+                            <tr><td>Fresh Milk 1L</td><td>BATCH-1001</td><td>24 May 2025</td><td><span class="badge badge-warning">Near Expiry</span></td><td>Dairy Best</td></tr>
+                            <tr><td>Cheddar Cheese</td><td>BATCH-1002</td><td>25 May 2025</td><td><span class="badge badge-warning">Near Expiry</span></td><td>Fresh Dairy</td></tr>
+                            <tr><td>Chicken Breast 500g</td><td>BATCH-1004</td><td>23 May 2025</td><td><span class="badge badge-danger">Expired</span></td><td>Meat Prime</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-report">
+                <div class="card-header"><h3>FG360 - CAPA Status</h3></div>
+                <div class="card-body chart-body-donut">
+                    <div class="chart-container"><canvas id="c5"></canvas></div>
+                    <div class="custom-legend">
+                        <div class="legend-item"><span class="legend-color" style="background:#ef4444"></span> Open (2) <span class="pct">40%</span></div>
+                        <div class="legend-item"><span class="legend-color" style="background:#f97316"></span> In Progress (2) <span class="pct">40%</span></div>
+                        <div class="legend-item"><span class="legend-color" style="background:#22c55e"></span> Completed (1) <span class="pct">20%</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-report">
+                <div class="card-header"><h3>FG360 - CAPA Overdue</h3></div>
+                <div class="card-body table-body">
+                    <table class="report-table">
+                        <thead><tr><th>CAPA #</th><th>Issue</th><th>Priority</th><th>Assigned To</th><th>Target Date</th><th>Status</th></tr></thead>
+                        <tbody id="capaOverdueTbody">
+                            <tr><td>CAPA00023</td><td>Chiller Temp Spike</td><td><span class="badge badge-danger">High</span></td><td>John Doe</td><td>20 May 2025</td><td><span class="badge badge-danger">Overdue</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- ROW 3: RECALL AND MAINTENANCE -->
+        <div class="reports-row">
+            <div class="card-report">
+                <div class="card-header"><h3>FG360 - Product Recall Status</h3></div>
+                <div class="card-body"><div class="chart-container-full"><canvas id="c7"></canvas></div></div>
+            </div>
+            <div class="card-report">
+                <div class="card-header"><h3>FG360 - Maintenance Tickets by Store</h3></div>
+                <div class="card-body"><div class="chart-container-full"><canvas id="c8"></canvas></div></div>
+            </div>
+            <div class="card-report">
+                <div class="card-header"><h3>FG360 - Maintenance Open Tickets</h3></div>
+                <div class="card-body table-body">
+                    <table class="report-table">
+                        <thead><tr><th>Ticket #</th><th>Problem</th><th>Priority</th><th>Assigned</th><th>Status</th><th>Created</th></tr></thead>
+                        <tbody id="maintenanceTbody">
+                            <tr><td>MT000123</td><td>Walk-in Refrigerator Temp</td><td><span class="badge badge-danger">High</span></td><td>Tech Team</td><td><span class="badge badge-warning">In Progress</span></td><td>21 May 2025</td></tr>
+                            <tr><td>MT000125</td><td>Sanitation Sink Leak</td><td><span class="badge badge-info">Medium</span></td><td>John Smith</td><td><span class="badge badge-info">Open</span></td><td>22 May 2025</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- ROW 4: STORE SUMMARY DETAILS -->
+        <div class="store-summary-card">
+            <div class="card-header" style="border:none; margin:0; padding:0;">
+                <h3>]]>🏬<![CDATA[ STORE SUMMARY &amp; OPERATIONAL DETAILS</h3>
+            </div>
+            <div class="store-summary-grid">
+                <div class="summary-item"><label>Store Name</label><strong id="sumStoreName">Store 1 (NYC Downtown)</strong></div>
+                <div class="summary-item"><label>Store Code</label><strong id="sumStoreCode">STR-1001</strong></div>
+                <div class="summary-item"><label>Location</label><strong id="sumLocation">5th Ave, Manhattan, NYC</strong></div>
+                <div class="summary-item"><label>Region</label><strong id="sumRegion">Region A (East Coast)</strong></div>
+                <div class="summary-item"><label>Store Manager</label><strong id="sumManager">Ramesh (Store Manager)</strong></div>
+                <div class="summary-item"><label>Total Employees</label><strong id="sumEmployees">18 Staff Members</strong></div>
+                <div class="summary-item"><label>Current Risk Level</label><strong id="sumRisk" style="color:#dc2626">High Risk Level</strong></div>
+                <div class="summary-item"><label>Today's Checklist Status</label><strong id="sumChecklistStatus" style="color:#16a34a">94.7% Passed (18/19)</strong></div>
+            </div>
+        </div>
+    </main>
+    <!-- AI ASSISTANT WIDGET -->
+    <button class="ai-floating-btn" id="aiBtn">( AI )</button>
+    <div class="ai-drawer" id="aiDrawer">
+        <div class="ai-header"><h3>]]>🤖<![CDATA[ Fresh Guard AI</h3><button class="ai-close" id="aiClose">X</button></div>
+        <div class="ai-body" id="aiChatBody">
+            <div class="chat-msg msg-ai">Hello Ramesh! ]]>👋<![CDATA[ I'm **Fresh Guard AI**. I can help you monitor Store 1's daily food safety, checklist status, near-expiry products, CAPAs, and maintenance tickets.</div>
+            <div class="suggested-chips" id="suggestedChips"></div>
+        </div>
+        <div class="ai-footer"><input type="text" class="ai-input" id="aiInput" placeholder="Ask Fresh Guard AI about Store 1..." /><button class="ai-send-btn" id="aiSend">➔</button></div>
+    </div>
+</j:jelly>]]></html>
+        <name>fg360_store_ops_dashboard</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 15:24:50</sys_created_on>
+        <sys_id>8c63ea47092203107f446356e0e8d8c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>fg360_store_ops_dashboard</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_ui_page_8c63ea47092203107f446356e0e8d8c0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 15:24:50</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_ui_page_8c63ea47092203107f446356e0e8d8c0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_fresh_guard_360_fg360_store_ops_dashboard.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" /&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;amp;display=swap" rel="stylesheet" /&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        :root { --bg-main: #f8fafc; --header-bg: #0f172a; --card-bg: #ffffff; --text-main: #0f172a; --text-muted: #64748b; --border-color: #e2e8f0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Inter", sans-serif; background-color: var(--bg-main); color: var(--text-main); line-height: 1.5; padding-bottom: 80px; position: relative; min-height: 100vh; }
+        .app-header { background-color: var(--header-bg); color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; height: 60px; border-bottom: 1px solid #1e293b; }
+        .header-title h1 { font-size: 1.2rem; font-weight: 700; color: #f8fafc; }
+        .header-title p { font-size: 0.75rem; color: #94a3b8; }
+        .header-controls { display: flex; align-items: center; gap: 12px; }
+        .store-selector { background: #1e293b; color: #ffffff; border: 1px solid #334155; border-radius: 6px; padding: 6px 12px; font-size: 0.82rem; font-weight: 600; font-family: inherit; outline: none; cursor: pointer; }
+        .store-selector option { background: #0f172a; color: #ffffff; }
+        .btn-refresh { background: #2563eb; color: #ffffff; border: none; border-radius: 6px; padding: 6px 14px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .btn-refresh:hover { background: #1d4ed8; }
+        .dashboard-container { padding: 20px 24px; max-width: 1600px; margin: 0 auto; }
+        /* KPI Grid */
+        .kpi-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 20px; }
+        .kpi-card { background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border-color); padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+        .kpi-top { display: flex; align-items: center; gap: 12px; }
+        .kpi-icon { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.25rem; }
+        .icon-green { background-color: #dcfce7; color: #16a34a; }
+        .icon-orange { background-color: #ffedd5; color: #ea580c; }
+        .icon-red { background-color: #fee2e2; color: #dc2626; }
+        .icon-yellow { background-color: #fef3c7; color: #d97706; }
+        .icon-purple { background-color: #f3e8ff; color: #9333ea; }
+        .icon-cyan { background-color: #e0f2fe; color: #0284c7; }
+        .kpi-label { font-size: 0.76rem; font-weight: 600; color: var(--text-muted); display: block; }
+        .kpi-value { font-size: 1.55rem; font-weight: 800; color: var(--text-main); line-height: 1.2; }
+        .kpi-subtext { font-size: 0.7rem; color: #64748b; font-weight: 500; display: block; margin-top: 2px; }
+        /* Grid Rows */
+        .reports-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+        .card-report { background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border-color); padding: 18px; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid #f1f5f9; }
+        .card-header h3 { font-size: 0.92rem; font-weight: 700; color: var(--text-main); }
+        .card-body { flex: 1; position: relative; }
+        .chart-body-donut { display: flex; align-items: center; gap: 14px; }
+        .chart-container { width: 140px; height: 140px; position: relative; flex-shrink: 0; }
+        .chart-container-full { width: 100%; height: 180px; position: relative; }
+        /* Tables */
+        .table-body { overflow-x: auto; max-height: 190px; }
+        .report-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; text-align: left; }
+        .report-table th { background-color: #f8fafc; color: var(--text-muted); font-weight: 600; padding: 8px 10px; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; }
+        .report-table td { padding: 8px 10px; border-bottom: 1px solid #f1f5f9; color: var(--text-main); }
+        .badge { padding: 3px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; display: inline-block; }
+        .badge-warning { background-color: #fef3c7; color: #d97706; }
+        .badge-danger { background-color: #fee2e2; color: #dc2626; }
+        .badge-success { background-color: #dcfce7; color: #16a34a; }
+        .badge-info { background-color: #dbeafe; color: #2563eb; }
+        /* Store Summary Card */
+        .store-summary-card { background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border-color); padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); margin-bottom: 20px; }
+        .store-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 14px; }
+        .summary-item label { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; display: block; uppercase; }
+        .summary-item strong { font-size: 0.95rem; color: var(--text-main); font-weight: 700; display: block; margin-top: 2px; }
+        /* AI Widget */
+        .ai-floating-btn { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #4f46e5); color: #ffffff; border: 3px solid #ffffff; box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4); font-weight: 800; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 9999; transition: transform 0.2s ease; }
+        .ai-floating-btn:hover { transform: scale(1.08); }
+        .ai-drawer { position: fixed; bottom: 96px; right: 24px; width: 420px; height: 580px; background: #ffffff; border-radius: 16px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25); border: 1px solid var(--border-color); display: none; flex-direction: column; overflow: hidden; z-index: 9999; }
+        .ai-drawer.active { display: flex; }
+        .ai-header { background: var(--header-bg); color: #ffffff; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; }
+        .ai-header h3 { font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .ai-close { background: none; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer; }
+        .ai-body { flex: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; background: #f8fafc; }
+        .chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 0.83rem; line-height: 1.45; white-space: pre-wrap; }
+        .msg-ai { background: #ffffff; border: 1px solid #e2e8f0; color: #1e293b; align-self: flex-start; border-bottom-left-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .msg-user { background: #2563eb; color: #ffffff; align-self: flex-end; border-bottom-right-radius: 2px; }
+        .suggested-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+        .chip-btn { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; padding: 5px 10px; border-radius: 16px; font-size: 0.74rem; font-weight: 600; cursor: pointer; }
+        .chip-btn:hover { background: #dbeafe; }
+        .ai-footer { padding: 12px; background: #ffffff; border-top: 1px solid #e2e8f0; display: flex; gap: 8px; }
+        .ai-input { flex: 1; border: 1px solid #cbd5e1; border-radius: 20px; padding: 8px 14px; font-size: 0.83rem; outline: none; }
+        .ai-send-btn { background: #2563eb; color: #ffffff; border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-weight: bold; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class="app-header"&gt;
+        &lt;div class="header-title"&gt;
+            &lt;h1&gt;Fresh Guard 360 - Store Operations Dashboard&lt;/h1&gt;
+            &lt;p&gt;Store-level Food Safety &amp;amp; Operations Monitoring&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="header-controls"&gt;
+            &lt;select id="activeStoreSelector" class="store-selector" title="Select Authorized Store"&gt;
+                &lt;option value="Store 1"&gt;Store 1 (NYC Downtown - Ramesh)&lt;/option&gt;
+                &lt;option value="Store 2"&gt;Store 2 (Brooklyn North - Priya)&lt;/option&gt;
+                &lt;option value="Store 3"&gt;Store 3 (Queens Central)&lt;/option&gt;
+                &lt;option value="Store 4"&gt;Store 4 (Manhattan)&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;button class="btn-refresh" onclick="window.location.reload();"&gt;]]&gt;🔄&lt;![CDATA[ Refresh&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main class="dashboard-container"&gt;
+        &lt;!-- TOP KPI SECTION --&gt;
+        &lt;div class="kpi-grid"&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-green"&gt;✅&lt;/div&gt;&lt;div&gt;&lt;span class="kpi-label"&gt;Today's Checklist Completion&lt;/span&gt;&lt;span class="kpi-value" id="kpiChecklist"&gt;94.7%&lt;/span&gt;&lt;span class="kpi-subtext"&gt;18 / 19 Completed&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-orange"&gt;⚠️&lt;/div&gt;&lt;div&gt;&lt;span class="kpi-label"&gt;Open Food Safety Issues&lt;/span&gt;&lt;span class="kpi-value" id="kpiIssues"&gt;4&lt;/span&gt;&lt;span class="kpi-subtext"&gt;Requires Review&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-red"&gt;]]&gt;🛡&lt;![CDATA[️&lt;/div&gt;&lt;div&gt;&lt;span class="kpi-label"&gt;High / Critical Risks&lt;/span&gt;&lt;span class="kpi-value" id="kpiRisks"&gt;2&lt;/span&gt;&lt;span class="kpi-subtext"&gt;Action Required&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-yellow"&gt;⚠️&lt;/div&gt;&lt;div&gt;&lt;span class="kpi-label"&gt;Near-Expiry Products&lt;/span&gt;&lt;span class="kpi-value" id="kpiExpiry"&gt;5&lt;/span&gt;&lt;span class="kpi-subtext"&gt;Expiring in 48h&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-purple"&gt;]]&gt;📋&lt;![CDATA[&lt;/div&gt;&lt;div&gt;&lt;span class="kpi-label"&gt;Overdue CAPA&lt;/span&gt;&lt;span class="kpi-value" id="kpiCapa"&gt;1&lt;/span&gt;&lt;span class="kpi-subtext"&gt;Action Plan Due&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-cyan"&gt;]]&gt;🔧&lt;![CDATA[&lt;/div&gt;&lt;div&gt;&lt;span class="kpi-label"&gt;Open Maintenance Tickets&lt;/span&gt;&lt;span class="kpi-value" id="kpiTickets"&gt;3&lt;/span&gt;&lt;span class="kpi-subtext"&gt;Pending Repair&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- ROW 1: DAILY FOOD SAFETY --&gt;
+        &lt;div class="reports-row"&gt;
+            &lt;div class="card-report"&gt;
+                &lt;div class="card-header"&gt;&lt;h3&gt;FG360 - Store Food Safety Status&lt;/h3&gt;&lt;/div&gt;
+                &lt;div class="card-body chart-body-donut"&gt;
+                    &lt;div class="chart-container"&gt;&lt;canvas id="c1"&gt;&lt;/canvas&gt;&lt;/div&gt;
+                    &lt;div class="custom-legend"&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#22c55e"&gt;&lt;/span&gt; Completed (18) &lt;span class="pct"&gt;94.7%&lt;/span&gt;&lt;/div&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#ef4444"&gt;&lt;/span&gt; Failed (1) &lt;span class="pct"&gt;5.3%&lt;/span&gt;&lt;/div&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#f59e0b"&gt;&lt;/span&gt; Pending (0) &lt;span class="pct"&gt;0%&lt;/span&gt;&lt;/div&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#3b82f6"&gt;&lt;/span&gt; Submitted (19) &lt;span class="pct"&gt;100%&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="card-report"&gt;
+                &lt;div class="card-header"&gt;&lt;h3&gt;FG360 - Food Safety Issues by Store&lt;/h3&gt;&lt;/div&gt;
+                &lt;div class="card-body"&gt;&lt;div class="chart-container-full"&gt;&lt;canvas id="c2"&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="card-report"&gt;
+                &lt;div class="card-header"&gt;&lt;h3&gt;FG360 - Food Safety Risk Level&lt;/h3&gt;&lt;/div&gt;
+                &lt;div class="card-body chart-body-donut"&gt;
+                    &lt;div class="chart-container"&gt;&lt;canvas id="c3"&gt;&lt;/canvas&gt;&lt;/div&gt;
+                    &lt;div class="custom-legend"&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#ef4444"&gt;&lt;/span&gt; Critical (1) &lt;span class="pct"&gt;25%&lt;/span&gt;&lt;/div&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#f97316"&gt;&lt;/span&gt; High (1) &lt;span class="pct"&gt;25%&lt;/span&gt;&lt;/div&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#f59e0b"&gt;&lt;/span&gt; Medium (1) &lt;span class="pct"&gt;25%&lt;/span&gt;&lt;/div&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#22c55e"&gt;&lt;/span&gt; Low (1) &lt;span class="pct"&gt;25%&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- ROW 2: PRODUCTS AND CAPA --&gt;
+        &lt;div class="reports-row"&gt;
+            &lt;div class="card-report"&gt;
+                &lt;div class="card-header"&gt;&lt;h3&gt;FG360 - Near Expiry and Expired Products&lt;/h3&gt;&lt;/div&gt;
+                &lt;div class="card-body table-body"&gt;
+                    &lt;table class="report-table"&gt;
+                        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Product&lt;/th&gt;&lt;th&gt;Batch&lt;/th&gt;&lt;th&gt;Expiry&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Supplier&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+                        &lt;tbody id="nearExpiryTbody"&gt;
+                            &lt;tr&gt;&lt;td&gt;Fresh Milk 1L&lt;/td&gt;&lt;td&gt;BATCH-1001&lt;/td&gt;&lt;td&gt;24 May 2025&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-warning"&gt;Near Expiry&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Dairy Best&lt;/td&gt;&lt;/tr&gt;
+                            &lt;tr&gt;&lt;td&gt;Cheddar Cheese&lt;/td&gt;&lt;td&gt;BATCH-1002&lt;/td&gt;&lt;td&gt;25 May 2025&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-warning"&gt;Near Expiry&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Fresh Dairy&lt;/td&gt;&lt;/tr&gt;
+                            &lt;tr&gt;&lt;td&gt;Chicken Breast 500g&lt;/td&gt;&lt;td&gt;BATCH-1004&lt;/td&gt;&lt;td&gt;23 May 2025&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-danger"&gt;Expired&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Meat Prime&lt;/td&gt;&lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="card-report"&gt;
+                &lt;div class="card-header"&gt;&lt;h3&gt;FG360 - CAPA Status&lt;/h3&gt;&lt;/div&gt;
+                &lt;div class="card-body chart-body-donut"&gt;
+                    &lt;div class="chart-container"&gt;&lt;canvas id="c5"&gt;&lt;/canvas&gt;&lt;/div&gt;
+                    &lt;div class="custom-legend"&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#ef4444"&gt;&lt;/span&gt; Open (2) &lt;span class="pct"&gt;40%&lt;/span&gt;&lt;/div&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#f97316"&gt;&lt;/span&gt; In Progress (2) &lt;span class="pct"&gt;40%&lt;/span&gt;&lt;/div&gt;
+                        &lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#22c55e"&gt;&lt;/span&gt; Completed (1) &lt;span class="pct"&gt;20%&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="card-report"&gt;
+                &lt;div class="card-header"&gt;&lt;h3&gt;FG360 - CAPA Overdue&lt;/h3&gt;&lt;/div&gt;
+                &lt;div class="card-body table-body"&gt;
+                    &lt;table class="report-table"&gt;
+                        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;CAPA #&lt;/th&gt;&lt;th&gt;Issue&lt;/th&gt;&lt;th&gt;Priority&lt;/th&gt;&lt;th&gt;Assigned To&lt;/th&gt;&lt;th&gt;Target Date&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+                        &lt;tbody id="capaOverdueTbody"&gt;
+                            &lt;tr&gt;&lt;td&gt;CAPA00023&lt;/td&gt;&lt;td&gt;Chiller Temp Spike&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-danger"&gt;High&lt;/span&gt;&lt;/td&gt;&lt;td&gt;John Doe&lt;/td&gt;&lt;td&gt;20 May 2025&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-danger"&gt;Overdue&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- ROW 3: RECALL AND MAINTENANCE --&gt;
+        &lt;div class="reports-row"&gt;
+            &lt;div class="card-report"&gt;
+                &lt;div class="card-header"&gt;&lt;h3&gt;FG360 - Product Recall Status&lt;/h3&gt;&lt;/div&gt;
+                &lt;div class="card-body"&gt;&lt;div class="chart-container-full"&gt;&lt;canvas id="c7"&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="card-report"&gt;
+                &lt;div class="card-header"&gt;&lt;h3&gt;FG360 - Maintenance Tickets by Store&lt;/h3&gt;&lt;/div&gt;
+                &lt;div class="card-body"&gt;&lt;div class="chart-container-full"&gt;&lt;canvas id="c8"&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="card-report"&gt;
+                &lt;div class="card-header"&gt;&lt;h3&gt;FG360 - Maintenance Open Tickets&lt;/h3&gt;&lt;/div&gt;
+                &lt;div class="card-body table-body"&gt;
+                    &lt;table class="report-table"&gt;
+                        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Ticket #&lt;/th&gt;&lt;th&gt;Problem&lt;/th&gt;&lt;th&gt;Priority&lt;/th&gt;&lt;th&gt;Assigned&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Created&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+                        &lt;tbody id="maintenanceTbody"&gt;
+                            &lt;tr&gt;&lt;td&gt;MT000123&lt;/td&gt;&lt;td&gt;Walk-in Refrigerator Temp&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-danger"&gt;High&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Tech Team&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-warning"&gt;In Progress&lt;/span&gt;&lt;/td&gt;&lt;td&gt;21 May 2025&lt;/td&gt;&lt;/tr&gt;
+                            &lt;tr&gt;&lt;td&gt;MT000125&lt;/td&gt;&lt;td&gt;Sanitation Sink Leak&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-info"&gt;Medium&lt;/span&gt;&lt;/td&gt;&lt;td&gt;John Smith&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-info"&gt;Open&lt;/span&gt;&lt;/td&gt;&lt;td&gt;22 May 2025&lt;/td&gt;&lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- ROW 4: STORE SUMMARY DETAILS --&gt;
+        &lt;div class="store-summary-card"&gt;
+            &lt;div class="card-header" style="border:none; margin:0; padding:0;"&gt;
+                &lt;h3&gt;]]&gt;🏬&lt;![CDATA[ STORE SUMMARY &amp;amp; OPERATIONAL DETAILS&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="store-summary-grid"&gt;
+                &lt;div class="summary-item"&gt;&lt;label&gt;Store Name&lt;/label&gt;&lt;strong id="sumStoreName"&gt;Store 1 (NYC Downtown)&lt;/strong&gt;&lt;/div&gt;
+                &lt;div class="summary-item"&gt;&lt;label&gt;Store Code&lt;/label&gt;&lt;strong id="sumStoreCode"&gt;STR-1001&lt;/strong&gt;&lt;/div&gt;
+                &lt;div class="summary-item"&gt;&lt;label&gt;Location&lt;/label&gt;&lt;strong id="sumLocation"&gt;5th Ave, Manhattan, NYC&lt;/strong&gt;&lt;/div&gt;
+                &lt;div class="summary-item"&gt;&lt;label&gt;Region&lt;/label&gt;&lt;strong id="sumRegion"&gt;Region A (East Coast)&lt;/strong&gt;&lt;/div&gt;
+                &lt;div class="summary-item"&gt;&lt;label&gt;Store Manager&lt;/label&gt;&lt;strong id="sumManager"&gt;Ramesh (Store Manager)&lt;/strong&gt;&lt;/div&gt;
+                &lt;div class="summary-item"&gt;&lt;label&gt;Total Employees&lt;/label&gt;&lt;strong id="sumEmployees"&gt;18 Staff Members&lt;/strong&gt;&lt;/div&gt;
+                &lt;div class="summary-item"&gt;&lt;label&gt;Current Risk Level&lt;/label&gt;&lt;strong id="sumRisk" style="color:#dc2626"&gt;High Risk Level&lt;/strong&gt;&lt;/div&gt;
+                &lt;div class="summary-item"&gt;&lt;label&gt;Today's Checklist Status&lt;/label&gt;&lt;strong id="sumChecklistStatus" style="color:#16a34a"&gt;94.7% Passed (18/19)&lt;/strong&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+    &lt;!-- AI ASSISTANT WIDGET --&gt;
+    &lt;button class="ai-floating-btn" id="aiBtn"&gt;( AI )&lt;/button&gt;
+    &lt;div class="ai-drawer" id="aiDrawer"&gt;
+        &lt;div class="ai-header"&gt;&lt;h3&gt;]]&gt;🤖&lt;![CDATA[ Fresh Guard AI&lt;/h3&gt;&lt;button class="ai-close" id="aiClose"&gt;X&lt;/button&gt;&lt;/div&gt;
+        &lt;div class="ai-body" id="aiChatBody"&gt;
+            &lt;div class="chat-msg msg-ai"&gt;Hello Ramesh! ]]&gt;👋&lt;![CDATA[ I'm **Fresh Guard AI**. I can help you monitor Store 1's daily food safety, checklist status, near-expiry products, CAPAs, and maintenance tickets.&lt;/div&gt;
+            &lt;div class="suggested-chips" id="suggestedChips"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="ai-footer"&gt;&lt;input type="text" class="ai-input" id="aiInput" placeholder="Ask Fresh Guard AI about Store 1..." /&gt;&lt;button class="ai-send-btn" id="aiSend"&gt;➔&lt;/button&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;fg360_store_ops_dashboard&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-08-11 15:24:50&lt;/sys_created_on&gt;&lt;sys_id&gt;8c63ea47092203107f446356e0e8d8c0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;fg360_store_ops_dashboard&lt;/sys_name&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_8c63ea47092203107f446356e0e8d8c0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-11 15:24:50&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1197438927</payload_hash>
+        <record_name>fg360_store_ops_dashboard</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 15:24:51</sys_created_on>
+        <sys_id>5c632ecb092203107f446356e0e8d84f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ff16d2a9d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 15:24:51</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>d063ea4722220310f8c7b7501a7a55c5</update_guid>
+        <update_guid_history>d063ea4722220310f8c7b7501a7a55c5:1197438927</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 15:57:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>065980b7a8944b368219bc2f646f4e71</sys_id>
+        <sys_metadata>8c63ea47092203107f446356e0e8d8c0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>fg360_store_ops_dashboard</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_ui_page_8c63ea47092203107f446356e0e8d8c0</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_8c63ea47092203107f446356e0e8d8c0">5c632ecb092203107f446356e0e8d84f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 15:57:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

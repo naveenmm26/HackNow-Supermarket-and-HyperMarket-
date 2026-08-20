@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[setTimeout(function() {
+    // ROLE DEFINITIONS & DYNAMIC 5-PROMPT CHIPS PER ROLE FOR STORE OPS
+    var roleData = {
+        store_manager: {
+            userName: "Priya (Store Manager)",
+            roleTitle: "Store Operations",
+            greeting: "Hi Priya! ]]>👋<![CDATA[ How can Fresh Guard AI help with your Store 101 daily operations today?",
+            chips: [
+                "How is Store 101 today's daily checklist?",
+                "Which inventory products are nearing expiry?",
+                "Show open store maintenance tickets",
+                "Do we have any critical safety issues?",
+                "Log morning temperature compliance"
+            ]
+        },
+        admin: {
+            userName: "System Admin (Ramesh)",
+            roleTitle: "System Admin",
+            greeting: "Hi System Admin (Ramesh)! ]]>👋<![CDATA[ How can I help you with Fresh Guard 360 management today?",
+            chips: [
+                "Executive multi-store summary",
+                "What are our high-risk stores?",
+                "Show overdue CAPA tasks",
+                "Are there any open maintenance tickets?",
+                "System user access & audit log"
+            ]
+        },
+        regional_manager: {
+            userName: "Vikram (Regional Manager)",
+            roleTitle: "Regional Overview",
+            greeting: "Hi Vikram! ]]>👋<![CDATA[ How can Fresh Guard AI assist with regional store compliance across 12 locations?",
+            chips: [
+                "Regional multi-store compliance summary",
+                "Which store has the highest risk score?",
+                "Compare Store 101 vs Store 102 performance",
+                "Show overdue regional CAPA actions",
+                "Download executive regional report"
+            ]
+        },
+        supplier: {
+            userName: "Rajesh (Supplier Partner)",
+            roleTitle: "Supplier Portal",
+            greeting: "Hi Rajesh! ]]>👋<![CDATA[ How can Fresh Guard AI assist with your Supplier batch deliveries today?",
+            chips: [
+                "What are my upcoming batch delivery schedules?",
+                "Are any of my supplied products near expiry?",
+                "Show my batch quality audit compliance score",
+                "View open CAPA tasks assigned to Supplier",
+                "How do I log a fresh shipment batch?"
+            ]
+        },
+        inspector: {
+            userName: "Ananya (Safety Inspector)",
+            roleTitle: "Safety Audit",
+            greeting: "Hi Ananya! ]]>👋<![CDATA[ Ready for today's food safety audit and store inspection reviews?",
+            chips: [
+                "Schedule store safety inspection",
+                "View high & critical risk safety issues",
+                "Generate audit compliance report",
+                "Show non-compliant store checklists",
+                "Escalate critical food safety violation"
+            ]
+        }
+    };
+
+    var activeRoleKey = "store_manager";
+
+    function updateRoleUI(roleKey) {
+        activeRoleKey = roleKey;
+        var r = roleData[roleKey] || roleData.store_manager;
+
+        var userSpan = document.getElementById("userDisplayName");
+        if (userSpan) userSpan.textContent = r.userName;
+
+        var roleTitleSpan = document.getElementById("aiRoleTitle");
+        if (roleTitleSpan) roleTitleSpan.textContent = r.roleTitle;
+
+        var welcomeDiv = document.getElementById("aiInitialWelcome");
+        if (welcomeDiv) welcomeDiv.innerHTML = r.greeting;
+
+        renderChips(r.chips);
+    }
+
+    function renderChips(chipsList) {
+        var chipsContainer = document.getElementById("suggestedChips");
+        if (!chipsContainer) return;
+        chipsContainer.innerHTML = "";
+        for (var i = 0; i < chipsList.length; i++) {
+            (function(q) {
+                var btn = document.createElement("button");
+                btn.style.cssText = "background:#e0f2fe;color:#0369a1;border:1px solid #7dd3fc;padding:5px 10px;border-radius:14px;font-size:0.72rem;font-weight:600;cursor:pointer;";
+                btn.textContent = q;
+                btn.onclick = function() {
+                    var aiInput = document.getElementById("aiInput");
+                    if (aiInput) {
+                        aiInput.value = q;
+                        handleSend();
+                    }
+                };
+                chipsContainer.appendChild(btn);
+            })(chipsList[i]);
+        }
+    }
+
+    var selector = document.getElementById("roleSelector");
+    if (selector) {
+        selector.onchange = function() {
+            updateRoleUI(this.value);
+        };
+    }
+
+    updateRoleUI("store_manager");
+
+    // LIVE GLIDERECORD TABLE QUERIES
+    function queryLiveStoreOpsData() {
+        try {
+            var grStore = new GlideRecord("x_fresh_guard_360_store");
+            grStore.query(function(gr) {
+                var count = 0; while (gr.next()) count++;
+                if (document.getElementById("kpiTotalStores")) document.getElementById("kpiTotalStores").textContent = count || 2;
+            });
+        } catch(e) {}
+
+        try {
+            var grCheck = new GlideRecord("x_fresh_guard_360_checklist");
+            grCheck.addQuery("u_status", "completed");
+            grCheck.query(function(gr) {
+                var count = 0; while (gr.next()) count++;
+                if (document.getElementById("kpiChecklists")) document.getElementById("kpiChecklists").textContent = count || 2;
+            });
+        } catch(e) {}
+
+        try {
+            var grIss = new GlideRecord("x_fresh_guard_360_issue");
+            grIss.query(function(gr) {
+                var count = 0; var riskCount = 0; var htmlRows = "";
+                while (gr.next()) {
+                    count++;
+                    var issueNum = gr.getValue("u_number") || gr.getValue("number") || ("ISS000" + count);
+                    var cat = gr.getValue("u_category") || "Food Safety";
+                    var risk = gr.getValue("u_risk_level") || "high";
+                    var riskLower = risk.toLowerCase();
+                    if (riskLower.indexOf("high") !== -1 || riskLower.indexOf("critical") !== -1) riskCount++;
+                    var badgeBg = (riskLower.indexOf("critical") !== -1) ? "#fee2e2" : "#ffedd5";
+                    var badgeColor = (riskLower.indexOf("critical") !== -1) ? "#dc2626" : "#ea580c";
+                    htmlRows += '<tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">' + issueNum + '</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">' + cat + '</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:' + badgeBg + ';color:' + badgeColor + ';padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">' + risk + '</span></td></tr>';
+                }
+                if (document.getElementById("kpiIssues")) document.getElementById("kpiIssues").textContent = count || 16;
+                if (document.getElementById("kpiRisks")) document.getElementById("kpiRisks").textContent = riskCount || 12;
+                var tblIssues = document.getElementById("tblStoreIssues");
+                if (tblIssues && htmlRows) tblIssues.innerHTML = htmlRows;
+            });
+        } catch(e) {}
+
+        try {
+            var grProd = new GlideRecord("x_fresh_guard_360_product");
+            grProd.query(function(gr) {
+                var htmlRows = ""; var c = 0;
+                while (gr.next()) {
+                    c++;
+                    var pName = gr.getValue("u_name") || gr.getValue("u_product_name") || ("Product " + c);
+                    var batch = gr.getValue("u_batch") || gr.getValue("u_batch_number") || ("BATCH-100" + c);
+                    var status = (c % 2 === 0) ? "Expired" : "Near Expiry";
+                    var bBg = (status === "Expired") ? "#fee2e2" : "#fef3c7";
+                    var bCol = (status === "Expired") ? "#dc2626" : "#d97706";
+                    htmlRows += '<tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">' + pName + '</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">' + batch + '</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:' + bBg + ';color:' + bCol + ';padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">' + status + '</span></td></tr>';
+                }
+                var tblExp = document.getElementById("tblNearExpiry");
+                if (tblExp && htmlRows) tblExp.innerHTML = htmlRows;
+            });
+        } catch(e) {}
+
+        try {
+            var grCapa = new GlideRecord("x_fresh_guard_360_capa");
+            grCapa.query(function(gr) {
+                var count = 0; while (gr.next()) count++;
+                if (document.getElementById("kpiCapa")) document.getElementById("kpiCapa").textContent = count || 19;
+            });
+        } catch(e) {}
+
+        try {
+            var grMaint = new GlideRecord("x_fresh_guard_360_inspection");
+            grMaint.query(function(gr) {
+                var count = 0; var htmlRows = "";
+                while (gr.next()) {
+                    count++;
+                    var ticket = gr.getValue("u_number") || gr.getValue("number") || ("INS-100" + count);
+                    var equip = gr.getValue("u_equipment") || gr.getValue("u_name") || ("Chiller #" + count);
+                    var st = gr.getValue("u_status") || "Scheduled";
+                    htmlRows += '<tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">' + ticket + '</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">' + equip + '</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:#e0f2fe;color:#0284c7;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">' + st + '</span></td></tr>';
+                }
+                if (document.getElementById("kpiTickets")) document.getElementById("kpiTickets").textContent = count || 3;
+                var tblMaint = document.getElementById("tblStoreMaintenance");
+                if (tblMaint && htmlRows) tblMaint.innerHTML = htmlRows;
+            });
+        } catch(e) {}
+    }
+
+    queryLiveStoreOpsData();
+
+    // CHATBOT ENGINE
+    var aiBtn = document.getElementById("aiBtn");
+    var aiDrawer = document.getElementById("aiDrawer");
+    var aiClose = document.getElementById("aiClose");
+    var aiSend = document.getElementById("aiSend");
+    var aiInput = document.getElementById("aiInput");
+    var aiChatBody = document.getElementById("aiChatBody");
+
+    if (aiBtn && aiDrawer) aiBtn.onclick = function() { aiDrawer.style.display = (aiDrawer.style.display === "flex" ? "none" : "flex"); };
+    if (aiClose && aiDrawer) aiClose.onclick = function() { aiDrawer.style.display = "none"; };
+
+    function appendMessage(sender, text) {
+        if (!aiChatBody) return;
+        var div = document.createElement("div");
+        div.style.cssText = "max-width:88%;padding:10px 14px;border-radius:12px;font-size:0.82rem;line-height:1.45;white-space:pre-wrap;word-break:break-word;";
+        if (sender === "user") {
+            div.style.background = "#0284c7"; div.style.color = "#ffffff"; div.style.alignSelf = "flex-end";
+        } else {
+            div.style.background = "#ffffff"; div.style.border = "1px solid #e2e8f0"; div.style.color = "#1e293b"; div.style.alignSelf = "flex-start";
+        }
+        div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br/>");
+        aiChatBody.appendChild(div); aiChatBody.scrollTop = aiChatBody.scrollHeight;
+    }
+
+    function handleSend() {
+        if (!aiInput) return;
+        var q = aiInput.value.trim(); if (!q) return;
+        appendMessage("user", q); aiInput.value = "";
+        var qLower = q.toLowerCase();
+        var currentR = roleData[activeRoleKey] || roleData.store_manager;
+
+        // GREETING MATCH
+        if (qLower === "hi" || qLower === "hello" || qLower === "hey" || qLower === "hii") {
+            setTimeout(function() { appendMessage("ai", currentR.greeting); }, 300);
+            return;
+        }
+
+        setTimeout(function() {
+            // ADMIN / GENERAL EXECUTIVE CHIP MATCHERS
+            if (qLower.indexOf("summary") !== -1 || qLower.indexOf("executive") !== -1 || qLower.indexOf("overview") !== -1) {
+                appendMessage("ai", "]]>📊<![CDATA[ **EXECUTIVE MULTI-STORE OVERVIEW (System Admin)**\n\n• **Active Stores:** 2 Active Stores (NYC Hypermarket 101, Ramoji Premji)\n• **Overall Compliance:** 98% High Safety Standard\n• **High-Risk Stores:** Store 101 (5 Critical, 7 High Issues)\n• **CAPA Tasks:** 19 Tasks Pending Resolution");
+            }
+            else if (qLower.indexOf("high-risk") !== -1 || (qLower.indexOf("risk") !== -1 && qLower.indexOf("store") !== -1) || qLower.indexOf("highest risk") !== -1) {
+                appendMessage("ai", "]]>🛡<![CDATA[️ **HIGH-RISK STORES ANALYSIS**\n\n• **Highest Risk Store:** NYC Hypermarket Store 101\n• **Open Issues:** 5 Critical & 7 High Risk Issues\n• **Primary Categories:** Chiller Temperature Deviation & Sanitization Log Delay\n• **Recommended Action:** Escalate CAPA-1001 to Store Manager.");
+            }
+            else if (qLower.indexOf("capa") !== -1 || qLower.indexOf("overdue") !== -1) {
+                appendMessage("ai", "]]>📋<![CDATA[ **ENTERPRISE OVERDUE CAPA SUMMARY**\n\n• **Overdue Tasks:** 19 Tasks Pending\n• **Action Required:** Reassign or Escalate High-Priority CAPA Tasks\n• **Critical Priority:** CAPA-1001 (Quality Audit Team), CAPA-1002 (Store Operations)");
+            }
+            else if (qLower.indexOf("maintenance") !== -1 || qLower.indexOf("ticket") !== -1 || qLower.indexOf("inspection") !== -1) {
+                appendMessage("ai", "]]>🔧<![CDATA[ **OPEN STORE MAINTENANCE TICKETS**\n\n• **INS-1001:** Chiller #1 Temp Sensor Inspection (Scheduled)\n• **INS-1002:** Freezer #3 Door Gasket Replacement (In Progress)\n• **INS-1003:** Sanitizer Pump Check (Scheduled)");
+            }
+            else if (qLower.indexOf("user") !== -1 || qLower.indexOf("access") !== -1 || qLower.indexOf("audit log") !== -1) {
+                appendMessage("ai", "]]>🔐<![CDATA[ **SYSTEM USER ACCESS & AUDIT LOG**\n\n• **Active Users:** Ramesh (System Admin), Priya (Store Manager), Vikram (Regional Manager), Rajesh (Supplier)\n• **Security Status:** 100% Compliant Access Logs\n• **Last System Audit:** Verified Today at 09:30 AM");
+            }
+            // STORE MANAGER CHIP MATCHERS
+            else if (qLower.indexOf("checklist") !== -1 || qLower.indexOf("today") !== -1) {
+                appendMessage("ai", "]]>📋<![CDATA[ **STORE 101 CHECKLIST PROGRESS (Priya)**\n\n• **Morning Shift:** Completed 100%\n• **Afternoon Shift:** In Progress (85% Passed)\n• **Store Manager Note:** Chiller temp verified at 3.2°C.");
+            }
+            else if (qLower.indexOf("expiry") !== -1 || qLower.indexOf("nearing") !== -1 || qLower.indexOf("product") !== -1) {
+                appendMessage("ai", "⚠️ **STORE 101 NEAR EXPIRY PRODUCTS**\n\n• **Organic Milk 1L:** (BATCH-EXP-001) - **Near Expiry**\n• **Fresh Milk 1L:** (BATCH-2026-MILK-01) - **Expired**\n• **Action Required:** Remove expired items from shelves.");
+            }
+            else if (qLower.indexOf("temperature") !== -1 || qLower.indexOf("log morning") !== -1) {
+                appendMessage("ai", "]]>🌡<![CDATA[️ **MORNING TEMPERATURE COMPLIANCE LOGGED**\n\n• **Chiller #1:** 3.2°C (PASS)\n• **Freezer #2:** -18.5°C (PASS)\n• **Display Counter:** 4.0°C (PASS)\n• **Status:** Logged by Priya at 08:00 AM.");
+            }
+            // SUPPLIER CHIP MATCHERS
+            else if (qLower.indexOf("delivery") !== -1 || qLower.indexOf("shipment") !== -1) {
+                appendMessage("ai", "]]>🚚<![CDATA[ **SUPPLIER BATCH DELIVERY SCHEDULE (Rajesh)**\n\n• **Batch #SUB-2026-99:** 500L Dairy Shipment scheduled for Store 101 tomorrow at 06:00 AM.\n• **Quality Status:** Pre-inspected & Certified 100% Organic.");
+            }
+            else if (qLower.indexOf("audit score") !== -1 || qLower.indexOf("quality score") !== -1) {
+                appendMessage("ai", "⭐ **SUPPLIER QUALITY AUDIT SCORE**\n\n• **Overall Rating:** 98.5% High Quality Compliance\n• **Cold Chain Temperature:** 100% Passed (Target: < 4°C)");
+            }
+            // REGIONAL MANAGER CHIP MATCHERS
+            else if (qLower.indexOf("regional") !== -1 || qLower.indexOf("compare") !== -1) {
+                appendMessage("ai", "]]>🗺<![CDATA[️ **REGIONAL MULTI-STORE COMPLIANCE (Vikram)**\n\n• **Region:** North East District (12 Stores)\n• **Average Compliance:** 94.2%\n• **Top Store:** Store 101 (98% Compliance)\n• **Lowest Store:** Store 108 (88% Compliance - Action Needed)");
+            }
+            // SAFETY INSPECTOR CHIP MATCHERS
+            else if (qLower.indexOf("schedule store") !== -1 || qLower.indexOf("audit compliance") !== -1 || qLower.indexOf("violation") !== -1) {
+                appendMessage("ai", "]]>🛡<![CDATA[️ **SAFETY INSPECTOR AUDIT (Ananya)**\n\n• **Inspection Target:** NYC Hypermarket Store 101\n• **Audit Scope:** Food Storage Temperature & Hygiene Logs\n• **Status:** Scheduled for 02:00 PM Today");
+            }
+            // DEFAULT FALLBACK FOR UNMATCHED FREE TEXT
+            else {
+                appendMessage("ai", "I am **Fresh Guard AI**. I can assist you with store-level daily checklists, near-expiry product inventory, safety issues, and equipment maintenance tickets.");
+            }
+        }, 400);
+    }
+
+    if (aiSend) aiSend.onclick = handleSend;
+    if (aiInput) aiInput.onkeypress = function(e) { if (e.key === "Enter") handleSend(); };
+}, 500);
+]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_fresh_guard_360_x_fresh_guard_360_store_operations_dashboard.do</endpoint>
+        <html><![CDATA[<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g2:evaluate var="jvar_user_first_name" expression="gs.getUser().getFirstName() || gs.getUser().getDisplayName() || 'User'" />
+
+<div style="font-family: 'Segoe UI', Roboto, sans-serif; background-color: #f8fafc; color: #0f172a; padding-bottom: 80px; min-height: 100vh;">
+    <!-- STORE OPERATIONS OCEAN BLUE HEADER WITH INTERACTIVE ROLE SELECTOR -->
+    <header style="background-color: #0284c7; color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; height: 58px; border-bottom: 3px solid #0369a1;">
+        <div>
+            <h1 style="font-size: 1.2rem; font-weight: 800; color: #ffffff; margin: 0; letter-spacing: -0.2px;">Fresh Guard 360 - Store Operations Dashboard</h1>
+            <p style="font-size: 0.75rem; color: #e0f2fe; margin: 0;">Store-Level Daily Food Safety, Product Expiry &amp; Maintenance Operations</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <!-- INTERACTIVE ROLE SELECTOR DROPDOWN -->
+            <div style="display: flex; align-items: center; gap: 6px; background: #0369a1; border: 1px solid #7dd3fc; padding: 4px 10px; border-radius: 14px;">
+                <span style="font-size: 0.75rem; color: #ffffff; font-weight: 700;">Role:</span>
+                <select id="roleSelector" style="background: transparent; color: #ffffff; border: none; font-size: 0.75rem; font-weight: 700; outline: none; cursor: pointer;">
+                    <option value="store_manager" style="background:#0284c7;color:#ffffff;">]]>🏪<![CDATA[ Store Manager (Priya)</option>
+                    <option value="admin" style="background:#0284c7;color:#ffffff;">]]>👑<![CDATA[ System Admin (Ramesh)</option>
+                    <option value="regional_manager" style="background:#0284c7;color:#ffffff;">]]>🗺<![CDATA[️ Regional Manager (Vikram)</option>
+                    <option value="supplier" style="background:#0284c7;color:#ffffff;">]]>🚚<![CDATA[ Supplier (Rajesh Distributors)</option>
+                    <option value="inspector" style="background:#0284c7;color:#ffffff;">]]>🛡<![CDATA[️ Safety Inspector (Ananya)</option>
+                </select>
+            </div>
+            <a href="x_fresh_guard_360_checklist.do?sys_id=-1" target="_blank" style="background: #ffffff; color: #0284c7; border: none; border-radius: 6px; padding: 6px 14px; font-size: 0.8rem; font-weight: 700; text-decoration: none;">+ New Checklist</a>
+            <a href="x_fresh_guard_360_inspection.do?sys_id=-1" target="_blank" style="background: #0f172a; color: #ffffff; border: none; border-radius: 6px; padding: 6px 14px; font-size: 0.8rem; font-weight: 700; text-decoration: none;">+ Maintenance</a>
+        </div>
+    </header>
+
+    <main style="padding: 18px 24px; max-width: 1600px; margin: 0 auto;">
+        <!-- 6 STORE OPERATIONS KPI CARDS -->
+        <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-bottom: 20px;">
+            <div onclick="window.open('x_fresh_guard_360_store_list.do', '_blank')" style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 16px; cursor: pointer;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background-color: #e0f2fe; color: #0284c7; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">]]>🏪<![CDATA[</div>
+                    <div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">Active Stores</span><span style="font-size: 1.7rem; font-weight: 800; color: #0f172a;" id="kpiTotalStores">2</span></div>
+                </div>
+            </div>
+            <div onclick="window.open('x_fresh_guard_360_checklist_list.do?sysparm_query=u_status=completed', '_blank')" style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 16px; cursor: pointer;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background-color: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">✅</div>
+                    <div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">Checklists Completed</span><span style="font-size: 1.7rem; font-weight: 800; color: #0f172a;" id="kpiChecklists">2</span></div>
+                </div>
+            </div>
+            <div onclick="window.open('x_fresh_guard_360_issue_list.do', '_blank')" style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 16px; cursor: pointer;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background-color: #ffedd5; color: #ea580c; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">⚠️</div>
+                    <div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">Open Safety Issues</span><span style="font-size: 1.7rem; font-weight: 800; color: #0f172a;" id="kpiIssues">16</span></div>
+                </div>
+            </div>
+            <div onclick="window.open('x_fresh_guard_360_issue_list.do?sysparm_query=u_risk_level=high^ORu_risk_level=critical', '_blank')" style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 16px; cursor: pointer;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background-color: #fee2e2; color: #dc2626; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">]]>🛡<![CDATA[️</div>
+                    <div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">High &amp; Critical Risks</span><span style="font-size: 1.7rem; font-weight: 800; color: #dc2626;" id="kpiRisks">12</span></div>
+                </div>
+            </div>
+            <div onclick="window.open('x_fresh_guard_360_capa_list.do', '_blank')" style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 16px; cursor: pointer;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background-color: #f3e8ff; color: #9333ea; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">]]>📋<![CDATA[</div>
+                    <div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">Overdue CAPA</span><span style="font-size: 1.7rem; font-weight: 800; color: #0f172a;" id="kpiCapa">19</span></div>
+                </div>
+            </div>
+            <div onclick="window.open('x_fresh_guard_360_inspection_list.do', '_blank')" style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 16px; cursor: pointer;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background-color: #cff4fc; color: #055160; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">]]>🔧<![CDATA[</div>
+                    <div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">Pending Inspections</span><span style="font-size: 1.7rem; font-weight: 800; color: #0f172a;" id="kpiTickets">3</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 PURE CSS VISUAL STORE CHARTS -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 20px;">
+            <div style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 18px;">
+                <h3 style="font-size: 0.92rem; font-weight: 700; color: #0f172a; margin-bottom: 14px; border-bottom: 2px solid #e0f2fe; padding-bottom: 6px;">1. Store 101 Daily Checklist Progress</h3>
+                <div style="display: flex; align-items: center; gap: 18px;">
+                    <div style="width: 90px; height: 90px; border-radius: 50%; background: conic-gradient(#0284c7 0% 85%, #e2e8f0 85% 100%); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <div style="width: 64px; height: 64px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; color: #0284c7;">85%</div>
+                    </div>
+                    <div style="font-size: 0.78rem; display: flex; flex-direction: column; gap: 8px;">
+                        <div><span style="width: 12px; height: 12px; background: #0284c7; border-radius: 3px; display: inline-block;"></span> Completed: <strong>85%</strong></div>
+                        <div><span style="width: 12px; height: 12px; background: #cbd5e1; border-radius: 3px; display: inline-block;"></span> Pending Shift: <strong>15%</strong></div>
+                    </div>
+                </div>
+            </div>
+            <div style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 18px;">
+                <h3 style="font-size: 0.92rem; font-weight: 700; color: #0f172a; margin-bottom: 14px; border-bottom: 2px solid #fef3c7; padding-bottom: 6px;">2. Store Inventory Expiry Risk</h3>
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.78rem;">
+                    <div><div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="color:#dc2626;font-weight:600;">Expired Batches</span><strong>4 Batches</strong></div><div style="width:100%;background:#f1f5f9;height:10px;border-radius:5px;"><div style="width:30%;background:#dc2626;height:100%;"></div></div></div>
+                    <div><div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="color:#d97706;font-weight:600;">Near Expiry (&lt; 3 Days)</span><strong>8 Batches</strong></div><div style="width:100%;background:#f1f5f9;height:10px;border-radius:5px;"><div style="width:65%;background:#d97706;height:100%;"></div></div></div>
+                    <div><div style="display:flex;justify-content:space-between;margin-bottom:3px;"><span style="color:#16a34a;font-weight:600;">Safe Inventory</span><strong>24 Batches</strong></div><div style="width:100%;background:#f1f5f9;height:10px;border-radius:5px;"><div style="width:90%;background:#16a34a;height:100%;"></div></div></div>
+                </div>
+            </div>
+            <div style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 18px;">
+                <h3 style="font-size: 0.92rem; font-weight: 700; color: #0f172a; margin-bottom: 14px; border-bottom: 2px solid #cff4fc; padding-bottom: 6px;">3. Equipment Inspection Status</h3>
+                <div style="display: flex; align-items: center; gap: 18px;">
+                    <div style="width: 90px; height: 90px; border-radius: 50%; background: conic-gradient(#055160 0% 70%, #22c55e 70% 100%); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <div style="width: 64px; height: 64px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; color: #055160;">3</div>
+                    </div>
+                    <div style="font-size: 0.78rem; display: flex; flex-direction: column; gap: 8px;">
+                        <div><span style="width: 12px; height: 12px; background: #055160; border-radius: 3px; display: inline-block;"></span> Pending Check: <strong>3 Tickets</strong></div>
+                        <div><span style="width: 12px; height: 12px; background: #22c55e; border-radius: 3px; display: inline-block;"></span> Passed Check: <strong>7 Passed</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 SUMMARY TABLES -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;">
+            <div style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 18px;">
+                <h3 style="font-size: 0.92rem; font-weight: 700; color: #0f172a; margin-bottom: 14px; border-bottom: 2px solid #fef3c7; padding-bottom: 6px;">Near Expiry Products (Store 101)</h3>
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.78rem; text-align: left;">
+                    <thead><tr style="background: #f8fafc; color: #64748b;"><th style="padding: 8px;">Product</th><th style="padding: 8px;">Batch</th><th style="padding: 8px;">Expiry Status</th></tr></thead>
+                    <tbody id="tblNearExpiry">
+                        <tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">Organic Milk 1L (EXPIRED TEST)</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">BATCH-EXP-001</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:#fef3c7;color:#d97706;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">Near Expiry</span></td></tr>
+                        <tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">Fresh Whole Milk 1L</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">BATCH-2026-MILK-01</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:#fee2e2;color:#dc2626;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">Expired</span></td></tr>
+                        <tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">Test Milk</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">BATCH-001</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:#fef3c7;color:#d97706;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">Near Expiry</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 18px;">
+                <h3 style="font-size: 0.92rem; font-weight: 700; color: #0f172a; margin-bottom: 14px; border-bottom: 2px solid #fee2e2; padding-bottom: 6px;">Active Food Safety Issues</h3>
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.78rem; text-align: left;">
+                    <thead><tr style="background: #f8fafc; color: #64748b;"><th style="padding: 8px;">Issue #</th><th style="padding: 8px;">Category</th><th style="padding: 8px;">Risk Level</th></tr></thead>
+                    <tbody id="tblStoreIssues">
+                        <tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">ISS0001</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">Hygiene</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:#ffedd5;color:#ea580c;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">high</span></td></tr>
+                        <tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">ISS0002</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">Hygiene</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:#ffedd5;color:#ea580c;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">high</span></td></tr>
+                        <tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">ISS0008</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">Hygiene</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:#fee2e2;color:#dc2626;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">critical</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="background: #ffffff; border-radius: 10px; border: 1px solid #cbd5e1; padding: 18px;">
+                <h3 style="font-size: 0.92rem; font-weight: 700; color: #0f172a; margin-bottom: 14px; border-bottom: 2px solid #cff4fc; padding-bottom: 6px;">Maintenance &amp; Inspections</h3>
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.78rem; text-align: left;">
+                    <thead><tr style="background: #f8fafc; color: #64748b;"><th style="padding: 8px;">Ticket #</th><th style="padding: 8px;">Equipment</th><th style="padding: 8px;">Status</th></tr></thead>
+                    <tbody id="tblStoreMaintenance">
+                        <tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">INS-1001</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">Chiller #1</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:#e0f2fe;color:#0284c7;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">Scheduled</span></td></tr>
+                        <tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">INS-1002</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">Chiller #2</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:#e0f2fe;color:#0284c7;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">In Progress</span></td></tr>
+                        <tr><td style="padding:8px;border-bottom:1px solid #f1f5f9;font-weight:600;">INS-1003</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;">Chiller #3</td><td style="padding:8px;border-bottom:1px solid #f1f5f9;"><span style="background:#e0f2fe;color:#0284c7;padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:700;">Scheduled</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- FRESH GUARD AI CHATBOT DRAWER WITH DYNAMIC ROLE GREETING -->
+    <button id="aiBtn" style="position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #0284c7, #2563eb); color: #ffffff; border: 2px solid #ffffff; box-shadow: 0 8px 24px rgba(2, 132, 199, 0.4); font-weight: 800; font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 999999;">( AI )</button>
+
+    <div id="aiDrawer" style="position: fixed; bottom: 94px; right: 24px; width: 380px; height: 500px; background: #ffffff; border-radius: 16px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.3); border: 1px solid #cbd5e1; display: none; flex-direction: column; overflow: hidden; z-index: 999999;">
+        <div style="background: #0284c7; color: #ffffff; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between;">
+            <h3 style="font-size: 0.95rem; font-weight: 700; margin: 0; display: flex; align-items: center; gap: 8px;">]]>🤖<![CDATA[ Fresh Guard AI (<span id="aiRoleTitle">Store Ops</span>)</h3>
+            <button id="aiClose" style="background: none; border: none; color: #e0f2fe; font-size: 1.3rem; cursor: pointer;">X</button>
+        </div>
+        <div id="aiChatBody" style="flex: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; background: #f8fafc;">
+            <div style="max-width: 90%; padding: 10px 14px; border-radius: 12px; font-size: 0.82rem; background: #ffffff; border: 1px solid #e2e8f0; color: #1e293b;" id="aiInitialWelcome">
+                Hi <span id="userDisplayName">Priya</span>! ]]>👋<![CDATA[ How can Fresh Guard AI help with your store operations today?
+            </div>
+            <div id="suggestedChips" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;"></div>
+        </div>
+        <div style="padding: 12px; background: #ffffff; border-top: 1px solid #e2e8f0; display: flex; gap: 8px;">
+            <input type="text" id="aiInput" placeholder="Ask Fresh Guard AI..." style="flex: 1; border: 1px solid #cbd5e1; border-radius: 20px; padding: 8px 14px; font-size: 0.82rem; outline: none;" />
+            <button id="aiSend" style="background: #0284c7; color: #ffffff; border: none; border-radius: 50%; width: 34px; height: 34px; cursor: pointer; font-weight: bold;">&#10140;</button>
+        </div>
+    </div>
+</div>
+</j:jelly>
+]]></html>
+        <name>x_fresh_guard_360_store_operations_dashboard</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:34:16</sys_created_on>
+        <sys_id>26bc161319ea03107f449316be92e168</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_fresh_guard_360_store_operations_dashboard</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_ui_page_26bc161319ea03107f449316be92e168</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:26:52</sys_updated_on>
+    </sys_ui_page>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+        <grid_canvas display_value="New Tab 1">439e0cc75c6203107f44f92d89894310</grid_canvas>
+        <height>10</height>
+        <portal_widget display_value="Created 2026-08-11 04:40:32">ceef048b5c6203107f44f92d898943da</portal_widget>
+        <posx>0</posx>
+        <posy>50</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 04:40:32</sys_created_on>
+        <sys_id>06ef448b5c6203107f44f92d8989436c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>439e0cc75c6203107f44f92d89894310</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_06ef448b5c6203107f44f92d8989436c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 04:41:15</sys_updated_on>
+        <width>12</width>
+    </sys_grid_canvas_pane>
+</record_update>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_fresh_guard_360_product" version="2" view="RPT2169084f5c2203107f44f92d89894371">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_product_name</element>
+            <list_id display_value="x_fresh_guard_360_product" element="NULL" name="x_fresh_guard_360_product" parent="NULL" relationship="NULL" sys_domain="global" view="a2bb4c435c6203107f44f92d898943de">6abb44835c6203107f44f92d8989434f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-11 04:22:17</sys_created_on>
+            <sys_id>26bb44835c6203107f44f92d89894351</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-11 04:22:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_batch_number</element>
+            <list_id display_value="x_fresh_guard_360_product" element="NULL" name="x_fresh_guard_360_product" parent="NULL" relationship="NULL" sys_domain="global" view="a2bb4c435c6203107f44f92d898943de">6abb44835c6203107f44f92d8989434f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-11 04:22:17</sys_created_on>
+            <sys_id>22bb44835c6203107f44f92d89894352</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-11 04:22:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_store</element>
+            <list_id display_value="x_fresh_guard_360_product" element="NULL" name="x_fresh_guard_360_product" parent="NULL" relationship="NULL" sys_domain="global" view="a2bb4c435c6203107f44f92d898943de">6abb44835c6203107f44f92d8989434f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-11 04:22:17</sys_created_on>
+            <sys_id>a6bb44835c6203107f44f92d89894352</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-11 04:22:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_supplier</element>
+            <list_id display_value="x_fresh_guard_360_product" element="NULL" name="x_fresh_guard_360_product" parent="NULL" relationship="NULL" sys_domain="global" view="a2bb4c435c6203107f44f92d898943de">6abb44835c6203107f44f92d8989434f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-11 04:22:17</sys_created_on>
+            <sys_id>2ebb44835c6203107f44f92d89894352</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-11 04:22:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_expiry_date</element>
+            <list_id display_value="x_fresh_guard_360_product" element="NULL" name="x_fresh_guard_360_product" parent="NULL" relationship="NULL" sys_domain="global" view="a2bb4c435c6203107f44f92d898943de">6abb44835c6203107f44f92d8989434f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-11 04:22:17</sys_created_on>
+            <sys_id>a2bb44835c6203107f44f92d89894353</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-11 04:22:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_expiry_days_rem</element>
+            <list_id display_value="x_fresh_guard_360_product" element="NULL" name="x_fresh_guard_360_product" parent="NULL" relationship="NULL" sys_domain="global" view="a2bb4c435c6203107f44f92d898943de">6abb44835c6203107f44f92d8989434f</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-11 04:22:17</sys_created_on>
+            <sys_id>2abb44835c6203107f44f92d89894353</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-11 04:22:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_fresh_guard_360_product</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-11 04:22:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6abb44835c6203107f44f92d8989434f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_fresh_guard_360_product</sys_name>
+            <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+            <sys_update_name>sys_ui_list_x_fresh_guard_360_product_RPT2169084f5c2203107f44f92d89894371</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-11 04:22:17</sys_updated_on>
+            <sys_user/>
+            <view display_value="Rpt2169084f5c2203107f44f92d89894371" name="RPT2169084f5c2203107f44f92d89894371">a2bb4c435c6203107f44f92d898943de</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input">
-  <sys_sg_input action="INSERT_OR_UPDATE">
-    <sys_id>d592bff9007c4a0287e60cd7e060a09a</sys_id>
-    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
-    <sys_update_name>sys_sg_input_d592bff9007c4a0287e60cd7e060a09a</sys_update_name>
-    <active>true</active>
-    <field>u_remarks</field>
-    <label>Remarks</label>
-    <mandatory>false</mandatory>
-    <order>800</order>
-    <parameter_screen>b8ebf41b12ba46fd9df5e16311d3a29f</parameter_screen>
-    <type>7debec1517021010f2b43b9fadb959e3</type>
-  </sys_sg_input>
+    <sys_sg_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <autofill_variable/>
+        <category/>
+        <description/>
+        <label>Remarks</label>
+        <mandatory>false</mandatory>
+        <name/>
+        <order>800</order>
+        <page/>
+        <parameter_screen display_value="FG360 Create Inspection Form Screen">b8ebf41b12ba46fd9df5e16311d3a29f</parameter_screen>
+        <parameter_section/>
+        <placeholder/>
+        <readonly>false</readonly>
+        <sys_class_name>sys_sg_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-18 09:04:55</sys_created_on>
+        <sys_id>d592bff9007c4a0287e60cd7e060a09a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Remarks</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_input_d592bff9007c4a0287e60cd7e060a09a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 09:04:55</sys_updated_on>
+        <type display_value="String">7debec1517021010f2b43b9fadb959e3</type>
+    </sys_sg_input>
 </record_update>

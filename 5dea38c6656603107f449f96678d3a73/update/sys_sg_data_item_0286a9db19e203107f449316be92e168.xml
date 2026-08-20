@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_data_item">
-  <sys_sg_data_item action="INSERT_OR_UPDATE">
-    <sys_id>0286a9db19e203107f449316be92e168</sys_id>
-    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
-    <sys_update_name>sys_sg_data_item_0286a9db19e203107f449316be92e168</sys_update_name>
-    <condition_type>declarative</condition_type>
-    <name>FG360 Mobile - Today Checklists</name>
-    <query_condition/>
-    <table>x_fresh_guard_360_checklist</table>
-  </sys_sg_data_item>
+    <sys_sg_data_item action="INSERT_OR_UPDATE">
+        <condition_type>declarative</condition_type>
+        <description/>
+        <group_by/>
+        <instance_relative_url_qc/>
+        <name>FG360 Mobile - Today Checklists</name>
+        <offline_query_condition/>
+        <offline_query_condition_script/>
+        <query_condition/>
+        <query_condition_script/>
+        <sys_class_name>sys_sg_data_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 05:37:28</sys_created_on>
+        <sys_id>0286a9db19e203107f449316be92e168</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>FG360 Mobile - Today Checklists</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_data_item_0286a9db19e203107f449316be92e168</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 10:18:16</sys_updated_on>
+        <table>x_fresh_guard_360_checklist</table>
+    </sys_sg_data_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=0286a9db19e203107f449316be92e168"/>
 </record_update>

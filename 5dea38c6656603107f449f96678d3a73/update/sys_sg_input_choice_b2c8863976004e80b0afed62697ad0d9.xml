@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input_choice">
-  <sys_sg_input_choice action="INSERT_OR_UPDATE">
-    <sys_id>b2c8863976004e80b0afed62697ad0d9</sys_id>
-    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
-    <sys_update_name>sys_sg_input_choice_b2c8863976004e80b0afed62697ad0d9</sys_update_name>
-    <input>ea1e72b4e1f203107f44164868fe954c</input>
-    <label>Low</label>
-    <order>100</order>
-    <value>low</value>
-  </sys_sg_input_choice>
+    <sys_sg_input_choice action="INSERT_OR_UPDATE">
+        <image_url/>
+        <input display_value="Risk Level">ea1e72b4e1f203107f44164868fe954c</input>
+        <label>Low</label>
+        <order>100</order>
+        <selected_image_url/>
+        <sys_class_name>sys_sg_input_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-18 09:30:24</sys_created_on>
+        <sys_id>b2c8863976004e80b0afed62697ad0d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Low</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_input_choice_b2c8863976004e80b0afed62697ad0d9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 09:30:24</sys_updated_on>
+        <value>low</value>
+    </sys_sg_input_choice>
 </record_update>

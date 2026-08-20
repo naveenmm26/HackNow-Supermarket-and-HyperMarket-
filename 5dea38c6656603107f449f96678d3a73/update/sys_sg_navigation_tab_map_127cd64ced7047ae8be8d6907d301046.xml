@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_navigation_tab_map">
-  <sys_sg_navigation_tab_map action="INSERT_OR_UPDATE">
-    <sys_id>127cd64ced7047ae8be8d6907d301046</sys_id>
-    <sys_scope display_value="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_scope>
-    <sys_update_name>sys_sg_navigation_tab_map_127cd64ced7047ae8be8d6907d301046</sys_update_name>
-    <navigation>2397a95f19e203107f449316be92e19d</navigation>
-    <navigation_tab>15ee29a2e21c4e45a6bf91c99e743201</navigation_tab>
-    <order>30</order>
-  </sys_sg_navigation_tab_map>
+    <sys_sg_navigation_tab_map action="INSERT_OR_UPDATE">
+        <navigation display_value="Fresh Guard 360 Mobile Nav">2397a95f19e203107f449316be92e19d</navigation>
+        <navigation_tab display_value="Products">15ee29a2e21c4e45a6bf91c99e743201</navigation_tab>
+        <order>30</order>
+        <sys_class_name>sys_sg_navigation_tab_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-18 06:28:44</sys_created_on>
+        <sys_id>127cd64ced7047ae8be8d6907d301046</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_navigation_tab_map_127cd64ced7047ae8be8d6907d301046</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 06:28:44</sys_updated_on>
+    </sys_sg_navigation_tab_map>
 </record_update>

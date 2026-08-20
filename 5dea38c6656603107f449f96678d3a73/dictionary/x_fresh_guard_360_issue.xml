@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="19be744265a603107f449f96678d3ab7" label="Food Safety Issue" max_length="40" name="x_fresh_guard_360_issue" type="collection">
+        <element label="Failed Checks" max_length="255" name="u_failed_checks" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Overall Score" max_length="20" name="u_overall_score" type="decimal"/>
+        <element label="Daily Checklist" max_length="32" name="u_checklist" reference="x_fresh_guard_360_checklist" type="reference"/>
+        <index name="index">
+            <element name="u_checklist"/>
+        </index>
+    </element>
+</database>

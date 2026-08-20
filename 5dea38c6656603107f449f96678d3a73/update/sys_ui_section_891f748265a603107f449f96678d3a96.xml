@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Capa Details" section_id="891f748265a603107f449f96678d3a96" sys_domain="global" table="x_fresh_guard_360_capa" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>8d1f748265a603107f449f96678d3a9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_capa_id</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>851f748265a603107f449f96678d3a9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>4d1f748265a603107f449f96678d3a9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_priority</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>051f748265a603107f449f96678d3aa0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>c91f748265a603107f449f96678d3aa0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_preventive_action</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>811f748265a603107f449f96678d3aa1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>491f748265a603107f449f96678d3aa1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_issue</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>011f748265a603107f449f96678d3aa2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_status</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>c51f748265a603107f449f96678d3aa2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_store</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>8d1f748265a603107f449f96678d3aa2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_assigned_to</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>451f748265a603107f449f96678d3aa3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>0d1f748265a603107f449f96678d3aa3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_target_date</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>c11f748265a603107f449f96678d3aa4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_supplier</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>891f748265a603107f449f96678d3aa4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_completed_date</element>
+            <position>14</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>411f748265a603107f449f96678d3aa5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>15</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>091f748265a603107f449f96678d3aa5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_root_cause</element>
+            <position>16</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>cd1f748265a603107f449f96678d3aa5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_corrective_action</element>
+            <position>17</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:43</sys_created_on>
+            <sys_id>851f748265a603107f449f96678d3aa6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:32:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>18</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-10 09:50:11</sys_created_on>
+            <sys_id>dc3d0c36ed6e03107f44863610ff2168</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Capa Details" display_value="Capa Details" name="x_fresh_guard_360_capa" sys_domain="global" view="Default view">891f748265a603107f449f96678d3a96</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-10 09:50:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Capa Details</caption>
+            <header>false</header>
+            <name>x_fresh_guard_360_capa</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:32:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>891f748265a603107f449f96678d3a96</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_fresh_guard_360_capa</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+            <sys_update_name>sys_ui_section_891f748265a603107f449f96678d3a96</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-12 10:36:53</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

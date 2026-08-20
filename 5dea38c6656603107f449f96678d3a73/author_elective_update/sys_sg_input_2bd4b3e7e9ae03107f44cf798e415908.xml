@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input">
+    <sys_sg_input action="DELETE">
+        <active>true</active>
+        <autofill_variable/>
+        <category/>
+        <description/>
+        <label>Issue Description</label>
+        <mandatory>false</mandatory>
+        <name>u_description</name>
+        <order/>
+        <page/>
+        <parameter_screen display_value="Safety Issue Input Form Screen">c42eafa7e96e03107f44cf798e41597c</parameter_screen>
+        <parameter_section/>
+        <placeholder/>
+        <readonly>false</readonly>
+        <sys_class_name>sys_sg_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 10:37:50</sys_created_on>
+        <sys_id>2bd4b3e7e9ae03107f44cf798e415908</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Issue Description</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_input_2bd4b3e7e9ae03107f44cf798e415908</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:37:50</sys_updated_on>
+        <type display_value="String">7debec1517021010f2b43b9fadb959e3</type>
+    </sys_sg_input>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_sg_input_2bd4b3e7e9ae03107f44cf798e415908</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input"><sys_sg_input action="INSERT_OR_UPDATE"><active>true</active><autofill_variable/><category/><description/><label>Issue Description</label><mandatory>false</mandatory><name>u_description</name><order/><page/><parameter_screen display_value="Safety Issue Input Form Screen">c42eafa7e96e03107f44cf798e41597c</parameter_screen><parameter_section/><placeholder/><readonly>false</readonly><sys_class_name>sys_sg_input</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-13 10:37:50</sys_created_on><sys_id>2bd4b3e7e9ae03107f44cf798e415908</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Issue Description</sys_name><sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package><sys_policy/><sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope><sys_update_name>sys_sg_input_2bd4b3e7e9ae03107f44cf798e415908</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-13 10:37:50</sys_updated_on><type display_value="String">7debec1517021010f2b43b9fadb959e3</type></sys_sg_input></record_update>]]></payload>
+        <payload_hash>-1204918745</payload_hash>
+        <record_name>Issue Description</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 10:37:50</sys_created_on>
+        <sys_id>ebd4b3e7e9ae03107f44cf798e41590b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ffab31f480000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:37:50</sys_updated_on>
+        <type>Input</type>
+        <update_guid>ebd4b3e7f9ae03108d7a74fa37c1aa0a</update_guid>
+        <update_guid_history>ebd4b3e7f9ae03108d7a74fa37c1aa0a:-1204918745</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 04:03:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_input">sys_sg_input</sys_db_object>
+        <sys_id>04433cbe85a8410d9789ec306c995e51</sys_id>
+        <sys_metadata>2bd4b3e7e9ae03107f44cf798e415908</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Issue Description</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_sg_input_2bd4b3e7e9ae03107f44cf798e415908</sys_update_name>
+        <sys_update_version display_value="sys_sg_input_2bd4b3e7e9ae03107f44cf798e415908">ebd4b3e7e9ae03107f44cf798e41590b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 04:03:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

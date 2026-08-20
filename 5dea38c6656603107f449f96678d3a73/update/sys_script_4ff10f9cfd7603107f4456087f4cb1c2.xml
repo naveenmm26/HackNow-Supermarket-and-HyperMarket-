@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_fresh_guard_360_checklist</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Fresh Guard 360 - Daily Checklist Submis</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeFlow1WithDetailedIssueMapping(current, previous) {
+    if (current.u_status == 'submitted' || current.u_status == 'failed') {
+        var checkMap = [
+            { field: 'u_temp_check', label: 'Temperature Check' },
+            { field: 'u_cleaning_check', label: 'Cleaning Check' },
+            { field: 'u_hygiene_check', label: 'Hygiene Check' },
+            { field: 'u_pest_check', label: 'Pest Control Check' },
+            { field: 'u_expiry_check', label: 'Expiry Check' },
+            { field: 'u_storage_check', label: 'Storage Check' },
+            { field: 'u_equip_check', label: 'Equipment Cleanliness' }
+        ];
+        
+        var failedChecks = [];
+        for (var i = 0; i < checkMap.length; i++) {
+            if (current.getValue(checkMap[i].field) == 'fail') {
+                failedChecks.push(checkMap[i].label);
+            }
+        }
+        
+        if (failedChecks.length > 0) {
+            current.u_status = 'failed';
+            current.u_risk_level = 'critical';
+            
+            var storeName = current.u_store ? current.u_store.getDisplayValue() : 'Store 101';
+            var scoreVal = current.u_overall_score || current.u_score || '71.43';
+            var failedChecksText = failedChecks.join(', ');
+            
+            // Auto-create detailed Food Safety Issue record with mapped fields
+            var grIss = new GlideRecord('x_fresh_guard_360_issue');
+            grIss.initialize();
+            grIss.setValue('u_issue_title', 'Checklist Failure: ' + failedChecksText + ' at ' + storeName);
+            grIss.setValue('u_store', current.u_store);
+            grIss.setValue('u_department', current.u_department);
+            grIss.setValue('u_risk_level', 'high');
+            grIss.setValue('u_capa_required', true);
+            grIss.setValue('u_status', 'open');
+            grIss.setValue('u_description', 'AUTOMATIC SAFETY ISSUE GENERATED FROM CHECKLIST\n' +
+                                           '----------------------------------------\n' +
+                                           'Checklist Number: ' + (current.u_checklist_number || current.u_number) + '\n' +
+                                           'Store Name: ' + storeName + '\n' +
+                                           'Overall Checklist Score: ' + scoreVal + '%\n' +
+                                           'Failed Inspection Checks: ' + failedChecksText + '\n' +
+                                           'Department: ' + current.u_department);
+            var issueSysId = grIss.insert();
+            gs.info('[FLOW 1] Auto-Created Detailed Food Safety Issue: ' + issueSysId);
+        } else {
+            current.u_status = 'completed';
+        }
+    }
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-15 14:50:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4ff10f9cfd7603107f4456087f4cb1c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fresh Guard 360 - Daily Checklist Submis</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_script_4ff10f9cfd7603107f4456087f4cb1c2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-15 14:50:58</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=4ff10f9cfd7603107f4456087f4cb1c2"/>
+</record_update>
