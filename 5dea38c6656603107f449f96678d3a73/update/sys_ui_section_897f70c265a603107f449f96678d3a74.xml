@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Inspection Details" section_id="897f70c265a603107f449f96678d3a74" sys_domain="global" table="x_fresh_guard_360_inspection" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>497f70c265a603107f449f96678d3a7c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_risk_level</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>417f70c265a603107f449f96678d3a7d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_inspection_date</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>4d7f70c265a603107f449f96678d3aa2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>057f70c265a603107f449f96678d3aa3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_record_id</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>c97f70c265a603107f449f96678d3aa3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>817f70c265a603107f449f96678d3aa4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_findings</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>497f70c265a603107f449f96678d3aa4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>017f70c265a603107f449f96678d3aa5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_record_type</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>c57f70c265a603107f449f96678d3aa5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_store</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>8d7f70c265a603107f449f96678d3aa5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_inspector</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>457f70c265a603107f449f96678d3aa6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_compliance_score</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>0d7f70c265a603107f449f96678d3aa6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>c17f70c265a603107f449f96678d3aa7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_status</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>897f70c265a603107f449f96678d3aa7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_due_date</element>
+            <position>14</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>417f70c265a603107f449f96678d3aa8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_issue</element>
+            <position>15</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>097f70c265a603107f449f96678d3aa8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>16</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>cd7f70c265a603107f449f96678d3aa8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_remarks</element>
+            <position>17</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>857f70c265a603107f449f96678d3aa9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>18</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>4d7f70c265a603107f449f96678d3aa9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_completed_date</element>
+            <position>19</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>057f70c265a603107f449f96678d3aaa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>20</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>c97f70c265a603107f449f96678d3aaa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_capa_required</element>
+            <position>21</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>917f70c265a603107f449f96678d3aab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>22</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_id>597f70c265a603107f449f96678d3aab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Inspection Details" display_value="Inspection Details" name="x_fresh_guard_360_inspection" sys_domain="global" view="Default view">897f70c265a603107f449f96678d3a74</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:34:21</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Inspection Details</caption>
+            <header>false</header>
+            <name>x_fresh_guard_360_inspection</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:34:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>897f70c265a603107f449f96678d3a74</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_fresh_guard_360_inspection</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+            <sys_update_name>sys_ui_section_897f70c265a603107f449f96678d3a74</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-12 10:36:53</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

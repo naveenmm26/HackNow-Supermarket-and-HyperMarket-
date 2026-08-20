@@ -1,0 +1,1472 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>
+      browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=154553115000,viewActivatedIn=naturalLanguage
+    </attributes>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="Service Catalog">bf2f2fec73f70300b61e66476bf6a774</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>service_fulfillment_manager_approval_subflow</internal_name>
+        <label_cache>[{"name":"c053350e-fa7c-49b6-b6f7-8eaf01f7bc33.table_name","label":"7 - Update Record➛Service
+      Fulfillment Step Data Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service
+      Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c053350e-fa7c-49b6-b6f7-8eaf01f7bc33.record","label":"7
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b8cc7e7d-6782-4f6a-8450-12300938d5e0.table_name","label":"5
+      - Update Record➛Service Fulfillment Step Data
+      Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b8cc7e7d-6782-4f6a-8450-12300938d5e0.record","label":"5
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.service_fulfillment_step_data","label":"Input➛Service
+      Fulfillment Step Data","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment
+      Step
+      Data","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1dffe85a-5381-47fa-9e61-da27482eb69c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"e7538896-5a97-4f4b-bda9-b5eb1d39285b.table_name","label":"3
+      - Update Record➛Service Fulfillment Step Data
+      Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e7538896-5a97-4f4b-bda9-b5eb1d39285b.record","label":"3
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.requested_item.requested_for.manager","label":"Input➛Requested
+      Item➛Requested
+      for➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"subflow.requested_item.requested_for","label":"Input➛Requested
+      Item➛Requested
+      for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for"},{"name":"subflow.requested_item","label":"Input➛Requested
+      Item","reference":"sc_req_item","reference_display":"Requested
+      Item","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"ebf00560-6762-4a4f-b9d2-409ffa91e6ee"}},{"name":"e5377b09-b4c9-42d8-ad22-13d7ddca5655.approval_state","label":"1
+      - Ask For Approval➛Approval State","reference_display":"Approval
+      State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not
+      Yet Requested","value":"not
+      requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No
+      Longer
+      Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]
+    </label_cache>
+        <master_snapshot>c3ab53aec7312010ca6da1e603c2607d</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Service Fulfillment Steps - Manager approval</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:21:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>54989ba2c7312010ca6da1e603c260f6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Service Fulfillment Steps - Manager approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_54989ba2c7312010ca6da1e603c260f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:35:22</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_variable_value action="DELETE" query="document_key=54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=54989ba2c7312010ca6da1e603c260f6^sys_idNOT IN5c989ba2c7312010ca6da1e603c260f7"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>54989ba2c7312010ca6da1e603c260f6</id>
+        <name>Service Fulfillment Manager Approval Subflow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:21:39</sys_created_on>
+        <sys_id>5c989ba2c7312010ca6da1e603c260f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-22 13:21:39</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=5c989ba2c7312010ca6da1e603c260f7"/>
+    <sys_hub_flow_input action="DELETE" query="model=54989ba2c7312010ca6da1e603c260f6^sys_idNOT IN4eabdf6ec7312010ca6da1e603c260e3,5828c5abc7752010ca6da1e603c2604a,5aab13aec7312010ca6da1e603c26010"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=ebf00560-6762-4a4f-b9d2-409ffa91e6ee
+    </attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label>Requested Item</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>requested_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Requested Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</model>
+        <model_id>54989ba2c7312010ca6da1e603c260f6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:09</sys_created_on>
+        <sys_id>4eabdf6ec7312010ca6da1e603c260e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-22 13:35:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=4eabdf6ec7312010ca6da1e603c260e3"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=8933f62a-9b5a-4c2f-becb-4173f3008518
+    </attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_service_fulfillment_step</choice_table>
+        <column_label>Service Fulfillment Step</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>service_fulfillment_step</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Service Fulfillment Step</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</model>
+        <model_id>54989ba2c7312010ca6da1e603c260f6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sc_service_fulfillment_step">sc_service_fulfillment_step</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-25 05:24:31</sys_created_on>
+        <sys_id>5828c5abc7752010ca6da1e603c2604a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-08 17:59:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=5828c5abc7752010ca6da1e603c2604a"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1dffe85a-5381-47fa-9e61-da27482eb69c
+    </attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_service_fulfillment_step_data</choice_table>
+        <column_label>Service Fulfillment Step Data</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>service_fulfillment_step_data</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Service Fulfillment Step Data</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</model>
+        <model_id>54989ba2c7312010ca6da1e603c260f6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sc_service_fulfillment_step_data">sc_service_fulfillment_step_data</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:10</sys_created_on>
+        <sys_id>5aab13aec7312010ca6da1e603c26010</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-25 05:24:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=5aab13aec7312010ca6da1e603c26010"/>
+    <sys_hub_flow_output action="DELETE" query="model=54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=54989ba2c7312010ca6da1e603c260f6^sys_idNOT IN5eed131a3731321004ac5c6c24924b4f,d2ed131a3731321004ac5c6c24924b62,deed131a3731321004ac5c6c24924b5a,deed131a3731321004ac5c6c24924b67"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:53</sys_created_on>
+        <sys_id>5eed131a3731321004ac5c6c24924b4f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:53</sys_updated_on>
+        <ui_id>e5377b09-b4c9-42d8-ad22-13d7ddca5655</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+1YUW/iOBD+KyjPlHMIhMBbpapSV3dXiXb3pVSR40zAK+NkY6e7HOK/3zhxIIU213Ks0K76guTxjOeb8ffZMQ9rhzLNU3kjlaaSwd1K3cTOxBkDjVyPAht5bp+4hFE/pi74xGN9/AmcrsON3yhI+jAe90nkEuIREgwZCTyIvJE/8igj6CfpEtAzB5bmMY6fqCiMYb1WRZSI9Hsvh28FKA1xyDUsNxt0irnKBF19sb5oYQsu4hykM3l47DoZzXFZDbkzWe9N6VUGoaARCAy8SlmxBKk7N1fvgFxHT2vM+zWYHDiO7eohN0acMnhI14EfGmQMmC2hQkHXWVIZU53mK2ei8wINOdD4VorV1mPBpa4KXdIfiv+Dy3t945cAVsZsE7bD0Dao7k3KGdxmZicri6aRqBuXimIp/64qMK2FhBZCN1pbKFwPMgPZgKgQJneL9Pu0znfNZVmcRStSRsV2RLXOeVRoUGY3QEDZkyXNMi7nYZanT7wMRijL3lzgoGf2HXMqPpe9ioE9bBDtXaP9qjR/oTk3RfyFy2Dwpiw+/FaYvFUZFnBY1lwVjF6K5TzTl7jmE1iEm+7/pXnEWjnDdhSpcOxYrliI9C6JfUjraU38zk01fxzJ703OTrnDb8f7LPgQv2V4OQxltbQluNtOcGt5C8MDch6GW0S/GMV/Grth4HtD/BklHnH7LgnADwI2JpQFvj8ceDt2IFAslQrkNFUIasfzE57Zd9hqOX8HuDrw0qLrTGt0r8K29FZ1Kkvt/smo7fq/KLcLfr/Xm8ry5/7u/BwRmHSfJcdzsaSw34/8MQniizgh0cUg8IYXlAG5AN8dwjD22dD1zicc4rYds3HwAgMTDqL5FVRPHOqnMXOcjq5NqmfXwhvwHmjp2gJ+rRCrpHK4d1GcTk0BIWeS08fH0AHrWSuLoHFdfE2LXLaQPlxwVXLhVfI3PE4lgjfAr4M/Vfj3NbBfVosEvA8J/I4SGAxbOQQvnJcslTE3OVVDCNUpC+pSrj4/vPYgbgyTNO8hfegc8s3m8Tafwldg+sjwQ9WdG85xEt999hUC1Du2aPvMt3GtW2ZFvvuUtEFW6INTvfrPp/OPV9Hza66VQMl4R5i4wD5S3Xz2r2c2+8yZzByZSpg53ZljvELDpNKMHljVdqK0rdebTWUpcmoXcBvDXXRMV6r0VGwBMbKxtD6zVBKx9lP+rXZnE3SuEPcf97xxu/5317b/zRVV/IuNrB9odSVV53jzbh2e7G4dfChu7wkWbl8feJXi2XW0DB//BfDHi0xjFgAA
+    </values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=5eed131a3731321004ac5c6c24924b4f"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment>State as Canceled</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>5ae47618-e834-447b-974c-852cdeb37882</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:53</sys_created_on>
+        <sys_id>d2ed131a3731321004ac5c6c24924b62</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:53</sys_updated_on>
+        <ui_id>b8cc7e7d-6782-4f6a-8450-12300938d5e0</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+1VTW8aMRD9K2jPCHlZsg3cIiEkDk2kUOWSRqtZexYseb1b20tCEf+94/0A8lGUplRVpXLz7JuZ98Zv8P02AO5koefaOtAcFxs7F8EkQIA0jAD5pygcspBxiAWEGLOID2MWj4N+ID1uhIKF4zDmURhFQ8aGl6MwjaM0HArKxpBwGnIkpEFeGEHnNajKB7ZbW6WZKh4HFs1ackyySmVSqRy1S6zDMhHgYLejHCFtqWBz16ZShK+kEgZ1MLl/6AclGOri0AST7YtPblNioiBFRYnTgle+fG8+/QUFXfZtJ+GlJN+DzqKtnkgfpE+eT8j6AT451AKpXQbKYj/IQZO2wmyCiTMVBQyCuNFqs0espHaN0hyerPxO9UfM4zIkabydwv6YtBPqhlPQPG9Kf7NNxEGquskVqsr1dSPBzxYzqJQ7mm1lqR6WnrIn0TDMFqvi8bbrN5O6VteyVQUHtT+Bc0amlUPrrwMV1kPJoSylXialKdayTiYq+WCp6DDwPqCeVi71oHHkwF/+YEbxaR2+AyO9iM9UhpJ3tfjkW+X7NjJawkmtuRac1BdFUMuNLN0VFV5jS3PX/13vpxennMPHB6MckTn43/LkpPFf237RwHuzA7y3IHhv2sA/thNfPLnedUPuvcKeJf9EaLsVz2LtUlycbSku/9JStIz+sa34Y7vAhif/RY8sUtvfHu+BA4dfK8YiwX1rheK19d8GfdDwmFNph72m+PsVdAVmEpWwb0jqHN82SNZtg/1TcDbbhzGrf/9fhDO+CA8/ACDaOvkPCQAA
+    </values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=d2ed131a3731321004ac5c6c24924b62"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment>State as Failed</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>e2db73cc-2c21-49a8-83ce-48831bf22116</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:53</sys_created_on>
+        <sys_id>deed131a3731321004ac5c6c24924b5a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:53</sys_updated_on>
+        <ui_id>e7538896-5a97-4f4b-bda9-b5eb1d39285b</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+1VTW8aMRD9K6s9I+RlgSbcIiEkDk2kUOWSRqtZexYseb1b20tCEf+94/0A8lGUplRVpXLz7JuZ98Zv8P02BO5koefaOtAcFxs7F+EkHCGkUQzIP8XRgEWMw1hAhGMW88GYjbKwF0qPG6Jg0WU05nEUxwPGBhfDKB3HaTQQlI0R4TTkSEiDvDCCzmtQlQ9st7ZKM1U89i2ateSYZJXKpFI5apdYh2UiwMFuRzlC2lLB5q5NpQhfSSUM6nBy/9ALSzDUxaEJJ9sXn9ymxERBiooSpwWvfPlgPv0FBV32bSfhpSTfg86irZ5IH6RPnk/EeiE+OdQCqV0GymIvzEGTtsJswokzFQUMgrjRarNHrKR2jdIcnqz8TvWHzOMyJGm8ncL+mLQT6oZT0DxvSn+zTcRBqrrJFarK9XUjwc8WM6iUO5ptZakelp6yJ9EwzBar4vG26zeTulbXslUFB7U/gXNGppVD668DFdZDyaEspV4mpSnWsk4mKnl/qejQ9z6gnlYudb9xZN9ffn9G8WkdvgMjvYjPVIaSd7X45Fvl+zYyWsJJrbkWnNQXRVDLjSzdFRVeY0tz1/td76ejU87hlwejHJE5+N/y5KTxX9t+0cCD2QEeLAgeTBv4x3biiycXXDfk3ivsWfJPhLZb8SzWLsXobEtx8ZeWomX0j23FH9sFNjj5L3pkkdr+9ngPHDj8WjEWiwykQvHa+G9BPmh2zKmww6Ap/X72XYGZRCXsG3I6t7cNknXbYP8MnM3y0ZjVv/+vwRlfg4cfjcQ3jQsJAAA=
+    </values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=deed131a3731321004ac5c6c24924b5a"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>96ccfeb5-0b1a-41cd-bd8d-704c65eacbe2</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:53</sys_created_on>
+        <sys_id>deed131a3731321004ac5c6c24924b67</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:53</sys_updated_on>
+        <ui_id>c053350e-fa7c-49b6-b6f7-8eaf01f7bc33</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+1VTW/bMAz9K4HPgSHHqdvmNiAIkMNaoBl66QqDluhGgCx7kpw2C/LfR/kjST8WdF2GYcByE/1Ivkc9RnebALiTpZ5r60BzXKztXASTIAHIohiQn8fRiEWMQyIgwoTFfJSw8ygYBtLjxihYdBklPI7ieMTY6GIcZUmcRSNB2ehxGgokpEFeGkHnFajaBzYbW2e5Kh9Di2YlOaZ5rXKpVIHapdZhlQpwsN1SjpC2UrC+7VIpwpdSCYM6mNzdD4MKDHVxaILJ5sUnt64wVZChosRpyWtffjCf/oKCPvuml/BSku9BZ9FVT6UP0ifPJ2LDAJ8caoHULgdlcRgUoElbadbBxJmaAgZBXGu13iGWUrtWaQFPVn6n+mPmcTmSNN5NYXdMuwn1wylpnteVv9k24iBT/eRKVRf6qpXgZ4s51ModzLa2VA8rT9mTaBnmi2X5eNP3m0ndqOvYqpKD2p3AOSOz2qH114EKm6EUUFVSP6SVKVeySSYqRfig6BB6H1BPKx902Doy9Jcfzig+bcK3YKQX8ZnKUPK2EZ9+q33fVkZHOG00N4LT5qIIarmRlftEhVfY0dwOf9f72dkx5/DLvVEOyOz9b3l61Pivbb9o4YPZHj5YEHwwbeEf24kvntzgqiX3XmHPkn8itNuKZ7FuKc5OthQXf2kpOkb/2Fb8sV1go6P/ogcWaexvD/fAgcOvNWOxIOWVIsu+tv7boA8aHqkAlRu0xd+voC8wk6iEfUNS7/iuQbrqGuyegpPZPkpY8/v/IpzwRbj/AUoKoJwPCQAA
+    </values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=deed131a3731321004ac5c6c24924b67"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=54989ba2c7312010ca6da1e603c260f6^sys_idNOT IN92ed131a3731321004ac5c6c24924b58,92ed131a3731321004ac5c6c24924b67,96ed131a3731321004ac5c6c24924b61"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">9aed131a3731321004ac5c6c24924b57</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:53</sys_created_on>
+        <sys_id>92ed131a3731321004ac5c6c24924b58</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:53</sys_updated_on>
+        <ui_id>e2db73cc-2c21-49a8-83ce-48831bf22116</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+1UTW/bMAz9K4HPieGPOGlyCzYUGLCuQFv0shUGLdGJNlnyJLltFuS/j/JHGnQJVgw97mY9UuR71KN3gW5c3Th7p1fWirUKll8fxoFQHqPvXaCgwmAZMK24cEKrvAXGwSPIxgeuQMEazWhV10YTOBJ2dIPfkTnklMaFrSVs79+WzTZCcoM9ixoM9XJoguXuVchta8wlFCip6K0zQq3puuB0KiMo4wWLWZrM0iSKkotpXMzSIk54Cggp5Q0XPwyiRp9bZHxWre9HuB06acM9rTgaB/jsUHGivyxBWhwHFSgOTpvtATEI/FrJF2AjlKNygU9+tuIX1U6yzCeWSBoZdsHDMe/H2MFsowXD69oT7BAHhezvMC2bSn3pdPgHwBIa6YYHIKSxVA9rT9qz6CmVtxv9dDM0vBSqFdgHpWYgDydwNIaicWj9w6DEigrlFdQ1DSf3Dyvay8SlCteSDmEp9RM19Q4LgXniIc0IwkvCP7bwPRjhVVxRGbrc0SzACpa3bqRyzpCEfTuW/GfjCXUCeyl5Nw1KsMyI2q2ozyP2rPfjP6185OLdDrN0Pi+ixaSYssVkmvCLCfAkmcQpn3POIJtlWQi9bXPrwOF+/62JopRcec7u71X2PfZiAVmZxVF2ei+ms1N7cWIjzi9D8pdl8M/3xl2Iouj/Mhwvg7B5Z+peW9v8n3fhwRu/62A733BkwhKRO499Gv7+PrAlAwh2DD1p88NLeMH2vwGazD/JRwYAAA==
+    </values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">9aed131a3731321004ac5c6c24924b66</block>
+        <comment/>
+        <connected_to>e2db73cc-2c21-49a8-83ce-48831bf22116</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:53</sys_created_on>
+        <sys_id>92ed131a3731321004ac5c6c24924b67</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:53</sys_updated_on>
+        <ui_id>96ccfeb5-0b1a-41cd-bd8d-704c65eacbe2</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=
+    </values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">9eed131a3731321004ac5c6c24924b60</block>
+        <comment/>
+        <connected_to>e2db73cc-2c21-49a8-83ce-48831bf22116</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:53</sys_created_on>
+        <sys_id>96ed131a3731321004ac5c6c24924b61</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:53</sys_updated_on>
+        <ui_id>5ae47618-e834-447b-974c-852cdeb37882</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+1UW2vbMBT+K8HPjvElTtq8hY7CYF1hLX3ZijmWjhMxWfIkuWkW8t935EsatpSVMfa0N+s7t+87F+8D3bqmdfZer6wVaxUsPz+GgVAeo+99oKDGYBkwrbhwQquiA8LgCWTrDTegYI1msmoaowmcCDu5AsVQIic3LmwjYffwNm+2EZIbHFg0YKiWQxMs9z+Z3K7BQkKJkpLeOSPUmsIFp1cVQ5VcsoRl6TxL4zi9mCXlPCuTlGeAkJLfGHg1ipp86JDwVbW+HuF2rKQN97SSOAzw2aHiRH9ZgbQYBjUoDk6b3RExCPxWyRdgI5SjdIF3frbiO+VO89w7VkgaGfbG47MY2tjDbKMFw9vGE+wRB6UcYpiWba0+9jr8ALCCVrpxAIS0lvJh40l7FgOl6m6jt5/GgtdCdQIHo9QM5PEFjtpQtg6tHwyNrqZERQ1NQ80p/GBFF0xc6mgt6RFVUm+pqN+wCJgnHlGPILom/F0HP4ARXsUNpaHgnmYJVrCi20ZK5wxJOHRtKb61nlAvcJBS9N0gB8uMaNyK6jzhwPoQ/rrKJ1u832OeLRZlfDktZ+xyOkv5xRR4mk6TjC84Z5DP8zyCYW0L68Dh4fCljeOMjH6Bz+77X8v7Dy4jOXcZZ27i9XNIf3MOfoBvvIY4jv+fw+k5CFv0az1o64r/8TU8+tXvK9h+bzgyYYnIvcfej/9/b9jRAgh2Cm21+eolvGCHH8NR9/JJBgAA
+    </values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_hub_flow_variable action="DELETE" query="model=54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_documentation action="DELETE">
+        <element>requested_item</element>
+        <help/>
+        <hint/>
+        <label>Requested Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:09</sys_created_on>
+        <sys_id>0eab13aec7312010ca6da1e603c26007</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Requested Item</sys_name>
+        <sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types">894b7538c71320105901a1e603c260ac</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6_requested_item_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-22 13:35:09</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>service_fulfillment_step_data</element>
+        <help/>
+        <hint/>
+        <label>Service Fulfillment Step Data</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:10</sys_created_on>
+        <sys_id>12ab13aec7312010ca6da1e603c26023</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Fulfillment Step Data</sys_name>
+        <sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types">894b7538c71320105901a1e603c260ac</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6_service_fulfillment_step_data_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-22 13:35:10</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>service_fulfillment_step</element>
+        <help/>
+        <hint/>
+        <label>Service Fulfillment Step</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-25 05:24:31</sys_created_on>
+        <sys_id>9828c5abc7752010ca6da1e603c2605e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Fulfillment Step</sys_name>
+        <sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types">894b7538c71320105901a1e603c260ac</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6_service_fulfillment_step_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-25 05:24:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="Service Catalog">bf2f2fec73f70300b61e66476bf6a774</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <internal_name>service_fulfillment_manager_approval_subflow</internal_name>
+        <label_cache>[{"name":"c053350e-fa7c-49b6-b6f7-8eaf01f7bc33.table_name","label":"7 - Update Record➛Service
+      Fulfillment Step Data Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service
+      Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c053350e-fa7c-49b6-b6f7-8eaf01f7bc33.record","label":"7
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b8cc7e7d-6782-4f6a-8450-12300938d5e0.table_name","label":"5
+      - Update Record➛Service Fulfillment Step Data
+      Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b8cc7e7d-6782-4f6a-8450-12300938d5e0.record","label":"5
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.service_fulfillment_step_data","label":"Input➛Service
+      Fulfillment Step Data","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment
+      Step
+      Data","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1dffe85a-5381-47fa-9e61-da27482eb69c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"e7538896-5a97-4f4b-bda9-b5eb1d39285b.table_name","label":"3
+      - Update Record➛Service Fulfillment Step Data
+      Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e7538896-5a97-4f4b-bda9-b5eb1d39285b.record","label":"3
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.requested_item.requested_for.manager","label":"Input➛Requested
+      Item➛Requested
+      for➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"subflow.requested_item.requested_for","label":"Input➛Requested
+      Item➛Requested
+      for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for"},{"name":"subflow.requested_item","label":"Input➛Requested
+      Item","reference":"sc_req_item","reference_display":"Requested
+      Item","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"ebf00560-6762-4a4f-b9d2-409ffa91e6ee"}},{"name":"e5377b09-b4c9-42d8-ad22-13d7ddca5655.approval_state","label":"1
+      - Ask For Approval➛Approval State","reference_display":"Approval
+      State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not
+      Yet Requested","value":"not
+      requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No
+      Longer
+      Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]
+    </label_cache>
+        <master>true</master>
+        <name>Service Fulfillment Steps - Manager approval</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>c3ab53aec7312010ca6da1e603c2607d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:55</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_variable_value action="DELETE" query="document_key=c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=c3ab53aec7312010ca6da1e603c2607d^sys_idNOT IN03ab53aec7312010ca6da1e603c2607e"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>c3ab53aec7312010ca6da1e603c2607d</id>
+        <name>Service Fulfillment Manager Approval Subflow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:13</sys_created_on>
+        <sys_id>03ab53aec7312010ca6da1e603c2607e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-22 13:35:13</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=03ab53aec7312010ca6da1e603c2607e"/>
+    <sys_hub_flow_input action="DELETE" query="model=c3ab53aec7312010ca6da1e603c2607d^sys_idNOT IN0bab53aec7312010ca6da1e603c260b9,6d2849abc7752010ca6da1e603c26064,87ab53aec7312010ca6da1e603c2607f"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1dffe85a-5381-47fa-9e61-da27482eb69c
+    </attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_service_fulfillment_step_data</choice_table>
+        <column_label>Service Fulfillment Step Data</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>service_fulfillment_step_data</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Service Fulfillment Step Data</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Service Fulfillment Steps - Manager approval">c3ab53aec7312010ca6da1e603c2607d</model>
+        <model_id>c3ab53aec7312010ca6da1e603c2607d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sc_service_fulfillment_step_data">sc_service_fulfillment_step_data</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:13</sys_created_on>
+        <sys_id>0bab53aec7312010ca6da1e603c260b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-25 05:24:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=0bab53aec7312010ca6da1e603c260b9"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=8933f62a-9b5a-4c2f-becb-4173f3008518
+    </attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_service_fulfillment_step</choice_table>
+        <column_label>Service Fulfillment Step</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>service_fulfillment_step</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Service Fulfillment Step</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Service Fulfillment Steps - Manager approval">c3ab53aec7312010ca6da1e603c2607d</model>
+        <model_id>c3ab53aec7312010ca6da1e603c2607d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sc_service_fulfillment_step">sc_service_fulfillment_step</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-25 05:24:36</sys_created_on>
+        <sys_id>6d2849abc7752010ca6da1e603c26064</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-08 18:21:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=6d2849abc7752010ca6da1e603c26064"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=ebf00560-6762-4a4f-b9d2-409ffa91e6ee
+    </attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label>Requested Item</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>requested_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Requested Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Service Fulfillment Steps - Manager approval">c3ab53aec7312010ca6da1e603c2607d</model>
+        <model_id>c3ab53aec7312010ca6da1e603c2607d</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:13</sys_created_on>
+        <sys_id>87ab53aec7312010ca6da1e603c2607f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-22 13:35:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=87ab53aec7312010ca6da1e603c2607f"/>
+    <sys_hub_flow_output action="DELETE" query="model=c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=c3ab53aec7312010ca6da1e603c2607d^sys_idNOT IN26ed531a3731321004ac5c6c24924b94,62ed531a3731321004ac5c6c24924bae,aaed531a3731321004ac5c6c24924b9b,e6ed531a3731321004ac5c6c24924b8b"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>State as Failed</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">c3ab53aec7312010ca6da1e603c2607d</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>e2db73cc-2c21-49a8-83ce-48831bf22116</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:55</sys_created_on>
+        <sys_id>26ed531a3731321004ac5c6c24924b94</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:55</sys_updated_on>
+        <ui_id>e7538896-5a97-4f4b-bda9-b5eb1d39285b</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+VVwU7jMBD9lcrnqnIa2oXeEFUlJBYkuuLComhiT8CS42Rtp9Ct+u87jpO2AoRAyx7Q9uaZN/F7L/Oa2w0D4VVlzo3zYAQu1+5cshmbIORJCii+pcmYJ1zAVEKCU56K8ZRPCjZkKuCOUPLkJJmKNEnTMefj46Mkn6Z5MpY0jQnhDJRISIuispLOK9BNKGw2rskLXT2OHNqVEpgVjS6U1iUanzmPdSbBw3ZLM1K5WsP6phulinhQWlo0bHZ7N2Q1WLrFo2WzzbPWe2lqyFET9Lrn+Zy3X9fhLCvRtAxVX7zoJuddZ3A+pw4NBToJHzJ88mgkEpECtMMhK8GQtMqu2czbhgoWQV4Zvd4hHpTxUWgJT079ppuPeMAVSMpEZ8LumHUGxXIxJ9+W9GThG7vzqyKLXfREYgGN9meHtQi4qsM2xBEPue6nK92U5jI6wnYPOHgfjSMSWAedgXmUVSwfqsfrnuRCmdaSTqKuBOjdCby3Km98oLNhqLH1uIS6VuY+q221Uu0wUSlH95oOo7A7dKdT92YUt3gUFma0oPq8Ld+AVUHEd3oMDW+HzK3dmQbn9lLIw+xXE5hEYZ2ErHWhtSBrNyEMC6tqf0pXrbAjvh3+bYLyyVurKU72m3hAZp8iJ7I34/MyPMsIHyz28MGS4IN5hH8sWe+g3yfrR7tPr8vpwvWidnE4O7iMjS5ak0+L1vFXilYn48tn658lio/f/LM/WME2RO4wTR48/mw4T2UBSqN8GZ/XIB+LzDv49ZFZKNTSvUK4zwuWxM1jFgU8y0zXHNx0zd0n6dOCk0x5+/tC8flvvkx3fwAgBkd/3QkAAA==
+    </values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=26ed531a3731321004ac5c6c24924b94"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">c3ab53aec7312010ca6da1e603c2607d</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>96ccfeb5-0b1a-41cd-bd8d-704c65eacbe2</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:55</sys_created_on>
+        <sys_id>62ed531a3731321004ac5c6c24924bae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:55</sys_updated_on>
+        <ui_id>c053350e-fa7c-49b6-b6f7-8eaf01f7bc33</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+VVwU7jMBD9lcrnqnKaEqC3FVUlJBYkuuLCosixJ2DJcbK2U+hW/fcdx05bFYSKlj2g7c0zb+L3XuY192vCuJO1vtTWMc1hsbKXgkxJxliRpAz4aZqMaUI5ywRLIKMpH2f0NCFDIj1uAoIm50nG0yRNx5SOzyZJkaVFMhY4DR6nWQWINMBrI/C8ZKr1hfXatkWp6ueRBbOUHPKyVaVUqgLtcuugyQVzbLPBGSFto9jqLo5ihT9JJQxoMr1/GJKGGbzFgSHT9UHrWJqKFaAQetvzPOTtVo0/i5q3HUPZF6/i5Cx2Bpcz7OCQp5PQIYEXB1oAEimZsjAkFdMorTYrMnWmxYIBJm60Wm0RT1K7ILRiL1b+xpsn1ONKQGU8mrA95tGgUC5n6NsCn8xda7Z+1WixDZ4IKFmr3MV+LQBuGr8NYcSxQvXTtWorfR0cIdsH7L2P1iIJaLxOzzzIKhdP9fNtT3IudWdJlKhqztT2xJwzsmidp7MmoKDzuGJNI/Vj3ph6KbthpFKNHhUeRn538E4rH/UobPHIL8xojvVZV75jRnoR3/ExOLwZEruyF4pZu5OCHua/Ws8kCIsS8s6FzoK82wQ/zI1s3De8agmR+Gb4twkqTt5bTX6+28Q9MrsUWZ6/G5/X4VkE+GC+gw8WCB/MAvxjyTqCfp+sH90+vS0nhutV7Wp/dnAdGjFaJ58WrbOvFK0o48tn658lio7f/bPfW8EuRHY/TY45+NlSmgr0olG4+K8D9DboY7E5gmMfm7kEJewbpPvMAHJARnkQcZCb2Bzcxeb2s/Rp4Uky2v2+UIT+m6/Twx89A7TC4QkAAA==
+    </values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=62ed531a3731321004ac5c6c24924bae"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>State as Canceled</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">c3ab53aec7312010ca6da1e603c2607d</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>5ae47618-e834-447b-974c-852cdeb37882</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:55</sys_created_on>
+        <sys_id>aaed531a3731321004ac5c6c24924b9b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:55</sys_updated_on>
+        <ui_id>b8cc7e7d-6782-4f6a-8450-12300938d5e0</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+VVwU7jMBD9lcrnqnIayEJvK6pKSCxIdMWFXUUTewKWHCdrO4Vu1X/fcZy0FSAEWvaAtjfPvInfe5nX3G4YCK9qc26cByNwuXbnks0YAhRJCii+pMmUJ1xAJiHBjKdimvHslI2ZCrgjlDw5TTKRJmk65Xx6cpQUWVokU0nTmBDOQIWEtChqK+m8At2Gwmbj2qLU9cPEoV0pgXnZ6lJpXaHxufPY5BI8bLc0I5VrNKxv+lGqiHulpUXDZrc/x6wBS7d4tGy2edJ6K00NBWqCXg88n/L26yacZS3ajqEaihf95LzvjM7n1KGhQCfhY4aPHo1EIlKCdjhmFRiSVts1m3nbUsEiyCuj1zvEvTI+Cq3g0anfdPMRD7gSSZnoTdgd896gWC7n5NuSnix8a3d+1WSxi55ILKHV/uywFgFXTdiGOOKh0MN0rdvKXEZH2O4BB++jdUQCm6AzMI+yyuV9/XA9kFwo01nSS9S1AL07gfdWFa0PdDYMNXYeV9A0ytzlja1XqhsmKtXkTtNhEnaH7nTqzkziFk/CwkwWVJ935RuwKoj4Ro+h4e2YubU70+DcXgp5mP9qA5MorJeQdy50FuTdJoRhYVXjv9JVK+yJb8d/m6Di+LXVFKf7TTwgs0+RE/mr8XkenmWEjxZ7+GhJ8NE8wt+XrDfQH5L1vdunl+X04XpWuzicHV3GRh+t4w+L1slnilYv49Nn658lik9f/bM/WMEuRO4wTR48/mg5T6UIV2uUzwP0Muh9sXkDxyE2C4VauhdID5nBith5zKOIJ7npm6Obvrn7LH1YeJKMd79PFKH/5uv08w9igsPA4QkAAA==
+    </values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=aaed531a3731321004ac5c6c24924b9b"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">c3ab53aec7312010ca6da1e603c2607d</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:55</sys_created_on>
+        <sys_id>e6ed531a3731321004ac5c6c24924b8b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:55</sys_updated_on>
+        <ui_id>e5377b09-b4c9-42d8-ad22-13d7ddca5655</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+2Y34/aOBDH/xWUZ5ZzCITA26popT3ddSXY9mVZRY4zAVfBobGzLYf4328SOz8KC4UeVbs6XiJ5PBN/ZzIfO8nTxqJM8UTcC6moYDBdy/vQGllDoIHtUGADx+4SmzDqhtQGlzisixfPals89xt4UReGwy4JbEIcQrw+I54DgTNwBw5lBP0EXQJ6psCSNMTxC42z3LDZyCyI4uRLJ4XPGUgFoc8VLLdbdAq5XMV0/dH4ooUteBymIKzR03PbWtEUb6sgtUabnalTdcU0gBhdJ6WwXaFqvcrHYcKyJQjl89L4l4kcm5nW/RhnMCiXQ9oWfFUgQkAdEY0ltK0lFSFVSbq2RirN0JACDR9EvK48FlwoneeSfpX8H1zY6eZ+EWBizNSgGvqmPtocjamiU7wzU1lalSvhDKQuSQgRzWL1rmnTDg+r/OnrEEWDuIxO4mwp3uuCWNUNGo8jkygCVnmeuXKdVjRdJF8mpcg7LoqKmBTjhNG4GlGlUh5kKpezsSCGosRLulpxMfdXafLCi2CUsuzMYxx08l7BNSWfi47u2g5WlXbu0D4uzB9pyvMk/sbbYPC2bcm1fBdTKetUsIb+5yxXohMzKfhFFXQJ8jiW8pW6xVVewGjetv8rLAE72pSs7kGto2ZFMh8hKfDYh2NS4tO61/PnoXKCqhKVRyNrR6UBpRj6xdy3nBRhrfd6wmBiH8fEWGpOdIO9golH3hAmJq03z8lPQwR6rtPHyyByiN21iQeu57Ehocxz3X7PqZsPpWPyNEYwqERRNSwXOD5OkFEycWt0tCaljoMCDScSn6iY7zAyLY2Gj+6ZfBw+R2z3/0RIxh93qqwte3X+OSjly30QHDfkou3dbuAOiRfehBEJbnqe07+hDMgNuHYf+qHL+rbzO+FH7GNnQei90t0Rh7j5WldO7FPYmDmPxhNU7dF4Z2QdkmtYLIavnVlF/M6ZdTkmPULeEpTXt7sT2GFHuxQaR9enJEvFEXT8BZdFSx1EqOFxHkoniCxR+lOr3CVpV/yPgORcQbqCdBCkXv9ojzY+QCocWCJCnq8pGzjpswDkrVh/eDr0t6ExjJK0g11I55But88P6QQ+AVM/GL7P7q+Wc95GccJDqH6gZDHI7z0Us03UL8UmqLlV1K/SZtJsF71L/VJ5Y7vF9Wvxe0fu0SaNhnVThhlWlqrmP5XNzKw+s0YzSyQCZlZ7ZuVeft6VhRk9MKtqorBtNtuttmQpNTewG8M6OqRrWXhKtoAQm7qwfmPxC4qM/RJ/Pk+oSQnuOIPWWBdlv0zlx2qpU9eF753vU+NQ3OmPR9485/sXO+d7V24v8WnqV99geIjjtnlBmJ//BUdnmbhMGAAA
+    </values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=e6ed531a3731321004ac5c6c24924b8b"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=c3ab53aec7312010ca6da1e603c2607d^sys_idNOT IN26ed531a3731321004ac5c6c24924bad,6eed531a3731321004ac5c6c24924b9a,e6ed531a3731321004ac5c6c24924b92"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">9aed131a3731321004ac5c6c24924b66</block>
+        <comment/>
+        <connected_to>e2db73cc-2c21-49a8-83ce-48831bf22116</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">c3ab53aec7312010ca6da1e603c2607d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:55</sys_created_on>
+        <sys_id>26ed531a3731321004ac5c6c24924bad</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:55</sys_updated_on>
+        <ui_id>96ccfeb5-0b1a-41cd-bd8d-704c65eacbe2</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=
+    </values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">9eed131a3731321004ac5c6c24924b60</block>
+        <comment/>
+        <connected_to>e2db73cc-2c21-49a8-83ce-48831bf22116</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">c3ab53aec7312010ca6da1e603c2607d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:55</sys_created_on>
+        <sys_id>6eed531a3731321004ac5c6c24924b9a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:55</sys_updated_on>
+        <ui_id>5ae47618-e834-447b-974c-852cdeb37882</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+1VXW/aMBT9K8jPIcoHgZY3RFVpUrtKa9WXrYpubAesOXZmO6UM8d93nQ9AG9M6jce94XOv7z3nxEfsiG5c3Tj7pBfWipUi888vARHKY/h7RxRUnMwJ1YoJJ7TKWyAgryAbX7gHBStuRou6NhrBkbCjJSjKJWfYxoStJWyf39dN10Iyw3sWNRjc5bgh891PJcFwWBlBGV/TmKbJNE2iKLmaxMU0LeKEpcAhwYESCi6xdTnQH921SPBbXW5be9w6I9SqP9/1Ux4HUBvmWcVRQPib44oh+3kJ0vKAVKAYOG22B8RwYA9KHoG1UA7HEd/8ZsV3XJhkmW8sOUqkvCsejnnvYgeXN+AAqTTUNaZvpWstKLedOYyX0Ei3PMW6hofaS+2uOCjkcFvLplIfO0fIYcDw0RBpLJLgtVfqqfc6yse13nwaWN4K1brSF6WmIA8ncOhd0TjPZ0fwc1c4KK+grtHR3D8G0V5GLlW4kngIS6k3uNS/yhCoJx6isRDeIn7Tws9ghFdxj2PwckezACto3r5gHIc2cbIPiN3apQRrjyLR3fxb4yl2kntxeeePv0KNqN0CN7/yXsc++DUQJ1nY7XiWzmZFdD0uJvR6PEnY1RhYkozjlM0Yo5BNsyyE/vHn1oHj+/2XJopSLPoYnE3NxeZeNF/xuXydSdZfhir5Q6j8F31npqIo+h+qfw6VsHkXhV5bu/yCmXrxAep2HrymwiK1J499GP6LfGGLj0vQU2ijzVcv6ojtfwA0GlTN1QYAAA==
+    </values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">9aed131a3731321004ac5c6c24924b57</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Service Fulfillment Steps - Manager approval">c3ab53aec7312010ca6da1e603c2607d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-16 08:46:55</sys_created_on>
+        <sys_id>e6ed531a3731321004ac5c6c24924b92</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:55</sys_updated_on>
+        <ui_id>e2db73cc-2c21-49a8-83ce-48831bf22116</ui_id>
+        <updation_source/>
+        <values>
+      H4sIAAAAAAAA/+1Vy27bMBD8FYNnWdDDsmPfDAcBCiQNkAS5tIGwIimbLUWqJBXHNfzvXUryA62DJmiOvZnD5e7MaAfeEt24unH2Qc+tFUtFZl+eAiKUx/D3liioOJkRqhUTTmiVt0BAnkE2/uIGFCy5Gczr2mgEB8IO7vg3Th1nWMaErSVsHt9WTVdCMsN7FjUYnOW4IbPtb1eCYbMygjKe0pimyThNoii5GMXFOC3ihKXAIcWGEgousXSxpz+4bpHgVV1uU3vcOiPUsj9f913u96A2zLOKo4DwF8cVQ/azEqTlAalAMXDabA6I4cBulTwCK6EctiO++MWKnzgwyTJfWHKUSHl3eTjmvYsdXF6CA6TSUNeYvpSutKDcduYwXkIj3eIU6wpuay+1e+KgkPvXWjaV+tw5Qg4N9h8NkcYiCV57pZ56r6O8X+n13Z7llVCtK/2l1BTk4QQOvSsa5/lsCZe8wkZ5BXWNjuZ+GUT7GLlU4VLiISylXuNQv5UhUE88RGMhvEL8soUfwQiv4gbb4OOOZgFW0LzdYGyHNnGyC4jd2IUEa48i0d38R+MpdpJ7cXnnj39CjajdHCc/817HLvgzECdZ2G55lk4mRTQdFiM6HY4SdjEEliTDOGUTxihk4ywLoV/+3DpwfLf72kRRirv9Wmg+qu370jWFrMziKDufrtH4XLrO5OqdkUr+Ein/Pd+YqCiK/kfqnyMlbN4FodfWDv/ARD35+HQzD15TYZHag8c+7f+J/MUGl0vQU2itzXcv6ojtfgFksYPd0wYAAA==
+    </values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_hub_flow_variable action="DELETE" query="model=c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_documentation action="DELETE">
+        <element>requested_item</element>
+        <help/>
+        <hint/>
+        <label>Requested Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:13</sys_created_on>
+        <sys_id>07ab53aec7312010ca6da1e603c260a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Requested Item</sys_name>
+        <sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types">894b7538c71320105901a1e603c260ac</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d_requested_item_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-22 13:35:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>service_fulfillment_step_data</element>
+        <help/>
+        <hint/>
+        <label>Service Fulfillment Step Data</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:14</sys_created_on>
+        <sys_id>17ab53aec7312010ca6da1e603c260c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Fulfillment Step Data</sys_name>
+        <sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types">894b7538c71320105901a1e603c260ac</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d_service_fulfillment_step_data_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-22 13:35:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>service_fulfillment_step</element>
+        <help/>
+        <hint/>
+        <label>Service Fulfillment Step</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-25 05:24:36</sys_created_on>
+        <sys_id>e52849abc7752010ca6da1e603c2606f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Fulfillment Step</sys_name>
+        <sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types">894b7538c71320105901a1e603c260ac</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Service Catalog - Service Fulfillment Step Types">894b7538c71320105901a1e603c260ac</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d_service_fulfillment_step_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-25 05:24:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_c3ab53aec7312010ca6da1e603c2607d"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>54989ba2c7312010ca6da1e603c260f6</sys_id>
+        <latest_snapshot>c3ab53aec7312010ca6da1e603c2607d</latest_snapshot>
+        <compiler_build>latest</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=54989ba2c7312010ca6da1e603c260f6"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=54989ba2c7312010ca6da1e603c260f6^sys_idNOT INb7ab93aec7312010ca6da1e603c26076"/>
+    <sys_flow_subflow_plan action="DELETE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@73e74a63</plan>
+        <plan_id display_value="Service Fulfillment Steps - Manager approval">54989ba2c7312010ca6da1e603c260f6</plan_id>
+        <snapshot>c3ab53aec7312010ca6da1e603c2607d</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-22 13:35:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>b7ab93aec7312010ca6da1e603c26076</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-16 08:46:55</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_54989ba2c7312010ca6da1e603c260f6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;
+      browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=154553115000,viewActivatedIn=naturalLanguage
+    &lt;/attributes&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category display_value="Service Catalog"&gt;bf2f2fec73f70300b61e66476bf6a774&lt;/category&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority/&gt;&lt;generation_source/&gt;&lt;internal_name&gt;service_fulfillment_manager_approval_subflow&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"c053350e-fa7c-49b6-b6f7-8eaf01f7bc33.table_name","label":"7 - Update Record➛Service
+      Fulfillment Step Data Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service
+      Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c053350e-fa7c-49b6-b6f7-8eaf01f7bc33.record","label":"7
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b8cc7e7d-6782-4f6a-8450-12300938d5e0.table_name","label":"5
+      - Update Record➛Service Fulfillment Step Data
+      Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b8cc7e7d-6782-4f6a-8450-12300938d5e0.record","label":"5
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.service_fulfillment_step_data","label":"Input➛Service
+      Fulfillment Step Data","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment
+      Step
+      Data","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1dffe85a-5381-47fa-9e61-da27482eb69c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"e7538896-5a97-4f4b-bda9-b5eb1d39285b.table_name","label":"3
+      - Update Record➛Service Fulfillment Step Data
+      Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e7538896-5a97-4f4b-bda9-b5eb1d39285b.record","label":"3
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.requested_item.requested_for.manager","label":"Input➛Requested
+      Item➛Requested
+      for➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"subflow.requested_item.requested_for","label":"Input➛Requested
+      Item➛Requested
+      for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for"},{"name":"subflow.requested_item","label":"Input➛Requested
+      Item","reference":"sc_req_item","reference_display":"Requested
+      Item","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"ebf00560-6762-4a4f-b9d2-409ffa91e6ee"}},{"name":"e5377b09-b4c9-42d8-ad22-13d7ddca5655.approval_state","label":"1
+      - Ask For Approval➛Approval State","reference_display":"Approval
+      State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not
+      Yet Requested","value":"not
+      requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No
+      Longer
+      Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]
+    &lt;/label_cache&gt;&lt;master_snapshot&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Service Fulfillment Steps - Manager approval&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:21:39&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;54989ba2c7312010ca6da1e603c260f6&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Service Fulfillment Steps - Manager approval&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_54989ba2c7312010ca6da1e603c260f6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 10:35:22&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=54989ba2c7312010ca6da1e603c260f6^sys_idNOT IN5c989ba2c7312010ca6da1e603c260f7"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;54989ba2c7312010ca6da1e603c260f6&lt;/id&gt;&lt;name&gt;Service Fulfillment Manager Approval Subflow&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:21:39&lt;/sys_created_on&gt;&lt;sys_id&gt;5c989ba2c7312010ca6da1e603c260f7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-22 13:21:39&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=5c989ba2c7312010ca6da1e603c260f7"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=54989ba2c7312010ca6da1e603c260f6^sys_idNOT IN4eabdf6ec7312010ca6da1e603c260e3,5828c5abc7752010ca6da1e603c2604a,5aab13aec7312010ca6da1e603c26010"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=ebf00560-6762-4a4f-b9d2-409ffa91e6ee
+    &lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sc_req_item&lt;/choice_table&gt;&lt;column_label&gt;Requested Item&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;requested_item&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Requested Item&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/model&gt;&lt;model_id&gt;54989ba2c7312010ca6da1e603c260f6&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:09&lt;/sys_created_on&gt;&lt;sys_id&gt;4eabdf6ec7312010ca6da1e603c260e3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-22 13:35:11&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4eabdf6ec7312010ca6da1e603c260e3"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=8933f62a-9b5a-4c2f-becb-4173f3008518
+    &lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sc_service_fulfillment_step&lt;/choice_table&gt;&lt;column_label&gt;Service Fulfillment Step&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;service_fulfillment_step&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Service Fulfillment Step&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/model&gt;&lt;model_id&gt;54989ba2c7312010ca6da1e603c260f6&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;3&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_service_fulfillment_step"&gt;sc_service_fulfillment_step&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-25 05:24:31&lt;/sys_created_on&gt;&lt;sys_id&gt;5828c5abc7752010ca6da1e603c2604a&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-02-08 17:59:39&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5828c5abc7752010ca6da1e603c2604a"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1dffe85a-5381-47fa-9e61-da27482eb69c
+    &lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sc_service_fulfillment_step_data&lt;/choice_table&gt;&lt;column_label&gt;Service Fulfillment Step Data&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;service_fulfillment_step_data&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Service Fulfillment Step Data&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/model&gt;&lt;model_id&gt;54989ba2c7312010ca6da1e603c260f6&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_service_fulfillment_step_data"&gt;sc_service_fulfillment_step_data&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:10&lt;/sys_created_on&gt;&lt;sys_id&gt;5aab13aec7312010ca6da1e603c26010&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-25 05:24:31&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5aab13aec7312010ca6da1e603c26010"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=54989ba2c7312010ca6da1e603c260f6^sys_idNOT IN5eed131a3731321004ac5c6c24924b4f,d2ed131a3731321004ac5c6c24924b62,deed131a3731321004ac5c6c24924b5a,deed131a3731321004ac5c6c24924b67"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Ask For Approval"&gt;f8f2e9920b10030085c083eb37673abd&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f8f2e9920b10030085c083eb37673abd&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:53&lt;/sys_created_on&gt;&lt;sys_id&gt;5eed131a3731321004ac5c6c24924b4f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:53&lt;/sys_updated_on&gt;&lt;ui_id&gt;e5377b09-b4c9-42d8-ad22-13d7ddca5655&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+1YUW/iOBD+KyjPlHMIhMBbpapSV3dXiXb3pVSR40zAK+NkY6e7HOK/3zhxIIU213Ks0K76guTxjOeb8ffZMQ9rhzLNU3kjlaaSwd1K3cTOxBkDjVyPAht5bp+4hFE/pi74xGN9/AmcrsON3yhI+jAe90nkEuIREgwZCTyIvJE/8igj6CfpEtAzB5bmMY6fqCiMYb1WRZSI9Hsvh28FKA1xyDUsNxt0irnKBF19sb5oYQsu4hykM3l47DoZzXFZDbkzWe9N6VUGoaARCAy8SlmxBKk7N1fvgFxHT2vM+zWYHDiO7eohN0acMnhI14EfGmQMmC2hQkHXWVIZU53mK2ei8wINOdD4VorV1mPBpa4KXdIfiv+Dy3t945cAVsZsE7bD0Dao7k3KGdxmZicri6aRqBuXimIp/64qMK2FhBZCN1pbKFwPMgPZgKgQJneL9Pu0znfNZVmcRStSRsV2RLXOeVRoUGY3QEDZkyXNMi7nYZanT7wMRijL3lzgoGf2HXMqPpe9ioE9bBDtXaP9qjR/oTk3RfyFy2Dwpiw+/FaYvFUZFnBY1lwVjF6K5TzTl7jmE1iEm+7/pXnEWjnDdhSpcOxYrliI9C6JfUjraU38zk01fxzJ703OTrnDb8f7LPgQv2V4OQxltbQluNtOcGt5C8MDch6GW0S/GMV/Grth4HtD/BklHnH7LgnADwI2JpQFvj8ceDt2IFAslQrkNFUIasfzE57Zd9hqOX8HuDrw0qLrTGt0r8K29FZ1Kkvt/smo7fq/KLcLfr/Xm8ry5/7u/BwRmHSfJcdzsaSw34/8MQniizgh0cUg8IYXlAG5AN8dwjD22dD1zicc4rYds3HwAgMTDqL5FVRPHOqnMXOcjq5NqmfXwhvwHmjp2gJ+rRCrpHK4d1GcTk0BIWeS08fH0AHrWSuLoHFdfE2LXLaQPlxwVXLhVfI3PE4lgjfAr4M/Vfj3NbBfVosEvA8J/I4SGAxbOQQvnJcslTE3OVVDCNUpC+pSrj4/vPYgbgyTNO8hfegc8s3m8Tafwldg+sjwQ9WdG85xEt999hUC1Du2aPvMt3GtW2ZFvvuUtEFW6INTvfrPp/OPV9Hza66VQMl4R5i4wD5S3Xz2r2c2+8yZzByZSpg53ZljvELDpNKMHljVdqK0rdebTWUpcmoXcBvDXXRMV6r0VGwBMbKxtD6zVBKx9lP+rXZnE3SuEPcf97xxu/5317b/zRVV/IuNrB9odSVV53jzbh2e7G4dfChu7wkWbl8feJXi2XW0DB//BfDHi0xjFgAA
+    &lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=5eed131a3731321004ac5c6c24924b4f"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment&gt;State as Canceled&lt;/comment&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;5&lt;/order&gt;&lt;parent_ui_id&gt;5ae47618-e834-447b-974c-852cdeb37882&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:53&lt;/sys_created_on&gt;&lt;sys_id&gt;d2ed131a3731321004ac5c6c24924b62&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:53&lt;/sys_updated_on&gt;&lt;ui_id&gt;b8cc7e7d-6782-4f6a-8450-12300938d5e0&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+1VTW8aMRD9K2jPCHlZsg3cIiEkDk2kUOWSRqtZexYseb1b20tCEf+94/0A8lGUplRVpXLz7JuZ98Zv8P02AO5koefaOtAcFxs7F8EkQIA0jAD5pygcspBxiAWEGLOID2MWj4N+ID1uhIKF4zDmURhFQ8aGl6MwjaM0HArKxpBwGnIkpEFeGEHnNajKB7ZbW6WZKh4HFs1ackyySmVSqRy1S6zDMhHgYLejHCFtqWBz16ZShK+kEgZ1MLl/6AclGOri0AST7YtPblNioiBFRYnTgle+fG8+/QUFXfZtJ+GlJN+DzqKtnkgfpE+eT8j6AT451AKpXQbKYj/IQZO2wmyCiTMVBQyCuNFqs0espHaN0hyerPxO9UfM4zIkabydwv6YtBPqhlPQPG9Kf7NNxEGquskVqsr1dSPBzxYzqJQ7mm1lqR6WnrIn0TDMFqvi8bbrN5O6VteyVQUHtT+Bc0amlUPrrwMV1kPJoSylXialKdayTiYq+WCp6DDwPqCeVi71oHHkwF/+YEbxaR2+AyO9iM9UhpJ3tfjkW+X7NjJawkmtuRac1BdFUMuNLN0VFV5jS3PX/13vpxennMPHB6MckTn43/LkpPFf237RwHuzA7y3IHhv2sA/thNfPLnedUPuvcKeJf9EaLsVz2LtUlycbSku/9JStIz+sa34Y7vAhif/RY8sUtvfHu+BA4dfK8YiwX1rheK19d8GfdDwmFNph72m+PsVdAVmEpWwb0jqHN82SNZtg/1TcDbbhzGrf/9fhDO+CA8/ACDaOvkPCQAA
+    &lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=d2ed131a3731321004ac5c6c24924b62"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment&gt;State as Failed&lt;/comment&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;e2db73cc-2c21-49a8-83ce-48831bf22116&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:53&lt;/sys_created_on&gt;&lt;sys_id&gt;deed131a3731321004ac5c6c24924b5a&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:53&lt;/sys_updated_on&gt;&lt;ui_id&gt;e7538896-5a97-4f4b-bda9-b5eb1d39285b&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+1VTW8aMRD9K6s9I+RlgSbcIiEkDk2kUOWSRqtZexYseb1b20tCEf+94/0A8lGUplRVpXLz7JuZ98Zv8P02BO5koefaOtAcFxs7F+EkHCGkUQzIP8XRgEWMw1hAhGMW88GYjbKwF0qPG6Jg0WU05nEUxwPGBhfDKB3HaTQQlI0R4TTkSEiDvDCCzmtQlQ9st7ZKM1U89i2ateSYZJXKpFI5apdYh2UiwMFuRzlC2lLB5q5NpQhfSSUM6nBy/9ALSzDUxaEJJ9sXn9ymxERBiooSpwWvfPlgPv0FBV32bSfhpSTfg86irZ5IH6RPnk/EeiE+OdQCqV0GymIvzEGTtsJswokzFQUMgrjRarNHrKR2jdIcnqz8TvWHzOMyJGm8ncL+mLQT6oZT0DxvSn+zTcRBqrrJFarK9XUjwc8WM6iUO5ptZakelp6yJ9EwzBar4vG26zeTulbXslUFB7U/gXNGppVD668DFdZDyaEspV4mpSnWsk4mKnl/qejQ9z6gnlYudb9xZN9ffn9G8WkdvgMjvYjPVIaSd7X45Fvl+zYyWsJJrbkWnNQXRVDLjSzdFRVeY0tz1/td76ejU87hlwejHJE5+N/y5KTxX9t+0cCD2QEeLAgeTBv4x3biiycXXDfk3ivsWfJPhLZb8SzWLsXobEtx8ZeWomX0j23FH9sFNjj5L3pkkdr+9ngPHDj8WjEWiwykQvHa+G9BPmh2zKmww6Ap/X72XYGZRCXsG3I6t7cNknXbYP8MnM3y0ZjVv/+vwRlfg4cfjcQ3jQsJAAA=
+    &lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=deed131a3731321004ac5c6c24924b5a"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;7&lt;/order&gt;&lt;parent_ui_id&gt;96ccfeb5-0b1a-41cd-bd8d-704c65eacbe2&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:53&lt;/sys_created_on&gt;&lt;sys_id&gt;deed131a3731321004ac5c6c24924b67&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:53&lt;/sys_updated_on&gt;&lt;ui_id&gt;c053350e-fa7c-49b6-b6f7-8eaf01f7bc33&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+1VTW/bMAz9K4HPgSHHqdvmNiAIkMNaoBl66QqDluhGgCx7kpw2C/LfR/kjST8WdF2GYcByE/1Ivkc9RnebALiTpZ5r60BzXKztXASTIAHIohiQn8fRiEWMQyIgwoTFfJSw8ygYBtLjxihYdBklPI7ieMTY6GIcZUmcRSNB2ehxGgokpEFeGkHnFajaBzYbW2e5Kh9Di2YlOaZ5rXKpVIHapdZhlQpwsN1SjpC2UrC+7VIpwpdSCYM6mNzdD4MKDHVxaILJ5sUnt64wVZChosRpyWtffjCf/oKCPvuml/BSku9BZ9FVT6UP0ifPJ2LDAJ8caoHULgdlcRgUoElbadbBxJmaAgZBXGu13iGWUrtWaQFPVn6n+mPmcTmSNN5NYXdMuwn1wylpnteVv9k24iBT/eRKVRf6qpXgZ4s51ModzLa2VA8rT9mTaBnmi2X5eNP3m0ndqOvYqpKD2p3AOSOz2qH114EKm6EUUFVSP6SVKVeySSYqRfig6BB6H1BPKx902Doy9Jcfzig+bcK3YKQX8ZnKUPK2EZ9+q33fVkZHOG00N4LT5qIIarmRlftEhVfY0dwOf9f72dkx5/DLvVEOyOz9b3l61Pivbb9o4YPZHj5YEHwwbeEf24kvntzgqiX3XmHPkn8itNuKZ7FuKc5OthQXf2kpOkb/2Fb8sV1go6P/ogcWaexvD/fAgcOvNWOxIOWVIsu+tv7boA8aHqkAlRu0xd+voC8wk6iEfUNS7/iuQbrqGuyegpPZPkpY8/v/IpzwRbj/AUoKoJwPCQAA
+    &lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=deed131a3731321004ac5c6c24924b67"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=54989ba2c7312010ca6da1e603c260f6^sys_idNOT IN92ed131a3731321004ac5c6c24924b58,92ed131a3731321004ac5c6c24924b67,96ed131a3731321004ac5c6c24924b61"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;9aed131a3731321004ac5c6c24924b57&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:53&lt;/sys_created_on&gt;&lt;sys_id&gt;92ed131a3731321004ac5c6c24924b58&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:53&lt;/sys_updated_on&gt;&lt;ui_id&gt;e2db73cc-2c21-49a8-83ce-48831bf22116&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+1UTW/bMAz9K4HPieGPOGlyCzYUGLCuQFv0shUGLdGJNlnyJLltFuS/j/JHGnQJVgw97mY9UuR71KN3gW5c3Th7p1fWirUKll8fxoFQHqPvXaCgwmAZMK24cEKrvAXGwSPIxgeuQMEazWhV10YTOBJ2dIPfkTnklMaFrSVs79+WzTZCcoM9ixoM9XJoguXuVchta8wlFCip6K0zQq3puuB0KiMo4wWLWZrM0iSKkotpXMzSIk54Cggp5Q0XPwyiRp9bZHxWre9HuB06acM9rTgaB/jsUHGivyxBWhwHFSgOTpvtATEI/FrJF2AjlKNygU9+tuIX1U6yzCeWSBoZdsHDMe/H2MFsowXD69oT7BAHhezvMC2bSn3pdPgHwBIa6YYHIKSxVA9rT9qz6CmVtxv9dDM0vBSqFdgHpWYgDydwNIaicWj9w6DEigrlFdQ1DSf3Dyvay8SlCteSDmEp9RM19Q4LgXniIc0IwkvCP7bwPRjhVVxRGbrc0SzACpa3bqRyzpCEfTuW/GfjCXUCeyl5Nw1KsMyI2q2ozyP2rPfjP6185OLdDrN0Pi+ixaSYssVkmvCLCfAkmcQpn3POIJtlWQi9bXPrwOF+/62JopRcec7u71X2PfZiAVmZxVF2ei+ms1N7cWIjzi9D8pdl8M/3xl2Iouj/Mhwvg7B5Z+peW9v8n3fhwRu/62A733BkwhKRO499Gv7+PrAlAwh2DD1p88NLeMH2vwGazD/JRwYAAA==
+    &lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;9aed131a3731321004ac5c6c24924b66&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;e2db73cc-2c21-49a8-83ce-48831bf22116&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;6&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:53&lt;/sys_created_on&gt;&lt;sys_id&gt;92ed131a3731321004ac5c6c24924b67&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:53&lt;/sys_updated_on&gt;&lt;ui_id&gt;96ccfeb5-0b1a-41cd-bd8d-704c65eacbe2&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=
+    &lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;9eed131a3731321004ac5c6c24924b60&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;e2db73cc-2c21-49a8-83ce-48831bf22116&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else If"&gt;666e5545c3e232002841b63b12d3ae99&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:53&lt;/sys_created_on&gt;&lt;sys_id&gt;96ed131a3731321004ac5c6c24924b61&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:53&lt;/sys_updated_on&gt;&lt;ui_id&gt;5ae47618-e834-447b-974c-852cdeb37882&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+1UW2vbMBT+K8HPjvElTtq8hY7CYF1hLX3ZijmWjhMxWfIkuWkW8t935EsatpSVMfa0N+s7t+87F+8D3bqmdfZer6wVaxUsPz+GgVAeo+99oKDGYBkwrbhwQquiA8LgCWTrDTegYI1msmoaowmcCDu5AsVQIic3LmwjYffwNm+2EZIbHFg0YKiWQxMs9z+Z3K7BQkKJkpLeOSPUmsIFp1cVQ5VcsoRl6TxL4zi9mCXlPCuTlGeAkJLfGHg1ipp86JDwVbW+HuF2rKQN97SSOAzw2aHiRH9ZgbQYBjUoDk6b3RExCPxWyRdgI5SjdIF3frbiO+VO89w7VkgaGfbG47MY2tjDbKMFw9vGE+wRB6UcYpiWba0+9jr8ALCCVrpxAIS0lvJh40l7FgOl6m6jt5/GgtdCdQIHo9QM5PEFjtpQtg6tHwyNrqZERQ1NQ80p/GBFF0xc6mgt6RFVUm+pqN+wCJgnHlGPILom/F0HP4ARXsUNpaHgnmYJVrCi20ZK5wxJOHRtKb61nlAvcJBS9N0gB8uMaNyK6jzhwPoQ/rrKJ1u832OeLRZlfDktZ+xyOkv5xRR4mk6TjC84Z5DP8zyCYW0L68Dh4fCljeOMjH6Bz+77X8v7Dy4jOXcZZ27i9XNIf3MOfoBvvIY4jv+fw+k5CFv0az1o64r/8TU8+tXvK9h+bzgyYYnIvcfej/9/b9jRAgh2Cm21+eolvGCHH8NR9/JJBgAA
+    &lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;requested_item&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Requested Item&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:09&lt;/sys_created_on&gt;&lt;sys_id&gt;0eab13aec7312010ca6da1e603c26007&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Requested Item&lt;/sys_name&gt;&lt;sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6_requested_item_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-22 13:35:09&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;service_fulfillment_step_data&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Service Fulfillment Step Data&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:10&lt;/sys_created_on&gt;&lt;sys_id&gt;12ab13aec7312010ca6da1e603c26023&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Service Fulfillment Step Data&lt;/sys_name&gt;&lt;sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6_service_fulfillment_step_data_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-22 13:35:10&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;service_fulfillment_step&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Service Fulfillment Step&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-25 05:24:31&lt;/sys_created_on&gt;&lt;sys_id&gt;9828c5abc7752010ca6da1e603c2605e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Service Fulfillment Step&lt;/sys_name&gt;&lt;sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6_service_fulfillment_step_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-25 05:24:31&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category display_value="Service Catalog"&gt;bf2f2fec73f70300b61e66476bf6a774&lt;/category&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;flow_priority/&gt;&lt;internal_name&gt;service_fulfillment_manager_approval_subflow&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"c053350e-fa7c-49b6-b6f7-8eaf01f7bc33.table_name","label":"7 - Update Record➛Service
+      Fulfillment Step Data Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service
+      Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c053350e-fa7c-49b6-b6f7-8eaf01f7bc33.record","label":"7
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b8cc7e7d-6782-4f6a-8450-12300938d5e0.table_name","label":"5
+      - Update Record➛Service Fulfillment Step Data
+      Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b8cc7e7d-6782-4f6a-8450-12300938d5e0.record","label":"5
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.service_fulfillment_step_data","label":"Input➛Service
+      Fulfillment Step Data","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment
+      Step
+      Data","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1dffe85a-5381-47fa-9e61-da27482eb69c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"e7538896-5a97-4f4b-bda9-b5eb1d39285b.table_name","label":"3
+      - Update Record➛Service Fulfillment Step Data
+      Table","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e7538896-5a97-4f4b-bda9-b5eb1d39285b.record","label":"3
+      - Update Record➛Service Fulfillment Step Data
+      Record","reference":"sc_service_fulfillment_step_data","reference_display":"Service Fulfillment Step
+      Data","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.requested_item.requested_for.manager","label":"Input➛Requested
+      Item➛Requested
+      for➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"subflow.requested_item.requested_for","label":"Input➛Requested
+      Item➛Requested
+      for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for"},{"name":"subflow.requested_item","label":"Input➛Requested
+      Item","reference":"sc_req_item","reference_display":"Requested
+      Item","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"ebf00560-6762-4a4f-b9d2-409ffa91e6ee"}},{"name":"e5377b09-b4c9-42d8-ad22-13d7ddca5655.approval_state","label":"1
+      - Ask For Approval➛Approval State","reference_display":"Approval
+      State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not
+      Yet Requested","value":"not
+      requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No
+      Longer
+      Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]
+    &lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Service Fulfillment Steps - Manager approval&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:13&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:55&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=c3ab53aec7312010ca6da1e603c2607d^sys_idNOT IN03ab53aec7312010ca6da1e603c2607e"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/id&gt;&lt;name&gt;Service Fulfillment Manager Approval Subflow&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:13&lt;/sys_created_on&gt;&lt;sys_id&gt;03ab53aec7312010ca6da1e603c2607e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-22 13:35:13&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=03ab53aec7312010ca6da1e603c2607e"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=c3ab53aec7312010ca6da1e603c2607d^sys_idNOT IN0bab53aec7312010ca6da1e603c260b9,6d2849abc7752010ca6da1e603c26064,87ab53aec7312010ca6da1e603c2607f"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1dffe85a-5381-47fa-9e61-da27482eb69c
+    &lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sc_service_fulfillment_step_data&lt;/choice_table&gt;&lt;column_label&gt;Service Fulfillment Step Data&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;service_fulfillment_step_data&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Service Fulfillment Step Data&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Service Fulfillment Steps - Manager approval"&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/model&gt;&lt;model_id&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_service_fulfillment_step_data"&gt;sc_service_fulfillment_step_data&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:13&lt;/sys_created_on&gt;&lt;sys_id&gt;0bab53aec7312010ca6da1e603c260b9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-25 05:24:36&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0bab53aec7312010ca6da1e603c260b9"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=8933f62a-9b5a-4c2f-becb-4173f3008518
+    &lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sc_service_fulfillment_step&lt;/choice_table&gt;&lt;column_label&gt;Service Fulfillment Step&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;service_fulfillment_step&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Service Fulfillment Step&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Service Fulfillment Steps - Manager approval"&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/model&gt;&lt;model_id&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;3&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_service_fulfillment_step"&gt;sc_service_fulfillment_step&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-25 05:24:36&lt;/sys_created_on&gt;&lt;sys_id&gt;6d2849abc7752010ca6da1e603c26064&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-02-08 18:21:16&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6d2849abc7752010ca6da1e603c26064"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;
+      element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=ebf00560-6762-4a4f-b9d2-409ffa91e6ee
+    &lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sc_req_item&lt;/choice_table&gt;&lt;column_label&gt;Requested Item&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;requested_item&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Requested Item&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Service Fulfillment Steps - Manager approval"&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/model&gt;&lt;model_id&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:13&lt;/sys_created_on&gt;&lt;sys_id&gt;87ab53aec7312010ca6da1e603c2607f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-22 13:35:13&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=87ab53aec7312010ca6da1e603c2607f"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=c3ab53aec7312010ca6da1e603c2607d^sys_idNOT IN26ed531a3731321004ac5c6c24924b94,62ed531a3731321004ac5c6c24924bae,aaed531a3731321004ac5c6c24924b9b,e6ed531a3731321004ac5c6c24924b8b"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment&gt;State as Failed&lt;/comment&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;e2db73cc-2c21-49a8-83ce-48831bf22116&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:55&lt;/sys_created_on&gt;&lt;sys_id&gt;26ed531a3731321004ac5c6c24924b94&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:55&lt;/sys_updated_on&gt;&lt;ui_id&gt;e7538896-5a97-4f4b-bda9-b5eb1d39285b&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+VVwU7jMBD9lcrnqnIa2oXeEFUlJBYkuuLComhiT8CS42Rtp9Ct+u87jpO2AoRAyx7Q9uaZN/F7L/Oa2w0D4VVlzo3zYAQu1+5cshmbIORJCii+pcmYJ1zAVEKCU56K8ZRPCjZkKuCOUPLkJJmKNEnTMefj46Mkn6Z5MpY0jQnhDJRISIuispLOK9BNKGw2rskLXT2OHNqVEpgVjS6U1iUanzmPdSbBw3ZLM1K5WsP6phulinhQWlo0bHZ7N2Q1WLrFo2WzzbPWe2lqyFET9Lrn+Zy3X9fhLCvRtAxVX7zoJuddZ3A+pw4NBToJHzJ88mgkEpECtMMhK8GQtMqu2czbhgoWQV4Zvd4hHpTxUWgJT079ppuPeMAVSMpEZ8LumHUGxXIxJ9+W9GThG7vzqyKLXfREYgGN9meHtQi4qsM2xBEPue6nK92U5jI6wnYPOHgfjSMSWAedgXmUVSwfqsfrnuRCmdaSTqKuBOjdCby3Km98oLNhqLH1uIS6VuY+q221Uu0wUSlH95oOo7A7dKdT92YUt3gUFma0oPq8Ld+AVUHEd3oMDW+HzK3dmQbn9lLIw+xXE5hEYZ2ErHWhtSBrNyEMC6tqf0pXrbAjvh3+bYLyyVurKU72m3hAZp8iJ7I34/MyPMsIHyz28MGS4IN5hH8sWe+g3yfrR7tPr8vpwvWidnE4O7iMjS5ak0+L1vFXilYn48tn658lio/f/LM/WME2RO4wTR48/mw4T2UBSqN8GZ/XIB+LzDv49ZFZKNTSvUK4zwuWxM1jFgU8y0zXHNx0zd0n6dOCk0x5+/tC8flvvkx3fwAgBkd/3QkAAA==
+    &lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=26ed531a3731321004ac5c6c24924b94"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;7&lt;/order&gt;&lt;parent_ui_id&gt;96ccfeb5-0b1a-41cd-bd8d-704c65eacbe2&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:55&lt;/sys_created_on&gt;&lt;sys_id&gt;62ed531a3731321004ac5c6c24924bae&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:55&lt;/sys_updated_on&gt;&lt;ui_id&gt;c053350e-fa7c-49b6-b6f7-8eaf01f7bc33&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+VVwU7jMBD9lcrnqnKaEqC3FVUlJBYkuuLCosixJ2DJcbK2U+hW/fcdx05bFYSKlj2g7c0zb+L3XuY192vCuJO1vtTWMc1hsbKXgkxJxliRpAz4aZqMaUI5ywRLIKMpH2f0NCFDIj1uAoIm50nG0yRNx5SOzyZJkaVFMhY4DR6nWQWINMBrI/C8ZKr1hfXatkWp6ueRBbOUHPKyVaVUqgLtcuugyQVzbLPBGSFto9jqLo5ihT9JJQxoMr1/GJKGGbzFgSHT9UHrWJqKFaAQetvzPOTtVo0/i5q3HUPZF6/i5Cx2Bpcz7OCQp5PQIYEXB1oAEimZsjAkFdMorTYrMnWmxYIBJm60Wm0RT1K7ILRiL1b+xpsn1ONKQGU8mrA95tGgUC5n6NsCn8xda7Z+1WixDZ4IKFmr3MV+LQBuGr8NYcSxQvXTtWorfR0cIdsH7L2P1iIJaLxOzzzIKhdP9fNtT3IudWdJlKhqztT2xJwzsmidp7MmoKDzuGJNI/Vj3ph6KbthpFKNHhUeRn538E4rH/UobPHIL8xojvVZV75jRnoR3/ExOLwZEruyF4pZu5OCHua/Ws8kCIsS8s6FzoK82wQ/zI1s3De8agmR+Gb4twkqTt5bTX6+28Q9MrsUWZ6/G5/X4VkE+GC+gw8WCB/MAvxjyTqCfp+sH90+vS0nhutV7Wp/dnAdGjFaJ58WrbOvFK0o48tn658lio7f/bPfW8EuRHY/TY45+NlSmgr0olG4+K8D9DboY7E5gmMfm7kEJewbpPvMAHJARnkQcZCb2Bzcxeb2s/Rp4Uky2v2+UIT+m6/Twx89A7TC4QkAAA==
+    &lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=62ed531a3731321004ac5c6c24924bae"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment&gt;State as Canceled&lt;/comment&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;5&lt;/order&gt;&lt;parent_ui_id&gt;5ae47618-e834-447b-974c-852cdeb37882&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:55&lt;/sys_created_on&gt;&lt;sys_id&gt;aaed531a3731321004ac5c6c24924b9b&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:55&lt;/sys_updated_on&gt;&lt;ui_id&gt;b8cc7e7d-6782-4f6a-8450-12300938d5e0&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+VVwU7jMBD9lcrnqnIayEJvK6pKSCxIdMWFXUUTewKWHCdrO4Vu1X/fcZy0FSAEWvaAtjfPvInfe5nX3G4YCK9qc26cByNwuXbnks0YAhRJCii+pMmUJ1xAJiHBjKdimvHslI2ZCrgjlDw5TTKRJmk65Xx6cpQUWVokU0nTmBDOQIWEtChqK+m8At2Gwmbj2qLU9cPEoV0pgXnZ6lJpXaHxufPY5BI8bLc0I5VrNKxv+lGqiHulpUXDZrc/x6wBS7d4tGy2edJ6K00NBWqCXg88n/L26yacZS3ajqEaihf95LzvjM7n1KGhQCfhY4aPHo1EIlKCdjhmFRiSVts1m3nbUsEiyCuj1zvEvTI+Cq3g0anfdPMRD7gSSZnoTdgd896gWC7n5NuSnix8a3d+1WSxi55ILKHV/uywFgFXTdiGOOKh0MN0rdvKXEZH2O4BB++jdUQCm6AzMI+yyuV9/XA9kFwo01nSS9S1AL07gfdWFa0PdDYMNXYeV9A0ytzlja1XqhsmKtXkTtNhEnaH7nTqzkziFk/CwkwWVJ935RuwKoj4Ro+h4e2YubU70+DcXgp5mP9qA5MorJeQdy50FuTdJoRhYVXjv9JVK+yJb8d/m6Di+LXVFKf7TTwgs0+RE/mr8XkenmWEjxZ7+GhJ8NE8wt+XrDfQH5L1vdunl+X04XpWuzicHV3GRh+t4w+L1slnilYv49Nn658lik9f/bM/WMEuRO4wTR48/mg5T6UIV2uUzwP0Muh9sXkDxyE2C4VauhdID5nBith5zKOIJ7npm6Obvrn7LH1YeJKMd79PFKH/5uv08w9igsPA4QkAAA==
+    &lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=aaed531a3731321004ac5c6c24924b9b"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Ask For Approval"&gt;f8f2e9920b10030085c083eb37673abd&lt;/action_type&gt;&lt;action_type_parent display_value="Ask For Approval"&gt;bae0a1120b10030085c083eb37673a92&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f8f2e9920b10030085c083eb37673abd&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:55&lt;/sys_created_on&gt;&lt;sys_id&gt;e6ed531a3731321004ac5c6c24924b8b&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:55&lt;/sys_updated_on&gt;&lt;ui_id&gt;e5377b09-b4c9-42d8-ad22-13d7ddca5655&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+2Y34/aOBDH/xWUZ5ZzCITA26popT3ddSXY9mVZRY4zAVfBobGzLYf4328SOz8KC4UeVbs6XiJ5PBN/ZzIfO8nTxqJM8UTcC6moYDBdy/vQGllDoIHtUGADx+4SmzDqhtQGlzisixfPals89xt4UReGwy4JbEIcQrw+I54DgTNwBw5lBP0EXQJ6psCSNMTxC42z3LDZyCyI4uRLJ4XPGUgFoc8VLLdbdAq5XMV0/dH4ooUteBymIKzR03PbWtEUb6sgtUabnalTdcU0gBhdJ6WwXaFqvcrHYcKyJQjl89L4l4kcm5nW/RhnMCiXQ9oWfFUgQkAdEY0ltK0lFSFVSbq2RirN0JACDR9EvK48FlwoneeSfpX8H1zY6eZ+EWBizNSgGvqmPtocjamiU7wzU1lalSvhDKQuSQgRzWL1rmnTDg+r/OnrEEWDuIxO4mwp3uuCWNUNGo8jkygCVnmeuXKdVjRdJF8mpcg7LoqKmBTjhNG4GlGlUh5kKpezsSCGosRLulpxMfdXafLCi2CUsuzMYxx08l7BNSWfi47u2g5WlXbu0D4uzB9pyvMk/sbbYPC2bcm1fBdTKetUsIb+5yxXohMzKfhFFXQJ8jiW8pW6xVVewGjetv8rLAE72pSs7kGto2ZFMh8hKfDYh2NS4tO61/PnoXKCqhKVRyNrR6UBpRj6xdy3nBRhrfd6wmBiH8fEWGpOdIO9golH3hAmJq03z8lPQwR6rtPHyyByiN21iQeu57Ehocxz3X7PqZsPpWPyNEYwqERRNSwXOD5OkFEycWt0tCaljoMCDScSn6iY7zAyLY2Gj+6ZfBw+R2z3/0RIxh93qqwte3X+OSjly30QHDfkou3dbuAOiRfehBEJbnqe07+hDMgNuHYf+qHL+rbzO+FH7GNnQei90t0Rh7j5WldO7FPYmDmPxhNU7dF4Z2QdkmtYLIavnVlF/M6ZdTkmPULeEpTXt7sT2GFHuxQaR9enJEvFEXT8BZdFSx1EqOFxHkoniCxR+lOr3CVpV/yPgORcQbqCdBCkXv9ojzY+QCocWCJCnq8pGzjpswDkrVh/eDr0t6ExjJK0g11I55But88P6QQ+AVM/GL7P7q+Wc95GccJDqH6gZDHI7z0Us03UL8UmqLlV1K/SZtJsF71L/VJ5Y7vF9Wvxe0fu0SaNhnVThhlWlqrmP5XNzKw+s0YzSyQCZlZ7ZuVeft6VhRk9MKtqorBtNtuttmQpNTewG8M6OqRrWXhKtoAQm7qwfmPxC4qM/RJ/Pk+oSQnuOIPWWBdlv0zlx2qpU9eF753vU+NQ3OmPR9485/sXO+d7V24v8WnqV99geIjjtnlBmJ//BUdnmbhMGAAA
+    &lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=e6ed531a3731321004ac5c6c24924b8b"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=c3ab53aec7312010ca6da1e603c2607d^sys_idNOT IN26ed531a3731321004ac5c6c24924bad,6eed531a3731321004ac5c6c24924b9a,e6ed531a3731321004ac5c6c24924b92"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;9aed131a3731321004ac5c6c24924b66&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;e2db73cc-2c21-49a8-83ce-48831bf22116&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;6&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:55&lt;/sys_created_on&gt;&lt;sys_id&gt;26ed531a3731321004ac5c6c24924bad&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:55&lt;/sys_updated_on&gt;&lt;ui_id&gt;96ccfeb5-0b1a-41cd-bd8d-704c65eacbe2&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=
+    &lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;9eed131a3731321004ac5c6c24924b60&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;e2db73cc-2c21-49a8-83ce-48831bf22116&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else If"&gt;666e5545c3e232002841b63b12d3ae99&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:55&lt;/sys_created_on&gt;&lt;sys_id&gt;6eed531a3731321004ac5c6c24924b9a&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:55&lt;/sys_updated_on&gt;&lt;ui_id&gt;5ae47618-e834-447b-974c-852cdeb37882&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+1VXW/aMBT9K8jPIcoHgZY3RFVpUrtKa9WXrYpubAesOXZmO6UM8d93nQ9AG9M6jce94XOv7z3nxEfsiG5c3Tj7pBfWipUi888vARHKY/h7RxRUnMwJ1YoJJ7TKWyAgryAbX7gHBStuRou6NhrBkbCjJSjKJWfYxoStJWyf39dN10Iyw3sWNRjc5bgh891PJcFwWBlBGV/TmKbJNE2iKLmaxMU0LeKEpcAhwYESCi6xdTnQH921SPBbXW5be9w6I9SqP9/1Ux4HUBvmWcVRQPib44oh+3kJ0vKAVKAYOG22B8RwYA9KHoG1UA7HEd/8ZsV3XJhkmW8sOUqkvCsejnnvYgeXN+AAqTTUNaZvpWstKLedOYyX0Ei3PMW6hofaS+2uOCjkcFvLplIfO0fIYcDw0RBpLJLgtVfqqfc6yse13nwaWN4K1brSF6WmIA8ncOhd0TjPZ0fwc1c4KK+grtHR3D8G0V5GLlW4kngIS6k3uNS/yhCoJx6isRDeIn7Tws9ghFdxj2PwckezACto3r5gHIc2cbIPiN3apQRrjyLR3fxb4yl2kntxeeePv0KNqN0CN7/yXsc++DUQJ1nY7XiWzmZFdD0uJvR6PEnY1RhYkozjlM0Yo5BNsyyE/vHn1oHj+/2XJopSLPoYnE3NxeZeNF/xuXydSdZfhir5Q6j8F31npqIo+h+qfw6VsHkXhV5bu/yCmXrxAep2HrymwiK1J499GP6LfGGLj0vQU2ijzVcv6ojtfwA0GlTN1QYAAA==
+    &lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;9aed131a3731321004ac5c6c24924b57&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Service Fulfillment Steps - Manager approval"&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-12-16 08:46:55&lt;/sys_created_on&gt;&lt;sys_id&gt;e6ed531a3731321004ac5c6c24924b92&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:55&lt;/sys_updated_on&gt;&lt;ui_id&gt;e2db73cc-2c21-49a8-83ce-48831bf22116&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;
+      H4sIAAAAAAAA/+1Vy27bMBD8FYNnWdDDsmPfDAcBCiQNkAS5tIGwIimbLUWqJBXHNfzvXUryA62DJmiOvZnD5e7MaAfeEt24unH2Qc+tFUtFZl+eAiKUx/D3liioOJkRqhUTTmiVt0BAnkE2/uIGFCy5Gczr2mgEB8IO7vg3Th1nWMaErSVsHt9WTVdCMsN7FjUYnOW4IbPtb1eCYbMygjKe0pimyThNoii5GMXFOC3ihKXAIcWGEgousXSxpz+4bpHgVV1uU3vcOiPUsj9f913u96A2zLOKo4DwF8cVQ/azEqTlAalAMXDabA6I4cBulTwCK6EctiO++MWKnzgwyTJfWHKUSHl3eTjmvYsdXF6CA6TSUNeYvpSutKDcduYwXkIj3eIU6wpuay+1e+KgkPvXWjaV+tw5Qg4N9h8NkcYiCV57pZ56r6O8X+n13Z7llVCtK/2l1BTk4QQOvSsa5/lsCZe8wkZ5BXWNjuZ+GUT7GLlU4VLiISylXuNQv5UhUE88RGMhvEL8soUfwQiv4gbb4OOOZgFW0LzdYGyHNnGyC4jd2IUEa48i0d38R+MpdpJ7cXnnj39CjajdHCc/817HLvgzECdZ2G55lk4mRTQdFiM6HY4SdjEEliTDOGUTxihk4ywLoV/+3DpwfLf72kRRirv9Wmg+qu370jWFrMziKDufrtH4XLrO5OqdkUr+Ein/Pd+YqCiK/kfqnyMlbN4FodfWDv/ARD35+HQzD15TYZHag8c+7f+J/MUGl0vQU2itzXcv6ojtfgFksYPd0wYAAA==
+    &lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;requested_item&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Requested Item&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:13&lt;/sys_created_on&gt;&lt;sys_id&gt;07ab53aec7312010ca6da1e603c260a8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Requested Item&lt;/sys_name&gt;&lt;sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d_requested_item_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-22 13:35:13&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;service_fulfillment_step_data&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Service Fulfillment Step Data&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:14&lt;/sys_created_on&gt;&lt;sys_id&gt;17ab53aec7312010ca6da1e603c260c3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Service Fulfillment Step Data&lt;/sys_name&gt;&lt;sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d_service_fulfillment_step_data_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-22 13:35:14&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;service_fulfillment_step&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Service Fulfillment Step&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-25 05:24:36&lt;/sys_created_on&gt;&lt;sys_id&gt;e52849abc7752010ca6da1e603c2606f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Service Fulfillment Step&lt;/sys_name&gt;&lt;sys_package display_value="Service Catalog - Service Fulfillment Step Types" source="sn_sc_step_types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Service Catalog - Service Fulfillment Step Types"&gt;894b7538c71320105901a1e603c260ac&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d_service_fulfillment_step_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-01-25 05:24:36&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_c3ab53aec7312010ca6da1e603c2607d"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;54989ba2c7312010ca6da1e603c260f6&lt;/sys_id&gt;&lt;latest_snapshot&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/latest_snapshot&gt;&lt;compiler_build&gt;latest&lt;/compiler_build&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=54989ba2c7312010ca6da1e603c260f6"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=54989ba2c7312010ca6da1e603c260f6^sys_idNOT INb7ab93aec7312010ca6da1e603c26076"/&gt;&lt;sys_flow_subflow_plan action="INSERT_OR_UPDATE"&gt;&lt;plan&gt;com.snc.process_flow.engine.ProcessPlan@73e74a63&lt;/plan&gt;&lt;plan_id display_value="Service Fulfillment Steps - Manager approval"&gt;54989ba2c7312010ca6da1e603c260f6&lt;/plan_id&gt;&lt;snapshot&gt;c3ab53aec7312010ca6da1e603c2607d&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-01-22 13:35:16&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;b7ab93aec7312010ca6da1e603c26076&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-12-16 08:46:55&lt;/sys_updated_on&gt;&lt;/sys_flow_subflow_plan&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>570803531</payload_hash>
+        <record_name>Service Fulfillment Steps - Manager approval</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:35:23</sys_created_on>
+        <sys_id>ca87d47eedee03107f44863610ff210e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb3dcac50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:35:23</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>0e87d47e9cee0310f56cd4da3078550d</update_guid>
+        <update_guid_history>0e87d47e9cee0310f56cd4da3078550d:570803531,0687947e71ee031014140be564d5dac4:-170653021</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:39:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>05c711d27efe46038245d8a77ee23401</sys_id>
+        <sys_metadata>54989ba2c7312010ca6da1e603c260f6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Service Fulfillment Steps - Manager approval</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_54989ba2c7312010ca6da1e603c260f6</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_54989ba2c7312010ca6da1e603c260f6">ca87d47eedee03107f44863610ff210e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:39:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

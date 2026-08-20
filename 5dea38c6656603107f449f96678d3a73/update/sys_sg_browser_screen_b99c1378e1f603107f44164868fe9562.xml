@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_browser_screen">
+    <sys_sg_browser_screen action="INSERT_OR_UPDATE">
+        <available_offline>false</available_offline>
+        <check_acl>false</check_acl>
+        <description/>
+        <dynamic_prefetch_count/>
+        <empty_state/>
+        <external_browser>false</external_browser>
+        <fetch_type>background</fetch_type>
+        <filter/>
+        <hide_filters>false</hide_filters>
+        <hide_native_header>false</hide_native_header>
+        <hide_screen_name>false</hide_screen_name>
+        <icon/>
+        <name>FG360 Store Operations Dashboard</name>
+        <relative_url>false</relative_url>
+        <roles_override/>
+        <sys_class_name>sys_sg_browser_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 06:04:10</sys_created_on>
+        <sys_id>b99c1378e1f603107f44164868fe9562</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>FG360 Management Dashboard</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_browser_screen_b99c1378e1f603107f44164868fe9562</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 16:42:23</sys_updated_on>
+        <url>/$pa_dashboard.do?sysparm_dashboard=279e0cc75c6203107f44f92d898943dc</url>
+    </sys_sg_browser_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=b99c1378e1f603107f44164868fe9562"/>
+</record_update>

@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>02668895fb3210101d696a752170692f</copied_from>
+        <copied_from_name>New Hire On boarding Case Trigge</copied_from_name>
+        <description>A new hire on boarding HR case will be created when a HR Profile record with future employment start date is either inserted or updated. When an update happens, a case will be created only if the previous value is empty and the new value is greater than or equal to today's date.</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>new_hire_on_boarding_case_trigger_config_job</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.user.name","label":"Trigger➛Job Record➛User➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"Created or Updated_1.current.user.department","label":"Trigger➛Job Record➛User➛Department","reference":"cmn_department","reference_display":"Department","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"department"},{"name":"Created or Updated_1.current.user.location","label":"Trigger➛Job Record➛User➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"location"},{"name":"Created or Updated_1.current.hr_profile","label":"Trigger➛Job Record➛HR profile","reference":"sn_hr_core_profile","reference_display":"HR Profile","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"hr_profile"},{"name":"Created or Updated_1.current.manager","label":"Trigger➛Job Record➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"manager"},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.is_match","label":"1 - Check Previous Values Match➛Is Match","reference_display":"Is Match","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3d238ff5-a625-45c8-9bce-ebf4c7e9c2c7"}},{"name":"Created or Updated_1.current","label":"Trigger➛Job Record","reference":"sn_hr_core_job","reference_display":"Job","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.changed_fields","label":"Trigger➛Changed Fields","type":"array.object","base_type":"array.object","attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}},{"name":"Created or Updated_1.table_name","label":"Trigger➛Job Table","reference":"sn_hr_core_job","reference_display":"Job","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.is_success","label":"4 - Create Case➛Is Success","reference_display":"Is Success","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"16ae7f8c-1410-4c7c-b5d5-bd48fec73091"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.case_sys_id","label":"4 - Create Case➛Case SysId","reference_display":"Case SysId","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b761c997-22bc-4241-a099-4e02a16c8f42"}},{"name":"Created or Updated_1.current.user.manager","label":"Trigger➛Job Record➛User➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created or Updated_1.current.user","label":"Trigger➛Job Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"user"},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.__action_status__","label":"1 - Check Previous Values Match➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.__dont_treat_as_error__","label":"1 - Check Previous Values Match➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.__action_status__","label":"4 - Create Case➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.__dont_treat_as_error__","label":"4 - Create Case➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>701668ddfb7210101d696a75217069f5</master_snapshot>
+        <master_snapshot_digest/>
+        <name>New Hire On boarding Case Trigger Job</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>9ee4b055ff0301106f0624b8553bf1ef</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>50e0acd9fb7210101d696a7521706962</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>New Hire On boarding Case Trigger Job</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_50e0acd9fb7210101d696a7521706962</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:34:50</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=50e0acd9fb7210101d696a7521706962"/>
+    <sys_variable_value action="DELETE" query="document_key=50e0acd9fb7210101d696a7521706962"/>
+    <sys_flow_record_trigger action="DELETE">
+        <active>true</active>
+        <condition table="sn_hr_core_job">job_start_date&gt;=javascript:gs.beginningOfToday()<item endquery="false" field="job_start_date" goto="false" newquery="false" operator="&gt;=" or="false" value="javascript:gs.beginningOfToday()"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-22 23:55:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9ee4b055ff0301106f0624b8553bf1ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <table>sn_hr_core_job</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="DELETE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>50e0acd9fb7210101d696a7521706962</identifier>
+        <identifier_type/>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-22 23:55:00</sys_created_on>
+        <sys_id>5ae4b055ff0301106f0624b8553bf1f0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <trigger display_value="">9ee4b055ff0301106f0624b8553bf1ef</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="DELETE" query="identifier=50e0acd9fb7210101d696a7521706962^sys_idNOT IN5ae4b055ff0301106f0624b8553bf1f0"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=50e0acd9fb7210101d696a7521706962"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=50e0acd9fb7210101d696a7521706962^sys_idNOT INd0e0acd9fb7210101d696a7521706963"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>50e0acd9fb7210101d696a7521706962</id>
+        <name>New Hire On boarding Case Trigger Config Job</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:20</sys_created_on>
+        <sys_id>d0e0acd9fb7210101d696a7521706963</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:20</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=d0e0acd9fb7210101d696a7521706963"/>
+    <sys_hub_flow_input action="DELETE" query="model=50e0acd9fb7210101d696a7521706962^sys_idNOT IN28e0acd9fb7210101d696a7521706970,68e0acd9fb7210101d696a752170696a,e8e0acd9fb7210101d696a7521706975"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="New Hire On boarding Case Trigger Job">50e0acd9fb7210101d696a7521706962</model>
+        <model_id>50e0acd9fb7210101d696a7521706962</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:20</sys_created_on>
+        <sys_id>28e0acd9fb7210101d696a7521706970</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=28e0acd9fb7210101d696a7521706970"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="New Hire On boarding Case Trigger Job">50e0acd9fb7210101d696a7521706962</model>
+        <model_id>50e0acd9fb7210101d696a7521706962</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:20</sys_created_on>
+        <sys_id>68e0acd9fb7210101d696a752170696a</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=68e0acd9fb7210101d696a752170696a"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="New Hire On boarding Case Trigger Job">50e0acd9fb7210101d696a7521706962</model>
+        <model_id>50e0acd9fb7210101d696a7521706962</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:20</sys_created_on>
+        <sys_id>e8e0acd9fb7210101d696a7521706975</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:54:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=e8e0acd9fb7210101d696a7521706975"/>
+    <sys_hub_flow_output action="DELETE" query="model=50e0acd9fb7210101d696a7521706962"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=50e0acd9fb7210101d696a7521706962"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=50e0acd9fb7210101d696a7521706962^sys_idNOT INa8e0acd9fb7210101d696a7521706995"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="New Hire On boarding Case Trigger Job">50e0acd9fb7210101d696a7521706962</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>a8e0acd9fb7210101d696a7521706995</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=a8e0acd9fb7210101d696a7521706995"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>a8e0acd9fb7210101d696a7521706995</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>24e0acd9fb7210101d696a7521706996</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <value>every</value>
+        <variable display_value="Run Trigger">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>a8e0acd9fb7210101d696a7521706995</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>a8e0acd9fb7210101d696a7521706996</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:49:32</sys_updated_on>
+        <value>sn_hr_core_job</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>a8e0acd9fb7210101d696a7521706995</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>e4e0acd9fb7210101d696a7521706996</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:49:32</sys_updated_on>
+        <value>job_start_date&gt;=javascript:gs.beginningOfToday()</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=a8e0acd9fb7210101d696a7521706995"/>
+    <sys_hub_action_instance action="DELETE" query="flow=50e0acd9fb7210101d696a7521706962^sys_idNOT IN68e0acd9fb7210101d696a752170698b,e4e0acd9fb7210101d696a7521706993"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Check Previous Values Match">7b6a0305fb3210101d696a75217069b6</action_type>
+        <action_type_parent display_value="Check Previous Values Match">24c64b41fb3210101d696a7521706963</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="New Hire On boarding Case Trigger Job">50e0acd9fb7210101d696a7521706962</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>68e0acd9fb7210101d696a752170698b</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <ui_id>601df32a-ea93-4401-8d4b-1901f47368ce</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=68e0acd9fb7210101d696a752170698b"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>68e0acd9fb7210101d696a752170698b</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>ece0acd9fb7210101d696a752170698d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:49:32</sys_updated_on>
+        <value>job_start_dateISEMPTY</value>
+        <variable display_value="Old Values Condition">847a0305fb3210101d696a75217069ca</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=68e0acd9fb7210101d696a752170698b"/>
+    <sys_element_mapping action="DELETE">
+        <field>old_values_condition</field>
+        <id>68e0acd9fb7210101d696a752170698b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>a8e0acd9fb7210101d696a752170698d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>trigger_record</field>
+        <id>68e0acd9fb7210101d696a752170698b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>e4e0acd9fb7210101d696a752170698d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>trigger_record_changed_fields</field>
+        <id>68e0acd9fb7210101d696a752170698b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>6ce0acd9fb7210101d696a752170698d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6</table>
+        <value>{{Created or Updated_1.changed_fields}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>trigger_table_name</field>
+        <id>68e0acd9fb7210101d696a752170698b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>24e0acd9fb7210101d696a752170698d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6</table>
+        <value>{{Created or Updated_1.table_name}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=68e0acd9fb7210101d696a752170698b"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=68e0acd9fb7210101d696a752170698b"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Case">5663ea0dfb3210101d696a75217069d2</action_type>
+        <action_type_parent display_value="Create Case">114c4c41fb3210101d696a7521706978</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="New Hire On boarding Case Trigger Job">50e0acd9fb7210101d696a7521706962</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>e4e0acd9fb7210101d696a7521706993</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <ui_id>dc6dca96-dcd8-43d6-a1bd-bdface5d7950</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=e4e0acd9fb7210101d696a7521706993"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e4e0acd9fb7210101d696a7521706993</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>24e0acd9fb7210101d696a7521706995</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <value>sn_hr_le_case</value>
+        <variable display_value="Case Table Name">5663ea0dfb3210101d696a75217069d3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=e4e0acd9fb7210101d696a7521706993"/>
+    <sys_element_mapping action="DELETE">
+        <field>case_fields</field>
+        <id>e4e0acd9fb7210101d696a7521706993</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>a0e0acd9fb7210101d696a7521706995</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-01 22:11:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2</table>
+        <value>hr_service={"display":"New Hire Onboarding","value":"64fa4c53534222003066a5f4a11c0875"}^opened_for={{Created or Updated_1.current.manager}}^subject_person={{Created or Updated_1.current.user}}^subject_person_job={{Created or Updated_1.current}}^location={{Created or Updated_1.current.user.location}}^department={{Created or Updated_1.current.user.department}}^subject_person_hr_profile={{Created or Updated_1.current.hr_profile}}^short_description=Request Onboarding for {{Created or Updated_1.current.user.name}}^state=10</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>case_table_name</field>
+        <id>e4e0acd9fb7210101d696a7521706993</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>ece0acd9fb7210101d696a7521706994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>case_values_record</field>
+        <id>e4e0acd9fb7210101d696a7521706993</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>2ce0acd9fb7210101d696a7521706994</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=e4e0acd9fb7210101d696a7521706993"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=e4e0acd9fb7210101d696a7521706993"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=50e0acd9fb7210101d696a7521706962^sys_idNOT IN68e0acd9fb7210101d696a752170697d,ace0acd9fb7210101d696a7521706981"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">ede47055ff0301106f0624b8553bf18b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="New Hire On boarding Case Trigger Job">50e0acd9fb7210101d696a7521706962</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>68e0acd9fb7210101d696a752170697d</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <ui_id>a08e5a16-51c4-4b88-9652-aac0924811fc</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=68e0acd9fb7210101d696a752170697d"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>68e0acd9fb7210101d696a752170697d</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>2ce0acd9fb7210101d696a7521706980</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <value>previous values do not match</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=68e0acd9fb7210101d696a752170697d"/>
+    <sys_element_mapping action="DELETE">
+        <field>condition</field>
+        <id>68e0acd9fb7210101d696a752170697d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>a8e0acd9fb7210101d696a7521706980</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{601df32a-ea93-4401-8d4b-1901f47368ce.is_match}}=0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>condition_name</field>
+        <id>68e0acd9fb7210101d696a752170697d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>e0e0acd9fb7210101d696a7521706980</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=68e0acd9fb7210101d696a752170697d"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=68e0acd9fb7210101d696a752170697d"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">a5e47055ff0301106f0624b8553bf191</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="New Hire On boarding Case Trigger Job">50e0acd9fb7210101d696a7521706962</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>a08e5a16-51c4-4b88-9652-aac0924811fc</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>ace0acd9fb7210101d696a7521706981</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <ui_id>821bc355-5f6a-4312-bf14-f4bdf2e1e410</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=ace0acd9fb7210101d696a7521706981"/>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=ace0acd9fb7210101d696a7521706981"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=ace0acd9fb7210101d696a7521706981"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=50e0acd9fb7210101d696a7521706962"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=50e0acd9fb7210101d696a7521706962"/>
+    <sys_hub_flow_variable action="DELETE" query="model=50e0acd9fb7210101d696a7521706962"/>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:20</sys_created_on>
+        <sys_id>24e0acd9fb7210101d696a7521706974</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962_current_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:20</sys_created_on>
+        <sys_id>60e0acd9fb7210101d696a752170696f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962_table_name_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-21 23:38:21</sys_created_on>
+        <sys_id>ace0acd9fb7210101d696a7521706979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Changed Fields</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962_changed_fields_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-21 23:38:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_50e0acd9fb7210101d696a7521706962"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>A new hire on boarding HR case will be created when a HR Profile record with future employment start date is either inserted or updated. When an update happens, a case will be created only if the previous value is empty and the new value is greater than or equal to today's date.</description>
+        <flow_priority/>
+        <internal_name>new_hire_on_boarding_case_trigger_job</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.user.name","label":"Trigger➛Job Record➛User➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"Created or Updated_1.current.user.department","label":"Trigger➛Job Record➛User➛Department","reference":"cmn_department","reference_display":"Department","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"department"},{"name":"Created or Updated_1.current.user.location","label":"Trigger➛Job Record➛User➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"location"},{"name":"Created or Updated_1.current.hr_profile","label":"Trigger➛Job Record➛HR profile","reference":"sn_hr_core_profile","reference_display":"HR Profile","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"hr_profile"},{"name":"Created or Updated_1.current.manager","label":"Trigger➛Job Record➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"manager"},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.is_match","label":"1 - Check Previous Values Match➛Is Match","reference_display":"Is Match","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3d238ff5-a625-45c8-9bce-ebf4c7e9c2c7"}},{"name":"Created or Updated_1.current","label":"Trigger➛Job Record","reference":"sn_hr_core_job","reference_display":"Job","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.changed_fields","label":"Trigger➛Changed Fields","type":"array.object","base_type":"array.object","attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}},{"name":"Created or Updated_1.table_name","label":"Trigger➛Job Table","reference":"sn_hr_core_job","reference_display":"Job","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.is_success","label":"4 - Create Case➛Is Success","reference_display":"Is Success","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"16ae7f8c-1410-4c7c-b5d5-bd48fec73091"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.case_sys_id","label":"4 - Create Case➛Case SysId","reference_display":"Case SysId","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b761c997-22bc-4241-a099-4e02a16c8f42"}},{"name":"Created or Updated_1.current.user.manager","label":"Trigger➛Job Record➛User➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created or Updated_1.current.user","label":"Trigger➛Job Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"user"},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.__action_status__","label":"1 - Check Previous Values Match➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.__dont_treat_as_error__","label":"1 - Check Previous Values Match➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.__action_status__","label":"4 - Create Case➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.__dont_treat_as_error__","label":"4 - Create Case➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>New Hire On boarding Case Trigger Job</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="New Hire On boarding Case Trigger Job">50e0acd9fb7210101d696a7521706962</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>701668ddfb7210101d696a75217069f5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:54:59</sys_updated_on>
+        <type>flow</type>
+        <version/>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=701668ddfb7210101d696a75217069f5"/>
+    <sys_variable_value action="DELETE" query="document_key=701668ddfb7210101d696a75217069f5"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=701668ddfb7210101d696a75217069f5"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=701668ddfb7210101d696a75217069f5^sys_idNOT IN781668ddfb7210101d696a75217069f5"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>701668ddfb7210101d696a75217069f5</id>
+        <name>New Hire On boarding Case Trigger Job</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:02</sys_created_on>
+        <sys_id>781668ddfb7210101d696a75217069f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:02</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=781668ddfb7210101d696a75217069f5"/>
+    <sys_hub_flow_input action="DELETE" query="model=701668ddfb7210101d696a75217069f5^sys_idNOT IN4116a8ddfb7210101d696a7521706914,cd16a8ddfb7210101d696a7521706909,f81668ddfb7210101d696a75217069f8"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="New Hire On boarding Case Trigger Job">701668ddfb7210101d696a75217069f5</model>
+        <model_id>701668ddfb7210101d696a75217069f5</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:02</sys_created_on>
+        <sys_id>4116a8ddfb7210101d696a7521706914</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:54:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=4116a8ddfb7210101d696a7521706914"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="New Hire On boarding Case Trigger Job">701668ddfb7210101d696a75217069f5</model>
+        <model_id>701668ddfb7210101d696a75217069f5</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:02</sys_created_on>
+        <sys_id>cd16a8ddfb7210101d696a7521706909</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:54:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=cd16a8ddfb7210101d696a7521706909"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="New Hire On boarding Case Trigger Job">701668ddfb7210101d696a75217069f5</model>
+        <model_id>701668ddfb7210101d696a75217069f5</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:02</sys_created_on>
+        <sys_id>f81668ddfb7210101d696a75217069f8</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:54:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=f81668ddfb7210101d696a75217069f8"/>
+    <sys_hub_flow_output action="DELETE" query="model=701668ddfb7210101d696a75217069f5"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=701668ddfb7210101d696a75217069f5"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=701668ddfb7210101d696a75217069f5^sys_idNOT IN8916a8ddfb7210101d696a7521706945"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="New Hire On boarding Case Trigger Job">701668ddfb7210101d696a75217069f5</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>8916a8ddfb7210101d696a7521706945</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=8916a8ddfb7210101d696a7521706945"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8916a8ddfb7210101d696a7521706945</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>4516a8ddfb7210101d696a7521706947</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <value>sn_hr_core_job</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8916a8ddfb7210101d696a7521706945</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>8116a8ddfb7210101d696a7521706947</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <value>job_start_date&gt;=javascript:gs.beginningOfToday()</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8916a8ddfb7210101d696a7521706945</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>cd16a8ddfb7210101d696a7521706946</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <value>every</value>
+        <variable display_value="Run Trigger">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=8916a8ddfb7210101d696a7521706945"/>
+    <sys_hub_action_instance action="DELETE" query="flow=701668ddfb7210101d696a75217069f5^sys_idNOT IN4d16a8ddfb7210101d696a7521706943,c116a8ddfb7210101d696a752170693b"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Case">5663ea0dfb3210101d696a75217069d2</action_type>
+        <action_type_parent display_value="Create Case">114c4c41fb3210101d696a7521706978</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="New Hire On boarding Case Trigger Job">701668ddfb7210101d696a75217069f5</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>4d16a8ddfb7210101d696a7521706943</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:54:59</sys_updated_on>
+        <ui_id>dc6dca96-dcd8-43d6-a1bd-bdface5d7950</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=4d16a8ddfb7210101d696a7521706943"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4d16a8ddfb7210101d696a7521706943</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>8516a8ddfb7210101d696a7521706945</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <value>sn_hr_le_case</value>
+        <variable display_value="Case Table Name">5663ea0dfb3210101d696a75217069d3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=4d16a8ddfb7210101d696a7521706943"/>
+    <sys_element_mapping action="DELETE">
+        <field>case_fields</field>
+        <id>4d16a8ddfb7210101d696a7521706943</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>0516a8ddfb7210101d696a7521706945</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-07 16:27:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2</table>
+        <value>hr_service={"display":"New Hire Onboarding","value":"64fa4c53534222003066a5f4a11c0875"}^opened_for={{Created or Updated_1.current.manager}}^subject_person={{Created or Updated_1.current.user}}^subject_person_job={{Created or Updated_1.current}}^location={{Created or Updated_1.current.user.location}}^department={{Created or Updated_1.current.user.department}}^subject_person_hr_profile={{Created or Updated_1.current.hr_profile}}^short_description=Request Onboarding for {{Created or Updated_1.current.user.name}}^state=10</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>case_table_name</field>
+        <id>4d16a8ddfb7210101d696a7521706943</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>4116a8ddfb7210101d696a7521706945</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>case_values_record</field>
+        <id>4d16a8ddfb7210101d696a7521706943</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>8d16a8ddfb7210101d696a7521706944</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=4d16a8ddfb7210101d696a7521706943"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=4d16a8ddfb7210101d696a7521706943"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Check Previous Values Match">7b6a0305fb3210101d696a75217069b6</action_type>
+        <action_type_parent display_value="Check Previous Values Match">24c64b41fb3210101d696a7521706963</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="New Hire On boarding Case Trigger Job">701668ddfb7210101d696a75217069f5</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>c116a8ddfb7210101d696a752170693b</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:54:59</sys_updated_on>
+        <ui_id>601df32a-ea93-4401-8d4b-1901f47368ce</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=c116a8ddfb7210101d696a752170693b"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c116a8ddfb7210101d696a752170693b</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>4116a8ddfb7210101d696a752170693d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <value>job_start_dateISEMPTY</value>
+        <variable display_value="Old Values Condition">847a0305fb3210101d696a75217069ca</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=c116a8ddfb7210101d696a752170693b"/>
+    <sys_element_mapping action="DELETE">
+        <field>old_values_condition</field>
+        <id>c116a8ddfb7210101d696a752170693b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>0d16a8ddfb7210101d696a752170693c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>trigger_record</field>
+        <id>c116a8ddfb7210101d696a752170693b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>4916a8ddfb7210101d696a752170693c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6</table>
+        <value>{{Created or Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>trigger_record_changed_fields</field>
+        <id>c116a8ddfb7210101d696a752170693b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>cd16a8ddfb7210101d696a752170693c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6</table>
+        <value>{{Created or Updated_1.changed_fields}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>trigger_table_name</field>
+        <id>c116a8ddfb7210101d696a752170693b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>8516a8ddfb7210101d696a752170693c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6</table>
+        <value>{{Created or Updated_1.table_name}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=c116a8ddfb7210101d696a752170693b"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=c116a8ddfb7210101d696a752170693b"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=701668ddfb7210101d696a75217069f5^sys_idNOT IN0516a8ddfb7210101d696a7521706921,c116a8ddfb7210101d696a7521706925"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">ede47055ff0301106f0624b8553bf18b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="New Hire On boarding Case Trigger Job">701668ddfb7210101d696a75217069f5</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>0516a8ddfb7210101d696a7521706921</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:54:59</sys_updated_on>
+        <ui_id>a08e5a16-51c4-4b88-9652-aac0924811fc</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=0516a8ddfb7210101d696a7521706921"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>0516a8ddfb7210101d696a7521706921</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>c516a8ddfb7210101d696a7521706924</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <value>previous values do not match</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=0516a8ddfb7210101d696a7521706921"/>
+    <sys_element_mapping action="DELETE">
+        <field>condition</field>
+        <id>0516a8ddfb7210101d696a7521706921</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>4516a8ddfb7210101d696a7521706924</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{601df32a-ea93-4401-8d4b-1901f47368ce.is_match}}=0</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>condition_name</field>
+        <id>0516a8ddfb7210101d696a7521706921</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>8116a8ddfb7210101d696a7521706924</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=0516a8ddfb7210101d696a7521706921"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=0516a8ddfb7210101d696a7521706921"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">a5e47055ff0301106f0624b8553bf191</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="New Hire On boarding Case Trigger Job">701668ddfb7210101d696a75217069f5</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>a08e5a16-51c4-4b88-9652-aac0924811fc</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_id>c116a8ddfb7210101d696a7521706925</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:54:59</sys_updated_on>
+        <ui_id>821bc355-5f6a-4312-bf14-f4bdf2e1e410</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=c116a8ddfb7210101d696a7521706925"/>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=c116a8ddfb7210101d696a7521706925"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=c116a8ddfb7210101d696a7521706925"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=701668ddfb7210101d696a75217069f5"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=701668ddfb7210101d696a75217069f5"/>
+    <sys_hub_flow_variable action="DELETE" query="model=701668ddfb7210101d696a75217069f5"/>
+    <sys_documentation action="DELETE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:02</sys_created_on>
+        <sys_id>0116a8ddfb7210101d696a7521706910</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Changed Fields</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5_changed_fields_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:02</sys_created_on>
+        <sys_id>8d16a8ddfb7210101d696a7521706919</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5_table_name_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:02</sys_created_on>
+        <sys_id>bc16a8ddfb7210101d696a7521706905</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5_current_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-22 00:01:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_701668ddfb7210101d696a75217069f5"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>50e0acd9fb7210101d696a7521706962</sys_id>
+        <latest_snapshot>701668ddfb7210101d696a75217069f5</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=50e0acd9fb7210101d696a7521706962^sys_idNOT IN1116a8ddfb7210101d696a752170696e"/>
+    <sys_flow_trigger_plan action="DELETE">
+        <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
+        <plan/>
+        <plan_id>50e0acd9fb7210101d696a7521706962</plan_id>
+        <snapshot>701668ddfb7210101d696a75217069f5</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-22 00:01:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1116a8ddfb7210101d696a752170696e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-22 23:55:00</sys_updated_on>
+        <trigger display_value="">9ee4b055ff0301106f0624b8553bf1ef</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=50e0acd9fb7210101d696a7521706962"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_50e0acd9fb7210101d696a7521706962</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from&gt;02668895fb3210101d696a752170692f&lt;/copied_from&gt;&lt;copied_from_name&gt;New Hire On boarding Case Trigge&lt;/copied_from_name&gt;&lt;description&gt;A new hire on boarding HR case will be created when a HR Profile record with future employment start date is either inserted or updated. When an update happens, a case will be created only if the previous value is empty and the new value is greater than or equal to today's date.&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority/&gt;&lt;generation_source/&gt;&lt;internal_name&gt;new_hire_on_boarding_case_trigger_config_job&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"Created or Updated_1.current.user.name","label":"Trigger➛Job Record➛User➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"Created or Updated_1.current.user.department","label":"Trigger➛Job Record➛User➛Department","reference":"cmn_department","reference_display":"Department","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"department"},{"name":"Created or Updated_1.current.user.location","label":"Trigger➛Job Record➛User➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"location"},{"name":"Created or Updated_1.current.hr_profile","label":"Trigger➛Job Record➛HR profile","reference":"sn_hr_core_profile","reference_display":"HR Profile","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"hr_profile"},{"name":"Created or Updated_1.current.manager","label":"Trigger➛Job Record➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"manager"},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.is_match","label":"1 - Check Previous Values Match➛Is Match","reference_display":"Is Match","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3d238ff5-a625-45c8-9bce-ebf4c7e9c2c7"}},{"name":"Created or Updated_1.current","label":"Trigger➛Job Record","reference":"sn_hr_core_job","reference_display":"Job","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.changed_fields","label":"Trigger➛Changed Fields","type":"array.object","base_type":"array.object","attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}},{"name":"Created or Updated_1.table_name","label":"Trigger➛Job Table","reference":"sn_hr_core_job","reference_display":"Job","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.is_success","label":"4 - Create Case➛Is Success","reference_display":"Is Success","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"16ae7f8c-1410-4c7c-b5d5-bd48fec73091"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.case_sys_id","label":"4 - Create Case➛Case SysId","reference_display":"Case SysId","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b761c997-22bc-4241-a099-4e02a16c8f42"}},{"name":"Created or Updated_1.current.user.manager","label":"Trigger➛Job Record➛User➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created or Updated_1.current.user","label":"Trigger➛Job Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"user"},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.__action_status__","label":"1 - Check Previous Values Match➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.__dont_treat_as_error__","label":"1 - Check Previous Values Match➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.__action_status__","label":"4 - Create Case➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.__dont_treat_as_error__","label":"4 - Create Case➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;701668ddfb7210101d696a75217069f5&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;New Hire On boarding Case Trigger Job&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id&gt;9ee4b055ff0301106f0624b8553bf1ef&lt;/remote_trigger_id&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:20&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;50e0acd9fb7210101d696a7521706962&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;New Hire On boarding Case Trigger Job&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_50e0acd9fb7210101d696a7521706962&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 10:34:50&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;updation_source/&gt;&lt;version/&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=50e0acd9fb7210101d696a7521706962"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=50e0acd9fb7210101d696a7521706962"/&gt;&lt;sys_flow_record_trigger action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition table="sn_hr_core_job"&gt;job_start_date&amp;gt;=javascript:gs.beginningOfToday()&lt;item endquery="false" field="job_start_date" goto="false" newquery="false" operator="&amp;gt;=" or="false" value="javascript:gs.beginningOfToday()"/&gt;&lt;/condition&gt;&lt;name/&gt;&lt;on_delete&gt;false&lt;/on_delete&gt;&lt;on_insert&gt;true&lt;/on_insert&gt;&lt;on_update&gt;true&lt;/on_update&gt;&lt;published_version/&gt;&lt;run_flow_in&gt;background&lt;/run_flow_in&gt;&lt;run_on_extended&gt;false&lt;/run_on_extended&gt;&lt;run_when_setting&gt;both&lt;/run_when_setting&gt;&lt;run_when_user_list/&gt;&lt;run_when_user_setting&gt;any&lt;/run_when_user_setting&gt;&lt;sys_class_name&gt;sys_flow_record_trigger&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-04-22 23:55:00&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;9ee4b055ff0301106f0624b8553bf1ef&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;table&gt;sn_hr_core_job&lt;/table&gt;&lt;trigger_definition/&gt;&lt;/sys_flow_record_trigger&gt;&lt;sys_trigger_runner_mapping action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;data&gt;{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}&lt;/data&gt;&lt;identifier&gt;50e0acd9fb7210101d696a7521706962&lt;/identifier&gt;&lt;identifier_type/&gt;&lt;runner&gt;FDTriggerRunner&lt;/runner&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-04-22 23:55:00&lt;/sys_created_on&gt;&lt;sys_id&gt;5ae4b055ff0301106f0624b8553bf1f0&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;9ee4b055ff0301106f0624b8553bf1ef&lt;/trigger&gt;&lt;/sys_trigger_runner_mapping&gt;&lt;sys_trigger_runner_mapping action="delete_multiple" query="identifier=50e0acd9fb7210101d696a7521706962^sys_idNOT IN5ae4b055ff0301106f0624b8553bf1f0"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=50e0acd9fb7210101d696a7521706962"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=50e0acd9fb7210101d696a7521706962^sys_idNOT INd0e0acd9fb7210101d696a7521706963"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;50e0acd9fb7210101d696a7521706962&lt;/id&gt;&lt;name&gt;New Hire On boarding Case Trigger Config Job&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:20&lt;/sys_created_on&gt;&lt;sys_id&gt;d0e0acd9fb7210101d696a7521706963&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:20&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=d0e0acd9fb7210101d696a7521706963"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=50e0acd9fb7210101d696a7521706962^sys_idNOT IN28e0acd9fb7210101d696a7521706970,68e0acd9fb7210101d696a752170696a,e8e0acd9fb7210101d696a7521706975"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="New Hire On boarding Case Trigger Job"&gt;50e0acd9fb7210101d696a7521706962&lt;/model&gt;&lt;model_id&gt;50e0acd9fb7210101d696a7521706962&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:20&lt;/sys_created_on&gt;&lt;sys_id&gt;28e0acd9fb7210101d696a7521706970&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=28e0acd9fb7210101d696a7521706970"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="New Hire On boarding Case Trigger Job"&gt;50e0acd9fb7210101d696a7521706962&lt;/model&gt;&lt;model_id&gt;50e0acd9fb7210101d696a7521706962&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:20&lt;/sys_created_on&gt;&lt;sys_id&gt;68e0acd9fb7210101d696a752170696a&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=68e0acd9fb7210101d696a752170696a"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="New Hire On boarding Case Trigger Job"&gt;50e0acd9fb7210101d696a7521706962&lt;/model&gt;&lt;model_id&gt;50e0acd9fb7210101d696a7521706962&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:20&lt;/sys_created_on&gt;&lt;sys_id&gt;e8e0acd9fb7210101d696a7521706975&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:54:56&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e8e0acd9fb7210101d696a7521706975"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=50e0acd9fb7210101d696a7521706962"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=50e0acd9fb7210101d696a7521706962"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=50e0acd9fb7210101d696a7521706962^sys_idNOT INa8e0acd9fb7210101d696a7521706995"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="New Hire On boarding Case Trigger Job"&gt;50e0acd9fb7210101d696a7521706962&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Created or Updated&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;a8e0acd9fb7210101d696a7521706995&lt;/sys_id&gt;&lt;sys_mod_count&gt;13&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created or Updated"&gt;a45d9180c32222002841b63b12d3aea7&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create_or_update&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=a8e0acd9fb7210101d696a7521706995"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;a8e0acd9fb7210101d696a7521706995&lt;/document_key&gt;&lt;order&gt;200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;24e0acd9fb7210101d696a7521706996&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;value&gt;every&lt;/value&gt;&lt;variable display_value="Run Trigger"&gt;2b9def50c31132002841b63b12d3ae5b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;a8e0acd9fb7210101d696a7521706995&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;a8e0acd9fb7210101d696a7521706996&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:49:32&lt;/sys_updated_on&gt;&lt;value&gt;sn_hr_core_job&lt;/value&gt;&lt;variable display_value="Table"&gt;cf1e1980c32222002841b63b12d3aea0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;a8e0acd9fb7210101d696a7521706995&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;e4e0acd9fb7210101d696a7521706996&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:49:32&lt;/sys_updated_on&gt;&lt;value&gt;job_start_date&amp;gt;=javascript:gs.beginningOfToday()&lt;/value&gt;&lt;variable display_value="Condition"&gt;707dd180c32222002841b63b12d3aecb&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=a8e0acd9fb7210101d696a7521706995"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=50e0acd9fb7210101d696a7521706962^sys_idNOT IN68e0acd9fb7210101d696a752170698b,e4e0acd9fb7210101d696a7521706993"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Check Previous Values Match"&gt;7b6a0305fb3210101d696a75217069b6&lt;/action_type&gt;&lt;action_type_parent display_value="Check Previous Values Match"&gt;24c64b41fb3210101d696a7521706963&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="New Hire On boarding Case Trigger Job"&gt;50e0acd9fb7210101d696a7521706962&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;68e0acd9fb7210101d696a752170698b&lt;/sys_id&gt;&lt;sys_mod_count&gt;26&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;ui_id&gt;601df32a-ea93-4401-8d4b-1901f47368ce&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=68e0acd9fb7210101d696a752170698b"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;68e0acd9fb7210101d696a752170698b&lt;/document_key&gt;&lt;order&gt;4&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;ece0acd9fb7210101d696a752170698d&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:49:32&lt;/sys_updated_on&gt;&lt;value&gt;job_start_dateISEMPTY&lt;/value&gt;&lt;variable display_value="Old Values Condition"&gt;847a0305fb3210101d696a75217069ca&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=68e0acd9fb7210101d696a752170698b"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;old_values_condition&lt;/field&gt;&lt;id&gt;68e0acd9fb7210101d696a752170698b&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;a8e0acd9fb7210101d696a752170698d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;trigger_record&lt;/field&gt;&lt;id&gt;68e0acd9fb7210101d696a752170698b&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;e4e0acd9fb7210101d696a752170698d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;trigger_record_changed_fields&lt;/field&gt;&lt;id&gt;68e0acd9fb7210101d696a752170698b&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;6ce0acd9fb7210101d696a752170698d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.changed_fields}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;trigger_table_name&lt;/field&gt;&lt;id&gt;68e0acd9fb7210101d696a752170698b&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;24e0acd9fb7210101d696a752170698d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.table_name}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=68e0acd9fb7210101d696a752170698b"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=68e0acd9fb7210101d696a752170698b"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create Case"&gt;5663ea0dfb3210101d696a75217069d2&lt;/action_type&gt;&lt;action_type_parent display_value="Create Case"&gt;114c4c41fb3210101d696a7521706978&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="New Hire On boarding Case Trigger Job"&gt;50e0acd9fb7210101d696a7521706962&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;4&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;e4e0acd9fb7210101d696a7521706993&lt;/sys_id&gt;&lt;sys_mod_count&gt;26&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;ui_id&gt;dc6dca96-dcd8-43d6-a1bd-bdface5d7950&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=e4e0acd9fb7210101d696a7521706993"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;e4e0acd9fb7210101d696a7521706993&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;24e0acd9fb7210101d696a7521706995&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;value&gt;sn_hr_le_case&lt;/value&gt;&lt;variable display_value="Case Table Name"&gt;5663ea0dfb3210101d696a75217069d3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=e4e0acd9fb7210101d696a7521706993"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;case_fields&lt;/field&gt;&lt;id&gt;e4e0acd9fb7210101d696a7521706993&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;a0e0acd9fb7210101d696a7521706995&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-10-01 22:11:47&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2&lt;/table&gt;&lt;value&gt;hr_service={"display":"New Hire Onboarding","value":"64fa4c53534222003066a5f4a11c0875"}^opened_for={{Created or Updated_1.current.manager}}^subject_person={{Created or Updated_1.current.user}}^subject_person_job={{Created or Updated_1.current}}^location={{Created or Updated_1.current.user.location}}^department={{Created or Updated_1.current.user.department}}^subject_person_hr_profile={{Created or Updated_1.current.hr_profile}}^short_description=Request Onboarding for {{Created or Updated_1.current.user.name}}^state=10&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;case_table_name&lt;/field&gt;&lt;id&gt;e4e0acd9fb7210101d696a7521706993&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;ece0acd9fb7210101d696a7521706994&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;case_values_record&lt;/field&gt;&lt;id&gt;e4e0acd9fb7210101d696a7521706993&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;2ce0acd9fb7210101d696a7521706994&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=e4e0acd9fb7210101d696a7521706993"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=e4e0acd9fb7210101d696a7521706993"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=50e0acd9fb7210101d696a7521706962^sys_idNOT IN68e0acd9fb7210101d696a752170697d,ace0acd9fb7210101d696a7521706981"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;ede47055ff0301106f0624b8553bf18b&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="New Hire On boarding Case Trigger Job"&gt;50e0acd9fb7210101d696a7521706962&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;68e0acd9fb7210101d696a752170697d&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;ui_id&gt;a08e5a16-51c4-4b88-9652-aac0924811fc&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=68e0acd9fb7210101d696a752170697d"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;68e0acd9fb7210101d696a752170697d&lt;/document_key&gt;&lt;order&gt;10&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;2ce0acd9fb7210101d696a7521706980&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;value&gt;previous values do not match&lt;/value&gt;&lt;variable display_value="Condition Label"&gt;f0af19c1c32632002841b63b12d3aea3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=68e0acd9fb7210101d696a752170697d"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition&lt;/field&gt;&lt;id&gt;68e0acd9fb7210101d696a752170697d&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;a8e0acd9fb7210101d696a7521706980&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value&gt;{{601df32a-ea93-4401-8d4b-1901f47368ce.is_match}}=0&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition_name&lt;/field&gt;&lt;id&gt;68e0acd9fb7210101d696a752170697d&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;e0e0acd9fb7210101d696a7521706980&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=68e0acd9fb7210101d696a752170697d"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=68e0acd9fb7210101d696a752170697d"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;a5e47055ff0301106f0624b8553bf191&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="New Hire On boarding Case Trigger Job"&gt;50e0acd9fb7210101d696a7521706962&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="End"&gt;d176605ea76103004f27b0d2187901c7&lt;/logic_definition&gt;&lt;order&gt;3&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id&gt;a08e5a16-51c4-4b88-9652-aac0924811fc&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;ace0acd9fb7210101d696a7521706981&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;ui_id&gt;821bc355-5f6a-4312-bf14-f4bdf2e1e410&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=ace0acd9fb7210101d696a7521706981"/&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ace0acd9fb7210101d696a7521706981"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=ace0acd9fb7210101d696a7521706981"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=50e0acd9fb7210101d696a7521706962"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=50e0acd9fb7210101d696a7521706962"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=50e0acd9fb7210101d696a7521706962"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:20&lt;/sys_created_on&gt;&lt;sys_id&gt;24e0acd9fb7210101d696a7521706974&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Record&lt;/sys_name&gt;&lt;sys_package display_value="Human Resources: Core" source="sn_hr_core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962_current_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:20&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:20&lt;/sys_created_on&gt;&lt;sys_id&gt;60e0acd9fb7210101d696a752170696f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Table Name&lt;/sys_name&gt;&lt;sys_package display_value="Human Resources: Core" source="sn_hr_core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962_table_name_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:20&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-21 23:38:21&lt;/sys_created_on&gt;&lt;sys_id&gt;ace0acd9fb7210101d696a7521706979&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Changed Fields&lt;/sys_name&gt;&lt;sys_package display_value="Human Resources: Core" source="sn_hr_core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962_changed_fields_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-21 23:38:21&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_50e0acd9fb7210101d696a7521706962"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_50e0acd9fb7210101d696a7521706962"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;A new hire on boarding HR case will be created when a HR Profile record with future employment start date is either inserted or updated. When an update happens, a case will be created only if the previous value is empty and the new value is greater than or equal to today's date.&lt;/description&gt;&lt;flow_priority/&gt;&lt;internal_name&gt;new_hire_on_boarding_case_trigger_job&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"Created or Updated_1.current.user.name","label":"Trigger➛Job Record➛User➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name"},{"name":"Created or Updated_1.current.user.department","label":"Trigger➛Job Record➛User➛Department","reference":"cmn_department","reference_display":"Department","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"department"},{"name":"Created or Updated_1.current.user.location","label":"Trigger➛Job Record➛User➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"location"},{"name":"Created or Updated_1.current.hr_profile","label":"Trigger➛Job Record➛HR profile","reference":"sn_hr_core_profile","reference_display":"HR Profile","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"hr_profile"},{"name":"Created or Updated_1.current.manager","label":"Trigger➛Job Record➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"manager"},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.is_match","label":"1 - Check Previous Values Match➛Is Match","reference_display":"Is Match","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3d238ff5-a625-45c8-9bce-ebf4c7e9c2c7"}},{"name":"Created or Updated_1.current","label":"Trigger➛Job Record","reference":"sn_hr_core_job","reference_display":"Job","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.changed_fields","label":"Trigger➛Changed Fields","type":"array.object","base_type":"array.object","attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}},{"name":"Created or Updated_1.table_name","label":"Trigger➛Job Table","reference":"sn_hr_core_job","reference_display":"Job","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.is_success","label":"4 - Create Case➛Is Success","reference_display":"Is Success","type":"integer","base_type":"integer","attributes":{"uiType":"integer","uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"16ae7f8c-1410-4c7c-b5d5-bd48fec73091"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.case_sys_id","label":"4 - Create Case➛Case SysId","reference_display":"Case SysId","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b761c997-22bc-4241-a099-4e02a16c8f42"}},{"name":"Created or Updated_1.current.user.manager","label":"Trigger➛Job Record➛User➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"manager"},{"name":"Created or Updated_1.current.user","label":"Trigger➛Job Record➛User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_hr_core_job","column_name":"user"},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.__action_status__","label":"1 - Check Previous Values Match➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"601df32a-ea93-4401-8d4b-1901f47368ce.__dont_treat_as_error__","label":"1 - Check Previous Values Match➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.__action_status__","label":"4 - Create Case➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dc6dca96-dcd8-43d6-a1bd-bdface5d7950.__dont_treat_as_error__","label":"4 - Create Case➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;New Hire On boarding Case Trigger Job&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="New Hire On boarding Case Trigger Job"&gt;50e0acd9fb7210101d696a7521706962&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:02&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;701668ddfb7210101d696a75217069f5&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:54:59&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;version/&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=701668ddfb7210101d696a75217069f5"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=701668ddfb7210101d696a75217069f5"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=701668ddfb7210101d696a75217069f5"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=701668ddfb7210101d696a75217069f5^sys_idNOT IN781668ddfb7210101d696a75217069f5"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;701668ddfb7210101d696a75217069f5&lt;/id&gt;&lt;name&gt;New Hire On boarding Case Trigger Job&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:02&lt;/sys_created_on&gt;&lt;sys_id&gt;781668ddfb7210101d696a75217069f5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:02&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=781668ddfb7210101d696a75217069f5"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=701668ddfb7210101d696a75217069f5^sys_idNOT IN4116a8ddfb7210101d696a7521706914,cd16a8ddfb7210101d696a7521706909,f81668ddfb7210101d696a75217069f8"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="New Hire On boarding Case Trigger Job"&gt;701668ddfb7210101d696a75217069f5&lt;/model&gt;&lt;model_id&gt;701668ddfb7210101d696a75217069f5&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:02&lt;/sys_created_on&gt;&lt;sys_id&gt;4116a8ddfb7210101d696a7521706914&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:54:59&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4116a8ddfb7210101d696a7521706914"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="New Hire On boarding Case Trigger Job"&gt;701668ddfb7210101d696a75217069f5&lt;/model&gt;&lt;model_id&gt;701668ddfb7210101d696a75217069f5&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:02&lt;/sys_created_on&gt;&lt;sys_id&gt;cd16a8ddfb7210101d696a7521706909&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:54:59&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=cd16a8ddfb7210101d696a7521706909"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="New Hire On boarding Case Trigger Job"&gt;701668ddfb7210101d696a75217069f5&lt;/model&gt;&lt;model_id&gt;701668ddfb7210101d696a75217069f5&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:02&lt;/sys_created_on&gt;&lt;sys_id&gt;f81668ddfb7210101d696a75217069f8&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:54:59&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f81668ddfb7210101d696a75217069f8"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=701668ddfb7210101d696a75217069f5"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=701668ddfb7210101d696a75217069f5"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=701668ddfb7210101d696a75217069f5^sys_idNOT IN8916a8ddfb7210101d696a7521706945"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="New Hire On boarding Case Trigger Job"&gt;701668ddfb7210101d696a75217069f5&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Created or Updated&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;8916a8ddfb7210101d696a7521706945&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created or Updated"&gt;a45d9180c32222002841b63b12d3aea7&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create_or_update&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=8916a8ddfb7210101d696a7521706945"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;8916a8ddfb7210101d696a7521706945&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;4516a8ddfb7210101d696a7521706947&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;value&gt;sn_hr_core_job&lt;/value&gt;&lt;variable display_value="Table"&gt;cf1e1980c32222002841b63b12d3aea0&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;8916a8ddfb7210101d696a7521706945&lt;/document_key&gt;&lt;order&gt;100&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;8116a8ddfb7210101d696a7521706947&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;value&gt;job_start_date&amp;gt;=javascript:gs.beginningOfToday()&lt;/value&gt;&lt;variable display_value="Condition"&gt;707dd180c32222002841b63b12d3aecb&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_trigger_instance&lt;/document&gt;&lt;document_key&gt;8916a8ddfb7210101d696a7521706945&lt;/document_key&gt;&lt;order&gt;200&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;cd16a8ddfb7210101d696a7521706946&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;value&gt;every&lt;/value&gt;&lt;variable display_value="Run Trigger"&gt;2b9def50c31132002841b63b12d3ae5b&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=8916a8ddfb7210101d696a7521706945"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=701668ddfb7210101d696a75217069f5^sys_idNOT IN4d16a8ddfb7210101d696a7521706943,c116a8ddfb7210101d696a752170693b"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create Case"&gt;5663ea0dfb3210101d696a75217069d2&lt;/action_type&gt;&lt;action_type_parent display_value="Create Case"&gt;114c4c41fb3210101d696a7521706978&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="New Hire On boarding Case Trigger Job"&gt;701668ddfb7210101d696a75217069f5&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;4&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;4d16a8ddfb7210101d696a7521706943&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:54:59&lt;/sys_updated_on&gt;&lt;ui_id&gt;dc6dca96-dcd8-43d6-a1bd-bdface5d7950&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=4d16a8ddfb7210101d696a7521706943"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;4d16a8ddfb7210101d696a7521706943&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;8516a8ddfb7210101d696a7521706945&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;value&gt;sn_hr_le_case&lt;/value&gt;&lt;variable display_value="Case Table Name"&gt;5663ea0dfb3210101d696a75217069d3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=4d16a8ddfb7210101d696a7521706943"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;case_fields&lt;/field&gt;&lt;id&gt;4d16a8ddfb7210101d696a7521706943&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;0516a8ddfb7210101d696a7521706945&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-10-07 16:27:42&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2&lt;/table&gt;&lt;value&gt;hr_service={"display":"New Hire Onboarding","value":"64fa4c53534222003066a5f4a11c0875"}^opened_for={{Created or Updated_1.current.manager}}^subject_person={{Created or Updated_1.current.user}}^subject_person_job={{Created or Updated_1.current}}^location={{Created or Updated_1.current.user.location}}^department={{Created or Updated_1.current.user.department}}^subject_person_hr_profile={{Created or Updated_1.current.hr_profile}}^short_description=Request Onboarding for {{Created or Updated_1.current.user.name}}^state=10&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;case_table_name&lt;/field&gt;&lt;id&gt;4d16a8ddfb7210101d696a7521706943&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;4116a8ddfb7210101d696a7521706945&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;case_values_record&lt;/field&gt;&lt;id&gt;4d16a8ddfb7210101d696a7521706943&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;8d16a8ddfb7210101d696a7521706944&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_5663ea0dfb3210101d696a75217069d2&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=4d16a8ddfb7210101d696a7521706943"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=4d16a8ddfb7210101d696a7521706943"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Check Previous Values Match"&gt;7b6a0305fb3210101d696a75217069b6&lt;/action_type&gt;&lt;action_type_parent display_value="Check Previous Values Match"&gt;24c64b41fb3210101d696a7521706963&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="New Hire On boarding Case Trigger Job"&gt;701668ddfb7210101d696a75217069f5&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;c116a8ddfb7210101d696a752170693b&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:54:59&lt;/sys_updated_on&gt;&lt;ui_id&gt;601df32a-ea93-4401-8d4b-1901f47368ce&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=c116a8ddfb7210101d696a752170693b"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;c116a8ddfb7210101d696a752170693b&lt;/document_key&gt;&lt;order&gt;4&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;4116a8ddfb7210101d696a752170693d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;value&gt;job_start_dateISEMPTY&lt;/value&gt;&lt;variable display_value="Old Values Condition"&gt;847a0305fb3210101d696a75217069ca&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=c116a8ddfb7210101d696a752170693b"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;old_values_condition&lt;/field&gt;&lt;id&gt;c116a8ddfb7210101d696a752170693b&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;0d16a8ddfb7210101d696a752170693c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;trigger_record&lt;/field&gt;&lt;id&gt;c116a8ddfb7210101d696a752170693b&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;4916a8ddfb7210101d696a752170693c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.current}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;trigger_record_changed_fields&lt;/field&gt;&lt;id&gt;c116a8ddfb7210101d696a752170693b&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;cd16a8ddfb7210101d696a752170693c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.changed_fields}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;trigger_table_name&lt;/field&gt;&lt;id&gt;c116a8ddfb7210101d696a752170693b&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;8516a8ddfb7210101d696a752170693c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_7b6a0305fb3210101d696a75217069b6&lt;/table&gt;&lt;value&gt;{{Created or Updated_1.table_name}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=c116a8ddfb7210101d696a752170693b"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=c116a8ddfb7210101d696a752170693b"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=701668ddfb7210101d696a75217069f5^sys_idNOT IN0516a8ddfb7210101d696a7521706921,c116a8ddfb7210101d696a7521706925"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;ede47055ff0301106f0624b8553bf18b&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="New Hire On boarding Case Trigger Job"&gt;701668ddfb7210101d696a75217069f5&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;0516a8ddfb7210101d696a7521706921&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:54:59&lt;/sys_updated_on&gt;&lt;ui_id&gt;a08e5a16-51c4-4b88-9652-aac0924811fc&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=0516a8ddfb7210101d696a7521706921"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;0516a8ddfb7210101d696a7521706921&lt;/document_key&gt;&lt;order&gt;10&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;c516a8ddfb7210101d696a7521706924&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;value&gt;previous values do not match&lt;/value&gt;&lt;variable display_value="Condition Label"&gt;f0af19c1c32632002841b63b12d3aea3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=0516a8ddfb7210101d696a7521706921"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition&lt;/field&gt;&lt;id&gt;0516a8ddfb7210101d696a7521706921&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;4516a8ddfb7210101d696a7521706924&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value&gt;{{601df32a-ea93-4401-8d4b-1901f47368ce.is_match}}=0&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition_name&lt;/field&gt;&lt;id&gt;0516a8ddfb7210101d696a7521706921&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;8116a8ddfb7210101d696a7521706924&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0516a8ddfb7210101d696a7521706921"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=0516a8ddfb7210101d696a7521706921"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;a5e47055ff0301106f0624b8553bf191&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="New Hire On boarding Case Trigger Job"&gt;701668ddfb7210101d696a75217069f5&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="End"&gt;d176605ea76103004f27b0d2187901c7&lt;/logic_definition&gt;&lt;order&gt;3&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id&gt;a08e5a16-51c4-4b88-9652-aac0924811fc&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_id&gt;c116a8ddfb7210101d696a7521706925&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:54:59&lt;/sys_updated_on&gt;&lt;ui_id&gt;821bc355-5f6a-4312-bf14-f4bdf2e1e410&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=c116a8ddfb7210101d696a7521706925"/&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=c116a8ddfb7210101d696a7521706925"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=c116a8ddfb7210101d696a7521706925"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=701668ddfb7210101d696a75217069f5"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=701668ddfb7210101d696a75217069f5"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=701668ddfb7210101d696a75217069f5"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:02&lt;/sys_created_on&gt;&lt;sys_id&gt;0116a8ddfb7210101d696a7521706910&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Changed Fields&lt;/sys_name&gt;&lt;sys_package display_value="Human Resources: Core" source="sn_hr_core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5_changed_fields_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:02&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:02&lt;/sys_created_on&gt;&lt;sys_id&gt;8d16a8ddfb7210101d696a7521706919&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Table Name&lt;/sys_name&gt;&lt;sys_package display_value="Human Resources: Core" source="sn_hr_core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5_table_name_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:02&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:02&lt;/sys_created_on&gt;&lt;sys_id&gt;bc16a8ddfb7210101d696a7521706905&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Record&lt;/sys_name&gt;&lt;sys_package display_value="Human Resources: Core" source="sn_hr_core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Human Resources: Core"&gt;d4ac3fff5b311200a4656ede91f91af2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5_current_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-08-22 00:01:02&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_701668ddfb7210101d696a75217069f5"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_701668ddfb7210101d696a75217069f5"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;50e0acd9fb7210101d696a7521706962&lt;/sys_id&gt;&lt;latest_snapshot&gt;701668ddfb7210101d696a75217069f5&lt;/latest_snapshot&gt;&lt;compiler_build/&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=50e0acd9fb7210101d696a7521706962^sys_idNOT IN1116a8ddfb7210101d696a752170696e"/&gt;&lt;sys_flow_trigger_plan action="INSERT_OR_UPDATE"&gt;&lt;binding_strategy&gt;com.snc.process_flow.engine.binding.Every&lt;/binding_strategy&gt;&lt;plan/&gt;&lt;plan_id&gt;50e0acd9fb7210101d696a7521706962&lt;/plan_id&gt;&lt;snapshot&gt;701668ddfb7210101d696a75217069f5&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-08-22 00:01:03&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;1116a8ddfb7210101d696a752170696e&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-04-22 23:55:00&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;9ee4b055ff0301106f0624b8553bf1ef&lt;/trigger&gt;&lt;/sys_flow_trigger_plan&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=50e0acd9fb7210101d696a7521706962"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1540889031</payload_hash>
+        <record_name>New Hire On boarding Case Trigger Job</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:34:52</sys_created_on>
+        <sys_id>6e67d83eedee03107f44863610ff2181</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb3d51fe0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:34:52</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>ae67d83eccee03109ce2940999602e80</update_guid>
+        <update_guid_history>ae67d83eccee03109ce2940999602e80:-1540889031,6a67d83e44ee0310fa6f75ade17d6f27:347063356</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:34:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>324dc264899d44a2a699e4b52aa87771</sys_id>
+        <sys_metadata>50e0acd9fb7210101d696a7521706962</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Hire On boarding Case Trigger Job</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_50e0acd9fb7210101d696a7521706962</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_50e0acd9fb7210101d696a7521706962">6e67d83eedee03107f44863610ff2181</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:34:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

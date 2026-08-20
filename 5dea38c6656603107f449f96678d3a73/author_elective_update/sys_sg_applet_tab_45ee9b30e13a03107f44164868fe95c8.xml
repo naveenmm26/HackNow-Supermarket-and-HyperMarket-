@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_tab">
+    <sys_sg_applet_tab action="DELETE">
+        <active>true</active>
+        <icon display_value="Chart Bar">d49c89a2b72200108223e126de11a9c4</icon>
+        <label>Store Dashboards</label>
+        <screen display_value="FG360 Store Operations Dashboard">9edc1f78e1f603107f44164868fe9569</screen>
+        <sys_class_name>sys_sg_applet_tab</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 06:14:13</sys_created_on>
+        <sys_id>45ee9b30e13a03107f44164868fe95c8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Store Dashboards</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_applet_tab_45ee9b30e13a03107f44164868fe95c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 06:17:25</sys_updated_on>
+    </sys_sg_applet_tab>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_sg_applet_tab_45ee9b30e13a03107f44164868fe95c8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_tab"><sys_sg_applet_tab action="INSERT_OR_UPDATE"><active>true</active><icon display_value="Chart Bar">d49c89a2b72200108223e126de11a9c4</icon><label>Store Dashboards</label><screen display_value="FG360 Store Operations Dashboard">9edc1f78e1f603107f44164868fe9569</screen><sys_class_name>sys_sg_applet_tab</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-17 06:14:13</sys_created_on><sys_id>45ee9b30e13a03107f44164868fe95c8</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Store Dashboards</sys_name><sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package><sys_policy/><sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope><sys_update_name>sys_sg_applet_tab_45ee9b30e13a03107f44164868fe95c8</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-17 06:17:25</sys_updated_on></sys_sg_applet_tab></record_update>]]></payload>
+        <payload_hash>-2030439323</payload_hash>
+        <record_name>Store Dashboards</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 06:17:25</sys_created_on>
+        <sys_id>7b9f93b0e13a03107f44164868fe950b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a00e5e21ab0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 06:17:25</sys_updated_on>
+        <type>Screen tab</type>
+        <update_guid>fb9f93b0ac3a0310806235c8c9ce320a</update_guid>
+        <update_guid_history>fb9f93b0ac3a0310806235c8c9ce320a:-2030439323,45ee9b30c83a0310aedfd3049fd2f9ca:-1923228165</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 08:07:58</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_applet_tab">sys_sg_applet_tab</sys_db_object>
+        <sys_id>4c08e466ccc54d50b0c95355b096c6a4</sys_id>
+        <sys_metadata>45ee9b30e13a03107f44164868fe95c8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Store Dashboards</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_sg_applet_tab_45ee9b30e13a03107f44164868fe95c8</sys_update_name>
+        <sys_update_version display_value="sys_sg_applet_tab_45ee9b30e13a03107f44164868fe95c8">7b9f93b0e13a03107f44164868fe950b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 08:07:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

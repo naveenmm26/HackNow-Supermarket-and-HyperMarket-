@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_parameter_screen">
+    <sys_sg_parameter_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <available_offline>false</available_offline>
+        <cancel_label>Cancel</cancel_label>
+        <description/>
+        <dynamic_prefetch_count/>
+        <empty_state/>
+        <fetch_type/>
+        <filter/>
+        <header_only_on_first_page>false</header_only_on_first_page>
+        <hide_action_execution_messages_button>false</hide_action_execution_messages_button>
+        <hide_filters>false</hide_filters>
+        <hide_page_progress_menu>false</hide_page_progress_menu>
+        <hide_screen_name>false</hide_screen_name>
+        <icon/>
+        <name>FG360 Create Checklist Form Screen</name>
+        <next_label/>
+        <pagination_type/>
+        <presentation_style>modal</presentation_style>
+        <prev_label/>
+        <proceed_with_unfilled_mandatory_inputs>false</proceed_with_unfilled_mandatory_inputs>
+        <reset_after_submit>false</reset_after_submit>
+        <resume>false</resume>
+        <roles_override/>
+        <show_unsaved_changes_confirmation_message>false</show_unsaved_changes_confirmation_message>
+        <submit_label>Submit</submit_label>
+        <sys_class_name>sys_sg_parameter_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-18 06:28:44</sys_created_on>
+        <sys_id>9013fd6b997f46ab9e64a505a30ed12e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FG360 Create Checklist Form Screen</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_parameter_screen_9013fd6b997f46ab9e64a505a30ed12e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 06:28:44</sys_updated_on>
+        <track_input_updates_timestamps>false</track_input_updates_timestamps>
+        <type display_value="FG360 Create Checklist Action Item">bc4d60d111c04d91952bdf1664625a67</type>
+        <unsaved_changes_cancel_button_label/>
+        <unsaved_changes_confirm_button_label/>
+        <unsaved_changes_confirmation_message_body/>
+        <unsaved_changes_confirmation_message_title/>
+        <view_config/>
+    </sys_sg_parameter_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=9013fd6b997f46ab9e64a505a30ed12e"/>
+</record_update>

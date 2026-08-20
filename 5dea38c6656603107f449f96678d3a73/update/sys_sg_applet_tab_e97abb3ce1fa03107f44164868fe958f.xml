@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_tab">
+    <sys_sg_applet_tab action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <icon display_value="Chart Bar">d49c89a2b72200108223e126de11a9c4</icon>
+        <label>Dashboard</label>
+        <screen display_value="FG360 Management Dashboard">9edc1f78e1f603107f44164868fe9569</screen>
+        <sys_class_name>sys_sg_applet_tab</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 08:14:41</sys_created_on>
+        <sys_id>e97abb3ce1fa03107f44164868fe958f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Dashboard</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_applet_tab_e97abb3ce1fa03107f44164868fe958f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 16:56:19</sys_updated_on>
+    </sys_sg_applet_tab>
+</record_update>

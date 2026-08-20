@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=8931348000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Agent Card Details</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>external_ai_agent_card__a2a_protocol</internal_name>
+        <label_cache>[{"name":"d9febc5c-793e-4fa3-a783-80b2c5471bee.agent_details","label":"2 - Well Known External Agent Card Subflow - A2A Protocol➛Agent Details","reference_display":"Agent Details","type":"json","base_type":"json","usedInstances":{"778dc52f-6504-4e57-8b98-4e698d3338f1":["agent_details-0"]},"attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"dd45e5d3-1d7b-4157-bc1d-71260087c1e6"}},{"name":"subflow.connection_credential_alias","label":"Input➛Connection Credential Alias","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"d9febc5c-793e-4fa3-a783-80b2c5471bee":["connection_credential_alias"],"94d851df-bb5a-4089-a578-b8583af03392":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c5cb6d74-37d9-482c-8c9b-7593895efd60","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.agent_card_url","label":"Input➛Agent Card Url","type":"string","base_type":"string","usedInstances":{"49b04546-e49e-47a8-ba1f-9b1fb65f29cb":["agent_card_url"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"0b6dbf2e-58d7-4f5b-89e2-30677c52e53e"}},{"name":"49b04546-e49e-47a8-ba1f-9b1fb65f29cb.agent_details","label":"5 - Well Known External Agent Card URL - A2A Protocol➛Agent Details","type":"json","base_type":"json","usedInstances":{"489dfbc0-5589-4a4a-8c1e-0dfacc8b5d67":["agent_details-0"]},"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"29a8aec6-51ec-4130-98ea-0499cd493352"}}]</label_cache>
+        <master_snapshot>a8bea442ff8aa21078a6ffffffffff99</master_snapshot>
+        <master_snapshot_digest/>
+        <name>External AI Agent Card - A2A Protocol</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-10 07:22:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5826f16dff82621078a6ffffffffffda</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>External AI Agent Card - A2A Protocol</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_5826f16dff82621078a6ffffffffffda</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:35:33</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=5826f16dff82621078a6ffffffffffda"/>
+    <sys_variable_value action="DELETE" query="document_key=5826f16dff82621078a6ffffffffffda"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_5826f16dff82621078a6ffffffffffda^id=5826f16dff82621078a6ffffffffffda"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=5826f16dff82621078a6ffffffffffda"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=5826f16dff82621078a6ffffffffffda^sys_idNOT IN1026f16dff82621078a6ffffffffffdb"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>5826f16dff82621078a6ffffffffffda</id>
+        <name>External AI Agent Card - A2A Protocol</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-10 07:22:34</sys_created_on>
+        <sys_id>1026f16dff82621078a6ffffffffffdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-10 07:22:34</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=1026f16dff82621078a6ffffffffffdb"/>
+    <sys_hub_flow_input action="DELETE" query="model=5826f16dff82621078a6ffffffffffda^sys_idNOT IN7b2c0e76ff40b2109541ffffffffff50,dc66796dff82621078a6ffffffffff5e"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0b6dbf2e-58d7-4f5b-89e2-30677c52e53e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>agent_card_url</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Agent Card Url</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</model>
+        <model_id>5826f16dff82621078a6ffffffffffda</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-21 16:16:54</sys_created_on>
+        <sys_id>7b2c0e76ff40b2109541ffffffffff50</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=7b2c0e76ff40b2109541ffffffffff50"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c5cb6d74-37d9-482c-8c9b-7593895efd60</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>connection_credential_alias</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Connection Credential Alias</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</model>
+        <model_id>5826f16dff82621078a6ffffffffffda</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-10 07:23:39</sys_created_on>
+        <sys_id>dc66796dff82621078a6ffffffffff5e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:17:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=dc66796dff82621078a6ffffffffff5e"/>
+    <sys_hub_flow_output action="DELETE" query="model=5826f16dff82621078a6ffffffffffda^sys_idNOT IN1866b96dff82621078a6ffffffffff73"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=93ef1169-c4c4-4e49-9b9a-307ef8147b87</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>agent_details</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="JSON">json</internal_type>
+        <label>Agent Details</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</model>
+        <model_id>5826f16dff82621078a6ffffffffffda</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_5826f16dff82621078a6ffffffffffda</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-10 07:23:40</sys_created_on>
+        <sys_id>1866b96dff82621078a6ffffffffff73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-10 07:23:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=1866b96dff82621078a6ffffffffff73"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=5826f16dff82621078a6ffffffffffda"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=5826f16dff82621078a6ffffffffffda"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=5826f16dff82621078a6ffffffffffda^sys_idNOT IN296c2c4eff4aa21078a6ffffffffffe5,d16c82b6ff40b2109541ffffffffff31"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Well Known External Agent Card Subflow - A2A Protocol">f421d2e1ff46621078a6ffffffffff5f</action_type>
+        <action_type_parent display_value="Well Known External Agent Card Subflow - A2A Protocol">7de5392dff82621078a6ffffffffffd4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>94d851df-bb5a-4089-a578-b8583af03392</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:17:24</sys_created_on>
+        <sys_id>296c2c4eff4aa21078a6ffffffffffe5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:17:05</sys_updated_on>
+        <ui_id>d9febc5c-793e-4fa3-a783-80b2c5471bee</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/5VSy27bMBD8lYBnW5BlW4p9C1IEKNA2QNPmEgTCilzaBChS4cOJa/jfu5RkHXwoUt44nN2dmeXLiSnBtmyZFwtR4ELKVVkWi7y6hVJOp1yyGTPQIjG5NQZ5UNbU3KFAExToGrQCT6QD6JhYp5OPjdT2PfsH/3ymCqF8p+H4/N+FfK+0cGjY9uV1xjpwpC+gY9vT1VM4dlhraFBT/6fglNlR+WdtXwrvJzk395Ocm7vR96fCSUKI5C8SrBNJ72LG8COgEUiSJGiPM9aCERCsO7JtcJEAhyAejT5OjL0ygZqxxP3w6g91vs3zPDElkneOw+t0rcekB5jvreL42CWtAxKg0WMNtzq25sfgKe0IJUQdLjsiJHrqh10SnWSMmuTT3r7/vAx8UKb3Nz5qy0FPNwiUQhMD+rSwqH5dZTMg3663hhpbmli30HWE1J2zB9VPIdFtttN0ydL3IXVe7UwG/TYyChOyB8K/9PAzOJXsfqc2VJzG/TbqLeLX9Cs2m2pdrDf5PJfFcr6qRD7flNV6LhY5FKsGK1xLdu6jrd9iMjWENMZRD4kSwXOnunBHEg44Oj+//gWA62OicwMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=296c2c4eff4aa21078a6ffffffffffe5"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Well Known External Agent Card URL - A2A Protocol">151c4a76ff40b2109541ffffffffff89</action_type>
+        <action_type_parent display_value="Well Known External Agent Card URL - A2A Protocol">d76b0636ff40b2109541ffffffffff87</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>8972ab2c-7e16-4754-a764-c49e24dc733e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-21 16:17:49</sys_created_on>
+        <sys_id>d16c82b6ff40b2109541ffffffffff31</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:22</sys_updated_on>
+        <ui_id>49b04546-e49e-47a8-ba1f-9b1fb65f29cb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41SXWvbQBD8K+GeZSE1J1vyW2gJFNoGmo+XEMTqtLIPTqfLfThxjf979iTZJIFC9Hazs7szs3o8MNmyNSuqXHBYLbuOZ823PKsKnnfnrxQsYRp6JCZsUPtagG3rYBXhO1AhFg4HF5pODS/pR8rxSKRWOqNg//AVrthK1VrUbP34lDADlhZ7tGx9+FTye4O1ggYVjbz1VuoNtX/Vz6nxKiq4+E4KLu5HQ/8zGtcR7k6LBttGVXnC8NWjbpEWd6AcJqwH3YIf7J6tvQ0EWIT2Rqv9mbGV2tMwFrmvTv6jyWWWZZHZITkUOFXPz3qOcILFdpACb4yXg54QD42ae8SgQq//TDZi+NhBUP4UPiHB0Tw0UXSUMWvqbrfDy9/TwmupR39zUQ0C1PkFnlJogkcXzxLkHWXz6/MlUGEfM+zBGEJqY4edHGeSxD7dKHqk8S8gLU5udAoi+kkpOkivCf8xwg9gZTT3m8ZQczKve3+KIO+1fA74M94+L7OGr/JiwaHhC56VxaIS/HKBRVXlS365asslO47R1s8hmppCmuOop0SJ4ISVxl+RqB3Ozo9PbxOr9+AyAwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=d16c82b6ff40b2109541ffffffffff31"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=5826f16dff82621078a6ffffffffffda"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=5826f16dff82621078a6ffffffffffda^sys_idNOT IN387cc2b6ff40b2109541ffffffffff4d,7f2c0e76ff40b2109541ffffffffff66,a56c2c4eff4aa21078a6ffffffffffe7,e64c8e76ff40b2109541fffffffffffa"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">4d8c86b6ff40b2109541ffffffffff69</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned>agent_details</outputs_assigned>
+        <parent_ui_id>8972ab2c-7e16-4754-a764-c49e24dc733e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-21 16:18:03</sys_created_on>
+        <sys_id>387cc2b6ff40b2109541ffffffffff4d</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:22</sys_updated_on>
+        <ui_id>489dfbc0-5589-4a4a-8c1e-0dfacc8b5d67</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6WPwW7CMBBE/8VngkgwTswtx94RF4TQ2l7TFa4dxU4QivLvdVRE6bl726c3I83EwpC6IcVDaGOkq2f708TIsD0rGyGUFMbaphJVuakbEPZ19ZatmIcvzCZc0aeLwQTkYsYjuGHh08Sl2vAdFwVyiQWvoSkUlLaQqrRK7GwltVr/ic9zLjAUOweP43979Cc50+My6rxiUffUpVYnGnOrBRdxzpj8sv9HGaEnUA6fr0FNkYI/LOzjzTOPPJ30O7qH/mZduP+y+Rt0jzg/XQEAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">058c86b6ff40b2109541ffffffffff64</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-21 16:16:54</sys_created_on>
+        <sys_id>7f2c0e76ff40b2109541ffffffffff66</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:21</sys_updated_on>
+        <ui_id>94d851df-bb5a-4089-a578-b8583af03392</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K0PPxthOE9a8lW2FwtqMJRTGKOJavk7EZMmT5KRZyH/flT+SsKYslD3uzT7Svfec43O9Y6bxdePdwtw4J5eaTb8/RUzqgNHzjsmCTVmZQJlei1SMsskoS5Ls/VWaT0Z5mhUjQBixiGmokG4KowvppdG8BSK2BtWEA3ospKsVbB+PiFhJVVjsp9ZgqcajZdPdH0d+WyNXkKOiwrm3Ui+p/FJuQ+GHgdy7zy3yOuswj3A3TDK2CLTSJGL47FEXSKNLUA4jVoEuwBu7PSAWoZhpdQRWUvtOcQXPTv6i3tl4HC6WSBpFb8fhlfdWDS4ZKXBWB4Id4iFXg4VGNZV+6HQEk7GERvkTkxtH/bAOpAOLnlI5X5nN12HgrdStwP5QGQHq8AaebMgbjy58GFRYUSNeQV2TOby2Zi3bYuJSxUtFL3GpzIaGhkTFIALxmDyC+Jbwjy38CFYGFffUhoo7mjk4KXibPmrnLUnYt7bwn00g1AnspfDODbrghJW1v6E5a+xZ76M+utcwLsdpMj4fj6vJmRCcpHa3c00exMR0qrFVwoXFMF+C4qAkuP3+bv4wW3y6/7L49jLmb2nxL/biAuEv9uK8Ga8sQ/aXZQif78JdSJLk/zKcLoN0vAt1r60d/uZdeAqB7ia4LjcFCumIyCJgd8PfPhxsKQBSnEIbY38ECUds/xtbS5kANwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">c58c86b6ff40b2109541ffffffffff66</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned>agent_details</outputs_assigned>
+        <parent_ui_id>94d851df-bb5a-4089-a578-b8583af03392</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:17:24</sys_created_on>
+        <sys_id>a56c2c4eff4aa21078a6ffffffffffe7</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:21</sys_updated_on>
+        <ui_id>778dc52f-6504-4e57-8b98-4e698d3338f1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6VTXWvbMBT9K0PPsYkT1x95C5RCx9bA2vVlDHMtXSXaZMm15KRZyH/fVeykzWAwmN/u0f0459zrA7O9b3vvnuzSObU2bPHtwJRgC5YUWVaXmZCymGWzZJoXkMnLl8/ZhBlokDJhjcZXAj0o7Qjegu4DfjiIUmLNb3iUl3OMUgnzCPJiHhXTesZv0jypEeOr8uORGgjlWg375//twzdKiw6DqO8T1kJHfD12bHH448nvW6w01Khp3MfH1QMV/6sJ57JlGP/h9uLCX8wJowj+4ayhyHYi8EkmDF89GoE0VIJ2OGENGAHedvsL0iGIldFvwEYZT71YSH516hc1TqfTaciUSOI4Dq+XsBqdHWC+sYrjqvWKuJwQD7Uea7jVfWMeBhFhJyih1/68E0J6R/2wDawDjZGTfNzY3ZfzwDtlTgLHR2056EsE3neq7j26sJFePV1ZM8SfrpeCGpvgZwNtq8y6aju7VacJRLiJ15qCWGq7I2bhnGPgQV1MTkJ8R/jtCX6GTgWpn6kNFYdhX4166fE+LJ1uTCZJVkY85WmUYlpGZV1CNJ/mKIskzesiZ8eTrdVLHwQNBo1WVIOblOB4p1q/JApbHFUf6dqUCX/ccHnbkckYCuTKEeGngN2/yxN7uifF30M72/0MUt+w429VVMTvzwMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">cd8c86b6ff40b2109541ffffffffff67</block>
+        <comment/>
+        <connected_to>94d851df-bb5a-4089-a578-b8583af03392</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-21 16:17:22</sys_created_on>
+        <sys_id>e64c8e76ff40b2109541fffffffffffa</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:22</sys_updated_on>
+        <ui_id>8972ab2c-7e16-4754-a764-c49e24dc733e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=5826f16dff82621078a6ffffffffffda"/>
+    <sys_hub_flow_variable action="DELETE" query="model=5826f16dff82621078a6ffffffffffda"/>
+    <sys_documentation action="DELETE">
+        <element>connection_credential_alias</element>
+        <help/>
+        <hint/>
+        <label>Connection Credential Alias</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-10 07:23:40</sys_created_on>
+        <sys_id>1866796dff82621078a6ffffffffff61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Connection Credential Alias</sys_name>
+        <sys_package display_value="Now Assist AI Agents" source="sn_aia">32808450431302106c3603295bb8f245</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda_connection_credential_alias_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-10 07:23:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>agent_card_url</element>
+        <help/>
+        <hint/>
+        <label>Agent Card Url</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-15 07:56:55</sys_created_on>
+        <sys_id>5930e5b0ff8032109541ffffffffff0f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Agent Card Url</sys_name>
+        <sys_package display_value="Now Assist AI Agents" source="sn_aia">32808450431302106c3603295bb8f245</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:16:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda"/>
+    <sys_documentation action="DELETE">
+        <element>agent_details</element>
+        <help/>
+        <hint/>
+        <label>Agent Details</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_5826f16dff82621078a6ffffffffffda</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-10 07:23:40</sys_created_on>
+        <sys_id>1866b96dff82621078a6ffffffffff76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Agent Details</sys_name>
+        <sys_package display_value="Now Assist AI Agents" source="sn_aia">32808450431302106c3603295bb8f245</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_5826f16dff82621078a6ffffffffffda_agent_details_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-10 07:23:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_5826f16dff82621078a6ffffffffffda"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Agent Card Details</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>external_ai_agent_card__a2a_protocol</internal_name>
+        <label_cache>[{"name":"d9febc5c-793e-4fa3-a783-80b2c5471bee.agent_details","label":"2 - Well Known External Agent Card Subflow - A2A Protocol➛Agent Details","reference_display":"Agent Details","type":"json","base_type":"json","usedInstances":{"778dc52f-6504-4e57-8b98-4e698d3338f1":["agent_details-0"]},"attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"dd45e5d3-1d7b-4157-bc1d-71260087c1e6"}},{"name":"subflow.connection_credential_alias","label":"Input➛Connection Credential Alias","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"d9febc5c-793e-4fa3-a783-80b2c5471bee":["connection_credential_alias"],"94d851df-bb5a-4089-a578-b8583af03392":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c5cb6d74-37d9-482c-8c9b-7593895efd60","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.agent_card_url","label":"Input➛Agent Card Url","type":"string","base_type":"string","usedInstances":{"49b04546-e49e-47a8-ba1f-9b1fb65f29cb":["agent_card_url"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"0b6dbf2e-58d7-4f5b-89e2-30677c52e53e"}},{"name":"49b04546-e49e-47a8-ba1f-9b1fb65f29cb.agent_details","label":"5 - Well Known External Agent Card URL - A2A Protocol➛Agent Details","type":"json","base_type":"json","usedInstances":{"489dfbc0-5589-4a4a-8c1e-0dfacc8b5d67":["agent_details-0"]},"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"29a8aec6-51ec-4130-98ea-0499cd493352"}}]</label_cache>
+        <master>true</master>
+        <name>External AI Agent Card - A2A Protocol</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:27:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a8bea442ff8aa21078a6ffffffffff99</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:24</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_variable_value action="DELETE" query="document_key=a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_a8bea442ff8aa21078a6ffffffffff99^id=a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=a8bea442ff8aa21078a6ffffffffff99^sys_idNOT INe4bea442ff8aa21078a6ffffffffff9a"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>a8bea442ff8aa21078a6ffffffffff99</id>
+        <name>External AI Agent Card - A2A Protocol</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:27:26</sys_created_on>
+        <sys_id>e4bea442ff8aa21078a6ffffffffff9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-11 15:27:26</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=e4bea442ff8aa21078a6ffffffffff9a"/>
+    <sys_hub_flow_input action="DELETE" query="model=a8bea442ff8aa21078a6ffffffffff99^sys_idNOT IN60bea442ff8aa21078a6ffffffffff9c,a58c86b6ff40b2109541ffffffffffcc"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c5cb6d74-37d9-482c-8c9b-7593895efd60</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>connection_credential_alias</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Connection Credential Alias</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="External AI Agent Card - A2A Protocol">a8bea442ff8aa21078a6ffffffffff99</model>
+        <model_id>a8bea442ff8aa21078a6ffffffffff99</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:27:26</sys_created_on>
+        <sys_id>60bea442ff8aa21078a6ffffffffff9c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=60bea442ff8aa21078a6ffffffffff9c"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0b6dbf2e-58d7-4f5b-89e2-30677c52e53e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>agent_card_url</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Agent Card Url</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="External AI Agent Card - A2A Protocol">a8bea442ff8aa21078a6ffffffffff99</model>
+        <model_id>a8bea442ff8aa21078a6ffffffffff99</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-21 16:18:23</sys_created_on>
+        <sys_id>a58c86b6ff40b2109541ffffffffffcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=a58c86b6ff40b2109541ffffffffffcc"/>
+    <sys_hub_flow_output action="DELETE" query="model=a8bea442ff8aa21078a6ffffffffff99^sys_idNOT IN74bea442ff8aa21078a6ffffffffffc2"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=93ef1169-c4c4-4e49-9b9a-307ef8147b87</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>agent_details</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="JSON">json</internal_type>
+        <label>Agent Details</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="External AI Agent Card - A2A Protocol">a8bea442ff8aa21078a6ffffffffff99</model>
+        <model_id>a8bea442ff8aa21078a6ffffffffff99</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_a8bea442ff8aa21078a6ffffffffff99</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:27:26</sys_created_on>
+        <sys_id>74bea442ff8aa21078a6ffffffffffc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-11 15:27:26</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=74bea442ff8aa21078a6ffffffffffc2"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=a8bea442ff8aa21078a6ffffffffff99^sys_idNOT INb0bea442ff8aa21078a6ffffffffffcd,e58c86b6ff40b2109541fffffffffff5"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Well Known External Agent Card Subflow - A2A Protocol">f421d2e1ff46621078a6ffffffffff5f</action_type>
+        <action_type_parent display_value="Well Known External Agent Card Subflow - A2A Protocol">7de5392dff82621078a6ffffffffffd4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f421d2e1ff46621078a6ffffffffff5f</compiled_snapshot>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">a8bea442ff8aa21078a6ffffffffff99</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>94d851df-bb5a-4089-a578-b8583af03392</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:27:27</sys_created_on>
+        <sys_id>b0bea442ff8aa21078a6ffffffffffcd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:24</sys_updated_on>
+        <ui_id>d9febc5c-793e-4fa3-a783-80b2c5471bee</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/5VSXWvbQBD8K+GeZSHJthT7LTgECm0DTZuXEMRKt2cfnE7KfThRhf979yxZLSmUVG87N7s7M6ungUnOtmyZZCnPMBViledZmhTXkIv5y5csYhoaJGbdao21k60ua4MctZOgSlASLJGOoHxgDYP1lVDta/wP/ulEHVzaTkH/+N+N9UEqblCz7dNzxDowpM+hYdvh3dNHDSqoUBF1Ny++2s2Lr24mhx+KwfVdIFlnpN5P9edp/MMFbA0PctOI4ZtDzZF0ClAWI9aA5uBa07OtM54Ag8DvtepnxkFqR8NY4L5Z+ZPWXSdJEpgCyXqN4+tcllPQIyxuwQEp8bXzZqLWh1bWaMfQOArwyu3+xEbCfRdcjy0OKnXpbpVv9NcxHTYPuNyVEG9JBHbBadA+GREPh/b120XlndTnUKZH1dag5gocRVd5F/QMzMvv71Iekb9yRoUNbSwb6DpCys60R3neQqKbeK+oiMMvR+qs3OsYzneN6QIQ3xF+e4Yfwchg9wuNoeaw7oeWLx4/hf9rsynW2XqTLBKRLRergieLTV6sFzxNIFtVWOBasFPEbG93Cqz9HRRdqHzxweYY2xRQOWYcWmojO3dDoo44ZXF6/gU0QuM7uQMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=b0bea442ff8aa21078a6ffffffffffcd"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Well Known External Agent Card URL - A2A Protocol">151c4a76ff40b2109541ffffffffff89</action_type>
+        <action_type_parent display_value="Well Known External Agent Card URL - A2A Protocol">d76b0636ff40b2109541ffffffffff87</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>151c4a76ff40b2109541ffffffffff89</compiled_snapshot>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">a8bea442ff8aa21078a6ffffffffff99</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>8972ab2c-7e16-4754-a764-c49e24dc733e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-21 16:18:24</sys_created_on>
+        <sys_id>e58c86b6ff40b2109541fffffffffff5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:24</sys_updated_on>
+        <ui_id>49b04546-e49e-47a8-ba1f-9b1fb65f29cb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41SXW/bMAz8K4WeHcNe7cTJW5GiQIFuBda1L0Vh0BKdCJBlVx9pPSP/fVTseFuHAdUbj0fyeNTzwKRgG5avU57BalnXWVJ9SZN1nqX1/ArOIqahQWLCDrUrORhReqMIP4DyITEM1le1at/ivynHI5GEtJ2C/ukzXL6XShjUbPP8ErEODA12aNhm+JD6rHIFFSqiXoVZF1uadfF4kv6/lVzfBdw6I/Vuiu+mJg9nsDUiiEojhu8OtUBSU4OyGLEGtADXmp5tnPEEGARxr1U/M/ZSO2rGAvfdyp80rkiSJDBrpAU5jtk5LCcHR7i+BgekxHPnzUTl+1ZytKM1Amvwym3/xEbCfedkq8cSB5U6V7fKN/rbaAibG5wPRoi3JAK7sGnQPi1SP+zbt+9nlTdSn0yZkqrloOYIHFlXeRf0DMzLHx9cHpF/fEaFTbhPA11HSNmZ9iBPU0h0E+8UBXH4S6TOyp2OgYcNY7oAxDeEX5/gJzAyrPuV2lBxGPeo5avH2/CL0iKpslWaLzKoskWWFPlizbPLBebrdbrMLleiWLJjxGxvtwqs/W0UXah89WHN0bbJoHL0OJRwIzt3RaIOOHlxfPkF1jBJ5XgDAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=e58c86b6ff40b2109541fffffffffff5"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=a8bea442ff8aa21078a6ffffffffff99^sys_idNOT IN658c86b6ff40b2109541fffffffffff6,74bea442ff8aa21078a6ffffffffffcc,a98c86b6ff40b2109541fffffffffff9,ad8c86b6ff40b2109541fffffffffff8"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">058c86b6ff40b2109541ffffffffff64</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">a8bea442ff8aa21078a6ffffffffff99</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-21 16:18:24</sys_created_on>
+        <sys_id>658c86b6ff40b2109541fffffffffff6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:24</sys_updated_on>
+        <ui_id>94d851df-bb5a-4089-a578-b8583af03392</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPxthOE9a+lXSFQtuMJRTGKOZalhMxWfL0kTQz+e+7shwnrBlLtz3uLTrSvfec43tIS5SzjbNmoa6N4UtJrr48R4RLj+HvlvCSXJEqgSq9pCkdZZNRliTZ+4u0mIyKNCtHwGBEIiKhZviSKllyy5XMOyAiaxDOX+DPkptGwPbpgNAVF6Vm/dQGNNZYpslV+9PVuSwEFEzg0+mexrv7Dvk1P7ttPG6s5nLZn+/7LvM9qHTpWaVJRNiLZbJkyKcCYVhEapAlWKW3A6IZlDMpDsCKSxsE1/Bi+HccmI3H/mHFUCLt3RiOee9UgKsbsIBUHLVOD8YpTpkJ5pSsAifs9BgLD2aNlxpKLBRiX62Eq+VjcIQMDY4+jDNIgjVeqafe66jmK7X5tGd5y2XnSn8pFAUxnMCid4Wznk9LmGA1NspraBp0NG+0WvOuGLnU8VLgIa6E2uBQv4UxUE88RmMhvkX8poOfQHOv4gHbYHGgWYDhNO82FtuhTYzsImK2ZirAmINIdDf/5jzFILkXlwd/fAnVvLHXOHnNeh27qA/AJYyrcZqMT6/exeTEgh3tftsaV3h5Md5K1mnLqWZ+PgeRg+Bgdru7+eNs8eHh4+Lz67D8SYu3pesMia/SdVr2WyKV/SZS/nuemagkSf5H6q8jxU0egtBr64b/w0Q9+1iEmYPXlBuktvDY3f6fx19scbk4PYY2Sn/1og7Y7gfEwj1QwwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">c58c86b6ff40b2109541ffffffffff66</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">a8bea442ff8aa21078a6ffffffffff99</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned>agent_details</outputs_assigned>
+        <parent_ui_id>94d851df-bb5a-4089-a578-b8583af03392</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:27:27</sys_created_on>
+        <sys_id>74bea442ff8aa21078a6ffffffffffcc</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:24</sys_updated_on>
+        <ui_id>778dc52f-6504-4e57-8b98-4e698d3338f1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6VTXW/aMBT9K5OfSUQgJQlvqKhSp65Io+tLNaEb5xq8Ok5qO1CG+O+7JiHQTZMmLU+5x/fjnHPtA6saVzfOPlUza+Vas+nLgcmCTVmUTiZ5NimESEeTUTRMUpiI/kvGbMA0lEiZsEbtVgU6kMoSvAXVePxwKDKBOb/hQZKNMYgFjANI0nGQDvMRv4mTKEcMP5Qfj9SgkLZWsH/+3z58I1Vh0Iv6PmA1GOLr0LApSdT0o0E9SP1KI/5I/lcLFOSoKHXmh3+a9x78xRq3rz38w1a6ix66Bp+Xi0eCKlN4gtGA4btDXSDxEKAsDlgJugBXmX2PGIRiodUF2JCsVk0J71b+pFnxcDj0mQJJG8f2tA9XndUtLObgYOlMw11j8GxLJTna1pUCBTTK3V5jbcKidpI0nUoc5OpcXamm1I+tGaxvcN4sIY0lElh7qZ57J0QsN9Xu65nlndQnV7pDVXFQfQTOGZk3zvM5sEY+fbC4jX8zGRWWfi8l1LXU61Vtqq08TSDCZbhWFIRCVTti5h9FCNyrC8l+CO8In5/gZzDSS/1CbajYD/um5VuD9/7y0E0VUTTJAh7zOIgxzoIszyAYDxMUaRQneZqw44DZvb1VYO3FJNrO6q3xElvLOnNWrb++hBtZuxmR2mLnw9HfWe1fcruVbcetXxyXliQ8eez+Kq/Y002V/BraVebVi79gx195i3SjJwQAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">4d8c86b6ff40b2109541ffffffffff69</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">a8bea442ff8aa21078a6ffffffffff99</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned>agent_details</outputs_assigned>
+        <parent_ui_id>8972ab2c-7e16-4754-a764-c49e24dc733e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-21 16:18:24</sys_created_on>
+        <sys_id>a98c86b6ff40b2109541fffffffffff9</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:24</sys_updated_on>
+        <ui_id>489dfbc0-5589-4a4a-8c1e-0dfacc8b5d67</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6VT227aQBD9lWqfsWWD4wtvKChSqjRIJc1LVKGxPQvbrNfO7hpCEf/eWWwMaVWpUv3kOZ7LOWfGB1a3tmmteapnxoi1YtOXAxMlm7IwjeM8i0vO03E8DoMkhZgPTzJhI6agQsqENSq7KtGCkIbgLcjW4YdDlOVBdBPFHkYZelECqZdDyL0sD3ke3/BxVuT+h/LjkRqUwjQS9s//26fYCFlqdKK+j1gDmvha1GxKEhW9KJAPQr3SiD+S/9UCCTlKSp254Z/mgwd/scbuGwf/MLXqo4e+wefl4pGgWpeOYDhi+G5RlUg8OEiDI1aBKsHWej8gGqFcKHkBNiSrU1PBuxE/aVYUBIHL5EjaCuy+DuGqt7qD+RwsLK1uC9tqPNtSiwJN50qJHFppb6+xLmHRWEGaTiUWcnmurmVbqcfODDY0OG+WkNYQCWycVMe9F8KXm3r39czyTqiTK/1HWRcghwis1SJvreNzYK14+mBxF/9mMkqs3F4qaBqh1qtG11txmkCEK38tKfC5rHfEzP0UPhROnU/2g39H+PwEP4MWTuoXakPFbtg3Jd5avHfHk02Qh2GceUVURF5El0vnmoE3CRLkaRgleZqw44iZvbmVYMzFJNrO6q11EjvLenNWnb+upNCisTMitcXeh6O7WeX+5G4r257bsLhCGJLw5LD7q7xyT5cqimtoV+tXJ/6CHX8BcvpYVCcEAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">cd8c86b6ff40b2109541ffffffffff67</block>
+        <comment/>
+        <connected_to>94d851df-bb5a-4089-a578-b8583af03392</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="External AI Agent Card - A2A Protocol">a8bea442ff8aa21078a6ffffffffff99</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-21 16:18:24</sys_created_on>
+        <sys_id>ad8c86b6ff40b2109541fffffffffff8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:24</sys_updated_on>
+        <ui_id>8972ab2c-7e16-4754-a764-c49e24dc733e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_hub_flow_variable action="DELETE" query="model=a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_documentation action="DELETE">
+        <element>agent_card_url</element>
+        <help/>
+        <hint/>
+        <label>Agent Card Url</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-15 07:56:58</sys_created_on>
+        <sys_id>023029b0ff8032109541ffffffffff0b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Agent Card Url</sys_name>
+        <sys_package display_value="Now Assist AI Agents" source="sn_aia">32808450431302106c3603295bb8f245</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>connection_credential_alias</element>
+        <help/>
+        <hint/>
+        <label>Connection Credential Alias</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:27:26</sys_created_on>
+        <sys_id>f0bea442ff8aa21078a6ffffffffffbe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Connection Credential Alias</sys_name>
+        <sys_package display_value="Now Assist AI Agents" source="sn_aia">32808450431302106c3603295bb8f245</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99_connection_credential_alias_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-11 15:27:26</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_documentation action="DELETE">
+        <element>agent_details</element>
+        <help/>
+        <hint/>
+        <label>Agent Details</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_a8bea442ff8aa21078a6ffffffffff99</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:27:27</sys_created_on>
+        <sys_id>34bea442ff8aa21078a6ffffffffffc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Agent Details</sys_name>
+        <sys_package display_value="Now Assist AI Agents" source="sn_aia">32808450431302106c3603295bb8f245</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Assist AI Agents">32808450431302106c3603295bb8f245</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_a8bea442ff8aa21078a6ffffffffff99_agent_details_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-11 15:27:27</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_a8bea442ff8aa21078a6ffffffffff99"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>5826f16dff82621078a6ffffffffffda</sys_id>
+        <latest_snapshot>a8bea442ff8aa21078a6ffffffffff99</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=5826f16dff82621078a6ffffffffffda"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=5826f16dff82621078a6ffffffffffda^sys_idNOT IN34bea442ff8aa21078a6ffffffffffe3"/>
+    <sys_flow_subflow_plan action="DELETE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@7c7f47d6</plan>
+        <plan_id display_value="External AI Agent Card - A2A Protocol">5826f16dff82621078a6ffffffffffda</plan_id>
+        <snapshot>a8bea442ff8aa21078a6ffffffffff99</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-11 15:27:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>34bea442ff8aa21078a6ffffffffffe3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-21 16:18:25</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_5826f16dff82621078a6ffffffffffda</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=8931348000,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;27000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;Agent Card Details&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;external_ai_agent_card__a2a_protocol&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"d9febc5c-793e-4fa3-a783-80b2c5471bee.agent_details","label":"2 - Well Known External Agent Card Subflow - A2A Protocol➛Agent Details","reference_display":"Agent Details","type":"json","base_type":"json","usedInstances":{"778dc52f-6504-4e57-8b98-4e698d3338f1":["agent_details-0"]},"attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"dd45e5d3-1d7b-4157-bc1d-71260087c1e6"}},{"name":"subflow.connection_credential_alias","label":"Input➛Connection Credential Alias","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"d9febc5c-793e-4fa3-a783-80b2c5471bee":["connection_credential_alias"],"94d851df-bb5a-4089-a578-b8583af03392":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c5cb6d74-37d9-482c-8c9b-7593895efd60","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.agent_card_url","label":"Input➛Agent Card Url","type":"string","base_type":"string","usedInstances":{"49b04546-e49e-47a8-ba1f-9b1fb65f29cb":["agent_card_url"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"0b6dbf2e-58d7-4f5b-89e2-30677c52e53e"}},{"name":"49b04546-e49e-47a8-ba1f-9b1fb65f29cb.agent_details","label":"5 - Well Known External Agent Card URL - A2A Protocol➛Agent Details","type":"json","base_type":"json","usedInstances":{"489dfbc0-5589-4a4a-8c1e-0dfacc8b5d67":["agent_details-0"]},"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"29a8aec6-51ec-4130-98ea-0499cd493352"}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;External AI Agent Card - A2A Protocol&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-10 07:22:34&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;5826f16dff82621078a6ffffffffffda&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;External AI Agent Card - A2A Protocol&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_5826f16dff82621078a6ffffffffffda&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 10:35:33&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_5826f16dff82621078a6ffffffffffda^id=5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=5826f16dff82621078a6ffffffffffda^sys_idNOT IN1026f16dff82621078a6ffffffffffdb"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;5826f16dff82621078a6ffffffffffda&lt;/id&gt;&lt;name&gt;External AI Agent Card - A2A Protocol&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-10 07:22:34&lt;/sys_created_on&gt;&lt;sys_id&gt;1026f16dff82621078a6ffffffffffdb&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-10 07:22:34&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=1026f16dff82621078a6ffffffffffdb"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=5826f16dff82621078a6ffffffffffda^sys_idNOT IN7b2c0e76ff40b2109541ffffffffff50,dc66796dff82621078a6ffffffffff5e"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0b6dbf2e-58d7-4f5b-89e2-30677c52e53e&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;agent_card_url&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Agent Card Url&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/model&gt;&lt;model_id&gt;5826f16dff82621078a6ffffffffffda&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-21 16:16:54&lt;/sys_created_on&gt;&lt;sys_id&gt;7b2c0e76ff40b2109541ffffffffff50&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:21&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7b2c0e76ff40b2109541ffffffffff50"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c5cb6d74-37d9-482c-8c9b-7593895efd60&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;connection_credential_alias&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Connection Credential Alias&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/model&gt;&lt;model_id&gt;5826f16dff82621078a6ffffffffffda&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-10 07:23:39&lt;/sys_created_on&gt;&lt;sys_id&gt;dc66796dff82621078a6ffffffffff5e&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:17:49&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=dc66796dff82621078a6ffffffffff5e"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=5826f16dff82621078a6ffffffffffda^sys_idNOT IN1866b96dff82621078a6ffffffffff73"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=93ef1169-c4c4-4e49-9b9a-307ef8147b87&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;agent_details&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="JSON"&gt;json&lt;/internal_type&gt;&lt;label&gt;Agent Details&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/model&gt;&lt;model_id&gt;5826f16dff82621078a6ffffffffffda&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_5826f16dff82621078a6ffffffffffda&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-10 07:23:40&lt;/sys_created_on&gt;&lt;sys_id&gt;1866b96dff82621078a6ffffffffff73&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-10 07:23:40&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1866b96dff82621078a6ffffffffff73"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=5826f16dff82621078a6ffffffffffda^sys_idNOT IN296c2c4eff4aa21078a6ffffffffffe5,d16c82b6ff40b2109541ffffffffff31"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Well Known External Agent Card Subflow - A2A Protocol"&gt;f421d2e1ff46621078a6ffffffffff5f&lt;/action_type&gt;&lt;action_type_parent display_value="Well Known External Agent Card Subflow - A2A Protocol"&gt;7de5392dff82621078a6ffffffffffd4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id&gt;94d851df-bb5a-4089-a578-b8583af03392&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:17:24&lt;/sys_created_on&gt;&lt;sys_id&gt;296c2c4eff4aa21078a6ffffffffffe5&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:17:05&lt;/sys_updated_on&gt;&lt;ui_id&gt;d9febc5c-793e-4fa3-a783-80b2c5471bee&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/5VSy27bMBD8lYBnW5BlW4p9C1IEKNA2QNPmEgTCilzaBChS4cOJa/jfu5RkHXwoUt44nN2dmeXLiSnBtmyZFwtR4ELKVVkWi7y6hVJOp1yyGTPQIjG5NQZ5UNbU3KFAExToGrQCT6QD6JhYp5OPjdT2PfsH/3ymCqF8p+H4/N+FfK+0cGjY9uV1xjpwpC+gY9vT1VM4dlhraFBT/6fglNlR+WdtXwrvJzk395Ocm7vR96fCSUKI5C8SrBNJ72LG8COgEUiSJGiPM9aCERCsO7JtcJEAhyAejT5OjL0ygZqxxP3w6g91vs3zPDElkneOw+t0rcekB5jvreL42CWtAxKg0WMNtzq25sfgKe0IJUQdLjsiJHrqh10SnWSMmuTT3r7/vAx8UKb3Nz5qy0FPNwiUQhMD+rSwqH5dZTMg3663hhpbmli30HWE1J2zB9VPIdFtttN0ydL3IXVe7UwG/TYyChOyB8K/9PAzOJXsfqc2VJzG/TbqLeLX9Cs2m2pdrDf5PJfFcr6qRD7flNV6LhY5FKsGK1xLdu6jrd9iMjWENMZRD4kSwXOnunBHEg44Oj+//gWA62OicwMAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=296c2c4eff4aa21078a6ffffffffffe5"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Well Known External Agent Card URL - A2A Protocol"&gt;151c4a76ff40b2109541ffffffffff89&lt;/action_type&gt;&lt;action_type_parent display_value="Well Known External Agent Card URL - A2A Protocol"&gt;d76b0636ff40b2109541ffffffffff87&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;5&lt;/order&gt;&lt;parent_ui_id&gt;8972ab2c-7e16-4754-a764-c49e24dc733e&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-21 16:17:49&lt;/sys_created_on&gt;&lt;sys_id&gt;d16c82b6ff40b2109541ffffffffff31&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:22&lt;/sys_updated_on&gt;&lt;ui_id&gt;49b04546-e49e-47a8-ba1f-9b1fb65f29cb&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/41SXWvbQBD8K+GeZSE1J1vyW2gJFNoGmo+XEMTqtLIPTqfLfThxjf979iTZJIFC9Hazs7szs3o8MNmyNSuqXHBYLbuOZ823PKsKnnfnrxQsYRp6JCZsUPtagG3rYBXhO1AhFg4HF5pODS/pR8rxSKRWOqNg//AVrthK1VrUbP34lDADlhZ7tGx9+FTye4O1ggYVjbz1VuoNtX/Vz6nxKiq4+E4KLu5HQ/8zGtcR7k6LBttGVXnC8NWjbpEWd6AcJqwH3YIf7J6tvQ0EWIT2Rqv9mbGV2tMwFrmvTv6jyWWWZZHZITkUOFXPz3qOcILFdpACb4yXg54QD42ae8SgQq//TDZi+NhBUP4UPiHB0Tw0UXSUMWvqbrfDy9/TwmupR39zUQ0C1PkFnlJogkcXzxLkHWXz6/MlUGEfM+zBGEJqY4edHGeSxD7dKHqk8S8gLU5udAoi+kkpOkivCf8xwg9gZTT3m8ZQczKve3+KIO+1fA74M94+L7OGr/JiwaHhC56VxaIS/HKBRVXlS365asslO47R1s8hmppCmuOop0SJ4ISVxl+RqB3Ozo9PbxOr9+AyAwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=d16c82b6ff40b2109541ffffffffff31"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=5826f16dff82621078a6ffffffffffda^sys_idNOT IN387cc2b6ff40b2109541ffffffffff4d,7f2c0e76ff40b2109541ffffffffff66,a56c2c4eff4aa21078a6ffffffffffe7,e64c8e76ff40b2109541fffffffffffa"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;4d8c86b6ff40b2109541ffffffffff69&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;6&lt;/order&gt;&lt;outputs_assigned&gt;agent_details&lt;/outputs_assigned&gt;&lt;parent_ui_id&gt;8972ab2c-7e16-4754-a764-c49e24dc733e&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-21 16:18:03&lt;/sys_created_on&gt;&lt;sys_id&gt;387cc2b6ff40b2109541ffffffffff4d&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:22&lt;/sys_updated_on&gt;&lt;ui_id&gt;489dfbc0-5589-4a4a-8c1e-0dfacc8b5d67&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6WPwW7CMBBE/8VngkgwTswtx94RF4TQ2l7TFa4dxU4QivLvdVRE6bl726c3I83EwpC6IcVDaGOkq2f708TIsD0rGyGUFMbaphJVuakbEPZ19ZatmIcvzCZc0aeLwQTkYsYjuGHh08Sl2vAdFwVyiQWvoSkUlLaQqrRK7GwltVr/ic9zLjAUOweP43979Cc50+My6rxiUffUpVYnGnOrBRdxzpj8sv9HGaEnUA6fr0FNkYI/LOzjzTOPPJ30O7qH/mZduP+y+Rt0jzg/XQEAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;058c86b6ff40b2109541ffffffffff64&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;1&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-21 16:16:54&lt;/sys_created_on&gt;&lt;sys_id&gt;7f2c0e76ff40b2109541ffffffffff66&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:21&lt;/sys_updated_on&gt;&lt;ui_id&gt;94d851df-bb5a-4089-a578-b8583af03392&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1UXWvbMBT9K0PPxthOE9a8lW2FwtqMJRTGKOJavk7EZMmT5KRZyH/flT+SsKYslD3uzT7Svfec43O9Y6bxdePdwtw4J5eaTb8/RUzqgNHzjsmCTVmZQJlei1SMsskoS5Ls/VWaT0Z5mhUjQBixiGmokG4KowvppdG8BSK2BtWEA3ospKsVbB+PiFhJVVjsp9ZgqcajZdPdH0d+WyNXkKOiwrm3Ui+p/FJuQ+GHgdy7zy3yOuswj3A3TDK2CLTSJGL47FEXSKNLUA4jVoEuwBu7PSAWoZhpdQRWUvtOcQXPTv6i3tl4HC6WSBpFb8fhlfdWDS4ZKXBWB4Id4iFXg4VGNZV+6HQEk7GERvkTkxtH/bAOpAOLnlI5X5nN12HgrdStwP5QGQHq8AaebMgbjy58GFRYUSNeQV2TOby2Zi3bYuJSxUtFL3GpzIaGhkTFIALxmDyC+Jbwjy38CFYGFffUhoo7mjk4KXibPmrnLUnYt7bwn00g1AnspfDODbrghJW1v6E5a+xZ76M+utcwLsdpMj4fj6vJmRCcpHa3c00exMR0qrFVwoXFMF+C4qAkuP3+bv4wW3y6/7L49jLmb2nxL/biAuEv9uK8Ga8sQ/aXZQif78JdSJLk/zKcLoN0vAt1r60d/uZdeAqB7ia4LjcFCumIyCJgd8PfPhxsKQBSnEIbY38ECUds/xtbS5kANwYAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;c58c86b6ff40b2109541ffffffffff66&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;3&lt;/order&gt;&lt;outputs_assigned&gt;agent_details&lt;/outputs_assigned&gt;&lt;parent_ui_id&gt;94d851df-bb5a-4089-a578-b8583af03392&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:17:24&lt;/sys_created_on&gt;&lt;sys_id&gt;a56c2c4eff4aa21078a6ffffffffffe7&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:21&lt;/sys_updated_on&gt;&lt;ui_id&gt;778dc52f-6504-4e57-8b98-4e698d3338f1&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6VTXWvbMBT9K0PPsYkT1x95C5RCx9bA2vVlDHMtXSXaZMm15KRZyH/fVeykzWAwmN/u0f0459zrA7O9b3vvnuzSObU2bPHtwJRgC5YUWVaXmZCymGWzZJoXkMnLl8/ZhBlokDJhjcZXAj0o7Qjegu4DfjiIUmLNb3iUl3OMUgnzCPJiHhXTesZv0jypEeOr8uORGgjlWg375//twzdKiw6DqO8T1kJHfD12bHH448nvW6w01Khp3MfH1QMV/6sJ57JlGP/h9uLCX8wJowj+4ayhyHYi8EkmDF89GoE0VIJ2OGENGAHedvsL0iGIldFvwEYZT71YSH516hc1TqfTaciUSOI4Dq+XsBqdHWC+sYrjqvWKuJwQD7Uea7jVfWMeBhFhJyih1/68E0J6R/2wDawDjZGTfNzY3ZfzwDtlTgLHR2056EsE3neq7j26sJFePV1ZM8SfrpeCGpvgZwNtq8y6aju7VacJRLiJ15qCWGq7I2bhnGPgQV1MTkJ8R/jtCX6GTgWpn6kNFYdhX4166fE+LJ1uTCZJVkY85WmUYlpGZV1CNJ/mKIskzesiZ8eTrdVLHwQNBo1WVIOblOB4p1q/JApbHFUf6dqUCX/ccHnbkckYCuTKEeGngN2/yxN7uifF30M72/0MUt+w429VVMTvzwMAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;cd8c86b6ff40b2109541ffffffffff67&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;94d851df-bb5a-4089-a578-b8583af03392&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-21 16:17:22&lt;/sys_created_on&gt;&lt;sys_id&gt;e64c8e76ff40b2109541fffffffffffa&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:22&lt;/sys_updated_on&gt;&lt;ui_id&gt;8972ab2c-7e16-4754-a764-c49e24dc733e&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;connection_credential_alias&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Connection Credential Alias&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-10 07:23:40&lt;/sys_created_on&gt;&lt;sys_id&gt;1866796dff82621078a6ffffffffff61&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Connection Credential Alias&lt;/sys_name&gt;&lt;sys_package display_value="Now Assist AI Agents" source="sn_aia"&gt;32808450431302106c3603295bb8f245&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda_connection_credential_alias_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-10 07:23:40&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;agent_card_url&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Agent Card Url&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-15 07:56:55&lt;/sys_created_on&gt;&lt;sys_id&gt;5930e5b0ff8032109541ffffffffff0f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Agent Card Url&lt;/sys_name&gt;&lt;sys_package display_value="Now Assist AI Agents" source="sn_aia"&gt;32808450431302106c3603295bb8f245&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:16:54&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;agent_details&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Agent Details&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_5826f16dff82621078a6ffffffffffda&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-10 07:23:40&lt;/sys_created_on&gt;&lt;sys_id&gt;1866b96dff82621078a6ffffffffff76&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Agent Details&lt;/sys_name&gt;&lt;sys_package display_value="Now Assist AI Agents" source="sn_aia"&gt;32808450431302106c3603295bb8f245&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_5826f16dff82621078a6ffffffffffda_agent_details_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-10 07:23:40&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;27000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;Agent Card Details&lt;/description&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;internal_name&gt;external_ai_agent_card__a2a_protocol&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"d9febc5c-793e-4fa3-a783-80b2c5471bee.agent_details","label":"2 - Well Known External Agent Card Subflow - A2A Protocol➛Agent Details","reference_display":"Agent Details","type":"json","base_type":"json","usedInstances":{"778dc52f-6504-4e57-8b98-4e698d3338f1":["agent_details-0"]},"attributes":{"uiType":"json","uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"dd45e5d3-1d7b-4157-bc1d-71260087c1e6"}},{"name":"subflow.connection_credential_alias","label":"Input➛Connection Credential Alias","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"d9febc5c-793e-4fa3-a783-80b2c5471bee":["connection_credential_alias"],"94d851df-bb5a-4089-a578-b8583af03392":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"c5cb6d74-37d9-482c-8c9b-7593895efd60","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.agent_card_url","label":"Input➛Agent Card Url","type":"string","base_type":"string","usedInstances":{"49b04546-e49e-47a8-ba1f-9b1fb65f29cb":["agent_card_url"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"0b6dbf2e-58d7-4f5b-89e2-30677c52e53e"}},{"name":"49b04546-e49e-47a8-ba1f-9b1fb65f29cb.agent_details","label":"5 - Well Known External Agent Card URL - A2A Protocol➛Agent Details","type":"json","base_type":"json","usedInstances":{"489dfbc0-5589-4a4a-8c1e-0dfacc8b5d67":["agent_details-0"]},"attributes":{"uiTypeLabel":"JSON","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"json","uiUniqueId":"29a8aec6-51ec-4130-98ea-0499cd493352"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;External AI Agent Card - A2A Protocol&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:27:26&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:24&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_a8bea442ff8aa21078a6ffffffffff99^id=a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=a8bea442ff8aa21078a6ffffffffff99^sys_idNOT INe4bea442ff8aa21078a6ffffffffff9a"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/id&gt;&lt;name&gt;External AI Agent Card - A2A Protocol&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:27:26&lt;/sys_created_on&gt;&lt;sys_id&gt;e4bea442ff8aa21078a6ffffffffff9a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-11 15:27:26&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=e4bea442ff8aa21078a6ffffffffff9a"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=a8bea442ff8aa21078a6ffffffffff99^sys_idNOT IN60bea442ff8aa21078a6ffffffffff9c,a58c86b6ff40b2109541ffffffffffcc"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c5cb6d74-37d9-482c-8c9b-7593895efd60&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;connection_credential_alias&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Connection Credential Alias&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="External AI Agent Card - A2A Protocol"&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/model&gt;&lt;model_id&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:27:26&lt;/sys_created_on&gt;&lt;sys_id&gt;60bea442ff8aa21078a6ffffffffff9c&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:23&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=60bea442ff8aa21078a6ffffffffff9c"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0b6dbf2e-58d7-4f5b-89e2-30677c52e53e&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;agent_card_url&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Agent Card Url&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="External AI Agent Card - A2A Protocol"&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/model&gt;&lt;model_id&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-21 16:18:23&lt;/sys_created_on&gt;&lt;sys_id&gt;a58c86b6ff40b2109541ffffffffffcc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:23&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a58c86b6ff40b2109541ffffffffffcc"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=a8bea442ff8aa21078a6ffffffffff99^sys_idNOT IN74bea442ff8aa21078a6ffffffffffc2"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=93ef1169-c4c4-4e49-9b9a-307ef8147b87&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;agent_details&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="JSON"&gt;json&lt;/internal_type&gt;&lt;label&gt;Agent Details&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="External AI Agent Card - A2A Protocol"&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/model&gt;&lt;model_id&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_a8bea442ff8aa21078a6ffffffffff99&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:27:26&lt;/sys_created_on&gt;&lt;sys_id&gt;74bea442ff8aa21078a6ffffffffffc2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-11 15:27:26&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=74bea442ff8aa21078a6ffffffffffc2"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=a8bea442ff8aa21078a6ffffffffff99^sys_idNOT INb0bea442ff8aa21078a6ffffffffffcd,e58c86b6ff40b2109541fffffffffff5"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Well Known External Agent Card Subflow - A2A Protocol"&gt;f421d2e1ff46621078a6ffffffffff5f&lt;/action_type&gt;&lt;action_type_parent display_value="Well Known External Agent Card Subflow - A2A Protocol"&gt;7de5392dff82621078a6ffffffffffd4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f421d2e1ff46621078a6ffffffffff5f&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id&gt;94d851df-bb5a-4089-a578-b8583af03392&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:27:27&lt;/sys_created_on&gt;&lt;sys_id&gt;b0bea442ff8aa21078a6ffffffffffcd&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:24&lt;/sys_updated_on&gt;&lt;ui_id&gt;d9febc5c-793e-4fa3-a783-80b2c5471bee&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/5VSXWvbQBD8K+GeZSHJthT7LTgECm0DTZuXEMRKt2cfnE7KfThRhf979yxZLSmUVG87N7s7M6ungUnOtmyZZCnPMBViledZmhTXkIv5y5csYhoaJGbdao21k60ua4MctZOgSlASLJGOoHxgDYP1lVDta/wP/ulEHVzaTkH/+N+N9UEqblCz7dNzxDowpM+hYdvh3dNHDSqoUBF1Ny++2s2Lr24mhx+KwfVdIFlnpN5P9edp/MMFbA0PctOI4ZtDzZF0ClAWI9aA5uBa07OtM54Ag8DvtepnxkFqR8NY4L5Z+ZPWXSdJEpgCyXqN4+tcllPQIyxuwQEp8bXzZqLWh1bWaMfQOArwyu3+xEbCfRdcjy0OKnXpbpVv9NcxHTYPuNyVEG9JBHbBadA+GREPh/b120XlndTnUKZH1dag5gocRVd5F/QMzMvv71Iekb9yRoUNbSwb6DpCys60R3neQqKbeK+oiMMvR+qs3OsYzneN6QIQ3xF+e4Yfwchg9wuNoeaw7oeWLx4/hf9rsynW2XqTLBKRLRergieLTV6sFzxNIFtVWOBasFPEbG93Cqz9HRRdqHzxweYY2xRQOWYcWmojO3dDoo44ZXF6/gU0QuM7uQMAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=b0bea442ff8aa21078a6ffffffffffcd"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Well Known External Agent Card URL - A2A Protocol"&gt;151c4a76ff40b2109541ffffffffff89&lt;/action_type&gt;&lt;action_type_parent display_value="Well Known External Agent Card URL - A2A Protocol"&gt;d76b0636ff40b2109541ffffffffff87&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;151c4a76ff40b2109541ffffffffff89&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;5&lt;/order&gt;&lt;parent_ui_id&gt;8972ab2c-7e16-4754-a764-c49e24dc733e&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-21 16:18:24&lt;/sys_created_on&gt;&lt;sys_id&gt;e58c86b6ff40b2109541fffffffffff5&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:24&lt;/sys_updated_on&gt;&lt;ui_id&gt;49b04546-e49e-47a8-ba1f-9b1fb65f29cb&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/41SXW/bMAz8K4WeHcNe7cTJW5GiQIFuBda1L0Vh0BKdCJBlVx9pPSP/fVTseFuHAdUbj0fyeNTzwKRgG5avU57BalnXWVJ9SZN1nqX1/ArOIqahQWLCDrUrORhReqMIP4DyITEM1le1at/ivynHI5GEtJ2C/ukzXL6XShjUbPP8ErEODA12aNhm+JD6rHIFFSqiXoVZF1uadfF4kv6/lVzfBdw6I/Vuiu+mJg9nsDUiiEojhu8OtUBSU4OyGLEGtADXmp5tnPEEGARxr1U/M/ZSO2rGAvfdyp80rkiSJDBrpAU5jtk5LCcHR7i+BgekxHPnzUTl+1ZytKM1Amvwym3/xEbCfedkq8cSB5U6V7fKN/rbaAibG5wPRoi3JAK7sGnQPi1SP+zbt+9nlTdSn0yZkqrloOYIHFlXeRf0DMzLHx9cHpF/fEaFTbhPA11HSNmZ9iBPU0h0E+8UBXH4S6TOyp2OgYcNY7oAxDeEX5/gJzAyrPuV2lBxGPeo5avH2/CL0iKpslWaLzKoskWWFPlizbPLBebrdbrMLleiWLJjxGxvtwqs/W0UXah89WHN0bbJoHL0OJRwIzt3RaIOOHlxfPkF1jBJ5XgDAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=e58c86b6ff40b2109541fffffffffff5"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=a8bea442ff8aa21078a6ffffffffff99^sys_idNOT IN658c86b6ff40b2109541fffffffffff6,74bea442ff8aa21078a6ffffffffffcc,a98c86b6ff40b2109541fffffffffff9,ad8c86b6ff40b2109541fffffffffff8"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;058c86b6ff40b2109541ffffffffff64&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;1&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-21 16:18:24&lt;/sys_created_on&gt;&lt;sys_id&gt;658c86b6ff40b2109541fffffffffff6&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:24&lt;/sys_updated_on&gt;&lt;ui_id&gt;94d851df-bb5a-4089-a578-b8583af03392&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1VXWvbMBT9K0PPxthOE9a+lXSFQtuMJRTGKOZalhMxWfL0kTQz+e+7shwnrBlLtz3uLTrSvfec43tIS5SzjbNmoa6N4UtJrr48R4RLj+HvlvCSXJEqgSq9pCkdZZNRliTZ+4u0mIyKNCtHwGBEIiKhZviSKllyy5XMOyAiaxDOX+DPkptGwPbpgNAVF6Vm/dQGNNZYpslV+9PVuSwEFEzg0+mexrv7Dvk1P7ttPG6s5nLZn+/7LvM9qHTpWaVJRNiLZbJkyKcCYVhEapAlWKW3A6IZlDMpDsCKSxsE1/Bi+HccmI3H/mHFUCLt3RiOee9UgKsbsIBUHLVOD8YpTpkJ5pSsAifs9BgLD2aNlxpKLBRiX62Eq+VjcIQMDY4+jDNIgjVeqafe66jmK7X5tGd5y2XnSn8pFAUxnMCid4Wznk9LmGA1NspraBp0NG+0WvOuGLnU8VLgIa6E2uBQv4UxUE88RmMhvkX8poOfQHOv4gHbYHGgWYDhNO82FtuhTYzsImK2ZirAmINIdDf/5jzFILkXlwd/fAnVvLHXOHnNeh27qA/AJYyrcZqMT6/exeTEgh3tftsaV3h5Md5K1mnLqWZ+PgeRg+Bgdru7+eNs8eHh4+Lz67D8SYu3pesMia/SdVr2WyKV/SZS/nuemagkSf5H6q8jxU0egtBr64b/w0Q9+1iEmYPXlBuktvDY3f6fx19scbk4PYY2Sn/1og7Y7gfEwj1QwwYAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;c58c86b6ff40b2109541ffffffffff66&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;3&lt;/order&gt;&lt;outputs_assigned&gt;agent_details&lt;/outputs_assigned&gt;&lt;parent_ui_id&gt;94d851df-bb5a-4089-a578-b8583af03392&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:27:27&lt;/sys_created_on&gt;&lt;sys_id&gt;74bea442ff8aa21078a6ffffffffffcc&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:24&lt;/sys_updated_on&gt;&lt;ui_id&gt;778dc52f-6504-4e57-8b98-4e698d3338f1&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6VTXW/aMBT9K5OfSUQgJQlvqKhSp65Io+tLNaEb5xq8Ok5qO1CG+O+7JiHQTZMmLU+5x/fjnHPtA6saVzfOPlUza+Vas+nLgcmCTVmUTiZ5NimESEeTUTRMUpiI/kvGbMA0lEiZsEbtVgU6kMoSvAXVePxwKDKBOb/hQZKNMYgFjANI0nGQDvMRv4mTKEcMP5Qfj9SgkLZWsH/+3z58I1Vh0Iv6PmA1GOLr0LApSdT0o0E9SP1KI/5I/lcLFOSoKHXmh3+a9x78xRq3rz38w1a6ix66Bp+Xi0eCKlN4gtGA4btDXSDxEKAsDlgJugBXmX2PGIRiodUF2JCsVk0J71b+pFnxcDj0mQJJG8f2tA9XndUtLObgYOlMw11j8GxLJTna1pUCBTTK3V5jbcKidpI0nUoc5OpcXamm1I+tGaxvcN4sIY0lElh7qZ57J0QsN9Xu65nlndQnV7pDVXFQfQTOGZk3zvM5sEY+fbC4jX8zGRWWfi8l1LXU61Vtqq08TSDCZbhWFIRCVTti5h9FCNyrC8l+CO8In5/gZzDSS/1CbajYD/um5VuD9/7y0E0VUTTJAh7zOIgxzoIszyAYDxMUaRQneZqw44DZvb1VYO3FJNrO6q3xElvLOnNWrb++hBtZuxmR2mLnw9HfWe1fcruVbcetXxyXliQ8eez+Kq/Y002V/BraVebVi79gx195i3SjJwQAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;4d8c86b6ff40b2109541ffffffffff69&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;6&lt;/order&gt;&lt;outputs_assigned&gt;agent_details&lt;/outputs_assigned&gt;&lt;parent_ui_id&gt;8972ab2c-7e16-4754-a764-c49e24dc733e&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-21 16:18:24&lt;/sys_created_on&gt;&lt;sys_id&gt;a98c86b6ff40b2109541fffffffffff9&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:24&lt;/sys_updated_on&gt;&lt;ui_id&gt;489dfbc0-5589-4a4a-8c1e-0dfacc8b5d67&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6VT227aQBD9lWqfsWWD4wtvKChSqjRIJc1LVKGxPQvbrNfO7hpCEf/eWWwMaVWpUv3kOZ7LOWfGB1a3tmmteapnxoi1YtOXAxMlm7IwjeM8i0vO03E8DoMkhZgPTzJhI6agQsqENSq7KtGCkIbgLcjW4YdDlOVBdBPFHkYZelECqZdDyL0sD3ke3/BxVuT+h/LjkRqUwjQS9s//26fYCFlqdKK+j1gDmvha1GxKEhW9KJAPQr3SiD+S/9UCCTlKSp254Z/mgwd/scbuGwf/MLXqo4e+wefl4pGgWpeOYDhi+G5RlUg8OEiDI1aBKsHWej8gGqFcKHkBNiSrU1PBuxE/aVYUBIHL5EjaCuy+DuGqt7qD+RwsLK1uC9tqPNtSiwJN50qJHFppb6+xLmHRWEGaTiUWcnmurmVbqcfODDY0OG+WkNYQCWycVMe9F8KXm3r39czyTqiTK/1HWRcghwis1SJvreNzYK14+mBxF/9mMkqs3F4qaBqh1qtG11txmkCEK38tKfC5rHfEzP0UPhROnU/2g39H+PwEP4MWTuoXakPFbtg3Jd5avHfHk02Qh2GceUVURF5El0vnmoE3CRLkaRgleZqw44iZvbmVYMzFJNrO6q11EjvLenNWnb+upNCisTMitcXeh6O7WeX+5G4r257bsLhCGJLw5LD7q7xyT5cqimtoV+tXJ/6CHX8BcvpYVCcEAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;cd8c86b6ff40b2109541ffffffffff67&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;94d851df-bb5a-4089-a578-b8583af03392&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="External AI Agent Card - A2A Protocol"&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-21 16:18:24&lt;/sys_created_on&gt;&lt;sys_id&gt;ad8c86b6ff40b2109541fffffffffff8&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:24&lt;/sys_updated_on&gt;&lt;ui_id&gt;8972ab2c-7e16-4754-a764-c49e24dc733e&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;agent_card_url&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Agent Card Url&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-15 07:56:58&lt;/sys_created_on&gt;&lt;sys_id&gt;023029b0ff8032109541ffffffffff0b&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Agent Card Url&lt;/sys_name&gt;&lt;sys_package display_value="Now Assist AI Agents" source="sn_aia"&gt;32808450431302106c3603295bb8f245&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:23&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;connection_credential_alias&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Connection Credential Alias&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:27:26&lt;/sys_created_on&gt;&lt;sys_id&gt;f0bea442ff8aa21078a6ffffffffffbe&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Connection Credential Alias&lt;/sys_name&gt;&lt;sys_package display_value="Now Assist AI Agents" source="sn_aia"&gt;32808450431302106c3603295bb8f245&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99_connection_credential_alias_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-11 15:27:26&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;agent_details&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Agent Details&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_a8bea442ff8aa21078a6ffffffffff99&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:27:27&lt;/sys_created_on&gt;&lt;sys_id&gt;34bea442ff8aa21078a6ffffffffffc7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Agent Details&lt;/sys_name&gt;&lt;sys_package display_value="Now Assist AI Agents" source="sn_aia"&gt;32808450431302106c3603295bb8f245&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Assist AI Agents"&gt;32808450431302106c3603295bb8f245&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_a8bea442ff8aa21078a6ffffffffff99_agent_details_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-11 15:27:27&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a8bea442ff8aa21078a6ffffffffff99"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;5826f16dff82621078a6ffffffffffda&lt;/sys_id&gt;&lt;latest_snapshot&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/latest_snapshot&gt;&lt;compiler_build/&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=5826f16dff82621078a6ffffffffffda"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=5826f16dff82621078a6ffffffffffda^sys_idNOT IN34bea442ff8aa21078a6ffffffffffe3"/&gt;&lt;sys_flow_subflow_plan action="INSERT_OR_UPDATE"&gt;&lt;plan&gt;com.snc.process_flow.engine.ProcessPlan@7c7f47d6&lt;/plan&gt;&lt;plan_id display_value="External AI Agent Card - A2A Protocol"&gt;5826f16dff82621078a6ffffffffffda&lt;/plan_id&gt;&lt;snapshot&gt;a8bea442ff8aa21078a6ffffffffff99&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-11 15:27:27&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;34bea442ff8aa21078a6ffffffffffe3&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-21 16:18:25&lt;/sys_updated_on&gt;&lt;/sys_flow_subflow_plan&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-230237070</payload_hash>
+        <record_name>External AI Agent Card - A2A Protocol</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:35:33</sys_created_on>
+        <sys_id>b497d87eedee03107f44863610ff212e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb3df39b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:35:33</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>f497d87e04ee03107d000c94c541692d</update_guid>
+        <update_guid_history>f497d87e04ee03107d000c94c541692d:-230237070,6c97d87e8bee03106a06aa17f7575a16:695538359</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:39:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>b0faef43626743e29c5bdf036118a249</sys_id>
+        <sys_metadata>5826f16dff82621078a6ffffffffffda</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>External AI Agent Card - A2A Protocol</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_5826f16dff82621078a6ffffffffffda</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_5826f16dff82621078a6ffffffffffda">b497d87eedee03107f44863610ff212e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:39:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

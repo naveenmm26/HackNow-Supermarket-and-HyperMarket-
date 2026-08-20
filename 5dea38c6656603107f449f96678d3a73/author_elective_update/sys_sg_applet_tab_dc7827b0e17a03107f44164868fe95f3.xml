@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_tab">
+    <sys_sg_applet_tab action="DELETE">
+        <active>true</active>
+        <icon display_value="User">1dcb41a2b72200108223e126de11a991</icon>
+        <label>User / Profile</label>
+        <screen display_value="FG360 Today Checklists List Screen">3ea1d36fe92a03107f44cf798e4159bc</screen>
+        <sys_class_name>sys_sg_applet_tab</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 06:55:57</sys_created_on>
+        <sys_id>dc7827b0e17a03107f44164868fe95f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User / Profile</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_applet_tab_dc7827b0e17a03107f44164868fe95f3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 06:55:57</sys_updated_on>
+    </sys_sg_applet_tab>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_sg_applet_tab_dc7827b0e17a03107f44164868fe95f3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_tab"><sys_sg_applet_tab action="INSERT_OR_UPDATE"><active>true</active><icon display_value="User">1dcb41a2b72200108223e126de11a991</icon><label>User / Profile</label><screen display_value="FG360 Today Checklists List Screen">3ea1d36fe92a03107f44cf798e4159bc</screen><sys_class_name>sys_sg_applet_tab</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-17 06:55:57</sys_created_on><sys_id>dc7827b0e17a03107f44164868fe95f3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>User / Profile</sys_name><sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package><sys_policy/><sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope><sys_update_name>sys_sg_applet_tab_dc7827b0e17a03107f44164868fe95f3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-17 06:55:57</sys_updated_on></sys_sg_applet_tab></record_update>]]></payload>
+        <payload_hash>-2037760837</payload_hash>
+        <record_name>User / Profile</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 06:55:57</sys_created_on>
+        <sys_id>dc7827b0e17a03107f44164868fe95f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a00e8169270000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 06:55:57</sys_updated_on>
+        <type>Screen tab</type>
+        <update_guid>dc7827b0767a0310c8d7224b04dabcf5</update_guid>
+        <update_guid_history>dc7827b0767a0310c8d7224b04dabcf5:-2037760837</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 08:10:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_applet_tab">sys_sg_applet_tab</sys_db_object>
+        <sys_id>2e8d99478faa44fa82161ebcee0f5ac4</sys_id>
+        <sys_metadata>dc7827b0e17a03107f44164868fe95f3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User / Profile</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_sg_applet_tab_dc7827b0e17a03107f44164868fe95f3</sys_update_name>
+        <sys_update_version display_value="sys_sg_applet_tab_dc7827b0e17a03107f44164868fe95f3">dc7827b0e17a03107f44164868fe95f6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 08:10:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

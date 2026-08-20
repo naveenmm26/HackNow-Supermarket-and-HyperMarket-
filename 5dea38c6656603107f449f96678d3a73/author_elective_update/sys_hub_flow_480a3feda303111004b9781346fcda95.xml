@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Get automation request from process name string matching</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>get_automation_request_from_process_name_string_matching</internal_name>
+        <label_cache>[{"name":"subflow.records","label":"Input➛records","reference":"sn_ac_automation_request","reference_display":"Automation Request","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"7fb89992-902b-4529-9f5d-581f24e89276"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.__dont_treat_as_error__","label":"1 - Return automation request records from process name➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"32a69463-d286-4b1e-9048-e845c0d6e483"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.__action_status__","label":"1 - Return automation request records from process name➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f17400ed-5707-4e74-a64a-01b12ce0d36c"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.automationreqrec","label":"1 - Return automation request records from process name➛Automation Request Records","reference":"sn_ac_automation_request","reference_display":"Automation Request","type":"records","base_type":"records","attributes":{"uiType":"records","uiTypeLabel":"Records","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9dd7ed26-fcf6-4374-9bec-c12469f00916"}},{"name":"subflow.processname","label":"Input➛processName","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiTypeLabel":"String","child_label":"processName_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","child_type":"string","child_name":"processname_child0","child_uiUniqueId":"a8f894e6-ad1f-4cff-ab20-42360581cff0","uiUniqueId":"3c5b5fe3-677d-4fe7-aebb-248069e57db0","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master_snapshot>ef9b7761a343111004b9781346fcdae9</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Get automation request from process name string matching</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:05:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>480a3feda303111004b9781346fcda95</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Get automation request from process name string matching</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_480a3feda303111004b9781346fcda95</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:34:00</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=480a3feda303111004b9781346fcda95"/>
+    <sys_variable_value action="DELETE" query="document_key=480a3feda303111004b9781346fcda95"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_480a3feda303111004b9781346fcda95^id=480a3feda303111004b9781346fcda95"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=480a3feda303111004b9781346fcda95"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=480a3feda303111004b9781346fcda95^sys_idNOT INc00a3feda303111004b9781346fcda96"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>480a3feda303111004b9781346fcda95</id>
+        <name>Get automation request from process name string matching</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:05:45</sys_created_on>
+        <sys_id>c00a3feda303111004b9781346fcda96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-09 05:05:45</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=c00a3feda303111004b9781346fcda96"/>
+    <sys_hub_flow_input action="DELETE" query="model=480a3feda303111004b9781346fcda95^sys_idNOT IN558bb361a343111004b9781346fcda03,f6d9ef39a313111004b9781346fcda9d"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=processName_child0,child_name=processname_child0,child_type=string,child_type_label=String,child_uiUniqueId=a8f894e6-ad1f-4cff-ab20-42360581cff0,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3c5b5fe3-677d-4fe7-aebb-248069e57db0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>processname</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>processName</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Get automation request from process name string matching">480a3feda303111004b9781346fcda95</model>
+        <model_id>480a3feda303111004b9781346fcda95</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_480a3feda303111004b9781346fcda95</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:23</sys_created_on>
+        <sys_id>558bb361a343111004b9781346fcda03</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:49:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=558bb361a343111004b9781346fcda03"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=7fb89992-902b-4529-9f5d-581f24e89276</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sn_ac_automation_request</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>records</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>records</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get automation request from process name string matching">480a3feda303111004b9781346fcda95</model>
+        <model_id>480a3feda303111004b9781346fcda95</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_480a3feda303111004b9781346fcda95</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sn_ac_automation_request">sn_ac_automation_request</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-22 08:49:23</sys_created_on>
+        <sys_id>f6d9ef39a313111004b9781346fcda9d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:49:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=f6d9ef39a313111004b9781346fcda9d"/>
+    <sys_hub_flow_output action="DELETE" query="model=480a3feda303111004b9781346fcda95^sys_idNOT IN156d0436a393111004b9781346fcda10"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=4880183e-d6c2-457a-a89d-44f54d24aad1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sn_ac_automation_request</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>automationrequest</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Records">records</internal_type>
+        <label>automationRequest</label>
+        <mandatory>false</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Get automation request from process name string matching">480a3feda303111004b9781346fcda95</model>
+        <model_id>480a3feda303111004b9781346fcda95</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_480a3feda303111004b9781346fcda95</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sn_ac_automation_request">sn_ac_automation_request</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-24 19:20:05</sys_created_on>
+        <sys_id>156d0436a393111004b9781346fcda10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-24 19:20:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=156d0436a393111004b9781346fcda10"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=480a3feda303111004b9781346fcda95"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=480a3feda303111004b9781346fcda95"/>
+    <sys_hub_action_instance action="DELETE" query="flow=480a3feda303111004b9781346fcda95^sys_idNOT IN36d9ef39a313111004b9781346fcdab0"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Return automation request records from process name">4799eb39a313111004b9781346fcda23</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get automation request from process name string matching">480a3feda303111004b9781346fcda95</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-22 08:49:23</sys_created_on>
+        <sys_id>36d9ef39a313111004b9781346fcdab0</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-05 16:28:41</sys_updated_on>
+        <ui_id>b1c5a29d-3f89-4b62-bcc0-50a5b87654ca</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=36d9ef39a313111004b9781346fcdab0"/>
+    <sys_element_mapping action="DELETE" query="id=36d9ef39a313111004b9781346fcdab0"/>
+    <sys_element_mapping action="DELETE">
+        <field>processname</field>
+        <id>36d9ef39a313111004b9781346fcdab0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-22 08:49:23</sys_created_on>
+        <sys_id>b6d9ef39a313111004b9781346fcdab2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:49:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_4799eb39a313111004b9781346fcda23</table>
+        <value>{{subflow.processname}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>records</field>
+        <id>36d9ef39a313111004b9781346fcdab0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-22 08:49:23</sys_created_on>
+        <sys_id>f2d9ef39a313111004b9781346fcdab2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:49:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_4799eb39a313111004b9781346fcda23</table>
+        <value>{{subflow.records}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=36d9ef39a313111004b9781346fcdab0"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=36d9ef39a313111004b9781346fcdab0"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=480a3feda303111004b9781346fcda95^sys_idNOT IN5d8bf361a343111004b9781346fcda50"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">83e8378c7710a510e1e3cf7fbd5a9929</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get automation request from process name string matching">480a3feda303111004b9781346fcda95</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned>automationrequest</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:24</sys_created_on>
+        <sys_id>5d8bf361a343111004b9781346fcda50</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-05 16:28:41</sys_updated_on>
+        <ui_id>dfc37a22-e726-4ab4-a788-3aff6829c57b</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=5d8bf361a343111004b9781346fcda50"/>
+    <sys_element_mapping action="DELETE" query="id=5d8bf361a343111004b9781346fcda50"/>
+    <sys_element_mapping action="DELETE">
+        <field>automationrequest</field>
+        <id>5d8bf361a343111004b9781346fcda50</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:24</sys_created_on>
+        <sys_id>558bf361a343111004b9781346fcda54</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:50:59</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_480a3feda303111004b9781346fcda95</table>
+        <value>{{b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.automationreqrec}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=5d8bf361a343111004b9781346fcda50"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=5d8bf361a343111004b9781346fcda50"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=480a3feda303111004b9781346fcda95"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=480a3feda303111004b9781346fcda95"/>
+    <sys_hub_flow_variable action="DELETE" query="model=480a3feda303111004b9781346fcda95"/>
+    <sys_documentation action="DELETE">
+        <element>records</element>
+        <help/>
+        <hint/>
+        <label>records</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_480a3feda303111004b9781346fcda95</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-22 08:49:23</sys_created_on>
+        <sys_id>32d9ef39a313111004b9781346fcdaa2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>records</sys_name>
+        <sys_package display_value="Automation Center" source="sn_ac">ae2a30de771001100175a9077b5a999e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:49:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>processname</element>
+        <help/>
+        <hint/>
+        <label>processName</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_480a3feda303111004b9781346fcda95</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:23</sys_created_on>
+        <sys_id>558bf361a343111004b9781346fcda3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>processName</sys_name>
+        <sys_package display_value="Automation Center" source="sn_ac">ae2a30de771001100175a9077b5a999e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-09 05:12:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_480a3feda303111004b9781346fcda95"/>
+    <sys_documentation action="DELETE">
+        <element>automationrequest</element>
+        <help/>
+        <hint/>
+        <label>automationRequest</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_480a3feda303111004b9781346fcda95</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-24 19:20:06</sys_created_on>
+        <sys_id>156d0436a393111004b9781346fcda14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>automationRequest</sys_name>
+        <sys_package display_value="Automation Center" source="sn_ac">ae2a30de771001100175a9077b5a999e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-24 19:20:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_480a3feda303111004b9781346fcda95"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Get automation request from process name string matching</description>
+        <flow_priority/>
+        <internal_name>get_automation_request_from_process_name_string_matching</internal_name>
+        <label_cache>[{"name":"subflow.records","label":"Input➛records","reference":"sn_ac_automation_request","reference_display":"Automation Request","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"7fb89992-902b-4529-9f5d-581f24e89276"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.__dont_treat_as_error__","label":"1 - Return automation request records from process name➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"32a69463-d286-4b1e-9048-e845c0d6e483"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.__action_status__","label":"1 - Return automation request records from process name➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f17400ed-5707-4e74-a64a-01b12ce0d36c"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.automationreqrec","label":"1 - Return automation request records from process name➛Automation Request Records","reference":"sn_ac_automation_request","reference_display":"Automation Request","type":"records","base_type":"records","attributes":{"uiType":"records","uiTypeLabel":"Records","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9dd7ed26-fcf6-4374-9bec-c12469f00916"}},{"name":"subflow.processname","label":"Input➛processName","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiTypeLabel":"String","child_label":"processName_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","child_type":"string","child_name":"processname_child0","child_uiUniqueId":"a8f894e6-ad1f-4cff-ab20-42360581cff0","uiUniqueId":"3c5b5fe3-677d-4fe7-aebb-248069e57db0","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master>true</master>
+        <name>Get automation request from process name string matching</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Get automation request from process name string matching">480a3feda303111004b9781346fcda95</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ef9b7761a343111004b9781346fcdae9</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-05 16:28:40</sys_updated_on>
+        <type>subflow</type>
+        <version/>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=ef9b7761a343111004b9781346fcdae9"/>
+    <sys_variable_value action="DELETE" query="document_key=ef9b7761a343111004b9781346fcdae9"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_ef9b7761a343111004b9781346fcdae9^id=ef9b7761a343111004b9781346fcdae9"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=ef9b7761a343111004b9781346fcdae9"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=ef9b7761a343111004b9781346fcdae9^sys_idNOT INe79b7761a343111004b9781346fcdaea"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>ef9b7761a343111004b9781346fcdae9</id>
+        <name>Get automation request from process name string matching</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:49</sys_created_on>
+        <sys_id>e79b7761a343111004b9781346fcdaea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-09 05:12:49</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=e79b7761a343111004b9781346fcdaea"/>
+    <sys_hub_flow_input action="DELETE" query="model=ef9b7761a343111004b9781346fcdae9^sys_idNOT IN3b9b7761a343111004b9781346fcdaeb,c73aa779a313111004b9781346fcdaa8"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=processName_child0,child_name=processname_child0,child_type=string,child_type_label=String,child_uiUniqueId=a8f894e6-ad1f-4cff-ab20-42360581cff0,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3c5b5fe3-677d-4fe7-aebb-248069e57db0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>processname</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>processName</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Get automation request from process name string matching">ef9b7761a343111004b9781346fcdae9</model>
+        <model_id>ef9b7761a343111004b9781346fcdae9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ef9b7761a343111004b9781346fcdae9</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:49</sys_created_on>
+        <sys_id>3b9b7761a343111004b9781346fcdaeb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:51:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=3b9b7761a343111004b9781346fcdaeb"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=7fb89992-902b-4529-9f5d-581f24e89276</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sn_ac_automation_request</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>records</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>records</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get automation request from process name string matching">ef9b7761a343111004b9781346fcdae9</model>
+        <model_id>ef9b7761a343111004b9781346fcdae9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_ef9b7761a343111004b9781346fcdae9</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sn_ac_automation_request">sn_ac_automation_request</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-22 08:51:03</sys_created_on>
+        <sys_id>c73aa779a313111004b9781346fcdaa8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:51:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=c73aa779a313111004b9781346fcdaa8"/>
+    <sys_hub_flow_output action="DELETE" query="model=ef9b7761a343111004b9781346fcdae9^sys_idNOT INe66d4436a393111004b9781346fcda28"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=4880183e-d6c2-457a-a89d-44f54d24aad1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sn_ac_automation_request</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>automationrequest</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Records">records</internal_type>
+        <label>automationRequest</label>
+        <mandatory>false</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Get automation request from process name string matching">ef9b7761a343111004b9781346fcdae9</model>
+        <model_id>ef9b7761a343111004b9781346fcdae9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_ef9b7761a343111004b9781346fcdae9</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sn_ac_automation_request">sn_ac_automation_request</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-24 19:20:11</sys_created_on>
+        <sys_id>e66d4436a393111004b9781346fcda28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-24 19:20:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=e66d4436a393111004b9781346fcda28"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=ef9b7761a343111004b9781346fcdae9"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=ef9b7761a343111004b9781346fcdae9"/>
+    <sys_hub_action_instance action="DELETE" query="flow=ef9b7761a343111004b9781346fcdae9^sys_idNOT IN1f3aa779a313111004b9781346fcdae7"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Return automation request records from process name">4799eb39a313111004b9781346fcda23</action_type>
+        <action_type_parent display_value="Return automation request records from process name">6ff667b5a313111004b9781346fcda61</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Get automation request from process name string matching">ef9b7761a343111004b9781346fcdae9</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-22 08:51:03</sys_created_on>
+        <sys_id>1f3aa779a313111004b9781346fcdae7</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-05 16:28:40</sys_updated_on>
+        <ui_id>b1c5a29d-3f89-4b62-bcc0-50a5b87654ca</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=1f3aa779a313111004b9781346fcdae7"/>
+    <sys_element_mapping action="DELETE" query="id=1f3aa779a313111004b9781346fcdae7"/>
+    <sys_element_mapping action="DELETE">
+        <field>processname</field>
+        <id>1f3aa779a313111004b9781346fcdae7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-22 08:51:03</sys_created_on>
+        <sys_id>9f3aa779a313111004b9781346fcdae8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:51:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_4799eb39a313111004b9781346fcda23</table>
+        <value>{{subflow.processname}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>records</field>
+        <id>1f3aa779a313111004b9781346fcdae7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-22 08:51:03</sys_created_on>
+        <sys_id>db3aa779a313111004b9781346fcdae8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:51:03</sys_updated_on>
+        <table>var__m_sys_hub_action_input_4799eb39a313111004b9781346fcda23</table>
+        <value>{{subflow.records}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=1f3aa779a313111004b9781346fcdae7"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=1f3aa779a313111004b9781346fcdae7"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=ef9b7761a343111004b9781346fcdae9^sys_idNOT IN739bb761a343111004b9781346fcda08"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">83e8378c7710a510e1e3cf7fbd5a9929</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Get automation request from process name string matching">ef9b7761a343111004b9781346fcdae9</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned>automationrequest</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:50</sys_created_on>
+        <sys_id>739bb761a343111004b9781346fcda08</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-05 16:28:40</sys_updated_on>
+        <ui_id>dfc37a22-e726-4ab4-a788-3aff6829c57b</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=739bb761a343111004b9781346fcda08"/>
+    <sys_element_mapping action="DELETE" query="id=739bb761a343111004b9781346fcda08"/>
+    <sys_element_mapping action="DELETE">
+        <field>automationrequest</field>
+        <id>739bb761a343111004b9781346fcda08</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:50</sys_created_on>
+        <sys_id>f39bb761a343111004b9781346fcda0b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:51:03</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_ef9b7761a343111004b9781346fcdae9</table>
+        <value>{{b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.automationreqrec}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=739bb761a343111004b9781346fcda08"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=739bb761a343111004b9781346fcda08"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=ef9b7761a343111004b9781346fcdae9"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=ef9b7761a343111004b9781346fcdae9"/>
+    <sys_hub_flow_variable action="DELETE" query="model=ef9b7761a343111004b9781346fcdae9"/>
+    <sys_documentation action="DELETE">
+        <element>processname</element>
+        <help/>
+        <hint/>
+        <label>processName</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ef9b7761a343111004b9781346fcdae9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:49</sys_created_on>
+        <sys_id>379b7761a343111004b9781346fcdaf5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>processName</sys_name>
+        <sys_package display_value="Automation Center" source="sn_ac">ae2a30de771001100175a9077b5a999e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-09 05:12:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>records</element>
+        <help/>
+        <hint/>
+        <label>records</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ef9b7761a343111004b9781346fcdae9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-22 08:51:03</sys_created_on>
+        <sys_id>9b3aa779a313111004b9781346fcdab6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>records</sys_name>
+        <sys_package display_value="Automation Center" source="sn_ac">ae2a30de771001100175a9077b5a999e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-22 08:51:03</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_ef9b7761a343111004b9781346fcdae9"/>
+    <sys_documentation action="DELETE">
+        <element>automationrequest</element>
+        <help/>
+        <hint/>
+        <label>automationRequest</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_ef9b7761a343111004b9781346fcdae9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-24 19:20:11</sys_created_on>
+        <sys_id>6e6d4436a393111004b9781346fcda2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>automationRequest</sys_name>
+        <sys_package display_value="Automation Center" source="sn_ac">ae2a30de771001100175a9077b5a999e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Automation Center">ae2a30de771001100175a9077b5a999e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-24 19:20:11</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_ef9b7761a343111004b9781346fcdae9"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>480a3feda303111004b9781346fcda95</sys_id>
+        <latest_snapshot>ef9b7761a343111004b9781346fcdae9</latest_snapshot>
+        <compiler_build>glide-Thu_Nov_24_21_49_14_IST_2022.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=480a3feda303111004b9781346fcda95"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=480a3feda303111004b9781346fcda95^sys_idNOT IN779bb761a343111004b9781346fcda2b"/>
+    <sys_flow_subflow_plan action="DELETE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@66dea61e</plan>
+        <plan_id display_value="Get automation request from process name string matching">480a3feda303111004b9781346fcda95</plan_id>
+        <snapshot>ef9b7761a343111004b9781346fcdae9</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-09 05:12:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>779bb761a343111004b9781346fcda2b</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-01-05 16:28:41</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_480a3feda303111004b9781346fcda95</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;Get automation request from process name string matching&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority/&gt;&lt;generation_source/&gt;&lt;internal_name&gt;get_automation_request_from_process_name_string_matching&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"subflow.records","label":"Input➛records","reference":"sn_ac_automation_request","reference_display":"Automation Request","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"7fb89992-902b-4529-9f5d-581f24e89276"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.__dont_treat_as_error__","label":"1 - Return automation request records from process name➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"32a69463-d286-4b1e-9048-e845c0d6e483"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.__action_status__","label":"1 - Return automation request records from process name➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f17400ed-5707-4e74-a64a-01b12ce0d36c"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.automationreqrec","label":"1 - Return automation request records from process name➛Automation Request Records","reference":"sn_ac_automation_request","reference_display":"Automation Request","type":"records","base_type":"records","attributes":{"uiType":"records","uiTypeLabel":"Records","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9dd7ed26-fcf6-4374-9bec-c12469f00916"}},{"name":"subflow.processname","label":"Input➛processName","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiTypeLabel":"String","child_label":"processName_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","child_type":"string","child_name":"processname_child0","child_uiUniqueId":"a8f894e6-ad1f-4cff-ab20-42360581cff0","uiUniqueId":"3c5b5fe3-677d-4fe7-aebb-248069e57db0","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;ef9b7761a343111004b9781346fcdae9&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Get automation request from process name string matching&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:05:45&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;480a3feda303111004b9781346fcda95&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Get automation request from process name string matching&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_480a3feda303111004b9781346fcda95&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 10:34:00&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;updation_source/&gt;&lt;version/&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=480a3feda303111004b9781346fcda95"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=480a3feda303111004b9781346fcda95"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_480a3feda303111004b9781346fcda95^id=480a3feda303111004b9781346fcda95"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=480a3feda303111004b9781346fcda95"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=480a3feda303111004b9781346fcda95^sys_idNOT INc00a3feda303111004b9781346fcda96"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;480a3feda303111004b9781346fcda95&lt;/id&gt;&lt;name&gt;Get automation request from process name string matching&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:05:45&lt;/sys_created_on&gt;&lt;sys_id&gt;c00a3feda303111004b9781346fcda96&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-09 05:05:45&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c00a3feda303111004b9781346fcda96"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=480a3feda303111004b9781346fcda95^sys_idNOT IN558bb361a343111004b9781346fcda03,f6d9ef39a313111004b9781346fcda9d"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=processName_child0,child_name=processname_child0,child_type=string,child_type_label=String,child_uiUniqueId=a8f894e6-ad1f-4cff-ab20-42360581cff0,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3c5b5fe3-677d-4fe7-aebb-248069e57db0&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;processname&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;processName&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Get automation request from process name string matching"&gt;480a3feda303111004b9781346fcda95&lt;/model&gt;&lt;model_id&gt;480a3feda303111004b9781346fcda95&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_480a3feda303111004b9781346fcda95&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:23&lt;/sys_created_on&gt;&lt;sys_id&gt;558bb361a343111004b9781346fcda03&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:49:23&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=558bb361a343111004b9781346fcda03"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=7fb89992-902b-4529-9f5d-581f24e89276&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sn_ac_automation_request&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;records&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;records&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Get automation request from process name string matching"&gt;480a3feda303111004b9781346fcda95&lt;/model&gt;&lt;model_id&gt;480a3feda303111004b9781346fcda95&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_480a3feda303111004b9781346fcda95&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sn_ac_automation_request"&gt;sn_ac_automation_request&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 08:49:23&lt;/sys_created_on&gt;&lt;sys_id&gt;f6d9ef39a313111004b9781346fcda9d&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:49:24&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f6d9ef39a313111004b9781346fcda9d"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=480a3feda303111004b9781346fcda95^sys_idNOT IN156d0436a393111004b9781346fcda10"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=4880183e-d6c2-457a-a89d-44f54d24aad1&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sn_ac_automation_request&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;automationrequest&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="Records"&gt;records&lt;/internal_type&gt;&lt;label&gt;automationRequest&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;1024&lt;/max_length&gt;&lt;model display_value="Get automation request from process name string matching"&gt;480a3feda303111004b9781346fcda95&lt;/model&gt;&lt;model_id&gt;480a3feda303111004b9781346fcda95&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_480a3feda303111004b9781346fcda95&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sn_ac_automation_request"&gt;sn_ac_automation_request&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-24 19:20:05&lt;/sys_created_on&gt;&lt;sys_id&gt;156d0436a393111004b9781346fcda10&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-24 19:20:05&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=156d0436a393111004b9781346fcda10"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=480a3feda303111004b9781346fcda95"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=480a3feda303111004b9781346fcda95"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=480a3feda303111004b9781346fcda95^sys_idNOT IN36d9ef39a313111004b9781346fcdab0"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Return automation request records from process name"&gt;4799eb39a313111004b9781346fcda23&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Get automation request from process name string matching"&gt;480a3feda303111004b9781346fcda95&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 08:49:23&lt;/sys_created_on&gt;&lt;sys_id&gt;36d9ef39a313111004b9781346fcdab0&lt;/sys_id&gt;&lt;sys_mod_count&gt;30&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-01-05 16:28:41&lt;/sys_updated_on&gt;&lt;ui_id&gt;b1c5a29d-3f89-4b62-bcc0-50a5b87654ca&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=36d9ef39a313111004b9781346fcdab0"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=36d9ef39a313111004b9781346fcdab0"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;processname&lt;/field&gt;&lt;id&gt;36d9ef39a313111004b9781346fcdab0&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 08:49:23&lt;/sys_created_on&gt;&lt;sys_id&gt;b6d9ef39a313111004b9781346fcdab2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:49:23&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_4799eb39a313111004b9781346fcda23&lt;/table&gt;&lt;value&gt;{{subflow.processname}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;records&lt;/field&gt;&lt;id&gt;36d9ef39a313111004b9781346fcdab0&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 08:49:23&lt;/sys_created_on&gt;&lt;sys_id&gt;f2d9ef39a313111004b9781346fcdab2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:49:23&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_4799eb39a313111004b9781346fcda23&lt;/table&gt;&lt;value&gt;{{subflow.records}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=36d9ef39a313111004b9781346fcdab0"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=36d9ef39a313111004b9781346fcdab0"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=480a3feda303111004b9781346fcda95^sys_idNOT IN5d8bf361a343111004b9781346fcda50"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;83e8378c7710a510e1e3cf7fbd5a9929&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Get automation request from process name string matching"&gt;480a3feda303111004b9781346fcda95&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned&gt;automationrequest&lt;/outputs_assigned&gt;&lt;outputs_to_assign/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:24&lt;/sys_created_on&gt;&lt;sys_id&gt;5d8bf361a343111004b9781346fcda50&lt;/sys_id&gt;&lt;sys_mod_count&gt;26&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-01-05 16:28:41&lt;/sys_updated_on&gt;&lt;ui_id&gt;dfc37a22-e726-4ab4-a788-3aff6829c57b&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=5d8bf361a343111004b9781346fcda50"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=5d8bf361a343111004b9781346fcda50"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;automationrequest&lt;/field&gt;&lt;id&gt;5d8bf361a343111004b9781346fcda50&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:24&lt;/sys_created_on&gt;&lt;sys_id&gt;558bf361a343111004b9781346fcda54&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:50:59&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_480a3feda303111004b9781346fcda95&lt;/table&gt;&lt;value&gt;{{b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.automationreqrec}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5d8bf361a343111004b9781346fcda50"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=5d8bf361a343111004b9781346fcda50"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=480a3feda303111004b9781346fcda95"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=480a3feda303111004b9781346fcda95"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=480a3feda303111004b9781346fcda95"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;records&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;records&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_480a3feda303111004b9781346fcda95&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 08:49:23&lt;/sys_created_on&gt;&lt;sys_id&gt;32d9ef39a313111004b9781346fcdaa2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;records&lt;/sys_name&gt;&lt;sys_package display_value="Automation Center" source="sn_ac"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:49:23&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;processname&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;processName&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_480a3feda303111004b9781346fcda95&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:23&lt;/sys_created_on&gt;&lt;sys_id&gt;558bf361a343111004b9781346fcda3d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;processName&lt;/sys_name&gt;&lt;sys_package display_value="Automation Center" source="sn_ac"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-09 05:12:23&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_480a3feda303111004b9781346fcda95"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;automationrequest&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;automationRequest&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_480a3feda303111004b9781346fcda95&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-24 19:20:06&lt;/sys_created_on&gt;&lt;sys_id&gt;156d0436a393111004b9781346fcda14&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;automationRequest&lt;/sys_name&gt;&lt;sys_package display_value="Automation Center" source="sn_ac"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-24 19:20:06&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_480a3feda303111004b9781346fcda95"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;Get automation request from process name string matching&lt;/description&gt;&lt;flow_priority/&gt;&lt;internal_name&gt;get_automation_request_from_process_name_string_matching&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"subflow.records","label":"Input➛records","reference":"sn_ac_automation_request","reference_display":"Automation Request","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"7fb89992-902b-4529-9f5d-581f24e89276"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.__dont_treat_as_error__","label":"1 - Return automation request records from process name➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"32a69463-d286-4b1e-9048-e845c0d6e483"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.__action_status__","label":"1 - Return automation request records from process name➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f17400ed-5707-4e74-a64a-01b12ce0d36c"}},{"name":"b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.automationreqrec","label":"1 - Return automation request records from process name➛Automation Request Records","reference":"sn_ac_automation_request","reference_display":"Automation Request","type":"records","base_type":"records","attributes":{"uiType":"records","uiTypeLabel":"Records","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9dd7ed26-fcf6-4374-9bec-c12469f00916"}},{"name":"subflow.processname","label":"Input➛processName","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiTypeLabel":"String","child_label":"processName_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","child_type":"string","child_name":"processname_child0","child_uiUniqueId":"a8f894e6-ad1f-4cff-ab20-42360581cff0","uiUniqueId":"3c5b5fe3-677d-4fe7-aebb-248069e57db0","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Get automation request from process name string matching&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Get automation request from process name string matching"&gt;480a3feda303111004b9781346fcda95&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:49&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;ef9b7761a343111004b9781346fcdae9&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-01-05 16:28:40&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;version/&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_ef9b7761a343111004b9781346fcdae9^id=ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=ef9b7761a343111004b9781346fcdae9^sys_idNOT INe79b7761a343111004b9781346fcdaea"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;ef9b7761a343111004b9781346fcdae9&lt;/id&gt;&lt;name&gt;Get automation request from process name string matching&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:49&lt;/sys_created_on&gt;&lt;sys_id&gt;e79b7761a343111004b9781346fcdaea&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-09 05:12:49&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=e79b7761a343111004b9781346fcdaea"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=ef9b7761a343111004b9781346fcdae9^sys_idNOT IN3b9b7761a343111004b9781346fcdaeb,c73aa779a313111004b9781346fcdaa8"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=processName_child0,child_name=processname_child0,child_type=string,child_type_label=String,child_uiUniqueId=a8f894e6-ad1f-4cff-ab20-42360581cff0,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3c5b5fe3-677d-4fe7-aebb-248069e57db0&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;processname&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;processName&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Get automation request from process name string matching"&gt;ef9b7761a343111004b9781346fcdae9&lt;/model&gt;&lt;model_id&gt;ef9b7761a343111004b9781346fcdae9&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_ef9b7761a343111004b9781346fcdae9&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:49&lt;/sys_created_on&gt;&lt;sys_id&gt;3b9b7761a343111004b9781346fcdaeb&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:51:03&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3b9b7761a343111004b9781346fcdaeb"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=7fb89992-902b-4529-9f5d-581f24e89276&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sn_ac_automation_request&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;records&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;records&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Get automation request from process name string matching"&gt;ef9b7761a343111004b9781346fcdae9&lt;/model&gt;&lt;model_id&gt;ef9b7761a343111004b9781346fcdae9&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_ef9b7761a343111004b9781346fcdae9&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sn_ac_automation_request"&gt;sn_ac_automation_request&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 08:51:03&lt;/sys_created_on&gt;&lt;sys_id&gt;c73aa779a313111004b9781346fcdaa8&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:51:03&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c73aa779a313111004b9781346fcdaa8"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=ef9b7761a343111004b9781346fcdae9^sys_idNOT INe66d4436a393111004b9781346fcda28"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=4880183e-d6c2-457a-a89d-44f54d24aad1&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sn_ac_automation_request&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;automationrequest&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="Records"&gt;records&lt;/internal_type&gt;&lt;label&gt;automationRequest&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;1024&lt;/max_length&gt;&lt;model display_value="Get automation request from process name string matching"&gt;ef9b7761a343111004b9781346fcdae9&lt;/model&gt;&lt;model_id&gt;ef9b7761a343111004b9781346fcdae9&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_ef9b7761a343111004b9781346fcdae9&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sn_ac_automation_request"&gt;sn_ac_automation_request&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-24 19:20:11&lt;/sys_created_on&gt;&lt;sys_id&gt;e66d4436a393111004b9781346fcda28&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-24 19:20:11&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e66d4436a393111004b9781346fcda28"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=ef9b7761a343111004b9781346fcdae9^sys_idNOT IN1f3aa779a313111004b9781346fcdae7"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Return automation request records from process name"&gt;4799eb39a313111004b9781346fcda23&lt;/action_type&gt;&lt;action_type_parent display_value="Return automation request records from process name"&gt;6ff667b5a313111004b9781346fcda61&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Get automation request from process name string matching"&gt;ef9b7761a343111004b9781346fcdae9&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 08:51:03&lt;/sys_created_on&gt;&lt;sys_id&gt;1f3aa779a313111004b9781346fcdae7&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-01-05 16:28:40&lt;/sys_updated_on&gt;&lt;ui_id&gt;b1c5a29d-3f89-4b62-bcc0-50a5b87654ca&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=1f3aa779a313111004b9781346fcdae7"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=1f3aa779a313111004b9781346fcdae7"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;processname&lt;/field&gt;&lt;id&gt;1f3aa779a313111004b9781346fcdae7&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 08:51:03&lt;/sys_created_on&gt;&lt;sys_id&gt;9f3aa779a313111004b9781346fcdae8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:51:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_4799eb39a313111004b9781346fcda23&lt;/table&gt;&lt;value&gt;{{subflow.processname}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;records&lt;/field&gt;&lt;id&gt;1f3aa779a313111004b9781346fcdae7&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 08:51:03&lt;/sys_created_on&gt;&lt;sys_id&gt;db3aa779a313111004b9781346fcdae8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:51:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_4799eb39a313111004b9781346fcda23&lt;/table&gt;&lt;value&gt;{{subflow.records}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=1f3aa779a313111004b9781346fcdae7"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=1f3aa779a313111004b9781346fcdae7"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=ef9b7761a343111004b9781346fcdae9^sys_idNOT IN739bb761a343111004b9781346fcda08"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;83e8378c7710a510e1e3cf7fbd5a9929&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Get automation request from process name string matching"&gt;ef9b7761a343111004b9781346fcdae9&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned&gt;automationrequest&lt;/outputs_assigned&gt;&lt;outputs_to_assign/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:50&lt;/sys_created_on&gt;&lt;sys_id&gt;739bb761a343111004b9781346fcda08&lt;/sys_id&gt;&lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-01-05 16:28:40&lt;/sys_updated_on&gt;&lt;ui_id&gt;dfc37a22-e726-4ab4-a788-3aff6829c57b&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=739bb761a343111004b9781346fcda08"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=739bb761a343111004b9781346fcda08"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;automationrequest&lt;/field&gt;&lt;id&gt;739bb761a343111004b9781346fcda08&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:50&lt;/sys_created_on&gt;&lt;sys_id&gt;f39bb761a343111004b9781346fcda0b&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:51:03&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_ef9b7761a343111004b9781346fcdae9&lt;/table&gt;&lt;value&gt;{{b1c5a29d-3f89-4b62-bcc0-50a5b87654ca.automationreqrec}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=739bb761a343111004b9781346fcda08"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=739bb761a343111004b9781346fcda08"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;processname&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;processName&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_ef9b7761a343111004b9781346fcdae9&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:49&lt;/sys_created_on&gt;&lt;sys_id&gt;379b7761a343111004b9781346fcdaf5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;processName&lt;/sys_name&gt;&lt;sys_package display_value="Automation Center" source="sn_ac"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-09 05:12:49&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;records&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;records&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_ef9b7761a343111004b9781346fcdae9&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-22 08:51:03&lt;/sys_created_on&gt;&lt;sys_id&gt;9b3aa779a313111004b9781346fcdab6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;records&lt;/sys_name&gt;&lt;sys_package display_value="Automation Center" source="sn_ac"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-22 08:51:03&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;automationrequest&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;automationRequest&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_ef9b7761a343111004b9781346fcdae9&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-24 19:20:11&lt;/sys_created_on&gt;&lt;sys_id&gt;6e6d4436a393111004b9781346fcda2c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;automationRequest&lt;/sys_name&gt;&lt;sys_package display_value="Automation Center" source="sn_ac"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Automation Center"&gt;ae2a30de771001100175a9077b5a999e&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-24 19:20:11&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_ef9b7761a343111004b9781346fcdae9"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;480a3feda303111004b9781346fcda95&lt;/sys_id&gt;&lt;latest_snapshot&gt;ef9b7761a343111004b9781346fcdae9&lt;/latest_snapshot&gt;&lt;compiler_build&gt;glide-Thu_Nov_24_21_49_14_IST_2022.zip&lt;/compiler_build&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=480a3feda303111004b9781346fcda95"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=480a3feda303111004b9781346fcda95^sys_idNOT IN779bb761a343111004b9781346fcda2b"/&gt;&lt;sys_flow_subflow_plan action="INSERT_OR_UPDATE"&gt;&lt;plan&gt;com.snc.process_flow.engine.ProcessPlan@66dea61e&lt;/plan&gt;&lt;plan_id display_value="Get automation request from process name string matching"&gt;480a3feda303111004b9781346fcda95&lt;/plan_id&gt;&lt;snapshot&gt;ef9b7761a343111004b9781346fcdae9&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-09 05:12:50&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;779bb761a343111004b9781346fcda2b&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-01-05 16:28:41&lt;/sys_updated_on&gt;&lt;/sys_flow_subflow_plan&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-233745461</payload_hash>
+        <record_name>Get automation request from process name string matching</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:34:02</sys_created_on>
+        <sys_id>963754faedee03107f44863610ff2198</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb3c8db80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:34:02</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>d63754fa02ee03103943d7e0239a7697</update_guid>
+        <update_guid_history>d63754fa02ee03103943d7e0239a7697:-233745461,c63754fa3bee03101b9b7b61f664de20:298842246</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:37:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>524999bbcd3240b3b60a6de38bf3a451</sys_id>
+        <sys_metadata>480a3feda303111004b9781346fcda95</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get automation request from process name string matching</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_480a3feda303111004b9781346fcda95</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_480a3feda303111004b9781346fcda95">963754faedee03107f44863610ff2198</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:37:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

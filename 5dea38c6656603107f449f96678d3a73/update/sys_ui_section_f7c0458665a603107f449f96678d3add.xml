@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Region Details" section_id="f7c0458665a603107f449f96678d3add" sys_domain="global" table="x_fresh_guard_360_region" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_region_name</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>00d0458665a603107f449f96678d3ae5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_description</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>c4d0458665a603107f449f96678d3ae5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>8cd0458665a603107f449f96678d3ae5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_regional_manager</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>44d0458665a603107f449f96678d3ae6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_location</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>0cd0458665a603107f449f96678d3ae6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_region_status</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>c0d0458665a603107f449f96678d3ae7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>88d0458665a603107f449f96678d3ae7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_number_of_stores</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>40d0458665a603107f449f96678d3ae8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_state</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>08d0458665a603107f449f96678d3ae8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_region_id</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>ccd0458665a603107f449f96678d3ae8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_id>84d0458665a603107f449f96678d3ae9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Region Details" display_value="Region Details" name="x_fresh_guard_360_region" sys_domain="global" view="Default view">f7c0458665a603107f449f96678d3add</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-08 05:40:17</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Region Details</caption>
+            <header>false</header>
+            <name>x_fresh_guard_360_region</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-08 05:40:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f7c0458665a603107f449f96678d3add</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_fresh_guard_360_region</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+            <sys_update_name>sys_ui_section_f7c0458665a603107f449f96678d3add</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-12 10:39:04</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

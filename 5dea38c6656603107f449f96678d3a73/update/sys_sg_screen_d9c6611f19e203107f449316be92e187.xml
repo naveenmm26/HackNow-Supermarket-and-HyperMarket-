@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_screen">
+    <sys_sg_screen action="INSERT_OR_UPDATE">
+        <available_offline>false</available_offline>
+        <description/>
+        <dynamic_prefetch_count/>
+        <empty_state/>
+        <fetch_type>not_required</fetch_type>
+        <filter/>
+        <hide_filters>false</hide_filters>
+        <hide_screen_name>false</hide_screen_name>
+        <icon/>
+        <name>FG360 - Daily Checklists</name>
+        <roles_override/>
+        <sys_class_name>sys_sg_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 05:38:31</sys_created_on>
+        <sys_id>d9c6611f19e203107f449316be92e187</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FG360 - Daily Checklists</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_screen_d9c6611f19e203107f449316be92e187</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 05:38:31</sys_updated_on>
+    </sys_sg_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=d9c6611f19e203107f449316be92e187"/>
+</record_update>

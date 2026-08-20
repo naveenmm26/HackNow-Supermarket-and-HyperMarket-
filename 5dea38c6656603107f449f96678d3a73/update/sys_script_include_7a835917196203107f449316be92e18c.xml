@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_fresh_guard_360.FreshGuard360StoreOpsData</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>FreshGuard360StoreOpsData</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var FreshGuard360StoreOpsData = Class.create();
+FreshGuard360StoreOpsData.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getStoreOpsMetrics: function() {
+        var result = { kpis: {}, userContext: {} };
+        var userSysId = gs.getUserID();
+        var userFirstName = gs.getUser().getFirstName() || gs.getUser().getDisplayName() || "User";
+        result.userContext.name = userFirstName;
+
+        // Determine Store Context from Employee Record
+        var storeSysId = "";
+        var storeName = "All Stores";
+        var grEmp = new GlideRecord("x_fresh_guard_360_employee");
+        grEmp.addQuery("u_employee_name", userSysId);
+        grEmp.query();
+        if (grEmp.next()) {
+            storeSysId = grEmp.getValue("u_store");
+            if (grEmp.u_store) storeName = grEmp.u_store.getDisplayValue();
+        }
+        result.userContext.storeName = storeName;
+        result.userContext.storeSysId = storeSysId;
+
+        var storeQuery = storeSysId ? "u_store=" + storeSysId : "";
+
+        // 1. KPI Counts
+        result.kpis.totalStores = this._getCount("x_fresh_guard_360_store", "");
+        result.kpis.checklistsCompleted = this._getCount("x_fresh_guard_360_checklist", storeQuery);
+        result.kpis.openIssues = this._getCount("x_fresh_guard_360_issue", (storeQuery ? storeQuery + "^" : "") + "u_status!=resolved^u_status!=closed");
+        result.kpis.highRisks = this._getCount("x_fresh_guard_360_issue", (storeQuery ? storeQuery + "^" : "") + "u_risk_level=high^ORu_risk_level=critical");
+        result.kpis.nearExpiryProducts = this._getCount("x_fresh_guard_360_product", (storeQuery ? storeQuery + "^" : "") + "u_safety_status=near_expiry^ORu_safety_status=expired");
+        result.kpis.overdueCapa = this._getCount("x_fresh_guard_360_capa", (storeQuery ? storeQuery + "^" : "") + "u_status!=completed^u_status!=closed");
+        result.kpis.openInspections = this._getCount("x_fresh_guard_360_inspection", (storeQuery ? storeQuery + "^" : "") + "u_status!=completed^u_status!=closed");
+        result.kpis.activeRecalls = this._getCount("x_fresh_guard_360_recall", "u_status!=completed^u_status!=closed");
+
+        return JSON.stringify(result);
+    },
+    _getCount: function(tableName, query) {
+        try {
+            var ga = new GlideAggregate(tableName);
+            if (query) ga.addEncodedQuery(query);
+            ga.addAggregate("COUNT");
+            ga.query();
+            return ga.next() ? parseInt(ga.getAggregate("COUNT"), 10) : 0;
+        } catch (e) { return 0; }
+    },
+    type: "FreshGuard360StoreOpsData"
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 04:14:31</sys_created_on>
+        <sys_id>7a835917196203107f449316be92e18c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FreshGuard360StoreOpsData</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_script_include_7a835917196203107f449316be92e18c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 04:14:31</sys_updated_on>
+    </sys_script_include>
+</record_update>

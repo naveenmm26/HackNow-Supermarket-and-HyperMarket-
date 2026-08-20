@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1209757000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This process runs every 15 minutes. It looks for user permission records that are waiting to be synced with external systems. Specifically, it searches for records where the external permission status is "Pending" and the sync strategy is either "Scheduled" or "System Scheduled." It then sorts these records by creation date and processes them in batches. The batch size is determined by a system setting (com.snc.documents.external.permission.batch_size). For each record in the batch, the process assigns the user permission using a custom action called "Update User Permission on Document.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>scheduled_document_collaboration</internal_name>
+        <label_cache>[{"name":"566313c3-928c-4e5f-9f9e-9e262ce35a79.Records","label":"1 - Look Up Records➛User Permissions Records","reference":"ds_document_user_can_access_mtom","reference_display":"User Permissions","type":"records","base_type":"records","usedInstances":{"3b92d78f-4745-4e01-9a53-75ed02b5fc2b":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3b92d78f-4745-4e01-9a53-75ed02b5fc2b.item.sys_id","label":"2 - For Each➛User Permissions Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"ds_document_user_can_access_mtom","column_name":"sys_id","usedInstances":{"3742d1e4-cee6-4f5d-86fb-b0bed266073a":["user_permission_sys_id"]}}]</label_cache>
+        <master_snapshot>05f341698333121014c5f26b022bc057</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Scheduled Document Collaboration</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>59f341698333121014c5f26b022bc073</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:18:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>192385e58333121014c5f26b022bc05c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Scheduled Document Collaboration</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_192385e58333121014c5f26b022bc05c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:30:10</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=192385e58333121014c5f26b022bc05c"/>
+    <sys_variable_value action="DELETE" query="document_key=192385e58333121014c5f26b022bc05c"/>
+    <sys_flow_timer_trigger action="DELETE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <published_version/>
+        <run_period>1970-01-01 00:15:00</run_period>
+        <run_start/>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:22:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>59f341698333121014c5f26b022bc073</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 10:11:39</sys_updated_on>
+        <time/>
+        <timer_type>1</timer_type>
+        <trigger_definition/>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="DELETE" query="name=Trigger:59f341698333121014c5f26b022bc073^sys_idNOT IN11f341698333121014c5f26b022bc074"/>
+    <sys_flow_trigger_auto_script action="DELETE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:59f341698333121014c5f26b022bc073</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
+        <run_period>1970-01-01 00:15:00</run_period>
+        <run_start/>
+        <run_time/>
+        <run_type>periodically</run_type>
+        <run_weekinmonth/>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('59f341698333121014c5f26b022bc073');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:22:05</sys_created_on>
+        <sys_id>11f341698333121014c5f26b022bc074</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 07:21:10</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">59f341698333121014c5f26b022bc073</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="DELETE" query="identifier=192385e58333121014c5f26b022bc05c"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=192385e58333121014c5f26b022bc05c"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=192385e58333121014c5f26b022bc05c^sys_idNOT IN912385e58333121014c5f26b022bc05d"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>192385e58333121014c5f26b022bc05c</id>
+        <name>Scheduled Document Collaboration</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:18:33</sys_created_on>
+        <sys_id>912385e58333121014c5f26b022bc05d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 07:18:33</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=912385e58333121014c5f26b022bc05d"/>
+    <sys_hub_flow_input action="DELETE" query="model=192385e58333121014c5f26b022bc05c"/>
+    <sys_hub_flow_output action="DELETE" query="model=192385e58333121014c5f26b022bc05c"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=192385e58333121014c5f26b022bc05c"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=192385e58333121014c5f26b022bc05c^sys_idNOT IN9483c5298333121014c5f26b022bc05e"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Scheduled Document Collaboration">192385e58333121014c5f26b022bc05c</flow>
+        <generation_source/>
+        <name>Repeat</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:20:06</sys_created_on>
+        <sys_id>9483c5298333121014c5f26b022bc05e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 07:21:02</sys_updated_on>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/3VSy07DMBD8FeRziZy2vHJDQpU4QKWCuCAUbexNa2n9wHEKAfHvbB6tEIgoF894Z2dGfv4UBBWSKMQGA0ISM2FcwuiAHruAjG/JaCx1GyEZ75i34DQkHztRpNjiTNTR20e0gSDxQA3UMOijxiiKXMqZ2AO1+NA1t5r1WMGB7ZXjYePAM5BfXchTmfN/ImWRnxVSMqt2hnREJ4rnl5kIEHk69dqfvyjTy+fqrF7qq6VazPmTcn65zKvzRZXP9QKwWrDgn8S//aR/kv/MhO8JnUZ9DPynloig1466440dNzsWYOG9MR84SUWskUMoHMnjsdSm4VK7EVY7bxSuw+BlQBJUNM0oT61192MOPmusoaX0NBXLSNuwHgdkz72LyVL9sPNvm8PClXFDwIkkr4COJ0gpmqpN2PTNI6FlodJCCMZtyxD93gzD7MVmQ3VZTf6NlzZm6zJQvfGMK4JsxfjNAD9BNH2KO5bh4a8hffna9nvHHJPjcgzNF6ZSVgZpek6Niiaka16wP7y/r5dv12tmnNoCAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=192385e58333121014c5f26b022bc05c^sys_idNOT IN5c83c5298333121014c5f26b022bc05f,b9b30d298333121014c5f26b022bc016"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Scheduled Document Collaboration">192385e58333121014c5f26b022bc05c</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:20:06</sys_created_on>
+        <sys_id>5c83c5298333121014c5f26b022bc05f</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 18:50:29</sys_updated_on>
+        <ui_id>566313c3-928c-4e5f-9f9e-9e262ce35a79</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYbW/bNhD+K4Q+tZmgyHHeln7KkmUr0CZF3fVL3REURdncKFIjKSdO4P++IynJgu1kMeAAKfYhCHh3vHvu5SEpf3uIeB6dRafFYZqSwdHpSZoOh2l6fDykZJBlw2OapdlhFsWRJCUDS0sywWA5I6J269zgXNG6ZNLi2jCNKZGYUMqMwaVVJZjm3FSCzL82O/4AK/SJ6ZIbw5U0YEGnXOSayejs2/c4qoiGWJbp6OxhRfVcsIJkTIDplwbtCng7r7ol9rog+9Dfhq6DQuncQUnjiN1ZJnMGGAoiDIujksicWKXnnUQzkt9IsRRMubTgMXLGd4bfQ9zT1NkVDLKiLOi6JW6KFcTFJbFkZHVNba0bUzpVHKob6pGzgtTCXvRlweCmslDcsCWkHXYrUZfyOpQj6hy0vQEJNBHnrHKJOuRNGsVoqm4/tyivuPQ1aZRCUSK6FbFW86y2Ds9DxATzs1GSquJygiutZtxvBixlMhGwSAqhbiGo4ROZEOqAJ1BXklyB/NKLvxLNXRYfwQ1sBkBcwITg0EKjau1LOcNU1MYrNJEm+IoWcWTm5kIQY5aZQ8nxP7XDHerQZIxD0dwWqnllz8HFjDXJLeJn8eUoXY4cVTLntpnzljRukLQkAlcdDbCxxNZmXIPD3GGBYv3ZV88lBRtNLJvM318bOmV5LVgeQ2aWlbgTrBPuhaPtkry+ci15L/ql21TOhsZrsg+bHDQ0HuyMxpDHj0RkCP76eLw9M0MJ/oOe9OTJITtazpNR2uJQyx4/AROmMAOW5S7qGqPW9Ntx4BnwWg7cuKlF2fwxxA0FCs5Evukmu3KKlZvs4P95k71KAgCgHIfucSm49M8SAPpSzEifPn5/XpkzP149XjgZMXSdEQRZhe63ZsIz4LRMGEFs9CXg2QCxvQv8yKzeA62wIcBwZwQYHuyGAA9dml0hN9S8fYm6brb2986erNrDCPY2DBabCLZVzMG2MQ8W6wQebsXg/rAFzeUjM7fjJ+sjjIxf8giYwtYmHg78xbc8nzC7jN5a5creEvH3Jn0zcbhtlE/vBZ6/h0/S9niwpCgwBWtmoHn99+8Ank7rZ8ggDuLtjpBnYGnL8ZHcoc8dmI0Im2MEmM4mvjf9c+R9J22G/HCHj8lXe5O2zdrIwbZnP8RX4y6IEF4RQeaQ9scHlk8ZR/t7Y7m3d+5/HEEO5f65h40cbFQbyBTZKUOOyU6isr8YtQkaeQeohC9bpBm0XSKCPJcS5DyGR6Ksywz+cYNUURhm4dWIfhogLtGvWiuNfofBFC7EiIVieTAzwoX/tUP54TCoGTZUVwCsgtQ8rHGUjCNECuBhC89tZ3ekrAQ7AzQamSmc2FB4isJ3ZWuYQGcnwJuE1hoGwSbe0N8XLi+I+s75ajLrvDjh/lg6zxmxdDoCorSef3MD8IuqHfOAlZ+0gv7a+RunPjhxI2IkTdofpkzSfgIny2/cxDvFjn5hV4yO0vAHE/82gbMVPL95CzAaZB2Kd9Fisfj+Lz5FzFU8EwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=5c83c5298333121014c5f26b022bc05f"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update User Permission on Document">5c9f91e183d31210a58c02bbf12bc0bd</action_type>
+        <action_type_parent display_value="Update User Permission on Document">6deef8ed83931210a58c02bbf12bc09b</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>5c9f91e183d31210a58c02bbf12bc0bd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Scheduled Document Collaboration">192385e58333121014c5f26b022bc05c</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>3b92d78f-4745-4e01-9a53-75ed02b5fc2b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:21:02</sys_created_on>
+        <sys_id>b9b30d298333121014c5f26b022bc016</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 18:50:30</sys_updated_on>
+        <ui_id>3742d1e4-cee6-4f5d-86fb-b0bed266073a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6VSy27bMBD8FYNnSdAzln0rEgQI0DZF3eQSBMKKXNkEKEohKSeq4X/v0pKdIr0E6HFnZ3dnhnw6MCnYml3xJL4q0qLMRJakSQxFyeO0rpskrXmcZCxgGlok5mDRVD2aVlorO13Z0Va0ImB7UIMnHA5ZvUrFsmzCfJkXYY5xEq6gyMJlgYKWFg1P60g6bKNp+HikcSFtr2B8/L8tfCeVMKjZ+uk5YD0YEu3QsPXhQ+uzrhXUqIj6QLYXPy62F5vRLu7EJ2JxY+/71hmpt3P9dV66OYOdEV5kEjB8c6gFkroGlMWAtaAFuM6MbO3MQIBBEPdajRfGTmpHy5jnvln5m86VcRx7ZoNkmOPUvZTVnPUENzfggJQM3A1mpvJdJznaKSqBDQzKXf+NTYT73pHXacRBrc7TnRpa/X0Khl0WnJ+WEEqrEth7p177bKTZ7LrXn2eVt1KfQpmbquOgLhU4iq4enNdzYIP89SHlCfknZ1TY0sWqhb4npOpNt5enKyS6jbaKiqhR3Sups3KrI+DeYUQvANEt4Tcn+BGM9Ha/0Roa9ucetHwZ8M7/qnrJ81zEGJZlQR93mWK4SlZxWCIWmGeASZqzY8Doi1wrsPY9KHqh6mXwNqfY5oCqKWM/wo3s3RcStcc5i+PzH+Dp8qzEAwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=b9b30d298333121014c5f26b022bc016"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=192385e58333121014c5f26b022bc05c"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=192385e58333121014c5f26b022bc05c^sys_idNOT IN39b30d298333121014c5f26b022bc015"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">1be9cdc2370022105aab49ae64924bcb</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Scheduled Document Collaboration">192385e58333121014c5f26b022bc05c</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:21:02</sys_created_on>
+        <sys_id>39b30d298333121014c5f26b022bc015</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 07:21:10</sys_updated_on>
+        <ui_id>3b92d78f-4745-4e01-9a53-75ed02b5fc2b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51STU/jMBD9Lz63UT5olvSGtELiAEgs4oJQNLEnrbWO7bWdlmyU/864SQviyCmZNzNv3vPMyEwfbB/8s7nxXu40276+rZjUEaP/kWnokG2ZDNh5tmIHUH2Mx3FTlkVW8GJd5dd8fYWbdl21Fa4rzMucY7GBX1XyhNw44aeJWoX0VsHw8nMGvpdKOFxEWnCkLaBj2/FbKgwWawUNKhq0MFC/FBRmlWirLK14kZdFnqb59VXWlEWT5aIAFCXVnTvvFtPf3iCyU+guvPSJKvJ0xfA9oBZIg1pQHlesAy0gGDewbXA9AQ5BPGo1XCr2UgeiY7H23cv/xJ2laSxskRxxnJOXsF4ecob53kiOjzZIo2ckQKOWHm5U3+mHWX5cAbbQq3BeASG9Jz60UXNUsUhq/+zN8ek88Fbqk78lqQwHdYkgBCebPqCPa0CFHRHVHVgr9a62zhzkqZm0dMlOUZC0yhxpaDy3BHgUntATQXJL+O8T/AJORhf3REPN08l9/a+Pc2cfi+J6Nk0Fnjtpww3RHXARN73Fe52Z/HwYArn0NPA5YnfnK4+JgZYs+VfoaNzfKPUTmz4Ahi7hEy8DAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=192385e58333121014c5f26b022bc05c"/>
+    <sys_hub_flow_variable action="DELETE" query="model=192385e58333121014c5f26b022bc05c"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_192385e58333121014c5f26b022bc05c"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_192385e58333121014c5f26b022bc05c"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This process runs every 15 minutes. It looks for user permission records that are waiting to be synced with external systems. Specifically, it searches for records where the external permission status is "Pending" and the sync strategy is either "Scheduled" or "System Scheduled." It then sorts these records by creation date and processes them in batches. The batch size is determined by a system setting (com.snc.documents.external.permission.batch_size). For each record in the batch, the process assigns the user permission using a custom action called "Update User Permission on Document.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>scheduled_document_collaboration</internal_name>
+        <label_cache>[{"name":"566313c3-928c-4e5f-9f9e-9e262ce35a79.Records","label":"1 - Look Up Records➛User Permissions Records","reference":"ds_document_user_can_access_mtom","reference_display":"User Permissions","type":"records","base_type":"records","usedInstances":{"3b92d78f-4745-4e01-9a53-75ed02b5fc2b":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3b92d78f-4745-4e01-9a53-75ed02b5fc2b.item.sys_id","label":"2 - For Each➛User Permissions Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"ds_document_user_can_access_mtom","column_name":"sys_id","usedInstances":{"3742d1e4-cee6-4f5d-86fb-b0bed266073a":["user_permission_sys_id"]}}]</label_cache>
+        <master>true</master>
+        <name>Scheduled Document Collaboration</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Scheduled Document Collaboration">192385e58333121014c5f26b022bc05c</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:22:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>05f341698333121014c5f26b022bc057</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 07:21:10</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=05f341698333121014c5f26b022bc057"/>
+    <sys_variable_value action="DELETE" query="document_key=05f341698333121014c5f26b022bc057"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=05f341698333121014c5f26b022bc057"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=05f341698333121014c5f26b022bc057^sys_idNOT IN89f341698333121014c5f26b022bc057"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>05f341698333121014c5f26b022bc057</id>
+        <name>Scheduled Document Collaboration</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:22:05</sys_created_on>
+        <sys_id>89f341698333121014c5f26b022bc057</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 07:22:05</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=89f341698333121014c5f26b022bc057"/>
+    <sys_hub_flow_input action="DELETE" query="model=05f341698333121014c5f26b022bc057"/>
+    <sys_hub_flow_output action="DELETE" query="model=05f341698333121014c5f26b022bc057"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=05f341698333121014c5f26b022bc057"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=05f341698333121014c5f26b022bc057^sys_idNOT IN45f341698333121014c5f26b022bc060"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Scheduled Document Collaboration">05f341698333121014c5f26b022bc057</flow>
+        <generation_source/>
+        <name>Repeat</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:22:05</sys_created_on>
+        <sys_id>45f341698333121014c5f26b022bc060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 07:22:05</sys_updated_on>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/3VSy07DMBD8FeRziZy2vHJDQpU4QKWCuCAUbexNa2n9wHEKAfHvbB6tEIgoF894Z2dGfv4UBBWSKMQGA0ISM2FcwuiAHruAjG/JaCx1GyEZ75i34DQkHztRpNjiTNTR20e0gSDxQA3UMOijxiiKXMqZ2AO1+NA1t5r1WMGB7ZXjYePAM5BfXchTmfN/ImWRnxVSMqt2hnREJ4rnl5kIEHk69dqfvyjTy+fqrF7qq6VazPmTcn65zKvzRZXP9QKwWrDgn8S//aR/kv/MhO8JnUZ9DPynloig1466440dNzsWYOG9MR84SUWskUMoHMnjsdSm4VK7EVY7bxSuw+BlQBJUNM0oT61192MOPmusoaX0NBXLSNuwHgdkz72LyVL9sPNvm8PClXFDwIkkr4COJ0gpmqpN2PTNI6FlodJCCMZtyxD93gzD7MVmQ3VZTf6NlzZm6zJQvfGMK4JsxfjNAD9BNH2KO5bh4a8hffna9nvHHJPjcgzNF6ZSVgZpek6Niiaka16wP7y/r5dv12tmnNoCAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=05f341698333121014c5f26b022bc057^sys_idNOT IN81f341698333121014c5f26b022bc05f,cdf341698333121014c5f26b022bc05f"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Scheduled Document Collaboration">05f341698333121014c5f26b022bc057</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:22:05</sys_created_on>
+        <sys_id>81f341698333121014c5f26b022bc05f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 07:21:10</sys_updated_on>
+        <ui_id>566313c3-928c-4e5f-9f9e-9e262ce35a79</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYbW/bNhD+K4Q+tZmgyHHeln7KkmUr0CZF3fVL3REURdncKFIjKSdO4P++IynJgu1kMeAAKfYhCHh3vHvu5SEpf3uIeB6dRafFYZqSwdHpSZoOh2l6fDykZJBlw2OapdlhFsWRJCUDS0sywWA5I6J269zgXNG6ZNLi2jCNKZGYUMqMwaVVJZjm3FSCzL82O/4AK/SJ6ZIbw5U0YEGnXOSayejs2/c4qoiGWJbp6OxhRfVcsIJkTIDplwbtCng7r7ol9rog+9Dfhq6DQuncQUnjiN1ZJnMGGAoiDIujksicWKXnnUQzkt9IsRRMubTgMXLGd4bfQ9zT1NkVDLKiLOi6JW6KFcTFJbFkZHVNba0bUzpVHKob6pGzgtTCXvRlweCmslDcsCWkHXYrUZfyOpQj6hy0vQEJNBHnrHKJOuRNGsVoqm4/tyivuPQ1aZRCUSK6FbFW86y2Ds9DxATzs1GSquJygiutZtxvBixlMhGwSAqhbiGo4ROZEOqAJ1BXklyB/NKLvxLNXRYfwQ1sBkBcwITg0EKjau1LOcNU1MYrNJEm+IoWcWTm5kIQY5aZQ8nxP7XDHerQZIxD0dwWqnllz8HFjDXJLeJn8eUoXY4cVTLntpnzljRukLQkAlcdDbCxxNZmXIPD3GGBYv3ZV88lBRtNLJvM318bOmV5LVgeQ2aWlbgTrBPuhaPtkry+ci15L/ql21TOhsZrsg+bHDQ0HuyMxpDHj0RkCP76eLw9M0MJ/oOe9OTJITtazpNR2uJQyx4/AROmMAOW5S7qGqPW9Ntx4BnwWg7cuKlF2fwxxA0FCs5Evukmu3KKlZvs4P95k71KAgCgHIfucSm49M8SAPpSzEifPn5/XpkzP149XjgZMXSdEQRZhe63ZsIz4LRMGEFs9CXg2QCxvQv8yKzeA62wIcBwZwQYHuyGAA9dml0hN9S8fYm6brb2986erNrDCPY2DBabCLZVzMG2MQ8W6wQebsXg/rAFzeUjM7fjJ+sjjIxf8giYwtYmHg78xbc8nzC7jN5a5creEvH3Jn0zcbhtlE/vBZ6/h0/S9niwpCgwBWtmoHn99+8Ank7rZ8ggDuLtjpBnYGnL8ZHcoc8dmI0Im2MEmM4mvjf9c+R9J22G/HCHj8lXe5O2zdrIwbZnP8RX4y6IEF4RQeaQ9scHlk8ZR/t7Y7m3d+5/HEEO5f65h40cbFQbyBTZKUOOyU6isr8YtQkaeQeohC9bpBm0XSKCPJcS5DyGR6Ksywz+cYNUURhm4dWIfhogLtGvWiuNfofBFC7EiIVieTAzwoX/tUP54TCoGTZUVwCsgtQ8rHGUjCNECuBhC89tZ3ekrAQ7AzQamSmc2FB4isJ3ZWuYQGcnwJuE1hoGwSbe0N8XLi+I+s75ajLrvDjh/lg6zxmxdDoCorSef3MD8IuqHfOAlZ+0gv7a+RunPjhxI2IkTdofpkzSfgIny2/cxDvFjn5hV4yO0vAHE/82gbMVPL95CzAaZB2Kd9Fisfj+Lz5FzFU8EwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=81f341698333121014c5f26b022bc05f"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update User Permission on Document">5c9f91e183d31210a58c02bbf12bc0bd</action_type>
+        <action_type_parent display_value="Update User Permission on Document">6deef8ed83931210a58c02bbf12bc09b</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>5c9f91e183d31210a58c02bbf12bc0bd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Scheduled Document Collaboration">05f341698333121014c5f26b022bc057</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>3b92d78f-4745-4e01-9a53-75ed02b5fc2b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:22:05</sys_created_on>
+        <sys_id>cdf341698333121014c5f26b022bc05f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-18 07:22:05</sys_updated_on>
+        <ui_id>3742d1e4-cee6-4f5d-86fb-b0bed266073a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6VSy27bMBD8FYNnSdAzln0rEgQI0DZF3eQSBMKKXNkEKEohKSeq4X/v0pKdIr0E6HFnZ3dnhnw6MCnYml3xJL4q0qLMRJakSQxFyeO0rpskrXmcZCxgGlok5mDRVD2aVlorO13Z0Va0ImB7UIMnHA5ZvUrFsmzCfJkXYY5xEq6gyMJlgYKWFg1P60g6bKNp+HikcSFtr2B8/L8tfCeVMKjZ+uk5YD0YEu3QsPXhQ+uzrhXUqIj6QLYXPy62F5vRLu7EJ2JxY+/71hmpt3P9dV66OYOdEV5kEjB8c6gFkroGlMWAtaAFuM6MbO3MQIBBEPdajRfGTmpHy5jnvln5m86VcRx7ZoNkmOPUvZTVnPUENzfggJQM3A1mpvJdJznaKSqBDQzKXf+NTYT73pHXacRBrc7TnRpa/X0Khl0WnJ+WEEqrEth7p177bKTZ7LrXn2eVt1KfQpmbquOgLhU4iq4enNdzYIP89SHlCfknZ1TY0sWqhb4npOpNt5enKyS6jbaKiqhR3Sups3KrI+DeYUQvANEt4Tcn+BGM9Ha/0Roa9ucetHwZ8M7/qnrJ81zEGJZlQR93mWK4SlZxWCIWmGeASZqzY8Doi1wrsPY9KHqh6mXwNqfY5oCqKWM/wo3s3RcStcc5i+PzH+Dp8qzEAwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=cdf341698333121014c5f26b022bc05f"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=05f341698333121014c5f26b022bc057"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=05f341698333121014c5f26b022bc057^sys_idNOT IN4df341698333121014c5f26b022bc05d"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">1be9cdc2370022105aab49ae64924bcb</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Scheduled Document Collaboration">05f341698333121014c5f26b022bc057</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:22:05</sys_created_on>
+        <sys_id>4df341698333121014c5f26b022bc05d</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 07:21:10</sys_updated_on>
+        <ui_id>3b92d78f-4745-4e01-9a53-75ed02b5fc2b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TXW+jMBD8L34miI+GK3mrWlWq1F6ltOrLqYoWe0msMzZnm6Qc4r/fOhBa9fGeYMe7szODGZjpfNt592punJN7zTa/3iMmdcDofWAaGmQbJj02jkXsCKoL9TCsiyJPc56vyuyar65wXa/KusRViVmRcczX8KOMt8iNFW4caVRI1yro3/6fgR+kEhZnkS1Y0ubRss3w7UgKWpCWoi7TpOR5VuRZkmTXV2lV5FWaiRxQFESooEJFrQ+zu29mfd+G0k4SZuBxntkuKD2CiCyJGH541AJpfQ3KYcQa0AK8sT3beNsRYBHEs1b90nGQ2hMdC70fTv6ljWmShMYayRDH6XApd3OOE1zfgYcXoua+s3MrPxjJ0U1RCKyhU/72KzY1PLdeGj2NeKjUZdqortE/pyTYQnD5bIR0jkRgG4wG6bOP+uVgTtuLynupz6HMh8pwUEsF3ltZdT7oGRgqbIho10DbSr3ftdYc5XmYtDTxXlER18qcaGm4ojHwIDymXCG+J/zuDL+BlcHFE9HQ8Bgx17tbBc59eqEQd3+6oGRyNnvYTTGEEW5l629owRFnueN7uPUT95Ipl44kvAbs4fKvhIOebpDkX6GTsb+D+E9s/AfJZKcrdQMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=05f341698333121014c5f26b022bc057"/>
+    <sys_hub_flow_variable action="DELETE" query="model=05f341698333121014c5f26b022bc057"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_05f341698333121014c5f26b022bc057"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_05f341698333121014c5f26b022bc057"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>192385e58333121014c5f26b022bc05c</sys_id>
+        <latest_snapshot>05f341698333121014c5f26b022bc057</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=192385e58333121014c5f26b022bc05c^sys_idNOT IN91f341698333121014c5f26b022bc075"/>
+    <sys_flow_trigger_plan action="DELETE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"91f341698333121014c5f26b022bc075","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>192385e58333121014c5f26b022bc05c</plan_id>
+        <snapshot>c253330e993c03107f4454352b402ecf</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-18 07:22:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>91f341698333121014c5f26b022bc075</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-04 07:21:10</sys_updated_on>
+        <trigger display_value="">59f341698333121014c5f26b022bc073</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=192385e58333121014c5f26b022bc05c"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_192385e58333121014c5f26b022bc05c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1209757000,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;27000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;This process runs every 15 minutes. It looks for user permission records that are waiting to be synced with external systems. Specifically, it searches for records where the external permission status is "Pending" and the sync strategy is either "Scheduled" or "System Scheduled." It then sorts these records by creation date and processes them in batches. The batch size is determined by a system setting (com.snc.documents.external.permission.batch_size). For each record in the batch, the process assigns the user permission using a custom action called "Update User Permission on Document.&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;scheduled_document_collaboration&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"566313c3-928c-4e5f-9f9e-9e262ce35a79.Records","label":"1 - Look Up Records➛User Permissions Records","reference":"ds_document_user_can_access_mtom","reference_display":"User Permissions","type":"records","base_type":"records","usedInstances":{"3b92d78f-4745-4e01-9a53-75ed02b5fc2b":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3b92d78f-4745-4e01-9a53-75ed02b5fc2b.item.sys_id","label":"2 - For Each➛User Permissions Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"ds_document_user_can_access_mtom","column_name":"sys_id","usedInstances":{"3742d1e4-cee6-4f5d-86fb-b0bed266073a":["user_permission_sys_id"]}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;05f341698333121014c5f26b022bc057&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Scheduled Document Collaboration&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id&gt;59f341698333121014c5f26b022bc073&lt;/remote_trigger_id&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:18:33&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;192385e58333121014c5f26b022bc05c&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Scheduled Document Collaboration&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_192385e58333121014c5f26b022bc05c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 10:30:10&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_flow_timer_trigger action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;day_of_month&gt;1&lt;/day_of_month&gt;&lt;day_of_week/&gt;&lt;name/&gt;&lt;published_version/&gt;&lt;run_period&gt;1970-01-01 00:15:00&lt;/run_period&gt;&lt;run_start/&gt;&lt;sys_class_name&gt;sys_flow_timer_trigger&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:22:05&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;59f341698333121014c5f26b022bc073&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-18 10:11:39&lt;/sys_updated_on&gt;&lt;time/&gt;&lt;timer_type&gt;1&lt;/timer_type&gt;&lt;trigger_definition/&gt;&lt;/sys_flow_timer_trigger&gt;&lt;sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:59f341698333121014c5f26b022bc073^sys_idNOT IN11f341698333121014c5f26b022bc074"/&gt;&lt;sys_flow_trigger_auto_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;advanced&gt;false&lt;/advanced&gt;&lt;business_calendar/&gt;&lt;condition/&gt;&lt;conditional&gt;false&lt;/conditional&gt;&lt;entered_run_end/&gt;&lt;entered_run_start/&gt;&lt;entered_time/&gt;&lt;max_drift/&gt;&lt;name&gt;Trigger:59f341698333121014c5f26b022bc073&lt;/name&gt;&lt;offset/&gt;&lt;offset_type&gt;0&lt;/offset_type&gt;&lt;repeat_every/&gt;&lt;run_as display_value="System Administrator"&gt;6816f79cc0a8016401c5a33be04be441&lt;/run_as&gt;&lt;run_as_tz/&gt;&lt;run_dayofmonth&gt;1&lt;/run_dayofmonth&gt;&lt;run_dayofweek/&gt;&lt;run_daysofweek/&gt;&lt;run_end/&gt;&lt;run_month/&gt;&lt;run_period&gt;1970-01-01 00:15:00&lt;/run_period&gt;&lt;run_start/&gt;&lt;run_time/&gt;&lt;run_type&gt;periodically&lt;/run_type&gt;&lt;run_weekinmonth/&gt;&lt;script&gt;&lt;![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('59f341698333121014c5f26b022bc073');]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_flow_trigger_auto_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:22:05&lt;/sys_created_on&gt;&lt;sys_id&gt;11f341698333121014c5f26b022bc074&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-04 07:21:10&lt;/sys_updated_on&gt;&lt;time_zone/&gt;&lt;trigger display_value=""&gt;59f341698333121014c5f26b022bc073&lt;/trigger&gt;&lt;upgrade_safe&gt;true&lt;/upgrade_safe&gt;&lt;/sys_flow_trigger_auto_script&gt;&lt;sys_trigger_runner_mapping action="delete_multiple" query="identifier=192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=192385e58333121014c5f26b022bc05c^sys_idNOT IN912385e58333121014c5f26b022bc05d"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;192385e58333121014c5f26b022bc05c&lt;/id&gt;&lt;name&gt;Scheduled Document Collaboration&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:18:33&lt;/sys_created_on&gt;&lt;sys_id&gt;912385e58333121014c5f26b022bc05d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-18 07:18:33&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=912385e58333121014c5f26b022bc05d"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=192385e58333121014c5f26b022bc05c^sys_idNOT IN9483c5298333121014c5f26b022bc05e"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Scheduled Document Collaboration"&gt;192385e58333121014c5f26b022bc05c&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Repeat&lt;/name&gt;&lt;published_version/&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:20:06&lt;/sys_created_on&gt;&lt;sys_id&gt;9483c5298333121014c5f26b022bc05e&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-18 07:21:02&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Repeat"&gt;f63f0d94c32222002841b63b12d3aeed&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/3VSy07DMBD8FeRziZy2vHJDQpU4QKWCuCAUbexNa2n9wHEKAfHvbB6tEIgoF894Z2dGfv4UBBWSKMQGA0ISM2FcwuiAHruAjG/JaCx1GyEZ75i34DQkHztRpNjiTNTR20e0gSDxQA3UMOijxiiKXMqZ2AO1+NA1t5r1WMGB7ZXjYePAM5BfXchTmfN/ImWRnxVSMqt2hnREJ4rnl5kIEHk69dqfvyjTy+fqrF7qq6VazPmTcn65zKvzRZXP9QKwWrDgn8S//aR/kv/MhO8JnUZ9DPynloig1466440dNzsWYOG9MR84SUWskUMoHMnjsdSm4VK7EVY7bxSuw+BlQBJUNM0oT61192MOPmusoaX0NBXLSNuwHgdkz72LyVL9sPNvm8PClXFDwIkkr4COJ0gpmqpN2PTNI6FlodJCCMZtyxD93gzD7MVmQ3VZTf6NlzZm6zJQvfGMK4JsxfjNAD9BNH2KO5bh4a8hffna9nvHHJPjcgzNF6ZSVgZpek6Niiaka16wP7y/r5dv12tmnNoCAAA=&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;repeat&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=192385e58333121014c5f26b022bc05c^sys_idNOT IN5c83c5298333121014c5f26b022bc05f,b9b30d298333121014c5f26b022bc016"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Look Up Records"&gt;43400a1587003300663ca1bb36cb0b4b&lt;/action_type&gt;&lt;action_type_parent display_value="Look Up Records"&gt;d1c56ec50b30030085c083eb37673a50&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;43400a1587003300663ca1bb36cb0b4b&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Scheduled Document Collaboration"&gt;192385e58333121014c5f26b022bc05c&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:20:06&lt;/sys_created_on&gt;&lt;sys_id&gt;5c83c5298333121014c5f26b022bc05f&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-13 18:50:29&lt;/sys_updated_on&gt;&lt;ui_id&gt;566313c3-928c-4e5f-9f9e-9e262ce35a79&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+VYbW/bNhD+K4Q+tZmgyHHeln7KkmUr0CZF3fVL3REURdncKFIjKSdO4P++IynJgu1kMeAAKfYhCHh3vHvu5SEpf3uIeB6dRafFYZqSwdHpSZoOh2l6fDykZJBlw2OapdlhFsWRJCUDS0sywWA5I6J269zgXNG6ZNLi2jCNKZGYUMqMwaVVJZjm3FSCzL82O/4AK/SJ6ZIbw5U0YEGnXOSayejs2/c4qoiGWJbp6OxhRfVcsIJkTIDplwbtCng7r7ol9rog+9Dfhq6DQuncQUnjiN1ZJnMGGAoiDIujksicWKXnnUQzkt9IsRRMubTgMXLGd4bfQ9zT1NkVDLKiLOi6JW6KFcTFJbFkZHVNba0bUzpVHKob6pGzgtTCXvRlweCmslDcsCWkHXYrUZfyOpQj6hy0vQEJNBHnrHKJOuRNGsVoqm4/tyivuPQ1aZRCUSK6FbFW86y2Ds9DxATzs1GSquJygiutZtxvBixlMhGwSAqhbiGo4ROZEOqAJ1BXklyB/NKLvxLNXRYfwQ1sBkBcwITg0EKjau1LOcNU1MYrNJEm+IoWcWTm5kIQY5aZQ8nxP7XDHerQZIxD0dwWqnllz8HFjDXJLeJn8eUoXY4cVTLntpnzljRukLQkAlcdDbCxxNZmXIPD3GGBYv3ZV88lBRtNLJvM318bOmV5LVgeQ2aWlbgTrBPuhaPtkry+ci15L/ql21TOhsZrsg+bHDQ0HuyMxpDHj0RkCP76eLw9M0MJ/oOe9OTJITtazpNR2uJQyx4/AROmMAOW5S7qGqPW9Ntx4BnwWg7cuKlF2fwxxA0FCs5Evukmu3KKlZvs4P95k71KAgCgHIfucSm49M8SAPpSzEifPn5/XpkzP149XjgZMXSdEQRZhe63ZsIz4LRMGEFs9CXg2QCxvQv8yKzeA62wIcBwZwQYHuyGAA9dml0hN9S8fYm6brb2986erNrDCPY2DBabCLZVzMG2MQ8W6wQebsXg/rAFzeUjM7fjJ+sjjIxf8giYwtYmHg78xbc8nzC7jN5a5creEvH3Jn0zcbhtlE/vBZ6/h0/S9niwpCgwBWtmoHn99+8Ank7rZ8ggDuLtjpBnYGnL8ZHcoc8dmI0Im2MEmM4mvjf9c+R9J22G/HCHj8lXe5O2zdrIwbZnP8RX4y6IEF4RQeaQ9scHlk8ZR/t7Y7m3d+5/HEEO5f65h40cbFQbyBTZKUOOyU6isr8YtQkaeQeohC9bpBm0XSKCPJcS5DyGR6Ksywz+cYNUURhm4dWIfhogLtGvWiuNfofBFC7EiIVieTAzwoX/tUP54TCoGTZUVwCsgtQ8rHGUjCNECuBhC89tZ3ekrAQ7AzQamSmc2FB4isJ3ZWuYQGcnwJuE1hoGwSbe0N8XLi+I+s75ajLrvDjh/lg6zxmxdDoCorSef3MD8IuqHfOAlZ+0gv7a+RunPjhxI2IkTdofpkzSfgIny2/cxDvFjn5hV4yO0vAHE/82gbMVPL95CzAaZB2Kd9Fisfj+Lz5FzFU8EwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=5c83c5298333121014c5f26b022bc05f"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update User Permission on Document"&gt;5c9f91e183d31210a58c02bbf12bc0bd&lt;/action_type&gt;&lt;action_type_parent display_value="Update User Permission on Document"&gt;6deef8ed83931210a58c02bbf12bc09b&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;5c9f91e183d31210a58c02bbf12bc0bd&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Scheduled Document Collaboration"&gt;192385e58333121014c5f26b022bc05c&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;3b92d78f-4745-4e01-9a53-75ed02b5fc2b&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:21:02&lt;/sys_created_on&gt;&lt;sys_id&gt;b9b30d298333121014c5f26b022bc016&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-13 18:50:30&lt;/sys_updated_on&gt;&lt;ui_id&gt;3742d1e4-cee6-4f5d-86fb-b0bed266073a&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6VSy27bMBD8FYNnSdAzln0rEgQI0DZF3eQSBMKKXNkEKEohKSeq4X/v0pKdIr0E6HFnZ3dnhnw6MCnYml3xJL4q0qLMRJakSQxFyeO0rpskrXmcZCxgGlok5mDRVD2aVlorO13Z0Va0ImB7UIMnHA5ZvUrFsmzCfJkXYY5xEq6gyMJlgYKWFg1P60g6bKNp+HikcSFtr2B8/L8tfCeVMKjZ+uk5YD0YEu3QsPXhQ+uzrhXUqIj6QLYXPy62F5vRLu7EJ2JxY+/71hmpt3P9dV66OYOdEV5kEjB8c6gFkroGlMWAtaAFuM6MbO3MQIBBEPdajRfGTmpHy5jnvln5m86VcRx7ZoNkmOPUvZTVnPUENzfggJQM3A1mpvJdJznaKSqBDQzKXf+NTYT73pHXacRBrc7TnRpa/X0Khl0WnJ+WEEqrEth7p177bKTZ7LrXn2eVt1KfQpmbquOgLhU4iq4enNdzYIP89SHlCfknZ1TY0sWqhb4npOpNt5enKyS6jbaKiqhR3Sups3KrI+DeYUQvANEt4Tcn+BGM9Ha/0Roa9ucetHwZ8M7/qnrJ81zEGJZlQR93mWK4SlZxWCIWmGeASZqzY8Doi1wrsPY9KHqh6mXwNqfY5oCqKWM/wo3s3RcStcc5i+PzH+Dp8qzEAwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=b9b30d298333121014c5f26b022bc016"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=192385e58333121014c5f26b022bc05c^sys_idNOT IN39b30d298333121014c5f26b022bc015"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;1be9cdc2370022105aab49ae64924bcb&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Scheduled Document Collaboration"&gt;192385e58333121014c5f26b022bc05c&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="For Each"&gt;098e1dc5c3e232002841b63b12d3ae33&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:21:02&lt;/sys_created_on&gt;&lt;sys_id&gt;39b30d298333121014c5f26b022bc015&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-04 07:21:10&lt;/sys_updated_on&gt;&lt;ui_id&gt;3b92d78f-4745-4e01-9a53-75ed02b5fc2b&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/51STU/jMBD9Lz63UT5olvSGtELiAEgs4oJQNLEnrbWO7bWdlmyU/864SQviyCmZNzNv3vPMyEwfbB/8s7nxXu40276+rZjUEaP/kWnokG2ZDNh5tmIHUH2Mx3FTlkVW8GJd5dd8fYWbdl21Fa4rzMucY7GBX1XyhNw44aeJWoX0VsHw8nMGvpdKOFxEWnCkLaBj2/FbKgwWawUNKhq0MFC/FBRmlWirLK14kZdFnqb59VXWlEWT5aIAFCXVnTvvFtPf3iCyU+guvPSJKvJ0xfA9oBZIg1pQHlesAy0gGDewbXA9AQ5BPGo1XCr2UgeiY7H23cv/xJ2laSxskRxxnJOXsF4ecob53kiOjzZIo2ckQKOWHm5U3+mHWX5cAbbQq3BeASG9Jz60UXNUsUhq/+zN8ek88Fbqk78lqQwHdYkgBCebPqCPa0CFHRHVHVgr9a62zhzkqZm0dMlOUZC0yhxpaDy3BHgUntATQXJL+O8T/AJORhf3REPN08l9/a+Pc2cfi+J6Nk0Fnjtpww3RHXARN73Fe52Z/HwYArn0NPA5YnfnK4+JgZYs+VfoaNzfKPUTmz4Ahi7hEy8DAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_192385e58333121014c5f26b022bc05c"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;27000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;This process runs every 15 minutes. It looks for user permission records that are waiting to be synced with external systems. Specifically, it searches for records where the external permission status is "Pending" and the sync strategy is either "Scheduled" or "System Scheduled." It then sorts these records by creation date and processes them in batches. The batch size is determined by a system setting (com.snc.documents.external.permission.batch_size). For each record in the batch, the process assigns the user permission using a custom action called "Update User Permission on Document.&lt;/description&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;internal_name&gt;scheduled_document_collaboration&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"566313c3-928c-4e5f-9f9e-9e262ce35a79.Records","label":"1 - Look Up Records➛User Permissions Records","reference":"ds_document_user_can_access_mtom","reference_display":"User Permissions","type":"records","base_type":"records","usedInstances":{"3b92d78f-4745-4e01-9a53-75ed02b5fc2b":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3b92d78f-4745-4e01-9a53-75ed02b5fc2b.item.sys_id","label":"2 - For Each➛User Permissions Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"ds_document_user_can_access_mtom","column_name":"sys_id","usedInstances":{"3742d1e4-cee6-4f5d-86fb-b0bed266073a":["user_permission_sys_id"]}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Scheduled Document Collaboration&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Scheduled Document Collaboration"&gt;192385e58333121014c5f26b022bc05c&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:22:05&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;05f341698333121014c5f26b022bc057&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-04 07:21:10&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=05f341698333121014c5f26b022bc057"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=05f341698333121014c5f26b022bc057"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=05f341698333121014c5f26b022bc057"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=05f341698333121014c5f26b022bc057^sys_idNOT IN89f341698333121014c5f26b022bc057"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;05f341698333121014c5f26b022bc057&lt;/id&gt;&lt;name&gt;Scheduled Document Collaboration&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:22:05&lt;/sys_created_on&gt;&lt;sys_id&gt;89f341698333121014c5f26b022bc057&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-18 07:22:05&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=89f341698333121014c5f26b022bc057"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=05f341698333121014c5f26b022bc057"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=05f341698333121014c5f26b022bc057"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=05f341698333121014c5f26b022bc057"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=05f341698333121014c5f26b022bc057^sys_idNOT IN45f341698333121014c5f26b022bc060"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Scheduled Document Collaboration"&gt;05f341698333121014c5f26b022bc057&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Repeat&lt;/name&gt;&lt;published_version/&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:22:05&lt;/sys_created_on&gt;&lt;sys_id&gt;45f341698333121014c5f26b022bc060&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-18 07:22:05&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Repeat"&gt;f63f0d94c32222002841b63b12d3aeed&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/3VSy07DMBD8FeRziZy2vHJDQpU4QKWCuCAUbexNa2n9wHEKAfHvbB6tEIgoF894Z2dGfv4UBBWSKMQGA0ISM2FcwuiAHruAjG/JaCx1GyEZ75i34DQkHztRpNjiTNTR20e0gSDxQA3UMOijxiiKXMqZ2AO1+NA1t5r1WMGB7ZXjYePAM5BfXchTmfN/ImWRnxVSMqt2hnREJ4rnl5kIEHk69dqfvyjTy+fqrF7qq6VazPmTcn65zKvzRZXP9QKwWrDgn8S//aR/kv/MhO8JnUZ9DPynloig1466440dNzsWYOG9MR84SUWskUMoHMnjsdSm4VK7EVY7bxSuw+BlQBJUNM0oT61192MOPmusoaX0NBXLSNuwHgdkz72LyVL9sPNvm8PClXFDwIkkr4COJ0gpmqpN2PTNI6FlodJCCMZtyxD93gzD7MVmQ3VZTf6NlzZm6zJQvfGMK4JsxfjNAD9BNH2KO5bh4a8hffna9nvHHJPjcgzNF6ZSVgZpek6Niiaka16wP7y/r5dv12tmnNoCAAA=&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;repeat&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=05f341698333121014c5f26b022bc057^sys_idNOT IN81f341698333121014c5f26b022bc05f,cdf341698333121014c5f26b022bc05f"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Look Up Records"&gt;43400a1587003300663ca1bb36cb0b4b&lt;/action_type&gt;&lt;action_type_parent display_value="Look Up Records"&gt;d1c56ec50b30030085c083eb37673a50&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;43400a1587003300663ca1bb36cb0b4b&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Scheduled Document Collaboration"&gt;05f341698333121014c5f26b022bc057&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:22:05&lt;/sys_created_on&gt;&lt;sys_id&gt;81f341698333121014c5f26b022bc05f&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-04 07:21:10&lt;/sys_updated_on&gt;&lt;ui_id&gt;566313c3-928c-4e5f-9f9e-9e262ce35a79&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+VYbW/bNhD+K4Q+tZmgyHHeln7KkmUr0CZF3fVL3REURdncKFIjKSdO4P++IynJgu1kMeAAKfYhCHh3vHvu5SEpf3uIeB6dRafFYZqSwdHpSZoOh2l6fDykZJBlw2OapdlhFsWRJCUDS0sywWA5I6J269zgXNG6ZNLi2jCNKZGYUMqMwaVVJZjm3FSCzL82O/4AK/SJ6ZIbw5U0YEGnXOSayejs2/c4qoiGWJbp6OxhRfVcsIJkTIDplwbtCng7r7ol9rog+9Dfhq6DQuncQUnjiN1ZJnMGGAoiDIujksicWKXnnUQzkt9IsRRMubTgMXLGd4bfQ9zT1NkVDLKiLOi6JW6KFcTFJbFkZHVNba0bUzpVHKob6pGzgtTCXvRlweCmslDcsCWkHXYrUZfyOpQj6hy0vQEJNBHnrHKJOuRNGsVoqm4/tyivuPQ1aZRCUSK6FbFW86y2Ds9DxATzs1GSquJygiutZtxvBixlMhGwSAqhbiGo4ROZEOqAJ1BXklyB/NKLvxLNXRYfwQ1sBkBcwITg0EKjau1LOcNU1MYrNJEm+IoWcWTm5kIQY5aZQ8nxP7XDHerQZIxD0dwWqnllz8HFjDXJLeJn8eUoXY4cVTLntpnzljRukLQkAlcdDbCxxNZmXIPD3GGBYv3ZV88lBRtNLJvM318bOmV5LVgeQ2aWlbgTrBPuhaPtkry+ci15L/ql21TOhsZrsg+bHDQ0HuyMxpDHj0RkCP76eLw9M0MJ/oOe9OTJITtazpNR2uJQyx4/AROmMAOW5S7qGqPW9Ntx4BnwWg7cuKlF2fwxxA0FCs5Evukmu3KKlZvs4P95k71KAgCgHIfucSm49M8SAPpSzEifPn5/XpkzP149XjgZMXSdEQRZhe63ZsIz4LRMGEFs9CXg2QCxvQv8yKzeA62wIcBwZwQYHuyGAA9dml0hN9S8fYm6brb2986erNrDCPY2DBabCLZVzMG2MQ8W6wQebsXg/rAFzeUjM7fjJ+sjjIxf8giYwtYmHg78xbc8nzC7jN5a5creEvH3Jn0zcbhtlE/vBZ6/h0/S9niwpCgwBWtmoHn99+8Ank7rZ8ggDuLtjpBnYGnL8ZHcoc8dmI0Im2MEmM4mvjf9c+R9J22G/HCHj8lXe5O2zdrIwbZnP8RX4y6IEF4RQeaQ9scHlk8ZR/t7Y7m3d+5/HEEO5f65h40cbFQbyBTZKUOOyU6isr8YtQkaeQeohC9bpBm0XSKCPJcS5DyGR6Ksywz+cYNUURhm4dWIfhogLtGvWiuNfofBFC7EiIVieTAzwoX/tUP54TCoGTZUVwCsgtQ8rHGUjCNECuBhC89tZ3ekrAQ7AzQamSmc2FB4isJ3ZWuYQGcnwJuE1hoGwSbe0N8XLi+I+s75ajLrvDjh/lg6zxmxdDoCorSef3MD8IuqHfOAlZ+0gv7a+RunPjhxI2IkTdofpkzSfgIny2/cxDvFjn5hV4yO0vAHE/82gbMVPL95CzAaZB2Kd9Fisfj+Lz5FzFU8EwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=81f341698333121014c5f26b022bc05f"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update User Permission on Document"&gt;5c9f91e183d31210a58c02bbf12bc0bd&lt;/action_type&gt;&lt;action_type_parent display_value="Update User Permission on Document"&gt;6deef8ed83931210a58c02bbf12bc09b&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;5c9f91e183d31210a58c02bbf12bc0bd&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Scheduled Document Collaboration"&gt;05f341698333121014c5f26b022bc057&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;3b92d78f-4745-4e01-9a53-75ed02b5fc2b&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:22:05&lt;/sys_created_on&gt;&lt;sys_id&gt;cdf341698333121014c5f26b022bc05f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-18 07:22:05&lt;/sys_updated_on&gt;&lt;ui_id&gt;3742d1e4-cee6-4f5d-86fb-b0bed266073a&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6VSy27bMBD8FYNnSdAzln0rEgQI0DZF3eQSBMKKXNkEKEohKSeq4X/v0pKdIr0E6HFnZ3dnhnw6MCnYml3xJL4q0qLMRJakSQxFyeO0rpskrXmcZCxgGlok5mDRVD2aVlorO13Z0Va0ImB7UIMnHA5ZvUrFsmzCfJkXYY5xEq6gyMJlgYKWFg1P60g6bKNp+HikcSFtr2B8/L8tfCeVMKjZ+uk5YD0YEu3QsPXhQ+uzrhXUqIj6QLYXPy62F5vRLu7EJ2JxY+/71hmpt3P9dV66OYOdEV5kEjB8c6gFkroGlMWAtaAFuM6MbO3MQIBBEPdajRfGTmpHy5jnvln5m86VcRx7ZoNkmOPUvZTVnPUENzfggJQM3A1mpvJdJznaKSqBDQzKXf+NTYT73pHXacRBrc7TnRpa/X0Khl0WnJ+WEEqrEth7p177bKTZ7LrXn2eVt1KfQpmbquOgLhU4iq4enNdzYIP89SHlCfknZ1TY0sWqhb4npOpNt5enKyS6jbaKiqhR3Sups3KrI+DeYUQvANEt4Tcn+BGM9Ha/0Roa9ucetHwZ8M7/qnrJ81zEGJZlQR93mWK4SlZxWCIWmGeASZqzY8Doi1wrsPY9KHqh6mXwNqfY5oCqKWM/wo3s3RcStcc5i+PzH+Dp8qzEAwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=cdf341698333121014c5f26b022bc05f"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=05f341698333121014c5f26b022bc057"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=05f341698333121014c5f26b022bc057^sys_idNOT IN4df341698333121014c5f26b022bc05d"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;1be9cdc2370022105aab49ae64924bcb&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Scheduled Document Collaboration"&gt;05f341698333121014c5f26b022bc057&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="For Each"&gt;098e1dc5c3e232002841b63b12d3ae33&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:22:05&lt;/sys_created_on&gt;&lt;sys_id&gt;4df341698333121014c5f26b022bc05d&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-04 07:21:10&lt;/sys_updated_on&gt;&lt;ui_id&gt;3b92d78f-4745-4e01-9a53-75ed02b5fc2b&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/51TXW+jMBD8L34miI+GK3mrWlWq1F6ltOrLqYoWe0msMzZnm6Qc4r/fOhBa9fGeYMe7szODGZjpfNt592punJN7zTa/3iMmdcDofWAaGmQbJj02jkXsCKoL9TCsiyJPc56vyuyar65wXa/KusRViVmRcczX8KOMt8iNFW4caVRI1yro3/6fgR+kEhZnkS1Y0ubRss3w7UgKWpCWoi7TpOR5VuRZkmTXV2lV5FWaiRxQFESooEJFrQ+zu29mfd+G0k4SZuBxntkuKD2CiCyJGH541AJpfQ3KYcQa0AK8sT3beNsRYBHEs1b90nGQ2hMdC70fTv6ljWmShMYayRDH6XApd3OOE1zfgYcXoua+s3MrPxjJ0U1RCKyhU/72KzY1PLdeGj2NeKjUZdqortE/pyTYQnD5bIR0jkRgG4wG6bOP+uVgTtuLynupz6HMh8pwUEsF3ltZdT7oGRgqbIho10DbSr3ftdYc5XmYtDTxXlER18qcaGm4ojHwIDymXCG+J/zuDL+BlcHFE9HQ8Bgx17tbBc59eqEQd3+6oGRyNnvYTTGEEW5l629owRFnueN7uPUT95Ipl44kvAbs4fKvhIOebpDkX6GTsb+D+E9s/AfJZKcrdQMAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=05f341698333121014c5f26b022bc057"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=05f341698333121014c5f26b022bc057"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_05f341698333121014c5f26b022bc057"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_05f341698333121014c5f26b022bc057"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;192385e58333121014c5f26b022bc05c&lt;/sys_id&gt;&lt;latest_snapshot&gt;05f341698333121014c5f26b022bc057&lt;/latest_snapshot&gt;&lt;compiler_build&gt;glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip&lt;/compiler_build&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=192385e58333121014c5f26b022bc05c^sys_idNOT IN91f341698333121014c5f26b022bc075"/&gt;&lt;sys_flow_trigger_plan action="INSERT_OR_UPDATE"&gt;&lt;binding_strategy&gt;com.snc.process_flow.engine.binding.RunAlways&lt;/binding_strategy&gt;&lt;plan&gt;{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"91f341698333121014c5f26b022bc075","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}&lt;/plan&gt;&lt;plan_id&gt;192385e58333121014c5f26b022bc05c&lt;/plan_id&gt;&lt;snapshot&gt;c253330e993c03107f4454352b402ecf&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-18 07:22:05&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;91f341698333121014c5f26b022bc075&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-03-04 07:21:10&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;59f341698333121014c5f26b022bc073&lt;/trigger&gt;&lt;/sys_flow_trigger_plan&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=192385e58333121014c5f26b022bc05c"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1909273473</payload_hash>
+        <record_name>Scheduled Document Collaboration</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:30:11</sys_created_on>
+        <sys_id>0656d876edee03107f44863610ff21f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb3908e80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:30:11</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>4656d87655ee0310bfbe3ff8e513acef</update_guid>
+        <update_guid_history>4656d87655ee0310bfbe3ff8e513acef:1909273473,7d56d87632ee031059a1284a5a2435e7:2028228293</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:34:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>140f5c0c785f44758a309728a35641d9</sys_id>
+        <sys_metadata>192385e58333121014c5f26b022bc05c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Scheduled Document Collaboration</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_192385e58333121014c5f26b022bc05c</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_192385e58333121014c5f26b022bc05c">0656d876edee03107f44863610ff21f0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:34:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

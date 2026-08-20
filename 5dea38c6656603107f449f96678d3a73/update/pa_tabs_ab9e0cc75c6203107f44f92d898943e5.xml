@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_tabs">
+    <pa_tabs action="INSERT_OR_UPDATE">
+        <canvas_page display_value="">2a419c4f5c6203107f44f92d8989432a</canvas_page>
+        <name>ab9e0cc75c6203107f44f92d898943e5New Tab 1</name>
+        <page display_value="New Tab 1">6f9e0cc75c6203107f44f92d898943df</page>
+        <sys_class_name>pa_tabs</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 04:34:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ab9e0cc75c6203107f44f92d898943e5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>ab9e0cc75c6203107f44f92d898943e5New Tab 1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>pa_tabs_ab9e0cc75c6203107f44f92d898943e5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 04:46:35</sys_updated_on>
+    </pa_tabs>
+</record_update>

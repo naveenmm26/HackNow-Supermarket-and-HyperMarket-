@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input">
+    <sys_sg_input action="DELETE">
+        <active>true</active>
+        <autofill_variable/>
+        <category/>
+        <description/>
+        <label>Store Location</label>
+        <mandatory>false</mandatory>
+        <name>u_store</name>
+        <order/>
+        <page/>
+        <parameter_screen display_value="Safety Issue Input Form Screen">c42eafa7e96e03107f44cf798e41597c</parameter_screen>
+        <parameter_section/>
+        <placeholder/>
+        <readonly>false</readonly>
+        <sys_class_name>sys_sg_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 10:38:55</sys_created_on>
+        <sys_id>df15f3e7e9ae03107f44cf798e4159c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Store Location</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_input_df15f3e7e9ae03107f44cf798e4159c1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:38:55</sys_updated_on>
+        <type display_value="Reference">770c605517021010f2b43b9fadb95900</type>
+    </sys_sg_input>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_sg_input_df15f3e7e9ae03107f44cf798e4159c1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_input"><sys_sg_input action="INSERT_OR_UPDATE"><active>true</active><autofill_variable/><category/><description/><label>Store Location</label><mandatory>false</mandatory><name>u_store</name><order/><page/><parameter_screen display_value="Safety Issue Input Form Screen">c42eafa7e96e03107f44cf798e41597c</parameter_screen><parameter_section/><placeholder/><readonly>false</readonly><sys_class_name>sys_sg_input</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-13 10:38:55</sys_created_on><sys_id>df15f3e7e9ae03107f44cf798e4159c1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Store Location</sys_name><sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package><sys_policy/><sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope><sys_update_name>sys_sg_input_df15f3e7e9ae03107f44cf798e4159c1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-13 10:38:55</sys_updated_on><type display_value="Reference">770c605517021010f2b43b9fadb95900</type></sys_sg_input></record_update>]]></payload>
+        <payload_hash>1515637885</payload_hash>
+        <record_name>Store Location</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 10:38:55</sys_created_on>
+        <sys_id>1b15bbe7e9ae03107f44cf798e415909</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ffab41c430000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:38:55</sys_updated_on>
+        <type>Input</type>
+        <update_guid>5315f3e79aae0310359f7074e19f1ec4</update_guid>
+        <update_guid_history>5315f3e79aae0310359f7074e19f1ec4:1515637885</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 04:03:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_sg_input">sys_sg_input</sys_db_object>
+        <sys_id>22dfec36557140499476ffa599c320a9</sys_id>
+        <sys_metadata>df15f3e7e9ae03107f44cf798e4159c1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Store Location</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_sg_input_df15f3e7e9ae03107f44cf798e4159c1</sys_update_name>
+        <sys_update_version display_value="sys_sg_input_df15f3e7e9ae03107f44cf798e4159c1">1b15bbe7e9ae03107f44cf798e415909</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 04:03:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_view_config_field">
+    <sys_sg_view_config_field action="INSERT_OR_UPDATE">
+        <name>u_store_status</name>
+        <sys_class_name>sys_sg_view_config_field</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 06:17:06</sys_created_on>
+        <sys_id>1c393e63e96603107f44cf798e415958</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_store_status</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_view_config_field_1c393e63e96603107f44cf798e415958</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:17:06</sys_updated_on>
+        <view_config display_value="FG360 Active Store Card">4328b663e96603107f44cf798e4159cc</view_config>
+    </sys_sg_view_config_field>
+</record_update>

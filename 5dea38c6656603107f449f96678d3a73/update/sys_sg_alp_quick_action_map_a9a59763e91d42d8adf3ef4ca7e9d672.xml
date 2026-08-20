@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_alp_quick_action_map">
+    <sys_sg_alp_quick_action_map action="INSERT_OR_UPDATE">
+        <applet_launcher display_value="Role-aware mobile home landing page">b2c417e3e96a03107f44cf798e415961</applet_launcher>
+        <order>300</order>
+        <quick_action_button display_value="Create Inspection">b6da011939094a98968f78caa08e011d</quick_action_button>
+        <sys_class_name>sys_sg_alp_quick_action_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-18 08:44:01</sys_created_on>
+        <sys_id>a9a59763e91d42d8adf3ef4ca7e9d672</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_alp_quick_action_map_a9a59763e91d42d8adf3ef4ca7e9d672</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 08:44:01</sys_updated_on>
+    </sys_sg_alp_quick_action_map>
+</record_update>

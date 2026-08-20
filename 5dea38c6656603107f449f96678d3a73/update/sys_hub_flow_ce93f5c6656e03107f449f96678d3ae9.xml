@@ -1,0 +1,1294 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=887106000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Automatically creates formal CAPA records for High and Critical food safety issues.</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>x_fresh_guard_360_issue_to_capa_escalator</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.u_store.u_store_name","label":"Trigger - Record Created or Updated➛Food Safety Issue Record➛Store➛Store Name","reference":"","reference_display":"Store Name","type":"string","base_type":"string","parent_table_name":"x_fresh_guard_360_store","column_name":"u_store_name","usedInstances":{"bcee3095-4f23-4b55-a6e0-c8d14c3bd10c":[null]}},{"name":"Created or Updated_1.current.u_issue_title","label":"Trigger - Record Created or Updated➛Food Safety Issue Record➛Issue Title","reference":"","reference_display":"Issue Title","type":"string","base_type":"string","parent_table_name":"x_fresh_guard_360_issue","column_name":"u_issue_title","usedInstances":{"bcee3095-4f23-4b55-a6e0-c8d14c3bd10c":[null]}},{"name":"dd835c5d-36f3-4f64-872c-c0209bc3e9bd.record.u_capa_id","label":"3 - Create Record➛CAPA Record➛CAPA ID","reference":"","reference_display":"CAPA ID","type":"string","base_type":"string","parent_table_name":"x_fresh_guard_360_capa","column_name":"u_capa_id","usedInstances":{"bcee3095-4f23-4b55-a6e0-c8d14c3bd10c":["ah_subject",null]}},{"name":"dd835c5d-36f3-4f64-872c-c0209bc3e9bd.record","label":"3 - Create Record➛CAPA Record","reference":"x_fresh_guard_360_capa","reference_display":"CAPA","type":"reference","base_type":"reference","usedInstances":{"bcee3095-4f23-4b55-a6e0-c8d14c3bd10c":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3760b525-3823-42a0-bf3a-4b236dc3e5e5.Count","label":"1 - Look Up Records➛Count","type":"integer","base_type":"integer","usedInstances":{"d87a3e93-7fd6-40f6-beea-beb4ea4281ca":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"undefined","label":" - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email","usedInstances":{"3760b525-3823-42a0-bf3a-4b236dc3e5e5":[null]},"attributes":{}},{"name":"Created or Updated_1.current.u_risk_level","label":"Trigger - Record Created or Updated➛Food Safety Issue Record➛Risk Level","reference":"","reference_display":"Risk Level","type":"choice","base_type":"choice","parent_table_name":"x_fresh_guard_360_issue","column_name":"u_risk_level","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","missing":false,"rawLabel":"-- None --","selected":false,"value":""},{"sequence":1.0,"used":false,"reference":false,"label":"Low","image":"","missing":false,"rawLabel":"Low","selected":false,"value":"low","parameters":{"name":"x_fresh_guard_360_issue","dependent_values":[""],"dependent_values_map":{"":"Low"}}},{"sequence":2.0,"used":false,"reference":false,"label":"Medium","image":"","missing":false,"rawLabel":"Medium","selected":false,"value":"medium","parameters":{"name":"x_fresh_guard_360_issue","dependent_values":[""],"dependent_values_map":{"":"Medium"}}},{"sequence":3.0,"used":false,"reference":false,"label":"High","image":"","missing":false,"rawLabel":"High","selected":false,"value":"high","parameters":{"name":"x_fresh_guard_360_issue","dependent_values":[""],"dependent_values_map":{"":"High"}}},{"sequence":4.0,"used":false,"reference":false,"label":"Critical","image":"","missing":false,"rawLabel":"Critical","selected":false,"value":"critical","parameters":{"name":"x_fresh_guard_360_issue","dependent_values":[""],"dependent_values_map":{"":"Critical"}}}],"usedInstances":{"a73322ae-2ff6-4a0c-9048-fb4f36190dba":["u_priority"],"dd835c5d-36f3-4f64-872c-c0209bc3e9bd":["u_priority"],"bcee3095-4f23-4b55-a6e0-c8d14c3bd10c":[null]}},{"name":"Created or Updated_1.current.u_store","label":"Trigger - Record Created or Updated➛Food Safety Issue Record➛Store","reference":"x_fresh_guard_360_store","reference_display":"Store","type":"reference","base_type":"reference","parent_table_name":"x_fresh_guard_360_issue","column_name":"u_store","usedInstances":{"a73322ae-2ff6-4a0c-9048-fb4f36190dba":["u_store"],"dd835c5d-36f3-4f64-872c-c0209bc3e9bd":["u_store"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Food Safety Issue Record","reference":"x_fresh_guard_360_issue","reference_display":"Food Safety Issue","type":"reference","base_type":"reference","usedInstances":{"a73322ae-2ff6-4a0c-9048-fb4f36190dba":["u_issue"],"a57275ee-893b-4840-ac4a-a1b7bfe031f9":["record"],"3760b525-3823-42a0-bf3a-4b236dc3e5e5":[null,"conditions"],"dd835c5d-36f3-4f64-872c-c0209bc3e9bd":["u_issue"]},"attributes":{}},{"name":"Created or Updated_1.current.u_store.u_store_manager","label":"Trigger - Record Created or Updated➛Food Safety Issue Record➛Store➛Store Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_fresh_guard_360_store","column_name":"u_store_manager","usedInstances":{"dd835c5d-36f3-4f64-872c-c0209bc3e9bd":["u_assigned_to"]}}]</label_cache>
+        <master_snapshot>883fb102652243107f449f96678d3a24</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Fresh Guard 360 - Food Safety Issue to CAPA</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>2cbb2211897a43107f44c6adad624c9b</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 09:22:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ce93f5c6656e03107f449f96678d3ae9</sys_id>
+        <sys_mod_count>60</sys_mod_count>
+        <sys_name>Fresh Guard 360 - Food Safety Issue to CAPA</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_ce93f5c6656e03107f449f96678d3ae9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 15:51:19</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>2e8ca6d1897a43107f44c6adad624c09</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=ce93f5c6656e03107f449f96678d3ae9"/>
+    <sys_variable_value action="delete_multiple" query="document_key=ce93f5c6656e03107f449f96678d3ae9"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_fresh_guard_360_issue">u_capa_required=true^u_risk_level=high^ORu_risk_level=critical<item endquery="false" field="u_capa_required" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item display_value="High" endquery="false" field="u_risk_level" goto="false" newquery="false" operator="=" or="false" value="high"/>
+            <item display_value="Critical" endquery="false" field="u_risk_level" goto="false" newquery="false" operator="=" or="true" value="critical"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-18 15:47:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2cbb2211897a43107f44c6adad624c9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 15:47:31</sys_updated_on>
+        <table>x_fresh_guard_360_issue</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>ce93f5c6656e03107f449f96678d3ae9</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-18 15:47:31</sys_created_on>
+        <sys_id>a4bb2211897a43107f44c6adad624c9c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 15:47:31</sys_updated_on>
+        <trigger display_value="">2cbb2211897a43107f44c6adad624c9b</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=ce93f5c6656e03107f449f96678d3ae9^sys_idNOT INa4bb2211897a43107f44c6adad624c9c"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=ce93f5c6656e03107f449f96678d3ae9"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=ce93f5c6656e03107f449f96678d3ae9^sys_idNOT INc693f5c6656e03107f449f96678d3aeb"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>ce93f5c6656e03107f449f96678d3ae9</id>
+        <name>Fresh Guard 360 - Food Safety Issue to CAPA</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 09:22:09</sys_created_on>
+        <sys_id>c693f5c6656e03107f449f96678d3aeb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 09:22:09</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c693f5c6656e03107f449f96678d3aeb"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=ce93f5c6656e03107f449f96678d3ae9^sys_idNOT INa66d790a65ee03107f449f96678d3a45,da6d390a65ee03107f449f96678d3ac4,e26d790a65ee03107f449f96678d3a3b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Changed Fields</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Fresh Guard 360 - Food Safety Issue to CAPA">ce93f5c6656e03107f449f96678d3ae9</model>
+        <model_id>ce93f5c6656e03107f449f96678d3ae9</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ce93f5c6656e03107f449f96678d3ae9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:05:03</sys_created_on>
+        <sys_id>a66d790a65ee03107f449f96678d3a45</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-15 16:13:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a66d790a65ee03107f449f96678d3a45"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Table Name</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fresh Guard 360 - Food Safety Issue to CAPA">ce93f5c6656e03107f449f96678d3ae9</model>
+        <model_id>ce93f5c6656e03107f449f96678d3ae9</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ce93f5c6656e03107f449f96678d3ae9</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:05:03</sys_created_on>
+        <sys_id>da6d390a65ee03107f449f96678d3ac4</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-15 16:13:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=da6d390a65ee03107f449f96678d3ac4"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Record</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fresh Guard 360 - Food Safety Issue to CAPA">ce93f5c6656e03107f449f96678d3ae9</model>
+        <model_id>ce93f5c6656e03107f449f96678d3ae9</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ce93f5c6656e03107f449f96678d3ae9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:05:03</sys_created_on>
+        <sys_id>e26d790a65ee03107f449f96678d3a3b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-15 16:13:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e26d790a65ee03107f449f96678d3a3b"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=ce93f5c6656e03107f449f96678d3ae9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ce93f5c6656e03107f449f96678d3ae9"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=ce93f5c6656e03107f449f96678d3ae9^sys_idNOT IN372fb102652243107f449f96678d3a01"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">ce93f5c6656e03107f449f96678d3ae9</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:48</sys_created_on>
+        <sys_id>372fb102652243107f449f96678d3a01</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 05:38:22</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=ce93f5c6656e03107f449f96678d3ae9^sys_idNOT INf9a74c36ed2e03107f44863610ff21de,b72fb102652243107f449f96678d3a04,0c235f62ed6603107f44863610ff2121,b54840b6ed2e03107f44863610ff212e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">ce93f5c6656e03107f449f96678d3ae9</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:25:59</sys_created_on>
+        <sys_id>f9a74c36ed2e03107f44863610ff21de</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 16:11:44</sys_updated_on>
+        <ui_id>3760b525-3823-42a0-bf3a-4b236dc3e5e5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VXXU/bMBT9K1GeoyohpTDeUBHSJD4mYLwwZDm201pzk8x2WkrV/77r2EmjNrBGKhJob/X9sM+99xzHfVr5nPpn/mk6DEMcHZ+ehGEch+FoFBMcJUk8IkmYDBM/8DM8YxCpcSIYLOdYlGb9glLJ1BRNSiwpikchIrjAEEC5KgRePrq48fmPc7CSKRdUssw/e3oO/AJL2FUz6Z+ttlz7whI4YQJCHxyuLZh6WTRLVPms7aqd5t1YRy6pgRIGPnvRLKMMMKRYKBb4M5xRrHO5bCySYXqbiY1hyjMNO/om+EXxVzj3NDRxKYOqCLO+Zolcg6w5vcAa32tZEl1KF0qmOSdM2X5QluJS6HHbZgNuC83zzKbYsm12LspZdmPb4Tcb1PMAS6kABCtMoQa5KyO9n+aLuxrlJc+qnjinyAkWzQprLXlSaoNn5TPBZrARmuGi4NkEFTKf8yoZsMwGEwGLQSryBRyq+CQbYGKAD6CveHAJ9ovK/IglN1VcwzaQDIC4AIYgO0KVl7Jq5RwRUarKIXGm7F7+OvDVUo0FVmpTObQc/SkNbtsHVzGyTTMpRPJCn8MWc+aKWwd7KeM43FCO5BnlBoVqyaNEXKmS/Sohm65WY2CNZtTLpfezoOYnigaklNBrvV7vqqZv+iHlVdVWy2vcLq6rYCe0HdtV1wZOaNHBhAZ1fCWpweGfT2n9tWNb8A8BkZN3SXa84ZPKpUa2ly0F7YqiN8/3gFDz/NYw00uWb6FyNE85E7Tre3JpHFvfk6P/83vyKUkOgCiy0+OZ4Fn1OACgH8X+8P0r9tsWzyp6bbhf2bAiuxrAns69195K2ANOrYR7ONt7sHg6INb3fUWZ7bu+NjoBxAcTQHx0GAGsmjKbRnb0vH4PmmnW8a8mHm/HAwVbCdG6S2C9zoz6nnm03hVw3EvBbbJZz8UbnDvww/ENRQYfeQVMIdWdh6x+0YLTCdOb0+somusFFr+7/I5xqB5UVd4HPEKH78p2FG0kCkpB8H8Mhtd+hUbwPNq9Q6LAmvtdIXtgqdtxjV+8uwZMJ0J3jYDS2aSaTfse+d5YHcmHB3wwftovaT2sTg3WM/sS/90OJ4Tnv+daim+pEAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f9a74c36ed2e03107f44863610ff21de"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">ce93f5c6656e03107f449f96678d3ae9</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>d87a3e93-7fd6-40f6-beea-beb4ea4281ca</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:48</sys_created_on>
+        <sys_id>b72fb102652243107f449f96678d3a04</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 16:11:44</sys_updated_on>
+        <ui_id>a57275ee-893b-4840-ac4a-a1b7bfe031f9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9lchrhBJCUctuBEKq1GmlMtNNp7JMfAOWnDjjB4VB/PtcJw4gqFoqdYOaVXwf9jkn9zjPGyI4GZI+8Di5SQZZmqRpL4571/1kNkhnSY+nDCAhHVKyArBSQ6Y0x/WSSecDm81IA7PAI6Wj3xX3rzTpZk5rKO12i6VcmEqy9VPowEi2EJJjngyfXzqkYho3t6DJcHOUOhedZDOQWPrYwjuGa9eVX3OVuQJxUdEG70LnOGSi2zFmsMnDSeIOgZWFkgMCyZk00CEFK5Gl0msytNphAPnzh1KudxULUdqGaMFWRvzDk/uxr8sBmWVBhN2SBoGacD5mlk1x58w6vdNLiQxMowmHnDlpR4expuChskKVTYtlM9l2K+mK8r5RhOw2OPgeziAIqDxPj7yhlU8X6vWxBTkRZS1JoChVxuRuxazVYuash7MhIKHWuGBVJco5rbRairoZoRTducRFN5fqFc80Yl52WeZxd1FV1p1gfFyHn5gWnsRP3Aabtx1i1mYkmTF7Kqgh/es8koZYoEBrFWoJaD0JvjnTorI/8KglBODbTpj/2dV7E5bd7AfqYM+9B1Y012AWdO6Y5jQdxFQY4+B09CdK8WjKcrDr6DaUfM4LZyBtvfCrnoC3kQc7nMTuDnuj+yYRzHD1ZWa4viQzBBoX74aPPBD33r1lDyapHntzMP+OGsusM39cHKccb1y8dv0RtKFy6oOPGz7nijOwt66YCJDcvEGmtQQUiNQCbcgd2SIko6eQ3P0nvswbySCunwtyyLf5Xbz8B04+Zc4wCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b72fb102652243107f449f96678d3a04"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">ce93f5c6656e03107f449f96678d3ae9</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>d87a3e93-7fd6-40f6-beea-beb4ea4281ca</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 05:36:30</sys_created_on>
+        <sys_id>0c235f62ed6603107f44863610ff2121</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 16:11:44</sys_updated_on>
+        <ui_id>bcee3095-4f23-4b55-a6e0-c8d14c3bd10c</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0c235f62ed6603107f44863610ff2121"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">ce93f5c6656e03107f449f96678d3ae9</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>d87a3e93-7fd6-40f6-beea-beb4ea4281ca</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:28:43</sys_created_on>
+        <sys_id>b54840b6ed2e03107f44863610ff212e</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 16:11:44</sys_updated_on>
+        <ui_id>dd835c5d-36f3-4f64-872c-c0209bc3e9bd</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4HOhmHHXdDmFqTIaWuHdeulawXGohNhsuXpI20W5L+PsuU06FqsBXYpsFwSke9Rj880c7NjUrApm+SYfTjLJ2WRF8U4y8anJ/lyUizzsSgA8YQlrIEaCelgqZB3h4RtQPkQfOCVQbvmKw9G8GKS8RJaIICQtlWwvY64+ezzjKLlWiphsGHTm9uEtWComkPDprsnqddqU7BERdCvQdwLWt22fTb28Zg7uugT2oigJ0sYPjhsBJKQCpTFhNXQCHDabNnUGU8BgyAuG7U9INaycVSQBeyDlb/o2tMs4Cqkzkrsc4cjjyb14eocHFxR5dJ5E6HlWssSbe+JwAq8cvPjWA+4bJ3UTU/p2oxsrXzdXPSWsEOB4ZlQxFsSgW3oMyiPbVRXa33/ZVC5kE1nSUwqXYI6nMA5I5feBT07hgprKsRraFvZrHhr9EZ2ZNJSpytFh7RS+p4utXLVpFAG4SnZCumC4udd+BqMDF18ojJE3ifMbu1cgbWPvZCJ/KcPSvrOYg+8tyFQSiNbN6MLNhjl7pNh6AVmZy8OVr58HKRuzu3RwHsurfX43WdZIXa7Oc2AQzHSZvStFeEnz9PSG3LO7fd3nlsamFeh04jtWK2R2ki3fSXRSPuDK9ygineC87bnajKGQuQdGUs0p98iZvimJ9rACs1+/+er/d+Rt661v0/fsNYWEpWwz4zjsNOwpkfhkPfj+WSvxeToOibjbsv/1W7LJ1n3eUcbrm/u3S+4o/+yF1bd7W8eDyW64QcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b54840b6ed2e03107f44863610ff212e"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=ce93f5c6656e03107f449f96678d3ae9"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=ce93f5c6656e03107f449f96678d3ae9^sys_idNOT INea188c76ed2e03107f44863610ff2117"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">40fbc832ed6e03107f44863610ff217c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">ce93f5c6656e03107f449f96678d3ae9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:27:57</sys_created_on>
+        <sys_id>ea188c76ed2e03107f44863610ff2117</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 15:51:08</sys_updated_on>
+        <ui_id>d87a3e93-7fd6-40f6-beea-beb4ea4281ca</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K8jPgPJBWMsboqo0aVunterLVkU3jgNWHTvzBzSL+O+7zgeggdRV6+NeED6+9/qcE5+kIcrZylnzoJbG8LUki+9PY8Klx/B/QySUjCwIVTLnlitJxmQLwnmsaeIP8yBLomQSX0XxZBZBMMmKGCazLIrnOY1ZwpLpSjlp9/sfLghi1v7mAU7JuakE1I/vMoxuuMg16+lXoJG1ZZosmj+2eI5nXUNSJGGQ0Diax1EQRFezMJvHWRjlMbDZHAcKyJjA0tWJ7gtW2LrykLGay3W//tS33g+g0rmnEgVjwl4skzlDEgUIw8akBJmDVbomC6sdAppBfidFfajYcGlxGvG1L4b/Yn5SEPjKgqEuyrrdwzLtne3g4gYsIBVHrdN9Kd0oTpnpHMlZAU7Y1SnWFdxVrcq2xUImhm4lXCm/dGaQw4DhQSLiDJJglVfqufdCivuN2n0bWN5y2brSbwpFQRxWYNG7zFnPpyFMsBIHpSVUFTqaVlpteduMXMrpWuBiWgi1w0P9HZ4C9cSnaCxMbxG/aeFH0Nyr+IxjsBnvgkkN1bwatLWHk/2YmNqsBBhz1Ijmpj+dZ9gp7rWlnT2+pR20xIO3rJexH5+nJ22BY4RWG0afR7wYrZZflyMQ/unXI/bCDcbvLCOvVL8tBEUARXhNw8shgPhSCEbd3T6PwqDrLXkIX8lDj/xVIJLkfx7+OQ+eZgaG07R9/+M4/0p6x0A8+YvfHXowm3KD3B489nH46viNGm8Up6fQTulnr+qI7X8DFB4fKr8GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=ce93f5c6656e03107f449f96678d3ae9^sys_idNOT INe7eb8cfeed2e03107f44863610ff2125,2feb8cfeed2e03107f44863610ff2125,63eb8cfeed2e03107f44863610ff2126,a7eb8cfeed2e03107f44863610ff2126"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>ce93f5c6656e03107f449f96678d3ae9</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{dd835c5d-36f3-4f64-872c-c0209bc3e9bd.record.u_capa_id}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:41</sys_created_on>
+        <sys_id>e7eb8cfeed2e03107f44863610ff2125</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:41</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d3c0536e-d248-435d-9a49-b89b834b6e6d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>ce93f5c6656e03107f449f96678d3ae9</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.u_issue_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:41</sys_created_on>
+        <sys_id>2feb8cfeed2e03107f44863610ff2125</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:41</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>73584a96-3906-4433-b846-ca35a8052df0</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>ce93f5c6656e03107f449f96678d3ae9</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.u_risk_level}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:41</sys_created_on>
+        <sys_id>63eb8cfeed2e03107f44863610ff2126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:41</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f9facc16-d2f5-44ff-9d0e-c1d0af659220</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>ce93f5c6656e03107f449f96678d3ae9</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.u_store.u_store_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:41</sys_created_on>
+        <sys_id>a7eb8cfeed2e03107f44863610ff2126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:41</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>76441a46-d4a0-4c05-a53a-1b5557192783</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=ce93f5c6656e03107f449f96678d3ae9"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ce93f5c6656e03107f449f96678d3ae9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:05:04</sys_created_on>
+        <sys_id>2a6d790a65ee03107f449f96678d3a4b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ce93f5c6656e03107f449f96678d3ae9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:05:03</sys_created_on>
+        <sys_id>a26d790a65ee03107f449f96678d3a11</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ce93f5c6656e03107f449f96678d3ae9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:05:03</sys_created_on>
+        <sys_id>a26d790a65ee03107f449f96678d3a41</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_ce93f5c6656e03107f449f96678d3ae9"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_ce93f5c6656e03107f449f96678d3ae9"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>-1</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Automatically creates formal CAPA records for High and Critical food safety issues.</description>
+        <flow_priority/>
+        <internal_name>x_fresh_guard_360_issue_to_capa_escalator</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current.u_store.u_store_name","label":"Trigger - Record Created or Updated➛Food Safety Issue Record➛Store➛Store Name","reference":"","reference_display":"Store Name","type":"string","base_type":"string","parent_table_name":"x_fresh_guard_360_store","column_name":"u_store_name","usedInstances":{"bcee3095-4f23-4b55-a6e0-c8d14c3bd10c":[null]}},{"name":"Created or Updated_1.current.u_issue_title","label":"Trigger - Record Created or Updated➛Food Safety Issue Record➛Issue Title","reference":"","reference_display":"Issue Title","type":"string","base_type":"string","parent_table_name":"x_fresh_guard_360_issue","column_name":"u_issue_title","usedInstances":{"bcee3095-4f23-4b55-a6e0-c8d14c3bd10c":[null]}},{"name":"dd835c5d-36f3-4f64-872c-c0209bc3e9bd.record.u_capa_id","label":"3 - Create Record➛CAPA Record➛CAPA ID","reference":"","reference_display":"CAPA ID","type":"string","base_type":"string","parent_table_name":"x_fresh_guard_360_capa","column_name":"u_capa_id","usedInstances":{"bcee3095-4f23-4b55-a6e0-c8d14c3bd10c":["ah_subject",null]}},{"name":"dd835c5d-36f3-4f64-872c-c0209bc3e9bd.record","label":"3 - Create Record➛CAPA Record","reference":"x_fresh_guard_360_capa","reference_display":"CAPA","type":"reference","base_type":"reference","usedInstances":{"bcee3095-4f23-4b55-a6e0-c8d14c3bd10c":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3760b525-3823-42a0-bf3a-4b236dc3e5e5.Count","label":"1 - Look Up Records➛Count","type":"integer","base_type":"integer","usedInstances":{"d87a3e93-7fd6-40f6-beea-beb4ea4281ca":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"undefined","label":" - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email - Send Email","usedInstances":{"3760b525-3823-42a0-bf3a-4b236dc3e5e5":[null]},"attributes":{}},{"name":"Created or Updated_1.current.u_risk_level","label":"Trigger - Record Created or Updated➛Food Safety Issue Record➛Risk Level","reference":"","reference_display":"Risk Level","type":"choice","base_type":"choice","parent_table_name":"x_fresh_guard_360_issue","column_name":"u_risk_level","choices":[{"label":"-- None --","sequence":-1.0,"used":false,"reference":false,"image":"","missing":false,"rawLabel":"-- None --","selected":false,"value":""},{"sequence":1.0,"used":false,"reference":false,"label":"Low","image":"","missing":false,"rawLabel":"Low","selected":false,"value":"low","parameters":{"name":"x_fresh_guard_360_issue","dependent_values":[""],"dependent_values_map":{"":"Low"}}},{"sequence":2.0,"used":false,"reference":false,"label":"Medium","image":"","missing":false,"rawLabel":"Medium","selected":false,"value":"medium","parameters":{"name":"x_fresh_guard_360_issue","dependent_values":[""],"dependent_values_map":{"":"Medium"}}},{"sequence":3.0,"used":false,"reference":false,"label":"High","image":"","missing":false,"rawLabel":"High","selected":false,"value":"high","parameters":{"name":"x_fresh_guard_360_issue","dependent_values":[""],"dependent_values_map":{"":"High"}}},{"sequence":4.0,"used":false,"reference":false,"label":"Critical","image":"","missing":false,"rawLabel":"Critical","selected":false,"value":"critical","parameters":{"name":"x_fresh_guard_360_issue","dependent_values":[""],"dependent_values_map":{"":"Critical"}}}],"usedInstances":{"a73322ae-2ff6-4a0c-9048-fb4f36190dba":["u_priority"],"dd835c5d-36f3-4f64-872c-c0209bc3e9bd":["u_priority"],"bcee3095-4f23-4b55-a6e0-c8d14c3bd10c":[null]}},{"name":"Created or Updated_1.current.u_store","label":"Trigger - Record Created or Updated➛Food Safety Issue Record➛Store","reference":"x_fresh_guard_360_store","reference_display":"Store","type":"reference","base_type":"reference","parent_table_name":"x_fresh_guard_360_issue","column_name":"u_store","usedInstances":{"a73322ae-2ff6-4a0c-9048-fb4f36190dba":["u_store"],"dd835c5d-36f3-4f64-872c-c0209bc3e9bd":["u_store"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Food Safety Issue Record","reference":"x_fresh_guard_360_issue","reference_display":"Food Safety Issue","type":"reference","base_type":"reference","usedInstances":{"a73322ae-2ff6-4a0c-9048-fb4f36190dba":["u_issue"],"a57275ee-893b-4840-ac4a-a1b7bfe031f9":["record"],"3760b525-3823-42a0-bf3a-4b236dc3e5e5":[null,"conditions"],"dd835c5d-36f3-4f64-872c-c0209bc3e9bd":["u_issue"]},"attributes":{}},{"name":"Created or Updated_1.current.u_store.u_store_manager","label":"Trigger - Record Created or Updated➛Food Safety Issue Record➛Store➛Store Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_fresh_guard_360_store","column_name":"u_store_manager","usedInstances":{"dd835c5d-36f3-4f64-872c-c0209bc3e9bd":["u_assigned_to"]}}]</label_cache>
+        <master>true</master>
+        <name>Fresh Guard 360 - Food Safety Issue to CAPA</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">ce93f5c6656e03107f449f96678d3ae9</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>883fb102652243107f449f96678d3a24</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 15:47:29</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=883fb102652243107f449f96678d3a24"/>
+    <sys_variable_value action="delete_multiple" query="document_key=883fb102652243107f449f96678d3a24"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=883fb102652243107f449f96678d3a24"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=883fb102652243107f449f96678d3a24^sys_idNOT INc43fb102652243107f449f96678d3a25"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>883fb102652243107f449f96678d3a24</id>
+        <name>Fresh Guard 360 - Food Safety Issue to CAPA</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:48</sys_created_on>
+        <sys_id>c43fb102652243107f449f96678d3a25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 10:12:48</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c43fb102652243107f449f96678d3a25"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=883fb102652243107f449f96678d3a24^sys_idNOT IN083fb102652243107f449f96678d3a26,8c3fb102652243107f449f96678d3a5c,c03fb102652243107f449f96678d3a67"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Record</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fresh Guard 360 - Food Safety Issue to CAPA">883fb102652243107f449f96678d3a24</model>
+        <model_id>883fb102652243107f449f96678d3a24</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_883fb102652243107f449f96678d3a24</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:48</sys_created_on>
+        <sys_id>083fb102652243107f449f96678d3a26</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 15:47:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=083fb102652243107f449f96678d3a26"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Changed Fields</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Fresh Guard 360 - Food Safety Issue to CAPA">883fb102652243107f449f96678d3a24</model>
+        <model_id>883fb102652243107f449f96678d3a24</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_883fb102652243107f449f96678d3a24</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:49</sys_created_on>
+        <sys_id>8c3fb102652243107f449f96678d3a5c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-15 16:13:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8c3fb102652243107f449f96678d3a5c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Table Name</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fresh Guard 360 - Food Safety Issue to CAPA">883fb102652243107f449f96678d3a24</model>
+        <model_id>883fb102652243107f449f96678d3a24</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_883fb102652243107f449f96678d3a24</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:49</sys_created_on>
+        <sys_id>c03fb102652243107f449f96678d3a67</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 15:47:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c03fb102652243107f449f96678d3a67"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=883fb102652243107f449f96678d3a24"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=883fb102652243107f449f96678d3a24"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=883fb102652243107f449f96678d3a24^sys_idNOT INdc3fb102652243107f449f96678d3a78"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">883fb102652243107f449f96678d3a24</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:49</sys_created_on>
+        <sys_id>dc3fb102652243107f449f96678d3a78</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 05:38:23</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=883fb102652243107f449f96678d3a24^sys_idNOT INc83fb102652243107f449f96678d3a77,f383dba2ed6603107f44863610ff2175,2cfb0c32ed6e03107f44863610ff2140,28fb0c32ed6e03107f44863610ff2141"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">883fb102652243107f449f96678d3a24</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>d87a3e93-7fd6-40f6-beea-beb4ea4281ca</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:49</sys_created_on>
+        <sys_id>c83fb102652243107f449f96678d3a77</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:46</sys_updated_on>
+        <ui_id>a57275ee-893b-4840-ac4a-a1b7bfe031f9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9lchrhBJCUctuBEKq1GmlMtNNp7JMfAOWnDjjB4VB/PtcJw4gqFoqdYOaVXwf9jkn9zjPGyI4GZI+8Di5SQZZmqRpL4571/1kNkhnSY+nDCAhHVKyArBSQ6Y0x/WSSecDm81IA7PAI6Wj3xX3rzTpZk5rKO12i6VcmEqy9VPowEi2EJJjngyfXzqkYho3t6DJcHOUOhedZDOQWPrYwjuGa9eVX3OVuQJxUdEG70LnOGSi2zFmsMnDSeIOgZWFkgMCyZk00CEFK5Gl0msytNphAPnzh1KudxULUdqGaMFWRvzDk/uxr8sBmWVBhN2SBoGacD5mlk1x58w6vdNLiQxMowmHnDlpR4expuChskKVTYtlM9l2K+mK8r5RhOw2OPgeziAIqDxPj7yhlU8X6vWxBTkRZS1JoChVxuRuxazVYuash7MhIKHWuGBVJco5rbRairoZoRTducRFN5fqFc80Yl52WeZxd1FV1p1gfFyHn5gWnsRP3Aabtx1i1mYkmTF7Kqgh/es8koZYoEBrFWoJaD0JvjnTorI/8KglBODbTpj/2dV7E5bd7AfqYM+9B1Y012AWdO6Y5jQdxFQY4+B09CdK8WjKcrDr6DaUfM4LZyBtvfCrnoC3kQc7nMTuDnuj+yYRzHD1ZWa4viQzBBoX74aPPBD33r1lDyapHntzMP+OGsusM39cHKccb1y8dv0RtKFy6oOPGz7nijOwt66YCJDcvEGmtQQUiNQCbcgd2SIko6eQ3P0nvswbySCunwtyyLf5Xbz8B04+Zc4wCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c83fb102652243107f449f96678d3a77"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">883fb102652243107f449f96678d3a24</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>d87a3e93-7fd6-40f6-beea-beb4ea4281ca</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 05:38:23</sys_created_on>
+        <sys_id>f383dba2ed6603107f44863610ff2175</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-15 16:13:59</sys_updated_on>
+        <ui_id>bcee3095-4f23-4b55-a6e0-c8d14c3bd10c</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f383dba2ed6603107f44863610ff2175"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">883fb102652243107f449f96678d3a24</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:45</sys_created_on>
+        <sys_id>2cfb0c32ed6e03107f44863610ff2140</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:45</sys_updated_on>
+        <ui_id>3760b525-3823-42a0-bf3a-4b236dc3e5e5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VXXU/bMBT9K1GeoyohpTDeUBHSJD4mYLwwZDm201pzk8x2WkrV/77r2EmjNrBGKhJob/X9sM+99xzHfVr5nPpn/mk6DEMcHZ+ehGEch+FoFBMcJUk8IkmYDBM/8DM8YxCpcSIYLOdYlGb9glLJ1BRNSiwpikchIrjAEEC5KgRePrq48fmPc7CSKRdUssw/e3oO/AJL2FUz6Z+ttlz7whI4YQJCHxyuLZh6WTRLVPms7aqd5t1YRy6pgRIGPnvRLKMMMKRYKBb4M5xRrHO5bCySYXqbiY1hyjMNO/om+EXxVzj3NDRxKYOqCLO+Zolcg6w5vcAa32tZEl1KF0qmOSdM2X5QluJS6HHbZgNuC83zzKbYsm12LspZdmPb4Tcb1PMAS6kABCtMoQa5KyO9n+aLuxrlJc+qnjinyAkWzQprLXlSaoNn5TPBZrARmuGi4NkEFTKf8yoZsMwGEwGLQSryBRyq+CQbYGKAD6CveHAJ9ovK/IglN1VcwzaQDIC4AIYgO0KVl7Jq5RwRUarKIXGm7F7+OvDVUo0FVmpTObQc/SkNbtsHVzGyTTMpRPJCn8MWc+aKWwd7KeM43FCO5BnlBoVqyaNEXKmS/Sohm65WY2CNZtTLpfezoOYnigaklNBrvV7vqqZv+iHlVdVWy2vcLq6rYCe0HdtV1wZOaNHBhAZ1fCWpweGfT2n9tWNb8A8BkZN3SXa84ZPKpUa2ly0F7YqiN8/3gFDz/NYw00uWb6FyNE85E7Tre3JpHFvfk6P/83vyKUkOgCiy0+OZ4Fn1OACgH8X+8P0r9tsWzyp6bbhf2bAiuxrAns69195K2ANOrYR7ONt7sHg6INb3fUWZ7bu+NjoBxAcTQHx0GAGsmjKbRnb0vH4PmmnW8a8mHm/HAwVbCdG6S2C9zoz6nnm03hVw3EvBbbJZz8UbnDvww/ENRQYfeQVMIdWdh6x+0YLTCdOb0+somusFFr+7/I5xqB5UVd4HPEKH78p2FG0kCkpB8H8Mhtd+hUbwPNq9Q6LAmvtdIXtgqdtxjV+8uwZMJ0J3jYDS2aSaTfse+d5YHcmHB3wwftovaT2sTg3WM/sS/90OJ4Tnv+daim+pEAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2cfb0c32ed6e03107f44863610ff2140"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">883fb102652243107f449f96678d3a24</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>d87a3e93-7fd6-40f6-beea-beb4ea4281ca</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:45</sys_created_on>
+        <sys_id>28fb0c32ed6e03107f44863610ff2141</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:45</sys_updated_on>
+        <ui_id>dd835c5d-36f3-4f64-872c-c0209bc3e9bd</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4HOhmHHXdDmFqTIaWuHdeulawXGohNhsuXpI20W5L+PsuU06FqsBXYpsFwSke9Rj880c7NjUrApm+SYfTjLJ2WRF8U4y8anJ/lyUizzsSgA8YQlrIEaCelgqZB3h4RtQPkQfOCVQbvmKw9G8GKS8RJaIICQtlWwvY64+ezzjKLlWiphsGHTm9uEtWComkPDprsnqddqU7BERdCvQdwLWt22fTb28Zg7uugT2oigJ0sYPjhsBJKQCpTFhNXQCHDabNnUGU8BgyAuG7U9INaycVSQBeyDlb/o2tMs4Cqkzkrsc4cjjyb14eocHFxR5dJ5E6HlWssSbe+JwAq8cvPjWA+4bJ3UTU/p2oxsrXzdXPSWsEOB4ZlQxFsSgW3oMyiPbVRXa33/ZVC5kE1nSUwqXYI6nMA5I5feBT07hgprKsRraFvZrHhr9EZ2ZNJSpytFh7RS+p4utXLVpFAG4SnZCumC4udd+BqMDF18ojJE3ifMbu1cgbWPvZCJ/KcPSvrOYg+8tyFQSiNbN6MLNhjl7pNh6AVmZy8OVr58HKRuzu3RwHsurfX43WdZIXa7Oc2AQzHSZvStFeEnz9PSG3LO7fd3nlsamFeh04jtWK2R2ki3fSXRSPuDK9ygineC87bnajKGQuQdGUs0p98iZvimJ9rACs1+/+er/d+Rt661v0/fsNYWEpWwz4zjsNOwpkfhkPfj+WSvxeToOibjbsv/1W7LJ1n3eUcbrm/u3S+4o/+yF1bd7W8eDyW64QcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=28fb0c32ed6e03107f44863610ff2141"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=883fb102652243107f449f96678d3a24"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=883fb102652243107f449f96678d3a24^sys_idNOT INa0fb0c32ed6e03107f44863610ff2143"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">40fbc832ed6e03107f44863610ff217c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Food Safety Issue to CAPA">883fb102652243107f449f96678d3a24</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:45</sys_created_on>
+        <sys_id>a0fb0c32ed6e03107f44863610ff2143</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 15:47:29</sys_updated_on>
+        <ui_id>d87a3e93-7fd6-40f6-beea-beb4ea4281ca</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYNnWaAky018MxwEKJA2RRPk0gbCiqJiIhSpipRtVfC/d6mHbTQumrQ99mbOLndnRhy4Jbq2ZW3NvV4aI54UWXx59IhQDsPfLVFQcLIgTKtMWKFV0gEe2YCsXWG15ux5IvLJavlpOQFZcciaCd8JgwM8kglTSmgeXtfN1kJmFR9YlFDhLssrsmh/KokMh+UU8uCSBSwK51FIaXgxC9J5lAZhFgGHCAdKSLl0e0f6k5sO8X6pyzalw42thHoazjfDlLsR1FXmWAXUI3xnuco48slBGu6RAlQGVlfNAXEib5U8AmuhLI4jrnlnxHdcGMaxa8w5SmS8Lx6OyeBiD+dXYAGp1MzW1dDK1lowbnpzMp5DLe3qFOsbbksntb9iIZXjbS3rQn3sHSGHAeNHQ6Q2SIKXTqmjPujI79Z6+3lkeS1U58pQlJqBPJzAondpbR2flnDJCxyUFFCW6GhSVnojusvIpfCfJB78XOotLnWv0gfmiPtoLPjXiF918ANUwqn4gGPwck8zBSNY0r1gHIc2cbL3iGnMSoIxR5HobvKtdhR7yYO4pPfHXWGVKO0SN2/4oGPvvQzESRbaNno3p2kcxtPoIoymsxDoNM0jmM7SMJpnLOIxj/2VrpXd77/WlEYZfRmSPx3ztvRcQpzHAY3Pp2c2P5eeM7l5Y2TC30TGfa9XJoZS+j8yfx0ZYZL+oQ/auuX/MDGPLh79zoPXTBikdu+w9+M/jSs0+LgEO4W2unp2oo7Y/gcFsBVzswYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=883fb102652243107f449f96678d3a24^sys_idNOT IN3cfb0c32ed6e03107f44863610ff218b,30fb0c32ed6e03107f44863610ff218c,34fb0c32ed6e03107f44863610ff218c,38fb0c32ed6e03107f44863610ff218c"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>883fb102652243107f449f96678d3a24</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{dd835c5d-36f3-4f64-872c-c0209bc3e9bd.record.u_capa_id}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:46</sys_created_on>
+        <sys_id>3cfb0c32ed6e03107f44863610ff218b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:46</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d3c0536e-d248-435d-9a49-b89b834b6e6d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>883fb102652243107f449f96678d3a24</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.u_issue_title}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:46</sys_created_on>
+        <sys_id>30fb0c32ed6e03107f44863610ff218c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:46</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>73584a96-3906-4433-b846-ca35a8052df0</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>883fb102652243107f449f96678d3a24</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.u_risk_level}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:46</sys_created_on>
+        <sys_id>34fb0c32ed6e03107f44863610ff218c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:46</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>f9facc16-d2f5-44ff-9d0e-c1d0af659220</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>883fb102652243107f449f96678d3a24</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.u_store.u_store_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 09:44:46</sys_created_on>
+        <sys_id>38fb0c32ed6e03107f44863610ff218c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 09:44:46</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>76441a46-d4a0-4c05-a53a-1b5557192783</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=883fb102652243107f449f96678d3a24"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_883fb102652243107f449f96678d3a24</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:49</sys_created_on>
+        <sys_id>003fb102652243107f449f96678d3a6d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:02:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_883fb102652243107f449f96678d3a24</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:49</sys_created_on>
+        <sys_id>883fb102652243107f449f96678d3a58</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_883fb102652243107f449f96678d3a24</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:49</sys_created_on>
+        <sys_id>cc3fb102652243107f449f96678d3a62</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:04:02</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_883fb102652243107f449f96678d3a24"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_883fb102652243107f449f96678d3a24"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>ce93f5c6656e03107f449f96678d3ae9</sys_id>
+        <latest_snapshot>883fb102652243107f449f96678d3a24</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=ce93f5c6656e03107f449f96678d3ae9^sys_idNOT IN103fb102652243107f449f96678d3a85"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"103fb102652243107f449f96678d3a85","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>ce93f5c6656e03107f449f96678d3ae9</plan_id>
+        <snapshot>c7317a9d897a43107f44c6adad624c78</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:12:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>103fb102652243107f449f96678d3a85</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 15:47:31</sys_updated_on>
+        <trigger display_value="">2cbb2211897a43107f44c6adad624c9b</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=ce93f5c6656e03107f449f96678d3ae9"/>
+</record_update>

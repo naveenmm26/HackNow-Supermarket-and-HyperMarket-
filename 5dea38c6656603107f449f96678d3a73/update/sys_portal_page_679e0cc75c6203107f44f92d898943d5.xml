@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2026-08-20 08:42:19">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout/>
+        <order/>
+        <read_roles>snc_internal</read_roles>
+        <roles/>
+        <selectable>true</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 04:34:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>679e0cc75c6203107f44f92d898943d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fresh Guard 360 - Management Dashboard</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_portal_page_679e0cc75c6203107f44f92d898943d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 04:34:55</sys_updated_on>
+        <title>Fresh Guard 360 - Management Dashboard</title>
+        <user/>
+        <view/>
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="Fresh Guard 360 - Management Dashboard">679e0cc75c6203107f44f92d898943d5</page>
+                <summary/>
+                <sys_created_by>admin</sys_created_by>
+                <sys_created_on>2026-08-11 04:34:55</sys_created_on>
+                <sys_id>eb9e0cc75c6203107f44f92d898943d7</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>admin</sys_updated_by>
+                <sys_updated_on>2026-08-11 04:34:55</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2026-08-11 04:34:55">eb9e0cc75c6203107f44f92d898943d7</portal_section>
+                        <sys_created_by>admin</sys_created_by>
+                        <sys_created_on>2026-08-11 04:34:55</sys_created_on>
+                        <sys_id>6f9e0cc75c6203107f44f92d898943d8</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>admin</sys_updated_by>
+                        <sys_updated_on>2026-08-11 04:34:55</sys_updated_on>
+                        <value>f06908075c2203107f44f92d8989434a</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal_page>
+</record_update>

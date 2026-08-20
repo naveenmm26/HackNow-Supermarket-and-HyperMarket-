@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script><![CDATA[document.addEventListener("DOMContentLoaded", function() {
+    const donutOpt = { responsive: true, maintainAspectRatio: false, cutout: "70%", plugins: { legend: { display: false } } };
+
+    new Chart(document.getElementById("c1"), { type: "doughnut", data: { labels: ["Completed","Failed","Pending","Submitted"], datasets: [{ data: [184,32,26,12], backgroundColor: ["#22c55e","#ef4444","#f59e0b","#3b82f6"] }] }, options: donutOpt });
+    new Chart(document.getElementById("c2"), { type: "bar", data: { labels: ["Store 1","Store 2","Store 3","Store 4","Store 5"], datasets: [{ label: "Issues", data: [12,8,6,4,2], backgroundColor: ["#ef4444","#f97316","#f59e0b","#22c55e","#3b82f6"] }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+    new Chart(document.getElementById("c3"), { type: "doughnut", data: { labels: ["Critical","High","Medium","Low"], datasets: [{ data: [5,10,12,18], backgroundColor: ["#ef4444","#f97316","#f59e0b","#22c55e"] }] }, options: donutOpt });
+    new Chart(document.getElementById("c5"), { type: "doughnut", data: { labels: ["Open","In Progress","Completed"], datasets: [{ data: [18,15,8], backgroundColor: ["#ef4444","#f97316","#22c55e"] }] }, options: donutOpt });
+
+    function loadLiveKpiMetrics() {
+        try {
+            var grStore = new GlideRecord("x_fresh_guard_360_store");
+            grStore.query(function(gr) {
+                var c = 0; while (gr.next()) c++;
+                if (c > 0 && document.getElementById("kpiTotalStores")) document.getElementById("kpiTotalStores").textContent = c;
+            });
+        } catch(e) {}
+        try {
+            var grCheck = new GlideRecord("x_fresh_guard_360_checklist");
+            grCheck.query(function(gr) {
+                var c = 0; while (gr.next()) c++;
+                if (c > 0 && document.getElementById("kpiChecklists")) document.getElementById("kpiChecklists").textContent = c;
+            });
+        } catch(e) {}
+        try {
+            var grIss = new GlideRecord("x_fresh_guard_360_issue");
+            grIss.query(function(gr) {
+                var c = 0; while (gr.next()) c++;
+                if (c > 0 && document.getElementById("kpiIssues")) document.getElementById("kpiIssues").textContent = c;
+            });
+        } catch(e) {}
+        try {
+            var grRisk = new GlideRecord("x_fresh_guard_360_issue");
+            grRisk.query(function(gr) {
+                var c = 0;
+                while (gr.next()) {
+                    var r = (gr.getValue("u_risk_level") || "").toLowerCase();
+                    if (r.includes("high") || r.includes("critical")) c++;
+                }
+                if (c > 0 && document.getElementById("kpiRisks")) document.getElementById("kpiRisks").textContent = c;
+            });
+        } catch(e) {}
+        try {
+            var grCapa = new GlideRecord("x_fresh_guard_360_capa");
+            grCapa.query(function(gr) {
+                var c = 0; while (gr.next()) c++;
+                if (c > 0 && document.getElementById("kpiCapa")) document.getElementById("kpiCapa").textContent = c;
+            });
+        } catch(e) {}
+        try {
+            var grMaint = new GlideRecord("x_fresh_guard_360_inspection");
+            grMaint.query(function(gr) {
+                var c = 0; while (gr.next()) c++;
+                if (c > 0 && document.getElementById("kpiTickets")) document.getElementById("kpiTickets").textContent = c;
+            });
+        } catch(e) {}
+    }
+    loadLiveKpiMetrics();
+
+    let currentUserName = "$[jvar_user_first_name]";
+    if (!currentUserName || currentUserName === "User" || currentUserName === "$[jvar_user_first_name]") currentUserName = "Manoj";
+
+    const aiBtn = document.getElementById("aiBtn");
+    const aiDrawer = document.getElementById("aiDrawer");
+    const aiClose = document.getElementById("aiClose");
+    const aiSend = document.getElementById("aiSend");
+    const aiInput = document.getElementById("aiInput");
+    const aiChatBody = document.getElementById("aiChatBody");
+    const chipsContainer = document.getElementById("suggestedChips");
+
+    const defaultPrompts = [
+        "Show me today's checklist status.",
+        "Which stores have high-risk issues?",
+        "Are any products nearing expiry?",
+        "Show me recent food safety inspections.",
+        "Are there any pending supplier complaints?"
+    ];
+
+    function renderChips() {
+        chipsContainer.innerHTML = "";
+        defaultPrompts.forEach(q => {
+            const btn = document.createElement("button");
+            btn.className = "chip-btn"; btn.textContent = q;
+            btn.onclick = () => { aiInput.value = q; handleSend(); };
+            chipsContainer.appendChild(btn);
+        });
+    }
+    renderChips();
+
+    if (aiBtn) aiBtn.onclick = () => aiDrawer.classList.toggle("active");
+    if (aiClose) aiClose.onclick = () => aiDrawer.classList.remove("active");
+
+    function appendMessage(sender, text) {
+        const div = document.createElement("div");
+        div.className = "chat-msg " + (sender === "user" ? "msg-user" : "msg-ai");
+        div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br/>");
+        aiChatBody.appendChild(div);
+        aiChatBody.scrollTop = aiChatBody.scrollHeight;
+    }
+
+    function handleSend() {
+        const q = aiInput.value.trim(); if (!q) return;
+        appendMessage("user", q); aiInput.value = "";
+        const qLower = q.toLowerCase();
+
+        const greetingRegex = /^(hi|hii|hiii|helo|hello|helloo|hey|heyy|heyyy|greetings|daii|hola|good\s*morning|good\s*afternoon|good\s*evening)$/i;
+        if (greetingRegex.test(qLower) || (qLower.startsWith("hi") && qLower.length <= 5) || (qLower.startsWith("hel") && qLower.length <= 6)) {
+            setTimeout(() => appendMessage("ai", "Hi " + currentUserName + "! ]]>👋<![CDATA[ How can I help you today? You can ask me anything about food safety, store checklists, products, inspections, or supplier complaints."), 300);
+            return;
+        }
+
+        setTimeout(() => {
+            if (qLower.includes("checklist")) {
+                appendMessage("ai", "]]>📋<![CDATA[ **TODAY'S CHECKLIST STATUS (" + currentUserName + ")**\n\n• **Total Submitted:** 184 Checklists\n• **Passed Checklists:** 152 (82.6% Compliance Rate)\n• **Failed Checklists:** 32 (17.4% Fail Rate)\n\n]]>🚨<![CDATA[ *Stores Needing Attention: Store 1 (NYC), Store 3 (Queens).*");
+            } else if (qLower.includes("risk") || qLower.includes("high-risk") || qLower.includes("issue")) {
+                appendMessage("ai", "]]>🛡<![CDATA[️ **HIGH-RISK STORES & ISSUES ANALYSIS**\n\n• **Store 1 (NYC Downtown):** **CRITICAL RISK** (12 Open Issues)\n• **Store 2 (Brooklyn North):** **HIGH RISK** (8 Open Issues)\n• **Store 3 (Queens Central):** **MEDIUM RISK** (6 Open Issues)");
+            } else if (qLower.includes("expiry") || qLower.includes("product") || qLower.includes("batch")) {
+                appendMessage("ai", "⚠️ **PRODUCTS NEARING EXPIRY & EXPIRED BATCHES**\n\n• **Milk 1L** (BATCH-1001) - Expiry: 24 May 2025 - **Near Expiry**\n• **Cheese 200g** (BATCH-1002) - Expiry: 25 May 2025 - **Near Expiry**\n• **Chicken Breast** (BATCH-1004) - Expiry: 23 May 2025 - **EXPIRED**");
+            } else if (qLower.includes("inspection") || qLower.includes("audit") || qLower.includes("inspect")) {
+                appendMessage("ai", "]]>🔍<![CDATA[ **RECENT FOOD SAFETY INSPECTIONS**\n\n• **Store 1 (NYC Downtown):** Inspected 22 May 2025 - **Grade B (Pass with CAPA)**\n• **Store 2 (Brooklyn North):** Inspected 20 May 2025 - **Grade A (Compliant)**\n• **Store 3 (Queens Central):** Scheduled for 26 May 2025");
+            } else if (qLower.includes("supplier") || qLower.includes("complaint") || qLower.includes("vendor")) {
+                appendMessage("ai", "]]>🏭<![CDATA[ **PENDING SUPPLIER COMPLAINTS & QUALITY ISSUES**\n\n• **Dairy Best:** 5 Active Complaints (Packaging Seal Defects)\n• **Meat Prime Inc:** 3 Active Complaints (Temperature Violation during Transit)\n• **Fresh Farm Produce:** 1 Active Complaint (Label Mismatch)");
+            } else {
+                appendMessage("ai", "I'm not sure I completely understood that. Could you please rephrase your question? ]]>😊<![CDATA[\n\nYou can ask me about store checklists, risk issues, near-expiry products, inspections, or supplier complaints.");
+            }
+        }, 400);
+    }
+
+    if (aiSend) aiSend.onclick = handleSend;
+    if (aiInput) aiInput.onkeypress = (e) => { if (e.key === "Enter") handleSend(); };
+});
+]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_fresh_guard_360_fg360_dashboard.do</endpoint>
+        <html><![CDATA[<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide">
+<div style="font-family: 'Segoe UI', sans-serif; background-color: #f8fafc; color: #0f172a; padding-bottom: 80px; min-height: 100vh;">    <header style="background-color: #0f172a; color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; height: 56px; border-bottom: 2px solid #2563eb;">        <div><h1 style="font-size: 1.15rem; font-weight: 700; color: #f8fafc; margin: 0;">Fresh Guard 360 - Store Operations Dashboard</h1><p style="font-size: 0.75rem; color: #94a3b8; margin: 0;">Real-Time Food Safety, Inventory &amp; Operations Analytics</p></div>        <div style="display: flex; align-items: center; gap: 10px;"><div style="background: #1e293b; color: #38bdf8; border: 1px solid #0284c7; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Role: Operations Admin</div><a href="x_fresh_guard_360_checklist.do?sys_id=-1" target="_blank" style="background: #2563eb; color: #ffffff; border: none; border-radius: 6px; padding: 6px 12px; font-size: 0.8rem; font-weight: 700; text-decoration: none;">+ New Checklist</a></div>    </header>    <main style="padding: 16px 24px; max-width: 1600px; margin: 0 auto;">        <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 16px;">            <div onclick="window.open('x_fresh_guard_360_store_list.do', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">                <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="width: 42px; height: 42px; border-radius: 50%; background-color: #dbeafe; color: #2563eb; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">]]>🏪<![CDATA[</div><div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">Total Stores</span><span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiTotalStores">2</span></div></div>                <div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"><span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;">View Stores &#10140;</span></div>            </div>            <div onclick="window.open('x_fresh_guard_360_checklist_list.do?sysparm_query=u_status=completed', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">                <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="width: 42px; height: 42px; border-radius: 50%; background-color: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">✅</div><div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">Checklists Completed</span><span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiChecklists">1</span></div></div>                <div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"><span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;">View Checklists &#10140;</span></div>            </div>            <div onclick="window.open('x_fresh_guard_360_issue_list.do', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">                <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="width: 42px; height: 42px; border-radius: 50%; background-color: #ffedd5; color: #ea580c; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">⚠️</div><div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">Open Food Safety Issues</span><span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiIssues">16</span></div></div>                <div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"><span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;">View Issues &#10140;</span></div>            </div>            <div onclick="window.open('x_fresh_guard_360_issue_list.do?sysparm_query=u_risk_level=high^ORu_risk_level=critical', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">                <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="width: 42px; height: 42px; border-radius: 50%; background-color: #fee2e2; color: #dc2626; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">]]>🛡<![CDATA[️</div><div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">High &amp; Critical Risks</span><span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiRisks">12</span></div></div>                <div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"><span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;">View Risks &#10140;</span></div>            </div>            <div onclick="window.open('x_fresh_guard_360_capa_list.do?sysparm_query=u_status!=completed^u_status!=closed', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">                <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="width: 42px; height: 42px; border-radius: 50%; background-color: #f3e8ff; color: #9333ea; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">]]>📋<![CDATA[</div><div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">Overdue CAPA</span><span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiCapa">19</span></div></div>                <div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"><span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;">View CAPA &#10140;</span></div>            </div>            <div onclick="window.open('x_fresh_guard_360_inspection_list.do?sysparm_query=u_status!=completed^u_status!=closed', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">                <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="width: 42px; height: 42px; border-radius: 50%; background-color: #cff4fc; color: #055160; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">]]>🔧<![CDATA[</div><div><span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;">Pending Inspections</span><span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiTickets">3</span></div></div>                <div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"><span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;">View Inspections &#10140;</span></div>            </div>        </div>        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">            <div style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 16px;"><h3 style="font-size: 0.9rem; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Near Expiry Products</h3><table style="width: 100%; border-collapse: collapse; font-size: 0.76rem;"><thead><tr style="background: #f8fafc; color: #64748b;"><th style="padding: 6px;">Product</th><th style="padding: 6px;">Batch</th><th style="padding: 6px;">Status</th></tr></thead><tbody><tr><td style="padding: 6px;">Milk 1L</td><td style="padding: 6px;">BATCH-1001</td><td style="padding: 6px;"><span style="background: #fef3c7; color: #d97706; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Near Expiry</span></td></tr><tr><td style="padding: 6px;">Cheese 200g</td><td style="padding: 6px;">BATCH-1002</td><td style="padding: 6px;"><span style="background: #fef3c7; color: #d97706; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Near Expiry</span></td></tr></tbody></table></div>            <div style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 16px;"><h3 style="font-size: 0.9rem; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Active Food Safety Issues</h3><table style="width: 100%; border-collapse: collapse; font-size: 0.76rem;"><thead><tr style="background: #f8fafc; color: #64748b;"><th style="padding: 6px;">Issue #</th><th style="padding: 6px;">Risk</th><th style="padding: 6px;">Status</th></tr></thead><tbody><tr><td style="padding: 6px;">ISS0001001</td><td style="padding: 6px;"><span style="background: #fee2e2; color: #dc2626; padding: 2px 6px; border-radius: 4px; font-weight: 600;">Critical</span></td><td style="padding: 6px;">Open</td></tr><tr><td style="padding: 6px;">ISS0001002</td><td style="padding: 6px;"><span style="background: #fee2e2; color: #dc2626; padding: 2px 6px; border-radius: 4px; font-weight: 600;">High</span></td><td style="padding: 6px;">Open</td></tr></tbody></table></div>            <div style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 16px;"><h3 style="font-size: 0.9rem; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Maintenance &amp; Inspections</h3><table style="width: 100%; border-collapse: collapse; font-size: 0.76rem;"><thead><tr style="background: #f8fafc; color: #64748b;"><th style="padding: 6px;">Ticket #</th><th style="padding: 6px;">Equipment</th><th style="padding: 6px;">Status</th></tr></thead><tbody><tr><td style="padding: 6px;">INS-1001</td><td style="padding: 6px;">Chiller #1</td><td style="padding: 6px;">Scheduled</td></tr><tr><td style="padding: 6px;">INS-1002</td><td style="padding: 6px;">Freezer #3</td><td style="padding: 6px;">In Progress</td></tr></tbody></table></div>        </div>    </main>    <button id="aiBtn" style="position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #4f46e5); color: #ffffff; border: 2px solid #ffffff; box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4); font-weight: 800; font-size: 0.88rem; cursor: pointer;">( AI )</button>    <div id="aiDrawer" style="position: fixed; bottom: 84px; right: 20px; width: 360px; height: 480px; background: #ffffff; border-radius: 14px; box-shadow: 0 16px 36px rgba(15, 23, 42, 0.3); border: 1px solid #cbd5e1; display: none; flex-direction: column; overflow: hidden; z-index: 999999;">        <div style="background: #0f172a; color: #ffffff; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;"><h3 style="font-size: 0.92rem; font-weight: 700; margin: 0;">]]>🤖<![CDATA[ Fresh Guard AI</h3><button id="aiClose" style="background: none; border: none; color: #94a3b8; font-size: 1.3rem; cursor: pointer;">X</button></div>        <div id="aiChatBody" style="flex: 1; padding: 14px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; background: #f8fafc;"><div style="max-width: 88%; padding: 9px 12px; border-radius: 10px; font-size: 0.81rem; background: #ffffff; border: 1px solid #e2e8f0; color: #1e293b;">Hello! ]]>👋<![CDATA[ I am <strong>Fresh Guard AI</strong>. How can I help with store operations today?</div></div>        <div style="padding: 10px; background: #ffffff; border-top: 1px solid #e2e8f0; display: flex; gap: 6px;"><input type="text" id="aiInput" placeholder="Ask Fresh Guard AI..." style="flex: 1; border: 1px solid #cbd5e1; border-radius: 18px; padding: 7px 12px; font-size: 0.8rem; outline: none;" /><button id="aiSend" style="background: #2563eb; color: #ffffff; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-weight: bold;">&#10140;</button></div>    </div></div>
+</j:jelly>]]></html>
+        <name>fg360_dashboard</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 07:49:39</sys_created_on>
+        <sys_id>c83bf00b5ce603107f44f92d898943cd</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>fg360_dashboard</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_ui_page_c83bf00b5ce603107f44f92d898943cd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:44:03</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_ui_page_c83bf00b5ce603107f44f92d898943cd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[document.addEventListener("DOMContentLoaded", function() {
+    const donutOpt = { responsive: true, maintainAspectRatio: false, cutout: "70%", plugins: { legend: { display: false } } };
+
+    new Chart(document.getElementById("c1"), { type: "doughnut", data: { labels: ["Completed","Failed","Pending","Submitted"], datasets: [{ data: [184,32,26,12], backgroundColor: ["#22c55e","#ef4444","#f59e0b","#3b82f6"] }] }, options: donutOpt });
+    new Chart(document.getElementById("c2"), { type: "bar", data: { labels: ["Store 1","Store 2","Store 3","Store 4","Store 5"], datasets: [{ label: "Issues", data: [12,8,6,4,2], backgroundColor: ["#ef4444","#f97316","#f59e0b","#22c55e","#3b82f6"] }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+    new Chart(document.getElementById("c3"), { type: "doughnut", data: { labels: ["Critical","High","Medium","Low"], datasets: [{ data: [5,10,12,18], backgroundColor: ["#ef4444","#f97316","#f59e0b","#22c55e"] }] }, options: donutOpt });
+    new Chart(document.getElementById("c5"), { type: "doughnut", data: { labels: ["Open","In Progress","Completed"], datasets: [{ data: [18,15,8], backgroundColor: ["#ef4444","#f97316","#22c55e"] }] }, options: donutOpt });
+
+    function loadLiveKpiMetrics() {
+        try {
+            var grStore = new GlideRecord("x_fresh_guard_360_store");
+            grStore.query(function(gr) {
+                var c = 0; while (gr.next()) c++;
+                if (c &gt; 0 &amp;&amp; document.getElementById("kpiTotalStores")) document.getElementById("kpiTotalStores").textContent = c;
+            });
+        } catch(e) {}
+        try {
+            var grCheck = new GlideRecord("x_fresh_guard_360_checklist");
+            grCheck.query(function(gr) {
+                var c = 0; while (gr.next()) c++;
+                if (c &gt; 0 &amp;&amp; document.getElementById("kpiChecklists")) document.getElementById("kpiChecklists").textContent = c;
+            });
+        } catch(e) {}
+        try {
+            var grIss = new GlideRecord("x_fresh_guard_360_issue");
+            grIss.query(function(gr) {
+                var c = 0; while (gr.next()) c++;
+                if (c &gt; 0 &amp;&amp; document.getElementById("kpiIssues")) document.getElementById("kpiIssues").textContent = c;
+            });
+        } catch(e) {}
+        try {
+            var grRisk = new GlideRecord("x_fresh_guard_360_issue");
+            grRisk.query(function(gr) {
+                var c = 0;
+                while (gr.next()) {
+                    var r = (gr.getValue("u_risk_level") || "").toLowerCase();
+                    if (r.includes("high") || r.includes("critical")) c++;
+                }
+                if (c &gt; 0 &amp;&amp; document.getElementById("kpiRisks")) document.getElementById("kpiRisks").textContent = c;
+            });
+        } catch(e) {}
+        try {
+            var grCapa = new GlideRecord("x_fresh_guard_360_capa");
+            grCapa.query(function(gr) {
+                var c = 0; while (gr.next()) c++;
+                if (c &gt; 0 &amp;&amp; document.getElementById("kpiCapa")) document.getElementById("kpiCapa").textContent = c;
+            });
+        } catch(e) {}
+        try {
+            var grMaint = new GlideRecord("x_fresh_guard_360_inspection");
+            grMaint.query(function(gr) {
+                var c = 0; while (gr.next()) c++;
+                if (c &gt; 0 &amp;&amp; document.getElementById("kpiTickets")) document.getElementById("kpiTickets").textContent = c;
+            });
+        } catch(e) {}
+    }
+    loadLiveKpiMetrics();
+
+    let currentUserName = "$[jvar_user_first_name]";
+    if (!currentUserName || currentUserName === "User" || currentUserName === "$[jvar_user_first_name]") currentUserName = "Manoj";
+
+    const aiBtn = document.getElementById("aiBtn");
+    const aiDrawer = document.getElementById("aiDrawer");
+    const aiClose = document.getElementById("aiClose");
+    const aiSend = document.getElementById("aiSend");
+    const aiInput = document.getElementById("aiInput");
+    const aiChatBody = document.getElementById("aiChatBody");
+    const chipsContainer = document.getElementById("suggestedChips");
+
+    const defaultPrompts = [
+        "Show me today's checklist status.",
+        "Which stores have high-risk issues?",
+        "Are any products nearing expiry?",
+        "Show me recent food safety inspections.",
+        "Are there any pending supplier complaints?"
+    ];
+
+    function renderChips() {
+        chipsContainer.innerHTML = "";
+        defaultPrompts.forEach(q =&gt; {
+            const btn = document.createElement("button");
+            btn.className = "chip-btn"; btn.textContent = q;
+            btn.onclick = () =&gt; { aiInput.value = q; handleSend(); };
+            chipsContainer.appendChild(btn);
+        });
+    }
+    renderChips();
+
+    if (aiBtn) aiBtn.onclick = () =&gt; aiDrawer.classList.toggle("active");
+    if (aiClose) aiClose.onclick = () =&gt; aiDrawer.classList.remove("active");
+
+    function appendMessage(sender, text) {
+        const div = document.createElement("div");
+        div.className = "chat-msg " + (sender === "user" ? "msg-user" : "msg-ai");
+        div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, "&lt;strong&gt;$1&lt;/strong&gt;").replace(/\n/g, "&lt;br/&gt;");
+        aiChatBody.appendChild(div);
+        aiChatBody.scrollTop = aiChatBody.scrollHeight;
+    }
+
+    function handleSend() {
+        const q = aiInput.value.trim(); if (!q) return;
+        appendMessage("user", q); aiInput.value = "";
+        const qLower = q.toLowerCase();
+
+        const greetingRegex = /^(hi|hii|hiii|helo|hello|helloo|hey|heyy|heyyy|greetings|daii|hola|good\s*morning|good\s*afternoon|good\s*evening)$/i;
+        if (greetingRegex.test(qLower) || (qLower.startsWith("hi") &amp;&amp; qLower.length &lt;= 5) || (qLower.startsWith("hel") &amp;&amp; qLower.length &lt;= 6)) {
+            setTimeout(() =&gt; appendMessage("ai", "Hi " + currentUserName + "! ]]&gt;👋&lt;![CDATA[ How can I help you today? You can ask me anything about food safety, store checklists, products, inspections, or supplier complaints."), 300);
+            return;
+        }
+
+        setTimeout(() =&gt; {
+            if (qLower.includes("checklist")) {
+                appendMessage("ai", "]]&gt;📋&lt;![CDATA[ **TODAY'S CHECKLIST STATUS (" + currentUserName + ")**\n\n• **Total Submitted:** 184 Checklists\n• **Passed Checklists:** 152 (82.6% Compliance Rate)\n• **Failed Checklists:** 32 (17.4% Fail Rate)\n\n]]&gt;🚨&lt;![CDATA[ *Stores Needing Attention: Store 1 (NYC), Store 3 (Queens).*");
+            } else if (qLower.includes("risk") || qLower.includes("high-risk") || qLower.includes("issue")) {
+                appendMessage("ai", "]]&gt;🛡&lt;![CDATA[️ **HIGH-RISK STORES &amp; ISSUES ANALYSIS**\n\n• **Store 1 (NYC Downtown):** **CRITICAL RISK** (12 Open Issues)\n• **Store 2 (Brooklyn North):** **HIGH RISK** (8 Open Issues)\n• **Store 3 (Queens Central):** **MEDIUM RISK** (6 Open Issues)");
+            } else if (qLower.includes("expiry") || qLower.includes("product") || qLower.includes("batch")) {
+                appendMessage("ai", "⚠️ **PRODUCTS NEARING EXPIRY &amp; EXPIRED BATCHES**\n\n• **Milk 1L** (BATCH-1001) - Expiry: 24 May 2025 - **Near Expiry**\n• **Cheese 200g** (BATCH-1002) - Expiry: 25 May 2025 - **Near Expiry**\n• **Chicken Breast** (BATCH-1004) - Expiry: 23 May 2025 - **EXPIRED**");
+            } else if (qLower.includes("inspection") || qLower.includes("audit") || qLower.includes("inspect")) {
+                appendMessage("ai", "]]&gt;🔍&lt;![CDATA[ **RECENT FOOD SAFETY INSPECTIONS**\n\n• **Store 1 (NYC Downtown):** Inspected 22 May 2025 - **Grade B (Pass with CAPA)**\n• **Store 2 (Brooklyn North):** Inspected 20 May 2025 - **Grade A (Compliant)**\n• **Store 3 (Queens Central):** Scheduled for 26 May 2025");
+            } else if (qLower.includes("supplier") || qLower.includes("complaint") || qLower.includes("vendor")) {
+                appendMessage("ai", "]]&gt;🏭&lt;![CDATA[ **PENDING SUPPLIER COMPLAINTS &amp; QUALITY ISSUES**\n\n• **Dairy Best:** 5 Active Complaints (Packaging Seal Defects)\n• **Meat Prime Inc:** 3 Active Complaints (Temperature Violation during Transit)\n• **Fresh Farm Produce:** 1 Active Complaint (Label Mismatch)");
+            } else {
+                appendMessage("ai", "I'm not sure I completely understood that. Could you please rephrase your question? ]]&gt;😊&lt;![CDATA[\n\nYou can ask me about store checklists, risk issues, near-expiry products, inspections, or supplier complaints.");
+            }
+        }, 400);
+    }
+
+    if (aiSend) aiSend.onclick = handleSend;
+    if (aiInput) aiInput.onkeypress = (e) =&gt; { if (e.key === "Enter") handleSend(); };
+});
+]]&gt;&lt;/client_script&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_fresh_guard_360_fg360_dashboard.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide"&gt;
+&lt;div style="font-family: 'Segoe UI', sans-serif; background-color: #f8fafc; color: #0f172a; padding-bottom: 80px; min-height: 100vh;"&gt;    &lt;header style="background-color: #0f172a; color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; height: 56px; border-bottom: 2px solid #2563eb;"&gt;        &lt;div&gt;&lt;h1 style="font-size: 1.15rem; font-weight: 700; color: #f8fafc; margin: 0;"&gt;Fresh Guard 360 - Store Operations Dashboard&lt;/h1&gt;&lt;p style="font-size: 0.75rem; color: #94a3b8; margin: 0;"&gt;Real-Time Food Safety, Inventory &amp;amp; Operations Analytics&lt;/p&gt;&lt;/div&gt;        &lt;div style="display: flex; align-items: center; gap: 10px;"&gt;&lt;div style="background: #1e293b; color: #38bdf8; border: 1px solid #0284c7; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600;"&gt;Role: Operations Admin&lt;/div&gt;&lt;a href="x_fresh_guard_360_checklist.do?sys_id=-1" target="_blank" style="background: #2563eb; color: #ffffff; border: none; border-radius: 6px; padding: 6px 12px; font-size: 0.8rem; font-weight: 700; text-decoration: none;"&gt;+ New Checklist&lt;/a&gt;&lt;/div&gt;    &lt;/header&gt;    &lt;main style="padding: 16px 24px; max-width: 1600px; margin: 0 auto;"&gt;        &lt;div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 16px;"&gt;            &lt;div onclick="window.open('x_fresh_guard_360_store_list.do', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;"&gt;                &lt;div style="display: flex; align-items: flex-start; gap: 12px;"&gt;&lt;div style="width: 42px; height: 42px; border-radius: 50%; background-color: #dbeafe; color: #2563eb; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"&gt;]]&gt;🏪&lt;![CDATA[&lt;/div&gt;&lt;div&gt;&lt;span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;"&gt;Total Stores&lt;/span&gt;&lt;span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiTotalStores"&gt;2&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;                &lt;div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"&gt;&lt;span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;"&gt;View Stores &amp;#10140;&lt;/span&gt;&lt;/div&gt;            &lt;/div&gt;            &lt;div onclick="window.open('x_fresh_guard_360_checklist_list.do?sysparm_query=u_status=completed', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;"&gt;                &lt;div style="display: flex; align-items: flex-start; gap: 12px;"&gt;&lt;div style="width: 42px; height: 42px; border-radius: 50%; background-color: #dcfce7; color: #16a34a; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"&gt;✅&lt;/div&gt;&lt;div&gt;&lt;span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;"&gt;Checklists Completed&lt;/span&gt;&lt;span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiChecklists"&gt;1&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;                &lt;div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"&gt;&lt;span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;"&gt;View Checklists &amp;#10140;&lt;/span&gt;&lt;/div&gt;            &lt;/div&gt;            &lt;div onclick="window.open('x_fresh_guard_360_issue_list.do', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;"&gt;                &lt;div style="display: flex; align-items: flex-start; gap: 12px;"&gt;&lt;div style="width: 42px; height: 42px; border-radius: 50%; background-color: #ffedd5; color: #ea580c; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"&gt;⚠️&lt;/div&gt;&lt;div&gt;&lt;span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;"&gt;Open Food Safety Issues&lt;/span&gt;&lt;span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiIssues"&gt;16&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;                &lt;div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"&gt;&lt;span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;"&gt;View Issues &amp;#10140;&lt;/span&gt;&lt;/div&gt;            &lt;/div&gt;            &lt;div onclick="window.open('x_fresh_guard_360_issue_list.do?sysparm_query=u_risk_level=high^ORu_risk_level=critical', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;"&gt;                &lt;div style="display: flex; align-items: flex-start; gap: 12px;"&gt;&lt;div style="width: 42px; height: 42px; border-radius: 50%; background-color: #fee2e2; color: #dc2626; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"&gt;]]&gt;🛡&lt;![CDATA[️&lt;/div&gt;&lt;div&gt;&lt;span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;"&gt;High &amp;amp; Critical Risks&lt;/span&gt;&lt;span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiRisks"&gt;12&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;                &lt;div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"&gt;&lt;span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;"&gt;View Risks &amp;#10140;&lt;/span&gt;&lt;/div&gt;            &lt;/div&gt;            &lt;div onclick="window.open('x_fresh_guard_360_capa_list.do?sysparm_query=u_status!=completed^u_status!=closed', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;"&gt;                &lt;div style="display: flex; align-items: flex-start; gap: 12px;"&gt;&lt;div style="width: 42px; height: 42px; border-radius: 50%; background-color: #f3e8ff; color: #9333ea; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"&gt;]]&gt;📋&lt;![CDATA[&lt;/div&gt;&lt;div&gt;&lt;span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;"&gt;Overdue CAPA&lt;/span&gt;&lt;span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiCapa"&gt;19&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;                &lt;div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"&gt;&lt;span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;"&gt;View CAPA &amp;#10140;&lt;/span&gt;&lt;/div&gt;            &lt;/div&gt;            &lt;div onclick="window.open('x_fresh_guard_360_inspection_list.do?sysparm_query=u_status!=completed^u_status!=closed', '_blank')" style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;"&gt;                &lt;div style="display: flex; align-items: flex-start; gap: 12px;"&gt;&lt;div style="width: 42px; height: 42px; border-radius: 50%; background-color: #cff4fc; color: #055160; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;"&gt;]]&gt;🔧&lt;![CDATA[&lt;/div&gt;&lt;div&gt;&lt;span style="font-size: 0.78rem; font-weight: 600; color: #64748b; display: block;"&gt;Pending Inspections&lt;/span&gt;&lt;span style="font-size: 1.6rem; font-weight: 800; color: #0f172a;" id="kpiTickets"&gt;3&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;                &lt;div style="margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9;"&gt;&lt;span style="font-size: 0.75rem; color: #2563eb; font-weight: 600;"&gt;View Inspections &amp;#10140;&lt;/span&gt;&lt;/div&gt;            &lt;/div&gt;        &lt;/div&gt;        &lt;div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;"&gt;            &lt;div style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 16px;"&gt;&lt;h3 style="font-size: 0.9rem; font-weight: 700; color: #0f172a; margin-bottom: 12px;"&gt;Near Expiry Products&lt;/h3&gt;&lt;table style="width: 100%; border-collapse: collapse; font-size: 0.76rem;"&gt;&lt;thead&gt;&lt;tr style="background: #f8fafc; color: #64748b;"&gt;&lt;th style="padding: 6px;"&gt;Product&lt;/th&gt;&lt;th style="padding: 6px;"&gt;Batch&lt;/th&gt;&lt;th style="padding: 6px;"&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style="padding: 6px;"&gt;Milk 1L&lt;/td&gt;&lt;td style="padding: 6px;"&gt;BATCH-1001&lt;/td&gt;&lt;td style="padding: 6px;"&gt;&lt;span style="background: #fef3c7; color: #d97706; padding: 2px 6px; border-radius: 4px; font-weight: 600;"&gt;Near Expiry&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="padding: 6px;"&gt;Cheese 200g&lt;/td&gt;&lt;td style="padding: 6px;"&gt;BATCH-1002&lt;/td&gt;&lt;td style="padding: 6px;"&gt;&lt;span style="background: #fef3c7; color: #d97706; padding: 2px 6px; border-radius: 4px; font-weight: 600;"&gt;Near Expiry&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;            &lt;div style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 16px;"&gt;&lt;h3 style="font-size: 0.9rem; font-weight: 700; color: #0f172a; margin-bottom: 12px;"&gt;Active Food Safety Issues&lt;/h3&gt;&lt;table style="width: 100%; border-collapse: collapse; font-size: 0.76rem;"&gt;&lt;thead&gt;&lt;tr style="background: #f8fafc; color: #64748b;"&gt;&lt;th style="padding: 6px;"&gt;Issue #&lt;/th&gt;&lt;th style="padding: 6px;"&gt;Risk&lt;/th&gt;&lt;th style="padding: 6px;"&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style="padding: 6px;"&gt;ISS0001001&lt;/td&gt;&lt;td style="padding: 6px;"&gt;&lt;span style="background: #fee2e2; color: #dc2626; padding: 2px 6px; border-radius: 4px; font-weight: 600;"&gt;Critical&lt;/span&gt;&lt;/td&gt;&lt;td style="padding: 6px;"&gt;Open&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="padding: 6px;"&gt;ISS0001002&lt;/td&gt;&lt;td style="padding: 6px;"&gt;&lt;span style="background: #fee2e2; color: #dc2626; padding: 2px 6px; border-radius: 4px; font-weight: 600;"&gt;High&lt;/span&gt;&lt;/td&gt;&lt;td style="padding: 6px;"&gt;Open&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;            &lt;div style="background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 16px;"&gt;&lt;h3 style="font-size: 0.9rem; font-weight: 700; color: #0f172a; margin-bottom: 12px;"&gt;Maintenance &amp;amp; Inspections&lt;/h3&gt;&lt;table style="width: 100%; border-collapse: collapse; font-size: 0.76rem;"&gt;&lt;thead&gt;&lt;tr style="background: #f8fafc; color: #64748b;"&gt;&lt;th style="padding: 6px;"&gt;Ticket #&lt;/th&gt;&lt;th style="padding: 6px;"&gt;Equipment&lt;/th&gt;&lt;th style="padding: 6px;"&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style="padding: 6px;"&gt;INS-1001&lt;/td&gt;&lt;td style="padding: 6px;"&gt;Chiller #1&lt;/td&gt;&lt;td style="padding: 6px;"&gt;Scheduled&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style="padding: 6px;"&gt;INS-1002&lt;/td&gt;&lt;td style="padding: 6px;"&gt;Freezer #3&lt;/td&gt;&lt;td style="padding: 6px;"&gt;In Progress&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;        &lt;/div&gt;    &lt;/main&gt;    &lt;button id="aiBtn" style="position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #4f46e5); color: #ffffff; border: 2px solid #ffffff; box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4); font-weight: 800; font-size: 0.88rem; cursor: pointer;"&gt;( AI )&lt;/button&gt;    &lt;div id="aiDrawer" style="position: fixed; bottom: 84px; right: 20px; width: 360px; height: 480px; background: #ffffff; border-radius: 14px; box-shadow: 0 16px 36px rgba(15, 23, 42, 0.3); border: 1px solid #cbd5e1; display: none; flex-direction: column; overflow: hidden; z-index: 999999;"&gt;        &lt;div style="background: #0f172a; color: #ffffff; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;"&gt;&lt;h3 style="font-size: 0.92rem; font-weight: 700; margin: 0;"&gt;]]&gt;🤖&lt;![CDATA[ Fresh Guard AI&lt;/h3&gt;&lt;button id="aiClose" style="background: none; border: none; color: #94a3b8; font-size: 1.3rem; cursor: pointer;"&gt;X&lt;/button&gt;&lt;/div&gt;        &lt;div id="aiChatBody" style="flex: 1; padding: 14px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; background: #f8fafc;"&gt;&lt;div style="max-width: 88%; padding: 9px 12px; border-radius: 10px; font-size: 0.81rem; background: #ffffff; border: 1px solid #e2e8f0; color: #1e293b;"&gt;Hello! ]]&gt;👋&lt;![CDATA[ I am &lt;strong&gt;Fresh Guard AI&lt;/strong&gt;. How can I help with store operations today?&lt;/div&gt;&lt;/div&gt;        &lt;div style="padding: 10px; background: #ffffff; border-top: 1px solid #e2e8f0; display: flex; gap: 6px;"&gt;&lt;input type="text" id="aiInput" placeholder="Ask Fresh Guard AI..." style="flex: 1; border: 1px solid #cbd5e1; border-radius: 18px; padding: 7px 12px; font-size: 0.8rem; outline: none;" /&gt;&lt;button id="aiSend" style="background: #2563eb; color: #ffffff; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-weight: bold;"&gt;&amp;#10140;&lt;/button&gt;&lt;/div&gt;    &lt;/div&gt;&lt;/div&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;fg360_dashboard&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-08-11 07:49:39&lt;/sys_created_on&gt;&lt;sys_id&gt;c83bf00b5ce603107f44f92d898943cd&lt;/sys_id&gt;&lt;sys_mod_count&gt;31&lt;/sys_mod_count&gt;&lt;sys_name&gt;fg360_dashboard&lt;/sys_name&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_c83bf00b5ce603107f44f92d898943cd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-12 08:44:03&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1151763991</payload_hash>
+        <record_name>fg360_dashboard</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 08:44:04</sys_created_on>
+        <sys_id>c331d2d7196a03107f449316be92e154</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19ff52498310000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 08:44:04</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>0731d2d7956a0310e09708a07e4d9853</update_guid>
+        <update_guid_history>0731d2d7956a0310e09708a07e4d9853:-1151763991,d5ac0e9fd92a03108a44cb40e83f79c7:1546942671,ced6f55fd0660310da4b5e0dc881c301:-511530857,9576f91f23660310e99d48a13d093ec3:546870129,d5067ddb2766031098a3f5a47aba7bfa:-1548024015,c7c5b5dbc76603108152ce05aa94ebda:1911883679,f9e43d5b96660310712138044fff9066:2082519879,acb99113c2a20310c5f10bdfaf468d65:-1290327092,7379d9df77620310bf4b48805972a4e4:-295299340,8fd8199fbe620310e36e2a4fee0f6166:-1290327092,73c7591fca6203102c41ef3c4c855700:768909872,d25799dbf4620310b5885ad866fab0b4:-722974176,87f5515bff6203107a07a1c352da55c0:-1290327092,4db93a0f97e2031024d38a7da40b5fe9:-988992756,690936cb04e2031042dd32fd8d050ed9:-1739418570,6358be4b58e20310b1d692777981bc79:-535553146,fa67360bc4e20310bf019a2b7909ab84:-1414921878,2596ba87c1e20310817fd99037196359:-1071878906,2406f64717e2031021cdad6b4b413634:-1358833504,e3e5364787e203109160f509a4d07f34:48755090,0d053e83c3e20310c5e9044f7b37ef75:-1702201624,6fc33643dbe203107e4ef59560cf1ee0:-1717996697,d072fe4f06a20310cc94c43954125f5a:1646636075,1581f6cb8da203105ab2393710f12909:1943963998,8d684507fc6a03109e7bd2eb098b7f91:-1527627794,ebb505cf972a03106e4c445c60bcf4aa:1081655117,f3440dcb7a2a03107ff6f439c261a2da:1654425905,a9afbcc33a2a0310125ad2437565220a:-2021300579,b0ae3083162a03108c0e5b5ae9a6f1c8:-335751347,188c380f05e603100ce9bd21ae4b6319:1241266143,403bf00bb4e6031084ecc47552f360d0:-1709740788</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 09:19:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>ce3cadd63b9e49d7a9c2f78437436a19</sys_id>
+        <sys_metadata>c83bf00b5ce603107f44f92d898943cd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>fg360_dashboard</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_ui_page_c83bf00b5ce603107f44f92d898943cd</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_c83bf00b5ce603107f44f92d898943cd">c331d2d7196a03107f449316be92e154</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 09:19:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

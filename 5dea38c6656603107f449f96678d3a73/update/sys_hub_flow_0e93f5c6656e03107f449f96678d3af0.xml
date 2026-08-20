@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=159475000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Dispatches urgent product recall quarantine instructions to Store Managers and Suppliers.</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>x_fresh_guard_360_product_recall_dispatcher</internal_name>
+        <label_cache>[{"name":"Updated_1.current.u_reason","label":"Trigger - Record Updated➛Product Recall Record➛Reason","reference":"","reference_display":"Reason","type":"html","base_type":"html","parent_table_name":"x_fresh_guard_360_recall","column_name":"u_reason","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{},"attributes":null},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Product Recall Record","reference":"x_fresh_guard_360_recall","reference_display":"Product Recall","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"81144643-44a7-4d19-b849-cc1171f739d5":["record"],"e6191c8b-e961-405c-868d-695c19613e2a":["record"],"5275390a-f53d-4dc1-96fc-7fdadaef740d":["record"]},"attributes":{}},{"name":"Updated_1.current.u_product.u_product_name","label":"Trigger - Record Updated➛Product Recall Record➛Product➛Product Name","reference":"","reference_display":"Product Name","type":"string","base_type":"string","parent_table_name":"x_fresh_guard_360_product","column_name":"u_product_name","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{"81144643-44a7-4d19-b849-cc1171f739d5":["ah_subject"],"5275390a-f53d-4dc1-96fc-7fdadaef740d":["ah_subject"]},"attributes":null},{"name":"Updated_1.current.u_supplier","label":"Trigger - Record Updated➛Product Recall Record➛Supplier","reference":"x_fresh_guard_360_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","parent_table_name":"x_fresh_guard_360_recall","column_name":"u_supplier","choices":null,"usedInstances":{"5275390a-f53d-4dc1-96fc-7fdadaef740d":["ah_to"]},"attributes":null},{"name":"Updated_1.current.u_batch_number","label":"Trigger - Record Updated➛Product Recall Record➛Batch Number","reference":"","reference_display":"Batch Number","type":"string","base_type":"string","parent_table_name":"x_fresh_guard_360_recall","column_name":"u_batch_number","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{},"attributes":null},{"name":"Updated_1.current.u_product","label":"Trigger - Record Updated➛Product Recall Record➛Product","reference":"x_fresh_guard_360_product","reference_display":"Product","type":"reference","base_type":"reference","parent_table_name":"x_fresh_guard_360_recall","column_name":"u_product","choices":null,"usedInstances":{"5275390a-f53d-4dc1-96fc-7fdadaef740d":["ah_subject"]},"attributes":null},{"name":"Updated_1.current.u_recall_id","label":"Trigger - Record Updated➛Product Recall Record➛Recall ID","reference":"","reference_display":"Recall ID","type":"string","base_type":"string","parent_table_name":"x_fresh_guard_360_recall","column_name":"u_recall_id","choices":null,"usedInstances":{"36e32a17-6800-4a7a-9444-68034e34da59":["log_message"]},"attributes":null},{"name":"e6191c8b-e961-405c-868d-695c19613e2a.record","label":"1 - Update Record➛Product Recall Record","reference":"x_fresh_guard_360_recall","reference_display":"Product Recall","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current.u_risk_level","label":"Trigger - Record Updated➛Product Recall Record➛Risk Level","reference":"","reference_display":"Risk Level","type":"choice","base_type":"choice","parent_table_name":"x_fresh_guard_360_recall","column_name":"u_risk_level","choices":[{"label":null,"value":null,"order":0.0}],"usedInstances":{},"attributes":null}]</label_cache>
+        <master_snapshot>23710a06652243107f449f96678d3a00</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Fresh Guard 360 - Product Recall Management</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>38f35be2ed6603107f44863610ff213f</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 09:22:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0e93f5c6656e03107f449f96678d3af0</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>Fresh Guard 360 - Product Recall Management</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_0e93f5c6656e03107f449f96678d3af0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:33:00</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>27e6547aedee03107f44863610ff21c1</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=0e93f5c6656e03107f449f96678d3af0"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0e93f5c6656e03107f449f96678d3af0"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_fresh_guard_360_recall">u_status=approved^ORu_status=in_progress<item display_value="Approved" endquery="false" field="u_status" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+            <item display_value="In Progress" endquery="false" field="u_status" goto="false" newquery="false" operator="=" or="true" value="in_progress"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 05:40:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>38f35be2ed6603107f44863610ff213f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 05:40:06</sys_updated_on>
+        <table>x_fresh_guard_360_recall</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>0e93f5c6656e03107f449f96678d3af0</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 05:40:06</sys_created_on>
+        <sys_id>34f35be2ed6603107f44863610ff2140</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 05:40:06</sys_updated_on>
+        <trigger display_value="">38f35be2ed6603107f44863610ff213f</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=0e93f5c6656e03107f449f96678d3af0^sys_idNOT IN34f35be2ed6603107f44863610ff2140"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=0e93f5c6656e03107f449f96678d3af0"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=0e93f5c6656e03107f449f96678d3af0^sys_idNOT IN0693f5c6656e03107f449f96678d3af2"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>0e93f5c6656e03107f449f96678d3af0</id>
+        <name>Fresh Guard 360 - Product Recall Management</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 09:22:09</sys_created_on>
+        <sys_id>0693f5c6656e03107f449f96678d3af2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 09:22:09</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=0693f5c6656e03107f449f96678d3af2"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=0e93f5c6656e03107f449f96678d3af0^sys_idNOT IN47304282652243107f449f96678d3a6a,8f304282652243107f449f96678d3a48,cb304282652243107f449f96678d3a73"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Record</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fresh Guard 360 - Product Recall Management">0e93f5c6656e03107f449f96678d3af0</model>
+        <model_id>0e93f5c6656e03107f449f96678d3af0</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0e93f5c6656e03107f449f96678d3af0</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:17:22</sys_created_on>
+        <sys_id>47304282652243107f449f96678d3a6a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=47304282652243107f449f96678d3a6a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Table Name</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fresh Guard 360 - Product Recall Management">0e93f5c6656e03107f449f96678d3af0</model>
+        <model_id>0e93f5c6656e03107f449f96678d3af0</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0e93f5c6656e03107f449f96678d3af0</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:17:22</sys_created_on>
+        <sys_id>8f304282652243107f449f96678d3a48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8f304282652243107f449f96678d3a48"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Changed Fields</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Fresh Guard 360 - Product Recall Management">0e93f5c6656e03107f449f96678d3af0</model>
+        <model_id>0e93f5c6656e03107f449f96678d3af0</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0e93f5c6656e03107f449f96678d3af0</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:17:23</sys_created_on>
+        <sys_id>cb304282652243107f449f96678d3a73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:04:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=cb304282652243107f449f96678d3a73"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=0e93f5c6656e03107f449f96678d3af0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0e93f5c6656e03107f449f96678d3af0"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=0e93f5c6656e03107f449f96678d3af0^sys_idNOT IN2f71c606652243107f449f96678d3ac4"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Product Recall Management">0e93f5c6656e03107f449f96678d3af0</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:52</sys_created_on>
+        <sys_id>2f71c606652243107f449f96678d3ac4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 05:40:04</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=0e93f5c6656e03107f449f96678d3af0^sys_idNOT INaf71c606652243107f449f96678d3adf,87a313e2ed6603107f44863610ff2130,8412903eedae03107f44863610ff210c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Product Recall Management">0e93f5c6656e03107f449f96678d3af0</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:52</sys_created_on>
+        <sys_id>af71c606652243107f449f96678d3adf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:36:47</sys_updated_on>
+        <ui_id>e6191c8b-e961-405c-868d-695c19613e2a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy24aMRT9FeQ1QjNMghJ2VVCkSmlSJS2bNLIu9h2w5HnUDwJF/HuvZzyASJQSKZuo7O7LPuf4HuZxw5RkY3aGMkkv05HI0iwbJsnw4iydjbJZOpQZIKasz0ookDoNispIipegfUhsNj9rCQ4lTwfCG4Ol226pLpWtNaynsY0yYqG0pDobPz71WQ2GTnRo2HhzVDoVkoYZamq97zAdY3TrOsSyEr4gXFx1yZs4OYmV3tcJVWgowEmTPsOVw1IiAclBW+yzAkpiWZk1GzvjKWEQ5F2p17uOhSpdS7SAlVV/6OazJPTlSMxEFGEX8ihQm84n4OCBThbOm51elRJoW00k5uC1uzrMtQ13tVNV2Y44mOluutK+KG9bRdjugIP38JZAYB14BuQtrfxhUT3fdyCvVdlIEinqSoDeReCcUTPvApwNQ42NxgXUtSrnvDbVUjXDBKUYzDUFg1xXz3SnVfNyACLgHpCqMLim/KRJT8GoQOIbHUPD2z6za3ulwdo9FdKQ//YBSUssUuCNCo0EvNmEMCyMqt0XumqJEfi2H5d+dv7WhonL/UIdnLlf/BXPDdoFn3swkmejhNPegdYvd/+7qSQ9bO++q7/PCSfg7Jzwo3n/13FHM7zI3RzO9m7bQrTC+YdZ4eIzWSHS+PRe+JcDkuGb/7EHm9QsvT3Yfs+XaFSuBATk3Dpw3v7ySZLJAIFYv/TBSTPv88YJDDpvXCvU0r5CqTMGFgTWIW8pHpkjFnvTWNx9Kz7MIekoaX6fyCf/zSfj6S84LeUFKQkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=af71c606652243107f449f96678d3adf"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Product Recall Management">0e93f5c6656e03107f449f96678d3af0</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 05:38:54</sys_created_on>
+        <sys_id>87a313e2ed6603107f44863610ff2130</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:36:47</sys_updated_on>
+        <ui_id>5275390a-f53d-4dc1-96fc-7fdadaef740d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1c227ruBX9FcLPkY58k+3MSzNxMg2Qy5nEZ4piMhAoirLVI4kqSSXxBAH63k8YYD6uX9JNXXyPIyVOaqU6LzniZXNzc629JJHWr48Nz2kcNjpO3zBtt4N7RrvVNox+azCw2wPX6PcGRpM4jYNGiAMKLTkljKvrO+zHquDx8VvkYEkdq6mTmHMayqcnqHc8Efl4+kvWDErIxPMdqG8c/vrbQSPCHCxKyhuHjytVRV3ysU19aDrCfEwlus5dW3VVTiN17TASB+Ce5eWF55mBYVaDzoZQA52UV8ZBgz5IGjoU3HGxL+hBI8AhzJXx6ayEU+xchf68YOKFEkweCcGIB3ERSE4oogH2fHTvyQnCKHVMbyh7D8L7HZxrt5Qpl0IMiPLVC4nngEeNhWIrCylUn82r3SGW+EbymMiYzyLNPEJFGk2Hujj25fFiWdrgKpIeC9MuEtt+3pv5cRBepkFszAwsrGQswBkaqdioycLgMHH3ZsLur3NnT70wiWIWFZ8R7M+u3BuKOZmcetRXSx3GgQ1tDxpYSu7ZsVRuAih8aDUfx0pcVWNBS+rTZCkDHEVeOLYizu68ZEBwP9DHPlzors/uob/wxqGOiZqrDquH9VMoHybFv2DuqYlfgBno/HTQEFNx7GMh5tOH+Fv/jJX3aTCW3VG9rQRwqjPhXiSPYKg7mk326SCjWHOwDc9OZ47bBZtzmj1YLqdiYo1jzB2rbRoWoAj7/jrTvnLmABgUHdL6crwr4Oecdwozm/3OOLdWdr7YF12mFRnjmiUZl+IuI9wIWCbTRJDyC8nMvRnJ+sYyyZ4h136QakaVwqxaZs/7MARAIqwU5tncksFfwZyX+GKYpm2bdrfXnuNwQFynZ7sm7pH2HHf3kGV5gPl3K8myC6RprrMjyx/lOFHAl5wTkJn92KHob7lT2/zMSGIzBqkuXGUIePrlNInujCGtN2lSCk0kGYLF9KegRDOXVOFcp+QES+QJJGC1dDRiyMtmtdDjAE1ZjIJYSGgmoWaJfEvi1tlf3mVwyEqHG7FSCWLunoDd7UKA58DGE0uyBdoJQCPVAZd4TPlfEt1KZAtUS4cprpPy5Q7l+FrA9ZmGsfV5ZLQUsGrheIWVN3lhxsj2dkamErVGyAVJMvaXHFXBvnLc9wIvAUTK2t3TwdmKKWoswYiQBTrs4GGowOA5oI+P1z0pA+jO6ySmRnTlEN3c+oRNzSUc2buGdIHRc0j/uIJpuzSouzWo/09A3d0OK7IEJBHb/6BELgD72/VPJ5cj9PX6avjteISuT46Pzs+Rhja85dJjFRf1qD3/X/Kku+n1187slrwRejkaOcluZrHYFJ8yZDPrW6L/Odd2Tyy8FUpuazlDM2e6wKrb2DDaJELKZ0164TQglDMmbQjM96TSuW3cps1oRpXTq6shujk6PRn9fYU2qbUvUdr8Nixl/QhllELp+zM0wQLZlIbqmRhCTx3kMo4gSQUCHnvVQy5HyfMJXN1BtADD+ps8SN/LoSGV8KgtDtO+Nk8rtdL/lvtnxs+GhyitEBEOEVE4yP1QTlqQONTKR57v3zZgflOfzupTgh3CfH0vpD9APWEh8BmylJcwJW+ZAASqk2krU8l657WPj65jSY5DAQENDk0KpW3H0Tot3NQ6pjHQcNuwtVazR8igiV3a6T495UHa7jwMhRAmhEZSzIew3DhMuCHAJ3BUcfAh72h88DQyLFAhPSc3pZLVV7B/5hSZZuKKlvmc/MWwHPylrqqXKNIInHuQM0cZ86UXaXNnk4fhpHDEotVmmVd52xH3xvDkDnqW7sGgTNQSDLbMsfwBLb+VztvN62fALeS6kJjLvOVzo2csVSYKmMScs/vi65LIpkaARrJsp6WR/vPnH8/4uVCg6/qeeVQutqAzK9kP1vm1Y4ByShaiOVLXE4DlYoIdahUhq8oLiw4/aw2FbCHXqDeoHmCsgZTwpnHMTVyBsKJZU5TbQZFHvgNOlb48h1kI/kamQHlhhqR5W0vFXPOAqxt6bE75IUsSfgaEf/278CKli1JuIddXNhOxLAJ7J2E2Ja2m7RINbnqo1umTrtaH2x/N6PZbGGN30DPtCkhY0WnUElZOwvL69RJ1C17r2qfWtaWl/gBpK0LiykhbVr7QoghjKq9zP2JJJugyOf2yd2I3cJvEGWBba/Yx3EC1ex1t0Gl2tZ49ME271bJdalZA7IpOoxa7cmK3iN1a2j61tC0t9QdIWxHKVkbayvCk8oJ27Ynv6JzeUX/v5KzfarYNs9/XHNzvaJ2mCaAiHUPr4kGri3tdu9cyKiBnRadRy1nJ148z5NZi9qnFbGGhP0DKitC1MlJWnCPVFzKKBQv3TsR63U4T99twZ9QmWOvYtKPZhoO1wcDo4pZDHNrrVUDEik6jFrGye2gKtbWAfW4BSxf5A8SrCE2rI16FuFF54Xrt+ZFXnmU5u7g4GZ4djU7Q0fHo7OoSXZ/8/O3s+mS4cqylqaOzIADRgFXyp4jTgN1RhF2XEpXi7OQhOTuYI5DLWYBILCQLYJEF9imU+YxxoS+bbenoQhnKT+tkP2IRlMScolPGHHSDXSqn6OcYA6JgOjAqp3jFTltHR/fYk0jECTA5eChjDjQJRXK4TAni2079nKofNaCf1K8aUNs00FcfS4XvZaPrBwezQdLq1x6NSi/f8+hTnps2Hm1CX94GzrmFdznetJu7pb25GanV/1Orf318pj4+89w9QJ4m3+EATZ0k6yRZlSRZn8Woz2KUT5rvdRqjzpx15qxK5qy3+uut/qL58n02++tsWWfLqmTLei+53ksulCl3vptcZ8k6S1YmS9YblvWG5ZbsuLMty/Ty5S3JfOCdb0rmht++LZlbetPGZHpZeOOx3JdFCnwOYvb5nvRjEGtfh8i+KTKRgb/yRZG/ji7O598T6b3x4z1mt9s26y+KvPnrPdG903I4i6Jsbjv+gs9v/wUycibrjVoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=87a313e2ed6603107f44863610ff2130"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Product Recall Management">0e93f5c6656e03107f449f96678d3af0</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:11:29</sys_created_on>
+        <sys_id>8412903eedae03107f44863610ff210c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:36:47</sys_updated_on>
+        <ui_id>81144643-44a7-4d19-b849-cc1171f739d5</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8412903eedae03107f44863610ff210c"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=0e93f5c6656e03107f449f96678d3af0"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=0e93f5c6656e03107f449f96678d3af0"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=0e93f5c6656e03107f449f96678d3af0^sys_idNOT IN723590b2edee03107f44863610ff2173,da025cfaedae03107f44863610ff214b,16025cfaedae03107f44863610ff214c,5a025cfaedae03107f44863610ff214c,9e025cfaedae03107f44863610ff214c,d2025cfaedae03107f44863610ff214d,39c2d47eedae03107f44863610ff2114,fdc2d47eedae03107f44863610ff2114,35c2d47eedae03107f44863610ff2115,79c2d47eedae03107f44863610ff2115,b63590b2edee03107f44863610ff2173,ba3590b2edee03107f44863610ff2173,323590b2edee03107f44863610ff2174,763590b2edee03107f44863610ff2174"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_recall_id}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:25:20</sys_created_on>
+        <sys_id>723590b2edee03107f44863610ff2173</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:25:20</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>6e03d3dd-42a1-4609-a30b-217cc91afe45</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_product.u_product_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:11:21</sys_created_on>
+        <sys_id>da025cfaedae03107f44863610ff214b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:11:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>672e654c-0a3b-4368-9a26-d85c5be08982</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_batch_number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:11:21</sys_created_on>
+        <sys_id>16025cfaedae03107f44863610ff214c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:11:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>71d7d5f2-eca1-4a54-8a07-d0028347a98b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_recall_id}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:11:21</sys_created_on>
+        <sys_id>5a025cfaedae03107f44863610ff214c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:11:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>de91af58-6b4d-4b85-b20b-69ac74d2efab</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_risk_level}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:11:21</sys_created_on>
+        <sys_id>9e025cfaedae03107f44863610ff214c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:11:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>11d02728-d844-48ce-b5a9-32db11c77829</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_reason}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:11:21</sys_created_on>
+        <sys_id>d2025cfaedae03107f44863610ff214d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:11:21</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2dbb6ee7-92d3-4cd3-98e9-6de3202af00e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_product.u_product_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:14:36</sys_created_on>
+        <sys_id>39c2d47eedae03107f44863610ff2114</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:14:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d026d59f-c5c8-4eab-acf3-677615663c71</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_recall_id}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:14:36</sys_created_on>
+        <sys_id>fdc2d47eedae03107f44863610ff2114</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:14:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>3364b7cb-596c-46f3-b09a-c181480a7459</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_batch_number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:14:36</sys_created_on>
+        <sys_id>35c2d47eedae03107f44863610ff2115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:14:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7d409ad9-6fb1-4436-95ee-21c8cd0ec5f9</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_reason}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:14:36</sys_created_on>
+        <sys_id>79c2d47eedae03107f44863610ff2115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:14:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9830699a-a77f-43a6-9cc6-8ef65bcbad63</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_product.u_product_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:25:20</sys_created_on>
+        <sys_id>b63590b2edee03107f44863610ff2173</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:25:20</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>bec21bfc-f08e-48c5-8087-0582aaaf976b</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_reason}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:25:20</sys_created_on>
+        <sys_id>ba3590b2edee03107f44863610ff2173</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:25:20</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>7541a83b-13ca-4be4-b0da-9905a2dcde77</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_risk_level}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:25:20</sys_created_on>
+        <sys_id>323590b2edee03107f44863610ff2174</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:25:20</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>82130688-da84-4164-9c40-5a925a75b720</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>0e93f5c6656e03107f449f96678d3af0</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Updated_1.current.u_batch_number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:25:20</sys_created_on>
+        <sys_id>763590b2edee03107f44863610ff2174</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:25:20</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9f1cd9ab-18ad-4374-9415-7b966b22bfe6</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=0e93f5c6656e03107f449f96678d3af0"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0e93f5c6656e03107f449f96678d3af0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:17:23</sys_created_on>
+        <sys_id>0b304282652243107f449f96678d3a79</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Changed Fields</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_0e93f5c6656e03107f449f96678d3af0_changed_fields_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:02:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0e93f5c6656e03107f449f96678d3af0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:17:22</sys_created_on>
+        <sys_id>83304282652243107f449f96678d3a66</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_0e93f5c6656e03107f449f96678d3af0_table_name_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:27</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0e93f5c6656e03107f449f96678d3af0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:17:23</sys_created_on>
+        <sys_id>8b304282652243107f449f96678d3a6f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_0e93f5c6656e03107f449f96678d3af0_current_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:31</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_0e93f5c6656e03107f449f96678d3af0"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_0e93f5c6656e03107f449f96678d3af0"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>-1</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Dispatches urgent product recall quarantine instructions to Store Managers and Suppliers.</description>
+        <flow_priority/>
+        <internal_name>x_fresh_guard_360_product_recall_dispatcher</internal_name>
+        <label_cache>[{"name":"Updated_1.current.u_recall_id","label":"Trigger - Record Updated➛Product Recall Record➛Recall ID","reference":"","reference_display":"Recall ID","type":"string","base_type":"string","parent_table_name":"x_fresh_guard_360_recall","column_name":"u_recall_id","usedInstances":{"36e32a17-6800-4a7a-9444-68034e34da59":["log_message"]}},{"name":"e6191c8b-e961-405c-868d-695c19613e2a.record","label":"1 - Update Record➛Product Recall Record","reference":"x_fresh_guard_360_recall","reference_display":"Product Recall","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Product Recall Record","reference":"x_fresh_guard_360_recall","reference_display":"Product Recall","type":"reference","base_type":"reference","usedInstances":{"e6191c8b-e961-405c-868d-695c19613e2a":["record"],"5275390a-f53d-4dc1-96fc-7fdadaef740d":["record"]},"attributes":{}},{"name":"Updated_1.current.u_supplier","label":"Trigger - Record Updated➛Product Recall Record➛Supplier","reference":"x_fresh_guard_360_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","parent_table_name":"x_fresh_guard_360_recall","column_name":"u_supplier","usedInstances":{"5275390a-f53d-4dc1-96fc-7fdadaef740d":["ah_to"]}},{"name":"Updated_1.current.u_product","label":"Trigger - Record Updated➛Product Recall Record➛Product","reference":"x_fresh_guard_360_product","reference_display":"Product","type":"reference","base_type":"reference","parent_table_name":"x_fresh_guard_360_recall","column_name":"u_product","usedInstances":{"5275390a-f53d-4dc1-96fc-7fdadaef740d":["ah_subject"]}}]</label_cache>
+        <master>true</master>
+        <name>Fresh Guard 360 - Product Recall Management</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Fresh Guard 360 - Product Recall Management">0e93f5c6656e03107f449f96678d3af0</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>23710a06652243107f449f96678d3a00</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:00:05</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=23710a06652243107f449f96678d3a00"/>
+    <sys_variable_value action="delete_multiple" query="document_key=23710a06652243107f449f96678d3a00"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=23710a06652243107f449f96678d3a00"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=23710a06652243107f449f96678d3a00^sys_idNOT IN2f710a06652243107f449f96678d3a00"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>23710a06652243107f449f96678d3a00</id>
+        <name>Fresh Guard 360 - Product Recall Management</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:53</sys_created_on>
+        <sys_id>2f710a06652243107f449f96678d3a00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 10:22:53</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2f710a06652243107f449f96678d3a00"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=23710a06652243107f449f96678d3a00^sys_idNOT IN7f710a06652243107f449f96678d3a01,bb710a06652243107f449f96678d3a2b,f7710a06652243107f449f96678d3a35"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Record</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fresh Guard 360 - Product Recall Management">23710a06652243107f449f96678d3a00</model>
+        <model_id>23710a06652243107f449f96678d3a00</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_23710a06652243107f449f96678d3a00</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:53</sys_created_on>
+        <sys_id>7f710a06652243107f449f96678d3a01</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7f710a06652243107f449f96678d3a01"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Changed Fields</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Fresh Guard 360 - Product Recall Management">23710a06652243107f449f96678d3a00</model>
+        <model_id>23710a06652243107f449f96678d3a00</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_23710a06652243107f449f96678d3a00</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:53</sys_created_on>
+        <sys_id>bb710a06652243107f449f96678d3a2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bb710a06652243107f449f96678d3a2b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Table Name</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Fresh Guard 360 - Product Recall Management">23710a06652243107f449f96678d3a00</model>
+        <model_id>23710a06652243107f449f96678d3a00</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_23710a06652243107f449f96678d3a00</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:53</sys_created_on>
+        <sys_id>f7710a06652243107f449f96678d3a35</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:04:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f7710a06652243107f449f96678d3a35"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=23710a06652243107f449f96678d3a00"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=23710a06652243107f449f96678d3a00"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=23710a06652243107f449f96678d3a00^sys_idNOT IN3f710a06652243107f449f96678d3a46"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Product Recall Management">23710a06652243107f449f96678d3a00</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:54</sys_created_on>
+        <sys_id>3f710a06652243107f449f96678d3a46</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 05:40:05</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=23710a06652243107f449f96678d3a00^sys_idNOT IN3f710a06652243107f449f96678d3a44,3b710a06652243107f449f96678d3a45,acf31be2ed6603107f44863610ff21da"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Product Recall Management">23710a06652243107f449f96678d3a00</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:54</sys_created_on>
+        <sys_id>3f710a06652243107f449f96678d3a44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 10:22:54</sys_updated_on>
+        <ui_id>e6191c8b-e961-405c-868d-695c19613e2a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy24aMRT9FeQ1QjNMghJ2VVCkSmlSJS2bNLIu9h2w5HnUDwJF/HuvZzyASJQSKZuo7O7LPuf4HuZxw5RkY3aGMkkv05HI0iwbJsnw4iydjbJZOpQZIKasz0ookDoNispIipegfUhsNj9rCQ4lTwfCG4Ol226pLpWtNaynsY0yYqG0pDobPz71WQ2GTnRo2HhzVDoVkoYZamq97zAdY3TrOsSyEr4gXFx1yZs4OYmV3tcJVWgowEmTPsOVw1IiAclBW+yzAkpiWZk1GzvjKWEQ5F2p17uOhSpdS7SAlVV/6OazJPTlSMxEFGEX8ihQm84n4OCBThbOm51elRJoW00k5uC1uzrMtQ13tVNV2Y44mOluutK+KG9bRdjugIP38JZAYB14BuQtrfxhUT3fdyCvVdlIEinqSoDeReCcUTPvApwNQ42NxgXUtSrnvDbVUjXDBKUYzDUFg1xXz3SnVfNyACLgHpCqMLim/KRJT8GoQOIbHUPD2z6za3ulwdo9FdKQ//YBSUssUuCNCo0EvNmEMCyMqt0XumqJEfi2H5d+dv7WhonL/UIdnLlf/BXPDdoFn3swkmejhNPegdYvd/+7qSQ9bO++q7/PCSfg7Jzwo3n/13FHM7zI3RzO9m7bQrTC+YdZ4eIzWSHS+PRe+JcDkuGb/7EHm9QsvT3Yfs+XaFSuBATk3Dpw3v7ySZLJAIFYv/TBSTPv88YJDDpvXCvU0r5CqTMGFgTWIW8pHpkjFnvTWNx9Kz7MIekoaX6fyCf/zSfj6S84LeUFKQkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3f710a06652243107f449f96678d3a44"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Product Recall Management">23710a06652243107f449f96678d3a00</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:54</sys_created_on>
+        <sys_id>3b710a06652243107f449f96678d3a45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-08 10:22:54</sys_updated_on>
+        <ui_id>36e32a17-6800-4a7a-9444-68034e34da59</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VUXW/aMBT9K8jPEBEo68rbBKtUqR9T0dhDVUXGvgFLjp3ZDpQh/vuuEydkFE0gdU+T8uLj4/ie43Pvy44ITsZktGDxgrFPo2Hc7w/xW6Qxv4n7N8BGn6/5NekSRTNAptTLRMIaJEJrKguPCZVqXHJhc0m384DeVShbCckNKDJ+ee2SnBr8jwNDxrujrXMLkXSBt4/JfajiRGFum3uIrbRgENb34dikBrXhvox+l8CbA8UB70+ptNAlGVWcOm22DWKA8iclD8BKKId/I578ZsUvvO+q73kpoCIG1V6zTII5FZxOqaMzZwrmChOoVbEWvdg1Enu9zqNW0On1Wm63St93D9xg99GbBGbcZv6gRgm1bJE3iBzIgzb5qzHatKgQ1oE73OPLcUhpId3kcgXx2QoGlygYXqDgyiuozH/KndCYRhL7zNCFrJ9GyyJTj1XOSKN3fhT/Cp2e7ILCYgQg9zHzuQkhSmcrvXmuM3IrVFlR2JSaUdmsqHNGLArn/d0RkJDhj5KM5jkakeRGr0V5GIvNoqXERZRKvcFLrViqiDIvLcJU0+gW8WkJz6kRXuYD/gYP77vEbu1EUmsPYjHCyc/CV1JJDxqS0qjyCDMid1/wgjWEcr39ZTsPhn9rZxj92b4ZWEuX0Hqrb0ZzbJLOM6AXEqPk8Jk63mLq2Ap4J9Wm3rybjju73fccNQJP4ogVBm11UZGYkpAIvt+/H1P/4orLZt4ZJtVZfmgcOmlbmHsWo1J2R3vuzWqwbr0Pm3uD0ehjBt+pUfK+OS/qzf+v9V5/AwAm6YXUBwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3b710a06652243107f449f96678d3a45"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Fresh Guard 360 - Product Recall Management">23710a06652243107f449f96678d3a00</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 05:40:05</sys_created_on>
+        <sys_id>acf31be2ed6603107f44863610ff21da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 05:40:05</sys_updated_on>
+        <ui_id>5275390a-f53d-4dc1-96fc-7fdadaef740d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2YXVPjNhSG/4rG11mvk5CEcEeTpd0ZFhgI24tlxyNLcqyubLmSTEiZ/Pce+TMfNJtAOoUplz76es/R+0i2vz06nDonzhE99vpBeIQHXrfT9bzjznAYdIehdzwYem1CnZaT4JhBT8WIVPb5HovMBh4fb1OKDaN+2yWZUiwxiwW0U65Tgedfy24QIREXFNqdk2/fW06KFcxomHJOHteadpUkcMAEdJ1gNWUGXVfS1qWaeWqfqSRZDPJ8XgXPywnGZQv6PIYWGGRVeS2HPRiWUAZyQiw0azkxTiBXqeZ1RDFMLxPRBCKeGJjyVGtJONRFIxMxxGLMBZpxEyGMCmGuY+d70PwvENft2KlCBjUgVitPCKegyFkK+2VJoflz0xyOscE3RmXEZKqutOSE6aKalIU4E2a0HCs6XKaGy6QYYnAgqtFSZHFyURTRqSdY2slMgxiW2trYZGFxSDy8ieTsuhJ7xpO8imVVhCRY1E/hDcOKRGecCbvVSRYH0LflYGMUDzJjZYIpBPRq1vFzqXYt6MkEy7cyxmnKk6mfKnnP8wVBfuxOBTy4oZAzGK/5NHExsbm6sHvYPYP4OA9/xYrbxL/ANDB40XL0XI8E1rpJH+rv/5lZ9UUxVuXY0X5uODuYKJ6aU1jqnpXJLlolYu3hNj/To8a3S3M2mD34oWI68qcZVtTv9j0fXISF2CTtSkkKZrA4FO37cbeDzoY765mndZfMbcTOl8eii6KhJK69J3GF70rgJkCZKQ6Cgi9kSnk1ZMfeKmT/ANfrgKpGZWeqVun5dwgBk2i/sHmZW774M8j5GS9evx8E/aA36DY+HJKQDoKwjwek2/huBqesirH64een7BI07U06yvNjPyZ20FIxASezyChDv1eituksIQmkhKMuWScElH48y6tbE9J50Z1UWBMZiWAzxRxuolqSDTb3lImwQVwjDbvloolEvMxqaUQLzWWG4kwb6GagZQW+lcvt6PVyV9qhjI6f9MqbAPPwAPa2XwS4MTaOfCO3vxK6ma8zMB1narFAm1juMmQ/ZneQX99jcjOXEk0NO5dM18i8qYIlld3tVBbX1AaUS9eS93oBeSv+t8IFj3luiILcwyNBt3qKeSs2ImQJiQN8EO2weGXo0WhTyT6GPnreNfPu6Dfn6PbWr2zWX/FRcGhL77B6Zelf1jwd7G3q3rup/yem7m23FVkxks6CPxgxS8a+vf7108UEXV1fjm9HE3T9aXR6fo4+oKffUdLic/upf17Pn2jPV52f51thdFNn+1QF9sGp//7S85/TdHh08FYrhZ3VM1jS+RI3d5nndUmKrOYPhifzmDAlpQmgMD/yRnrn3BXdWPWXqviLZT9IoSKMuugKPoU1Q5CBwgnMAh+dYQj2ZBQF2JDILZb5mBbzbFJXyjj4MvsxuUMh66utKONGXUsaIxOLNRZ/m3w5b0gcvPBi6/d63f47iy++2dIZ7VAl07TM7cC32/e/AY/shUWtGQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=acf31be2ed6603107f44863610ff21da"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=23710a06652243107f449f96678d3a00"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=23710a06652243107f449f96678d3a00"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=23710a06652243107f449f96678d3a00"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=23710a06652243107f449f96678d3a00"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_23710a06652243107f449f96678d3a00</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:53</sys_created_on>
+        <sys_id>7b710a06652243107f449f96678d3a0e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_23710a06652243107f449f96678d3a00_current_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:26</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_23710a06652243107f449f96678d3a00</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:53</sys_created_on>
+        <sys_id>b7710a06652243107f449f96678d3a31</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Changed Fields</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_23710a06652243107f449f96678d3a00_changed_fields_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:03:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_23710a06652243107f449f96678d3a00</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:54</sys_created_on>
+        <sys_id>ff710a06652243107f449f96678d3a3a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_23710a06652243107f449f96678d3a00_table_name_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:04:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_23710a06652243107f449f96678d3a00"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_23710a06652243107f449f96678d3a00"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>0e93f5c6656e03107f449f96678d3af0</sys_id>
+        <latest_snapshot>23710a06652243107f449f96678d3a00</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch2-04-17-2026_04-29-2026_2044.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0e93f5c6656e03107f449f96678d3af0^sys_idNOT IN04810a06652243107f449f96678d3a52"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"04810a06652243107f449f96678d3a52","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>0e93f5c6656e03107f449f96678d3af0</plan_id>
+        <snapshot>7ad714feedee03107f44863610ff21bd</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-08 10:22:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>04810a06652243107f449f96678d3a52</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 05:40:06</sys_updated_on>
+        <trigger display_value="">38f35be2ed6603107f44863610ff213f</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=0e93f5c6656e03107f449f96678d3af0"/>
+</record_update>

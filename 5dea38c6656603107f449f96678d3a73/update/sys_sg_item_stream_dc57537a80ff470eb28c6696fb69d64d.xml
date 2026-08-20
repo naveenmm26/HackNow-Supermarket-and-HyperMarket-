@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream">
+    <sys_sg_item_stream action="INSERT_OR_UPDATE">
+        <data_item display_value="FG360 Mobile - All Products">2e53128c8997451c85c8549c5c6397d8</data_item>
+        <interleaved_field/>
+        <name/>
+        <sys_class_name>sys_sg_item_stream</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-18 06:58:27</sys_created_on>
+        <sys_id>dc57537a80ff470eb28c6696fb69d64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_item_stream_dc57537a80ff470eb28c6696fb69d64d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-18 06:58:27</sys_updated_on>
+        <table>x_fresh_guard_360_product</table>
+    </sys_sg_item_stream>
+</record_update>

@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>create_case_related_party_flow_data</internal_name>
+        <label_cache>[{"name":"72daffb3-d79f-446e-a1b3-8142403b53b5.flow_record","label":"1➛Flow Record","reference":"sys_flow_data","reference_display":"Flow Data","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8b6012fe-65d8-4419-85c0-d5dc04f77e7a"}},{"name":"9db70b4a-fd01-494f-b7cf-233cabac0908.flow_data_record","label":"1➛Flow Data Record","reference":"sys_flow_data","reference_display":"Flow Data","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0ea29b72-e9a6-4738-9913-1bb32fbd2269"}},{"name":"subflow.case_record","label":"Input➛Case Record","reference":"sn_customerservice_case","reference_display":"Case","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a6c2d293-54bf-4f8a-8b0b-3a9db603454b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.case_record.sys_id","label":"Input➛Case Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_customerservice_case","column_name":"sys_id"}]</label_cache>
+        <master_snapshot>6852e9a9535c101031cdddeeff7b12d7</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Create Case Related Party Flow Data</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:20:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>08116d69535c101031cdddeeff7b126a</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Create Case Related Party Flow Data</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_08116d69535c101031cdddeeff7b126a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:29:22</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=08116d69535c101031cdddeeff7b126a"/>
+    <sys_variable_value action="DELETE" query="document_key=08116d69535c101031cdddeeff7b126a"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a^id=08116d69535c101031cdddeeff7b126a"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=08116d69535c101031cdddeeff7b126a"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=08116d69535c101031cdddeeff7b126a^sys_idNOT IN0c116d69535c101031cdddeeff7b126c"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>08116d69535c101031cdddeeff7b126a</id>
+        <name>Create Case Related Party Flow Data</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:20:16</sys_created_on>
+        <sys_id>0c116d69535c101031cdddeeff7b126c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:20:16</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=0c116d69535c101031cdddeeff7b126c"/>
+    <sys_hub_flow_input action="DELETE" query="model=08116d69535c101031cdddeeff7b126a^sys_idNOT IN2f4269a9535c101031cdddeeff7b12b6"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a6c2d293-54bf-4f8a-8b0b-3a9db603454b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sn_customerservice_case</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>case_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Case Record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Case Related Party Flow Data">08116d69535c101031cdddeeff7b126a</model>
+        <model_id>08116d69535c101031cdddeeff7b126a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_08116d69535c101031cdddeeff7b126a</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sn_customerservice_case">sn_customerservice_case</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:41</sys_created_on>
+        <sys_id>2f4269a9535c101031cdddeeff7b12b6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:25:43</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=2f4269a9535c101031cdddeeff7b12b6"/>
+    <sys_hub_flow_output action="DELETE" query="model=08116d69535c101031cdddeeff7b126a^sys_idNOT IN634269a9535c101031cdddeeff7b12c1,e342a9a9535c101031cdddeeff7b12cf"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=aaad3fcf-d7a6-4f94-bcd5-83c44537beae</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>flow_data_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Flow Data Record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Case Related Party Flow Data">08116d69535c101031cdddeeff7b126a</model>
+        <model_id>08116d69535c101031cdddeeff7b126a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_flow_data">sys_flow_data</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:42</sys_created_on>
+        <sys_id>634269a9535c101031cdddeeff7b12c1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:25:43</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=634269a9535c101031cdddeeff7b12c1"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3a554eaa-e434-4868-81f9-85b022d373fd</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>list_query</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>List Query</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Case Related Party Flow Data">08116d69535c101031cdddeeff7b126a</model>
+        <model_id>08116d69535c101031cdddeeff7b126a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:42</sys_created_on>
+        <sys_id>e342a9a9535c101031cdddeeff7b12cf</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:25:43</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=e342a9a9535c101031cdddeeff7b12cf"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=08116d69535c101031cdddeeff7b126a"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=08116d69535c101031cdddeeff7b126a"/>
+    <sys_hub_action_instance action="DELETE" query="flow=08116d69535c101031cdddeeff7b126a^sys_idNOT IN315623ad5394101031cdddeeff7b12a2"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Case Related Party Flow Data">e4d56b6d5394101031cdddeeff7b125e</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Create Case Related Party Flow Data">08116d69535c101031cdddeeff7b126a</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-21 02:02:34</sys_created_on>
+        <sys_id>315623ad5394101031cdddeeff7b12a2</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 03:07:32</sys_updated_on>
+        <ui_id>72daffb3-d79f-446e-a1b3-8142403b53b5</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=315623ad5394101031cdddeeff7b12a2"/>
+    <sys_element_mapping action="DELETE" query="id=315623ad5394101031cdddeeff7b12a2"/>
+    <sys_element_mapping action="DELETE">
+        <field>case_record</field>
+        <id>315623ad5394101031cdddeeff7b12a2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-21 02:02:34</sys_created_on>
+        <sys_id>bd5623ad5394101031cdddeeff7b12a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 02:02:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_e4d56b6d5394101031cdddeeff7b125e</table>
+        <value>{{subflow.case_record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=315623ad5394101031cdddeeff7b12a2"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=315623ad5394101031cdddeeff7b12a2"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=08116d69535c101031cdddeeff7b126a^sys_idNOT IN2742a9a9535c101031cdddeeff7b12e3"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">795623ad5394101031cdddeeff7b12a6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Case Related Party Flow Data">08116d69535c101031cdddeeff7b126a</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned>flow_data_record,list_query</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:42</sys_created_on>
+        <sys_id>2742a9a9535c101031cdddeeff7b12e3</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 03:07:32</sys_updated_on>
+        <ui_id>b02e62cd-656e-463d-a3cc-45b77c55537f</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=2742a9a9535c101031cdddeeff7b12e3"/>
+    <sys_element_mapping action="DELETE" query="id=2742a9a9535c101031cdddeeff7b12e3"/>
+    <sys_element_mapping action="DELETE">
+        <field>flow_data_record</field>
+        <id>2742a9a9535c101031cdddeeff7b12e3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:42</sys_created_on>
+        <sys_id>3f42a9a9535c101031cdddeeff7b12e6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 03:05:48</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a</table>
+        <value>{{72daffb3-d79f-446e-a1b3-8142403b53b5.flow_record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>list_query</field>
+        <id>2742a9a9535c101031cdddeeff7b12e3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:42</sys_created_on>
+        <sys_id>7b42a9a9535c101031cdddeeff7b12e6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 03:02:36</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a</table>
+        <value>case_record={{subflow.case_record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=2742a9a9535c101031cdddeeff7b12e3"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=2742a9a9535c101031cdddeeff7b12e3"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=08116d69535c101031cdddeeff7b126a"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=08116d69535c101031cdddeeff7b126a"/>
+    <sys_hub_flow_variable action="DELETE" query="model=08116d69535c101031cdddeeff7b126a"/>
+    <sys_documentation action="DELETE">
+        <element>case_record</element>
+        <help/>
+        <hint/>
+        <label>Case Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_08116d69535c101031cdddeeff7b126a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:42</sys_created_on>
+        <sys_id>2b4269a9535c101031cdddeeff7b12be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Case Record</sys_name>
+        <sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook">7be17355874010108ef7a7da0acb0bb5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_08116d69535c101031cdddeeff7b126a_case_record_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:25:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_08116d69535c101031cdddeeff7b126a"/>
+    <sys_documentation action="DELETE">
+        <element>flow_data_record</element>
+        <help/>
+        <hint/>
+        <label>Flow Data Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:42</sys_created_on>
+        <sys_id>2342a9a9535c101031cdddeeff7b12ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Flow Data Record</sys_name>
+        <sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook">7be17355874010108ef7a7da0acb0bb5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a_flow_data_record_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:25:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>list_query</element>
+        <help/>
+        <hint/>
+        <label>List Query</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:42</sys_created_on>
+        <sys_id>eb42a9a9535c101031cdddeeff7b12d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>List Query</sys_name>
+        <sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook">7be17355874010108ef7a7da0acb0bb5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a_list_query_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:25:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <internal_name>create_case_related_party_flow_data</internal_name>
+        <label_cache>[{"name":"subflow.case_record.sys_id","label":"Input➛Case Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_customerservice_case","column_name":"sys_id"},{"name":"subflow.case_record","label":"Input➛Case Record","reference":"sn_customerservice_case","reference_display":"Case","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a6c2d293-54bf-4f8a-8b0b-3a9db603454b"}},{"name":"9db70b4a-fd01-494f-b7cf-233cabac0908.flow_data_record","label":"1➛Flow Data Record","reference":"sys_flow_data","reference_display":"Flow Data","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0ea29b72-e9a6-4738-9913-1bb32fbd2269"}}]</label_cache>
+        <master>true</master>
+        <name>Create Case Related Party Flow Data</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Create Case Related Party Flow Data">08116d69535c101031cdddeeff7b126a</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6852e9a9535c101031cdddeeff7b12d7</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 03:07:31</sys_updated_on>
+        <type>subflow</type>
+        <version/>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_variable_value action="DELETE" query="document_key=6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7^id=6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=6852e9a9535c101031cdddeeff7b12d7^sys_idNOT IN2452e9a9535c101031cdddeeff7b12d8"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>6852e9a9535c101031cdddeeff7b12d7</id>
+        <name>Create Case Related Party Flow Data</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:46</sys_created_on>
+        <sys_id>2452e9a9535c101031cdddeeff7b12d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:25:46</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=2452e9a9535c101031cdddeeff7b12d8"/>
+    <sys_hub_flow_input action="DELETE" query="model=6852e9a9535c101031cdddeeff7b12d7^sys_idNOT IN6452e9a9535c101031cdddeeff7b12d9"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a6c2d293-54bf-4f8a-8b0b-3a9db603454b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sn_customerservice_case</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>case_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Case Record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Case Related Party Flow Data">6852e9a9535c101031cdddeeff7b12d7</model>
+        <model_id>6852e9a9535c101031cdddeeff7b12d7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6852e9a9535c101031cdddeeff7b12d7</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sn_customerservice_case">sn_customerservice_case</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:46</sys_created_on>
+        <sys_id>6452e9a9535c101031cdddeeff7b12d9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 02:03:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=6452e9a9535c101031cdddeeff7b12d9"/>
+    <sys_hub_flow_output action="DELETE" query="model=6852e9a9535c101031cdddeeff7b12d7^sys_idNOT IN2452e9a9535c101031cdddeeff7b12fc,e852e9a9535c101031cdddeeff7b12ed"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3a554eaa-e434-4868-81f9-85b022d373fd</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>list_query</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>List Query</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Case Related Party Flow Data">6852e9a9535c101031cdddeeff7b12d7</model>
+        <model_id>6852e9a9535c101031cdddeeff7b12d7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:46</sys_created_on>
+        <sys_id>2452e9a9535c101031cdddeeff7b12fc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 02:03:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=2452e9a9535c101031cdddeeff7b12fc"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=aaad3fcf-d7a6-4f94-bcd5-83c44537beae</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>flow_data_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Flow Data Record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Create Case Related Party Flow Data">6852e9a9535c101031cdddeeff7b12d7</model>
+        <model_id>6852e9a9535c101031cdddeeff7b12d7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_flow_data">sys_flow_data</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:46</sys_created_on>
+        <sys_id>e852e9a9535c101031cdddeeff7b12ed</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 02:03:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=e852e9a9535c101031cdddeeff7b12ed"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_hub_action_instance action="DELETE" query="flow=6852e9a9535c101031cdddeeff7b12d7^sys_idNOT INd79627ad5394101031cdddeeff7b1219"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Case Related Party Flow Data">e4d56b6d5394101031cdddeeff7b125e</action_type>
+        <action_type_parent display_value="Create Case Related Party Flow Data">4a25ef2d5394101031cdddeeff7b1240</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Create Case Related Party Flow Data">6852e9a9535c101031cdddeeff7b12d7</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-21 02:03:46</sys_created_on>
+        <sys_id>d79627ad5394101031cdddeeff7b1219</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 03:07:31</sys_updated_on>
+        <ui_id>72daffb3-d79f-446e-a1b3-8142403b53b5</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=d79627ad5394101031cdddeeff7b1219"/>
+    <sys_element_mapping action="DELETE" query="id=d79627ad5394101031cdddeeff7b1219"/>
+    <sys_element_mapping action="DELETE">
+        <field>case_record</field>
+        <id>d79627ad5394101031cdddeeff7b1219</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-21 02:03:46</sys_created_on>
+        <sys_id>179627ad5394101031cdddeeff7b121a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 02:03:46</sys_updated_on>
+        <table>var__m_sys_hub_action_input_e4d56b6d5394101031cdddeeff7b125e</table>
+        <value>{{subflow.case_record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=d79627ad5394101031cdddeeff7b1219"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=d79627ad5394101031cdddeeff7b1219"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=6852e9a9535c101031cdddeeff7b12d7^sys_idNOT IN38522da9535c101031cdddeeff7b120c"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">795623ad5394101031cdddeeff7b12a6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Create Case Related Party Flow Data">6852e9a9535c101031cdddeeff7b12d7</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned>flow_data_record,list_query</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:46</sys_created_on>
+        <sys_id>38522da9535c101031cdddeeff7b120c</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 03:07:31</sys_updated_on>
+        <ui_id>b02e62cd-656e-463d-a3cc-45b77c55537f</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=38522da9535c101031cdddeeff7b120c"/>
+    <sys_element_mapping action="DELETE" query="id=38522da9535c101031cdddeeff7b120c"/>
+    <sys_element_mapping action="DELETE">
+        <field>flow_data_record</field>
+        <id>38522da9535c101031cdddeeff7b120c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:47</sys_created_on>
+        <sys_id>bc522da9535c101031cdddeeff7b120f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 03:05:52</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7</table>
+        <value>{{72daffb3-d79f-446e-a1b3-8142403b53b5.flow_record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>list_query</field>
+        <id>38522da9535c101031cdddeeff7b120c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:47</sys_created_on>
+        <sys_id>f8522da9535c101031cdddeeff7b120f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 03:02:39</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7</table>
+        <value>case_record={{subflow.case_record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=38522da9535c101031cdddeeff7b120c"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=38522da9535c101031cdddeeff7b120c"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_hub_flow_variable action="DELETE" query="model=6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_documentation action="DELETE">
+        <element>case_record</element>
+        <help/>
+        <hint/>
+        <label>Case Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6852e9a9535c101031cdddeeff7b12d7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:46</sys_created_on>
+        <sys_id>6852e9a9535c101031cdddeeff7b12e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Case Record</sys_name>
+        <sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook">7be17355874010108ef7a7da0acb0bb5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_6852e9a9535c101031cdddeeff7b12d7_case_record_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:25:46</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_documentation action="DELETE">
+        <element>list_query</element>
+        <help/>
+        <hint/>
+        <label>List Query</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:46</sys_created_on>
+        <sys_id>b8522da9535c101031cdddeeff7b1206</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>List Query</sys_name>
+        <sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook">7be17355874010108ef7a7da0acb0bb5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7_list_query_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:25:46</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>flow_data_record</element>
+        <help/>
+        <hint/>
+        <label>Flow Data Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:46</sys_created_on>
+        <sys_id>e452e9a9535c101031cdddeeff7b12f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Flow Data Record</sys_name>
+        <sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook">7be17355874010108ef7a7da0acb0bb5</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Playbooks for Customer Service Management">7be17355874010108ef7a7da0acb0bb5</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7_flow_data_record_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-20 16:25:46</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>08116d69535c101031cdddeeff7b126a</sys_id>
+        <latest_snapshot>6852e9a9535c101031cdddeeff7b12d7</latest_snapshot>
+        <compiler_build>latest</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=08116d69535c101031cdddeeff7b126a"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=08116d69535c101031cdddeeff7b126a^sys_idNOT INbc522da9535c101031cdddeeff7b122e"/>
+    <sys_flow_subflow_plan action="DELETE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@6d37a52c</plan>
+        <plan_id display_value="Create Case Related Party Flow Data">08116d69535c101031cdddeeff7b126a</plan_id>
+        <snapshot>6852e9a9535c101031cdddeeff7b12d7</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-04-20 16:25:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bc522da9535c101031cdddeeff7b122e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-04-21 03:07:32</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_08116d69535c101031cdddeeff7b126a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority/&gt;&lt;generation_source/&gt;&lt;internal_name&gt;create_case_related_party_flow_data&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"72daffb3-d79f-446e-a1b3-8142403b53b5.flow_record","label":"1➛Flow Record","reference":"sys_flow_data","reference_display":"Flow Data","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8b6012fe-65d8-4419-85c0-d5dc04f77e7a"}},{"name":"9db70b4a-fd01-494f-b7cf-233cabac0908.flow_data_record","label":"1➛Flow Data Record","reference":"sys_flow_data","reference_display":"Flow Data","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0ea29b72-e9a6-4738-9913-1bb32fbd2269"}},{"name":"subflow.case_record","label":"Input➛Case Record","reference":"sn_customerservice_case","reference_display":"Case","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a6c2d293-54bf-4f8a-8b0b-3a9db603454b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.case_record.sys_id","label":"Input➛Case Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_customerservice_case","column_name":"sys_id"}]&lt;/label_cache&gt;&lt;master_snapshot&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Create Case Related Party Flow Data&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:20:16&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;08116d69535c101031cdddeeff7b126a&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_name&gt;Create Case Related Party Flow Data&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_08116d69535c101031cdddeeff7b126a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 10:29:22&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;updation_source/&gt;&lt;version/&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a^id=08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=08116d69535c101031cdddeeff7b126a^sys_idNOT IN0c116d69535c101031cdddeeff7b126c"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;08116d69535c101031cdddeeff7b126a&lt;/id&gt;&lt;name&gt;Create Case Related Party Flow Data&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:20:16&lt;/sys_created_on&gt;&lt;sys_id&gt;0c116d69535c101031cdddeeff7b126c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:20:16&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=0c116d69535c101031cdddeeff7b126c"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=08116d69535c101031cdddeeff7b126a^sys_idNOT IN2f4269a9535c101031cdddeeff7b12b6"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a6c2d293-54bf-4f8a-8b0b-3a9db603454b&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sn_customerservice_case&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;case_record&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Case Record&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Create Case Related Party Flow Data"&gt;08116d69535c101031cdddeeff7b126a&lt;/model&gt;&lt;model_id&gt;08116d69535c101031cdddeeff7b126a&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_08116d69535c101031cdddeeff7b126a&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sn_customerservice_case"&gt;sn_customerservice_case&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:41&lt;/sys_created_on&gt;&lt;sys_id&gt;2f4269a9535c101031cdddeeff7b12b6&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:25:43&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2f4269a9535c101031cdddeeff7b12b6"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=08116d69535c101031cdddeeff7b126a^sys_idNOT IN634269a9535c101031cdddeeff7b12c1,e342a9a9535c101031cdddeeff7b12cf"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=aaad3fcf-d7a6-4f94-bcd5-83c44537beae&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;flow_data_record&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Flow Data Record&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Create Case Related Party Flow Data"&gt;08116d69535c101031cdddeeff7b126a&lt;/model&gt;&lt;model_id&gt;08116d69535c101031cdddeeff7b126a&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sys_flow_data"&gt;sys_flow_data&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:42&lt;/sys_created_on&gt;&lt;sys_id&gt;634269a9535c101031cdddeeff7b12c1&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:25:43&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=634269a9535c101031cdddeeff7b12c1"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3a554eaa-e434-4868-81f9-85b022d373fd&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;list_query&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;List Query&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Create Case Related Party Flow Data"&gt;08116d69535c101031cdddeeff7b126a&lt;/model&gt;&lt;model_id&gt;08116d69535c101031cdddeeff7b126a&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:42&lt;/sys_created_on&gt;&lt;sys_id&gt;e342a9a9535c101031cdddeeff7b12cf&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:25:43&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e342a9a9535c101031cdddeeff7b12cf"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=08116d69535c101031cdddeeff7b126a^sys_idNOT IN315623ad5394101031cdddeeff7b12a2"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create Case Related Party Flow Data"&gt;e4d56b6d5394101031cdddeeff7b125e&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Create Case Related Party Flow Data"&gt;08116d69535c101031cdddeeff7b126a&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-21 02:02:34&lt;/sys_created_on&gt;&lt;sys_id&gt;315623ad5394101031cdddeeff7b12a2&lt;/sys_id&gt;&lt;sys_mod_count&gt;30&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 03:07:32&lt;/sys_updated_on&gt;&lt;ui_id&gt;72daffb3-d79f-446e-a1b3-8142403b53b5&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=315623ad5394101031cdddeeff7b12a2"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=315623ad5394101031cdddeeff7b12a2"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;case_record&lt;/field&gt;&lt;id&gt;315623ad5394101031cdddeeff7b12a2&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-21 02:02:34&lt;/sys_created_on&gt;&lt;sys_id&gt;bd5623ad5394101031cdddeeff7b12a3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 02:02:34&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_e4d56b6d5394101031cdddeeff7b125e&lt;/table&gt;&lt;value&gt;{{subflow.case_record}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=315623ad5394101031cdddeeff7b12a2"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=315623ad5394101031cdddeeff7b12a2"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=08116d69535c101031cdddeeff7b126a^sys_idNOT IN2742a9a9535c101031cdddeeff7b12e3"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;795623ad5394101031cdddeeff7b12a6&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Create Case Related Party Flow Data"&gt;08116d69535c101031cdddeeff7b126a&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned&gt;flow_data_record,list_query&lt;/outputs_assigned&gt;&lt;outputs_to_assign/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:42&lt;/sys_created_on&gt;&lt;sys_id&gt;2742a9a9535c101031cdddeeff7b12e3&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 03:07:32&lt;/sys_updated_on&gt;&lt;ui_id&gt;b02e62cd-656e-463d-a3cc-45b77c55537f&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=2742a9a9535c101031cdddeeff7b12e3"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=2742a9a9535c101031cdddeeff7b12e3"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;flow_data_record&lt;/field&gt;&lt;id&gt;2742a9a9535c101031cdddeeff7b12e3&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:42&lt;/sys_created_on&gt;&lt;sys_id&gt;3f42a9a9535c101031cdddeeff7b12e6&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 03:05:48&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a&lt;/table&gt;&lt;value&gt;{{72daffb3-d79f-446e-a1b3-8142403b53b5.flow_record}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;list_query&lt;/field&gt;&lt;id&gt;2742a9a9535c101031cdddeeff7b12e3&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:42&lt;/sys_created_on&gt;&lt;sys_id&gt;7b42a9a9535c101031cdddeeff7b12e6&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 03:02:36&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a&lt;/table&gt;&lt;value&gt;case_record={{subflow.case_record}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=2742a9a9535c101031cdddeeff7b12e3"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=2742a9a9535c101031cdddeeff7b12e3"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;case_record&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Case Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_08116d69535c101031cdddeeff7b126a&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:42&lt;/sys_created_on&gt;&lt;sys_id&gt;2b4269a9535c101031cdddeeff7b12be&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Case Record&lt;/sys_name&gt;&lt;sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_08116d69535c101031cdddeeff7b126a_case_record_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:25:42&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;flow_data_record&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Flow Data Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:42&lt;/sys_created_on&gt;&lt;sys_id&gt;2342a9a9535c101031cdddeeff7b12ce&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Flow Data Record&lt;/sys_name&gt;&lt;sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a_flow_data_record_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:25:42&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;list_query&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;List Query&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:42&lt;/sys_created_on&gt;&lt;sys_id&gt;eb42a9a9535c101031cdddeeff7b12d5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;List Query&lt;/sys_name&gt;&lt;sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a_list_query_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:25:42&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;flow_priority/&gt;&lt;internal_name&gt;create_case_related_party_flow_data&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"subflow.case_record.sys_id","label":"Input➛Case Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_customerservice_case","column_name":"sys_id"},{"name":"subflow.case_record","label":"Input➛Case Record","reference":"sn_customerservice_case","reference_display":"Case","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a6c2d293-54bf-4f8a-8b0b-3a9db603454b"}},{"name":"9db70b4a-fd01-494f-b7cf-233cabac0908.flow_data_record","label":"1➛Flow Data Record","reference":"sys_flow_data","reference_display":"Flow Data","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0ea29b72-e9a6-4738-9913-1bb32fbd2269"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Create Case Related Party Flow Data&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Create Case Related Party Flow Data"&gt;08116d69535c101031cdddeeff7b126a&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:46&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 03:07:31&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;version/&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7^id=6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=6852e9a9535c101031cdddeeff7b12d7^sys_idNOT IN2452e9a9535c101031cdddeeff7b12d8"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/id&gt;&lt;name&gt;Create Case Related Party Flow Data&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:46&lt;/sys_created_on&gt;&lt;sys_id&gt;2452e9a9535c101031cdddeeff7b12d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:25:46&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2452e9a9535c101031cdddeeff7b12d8"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=6852e9a9535c101031cdddeeff7b12d7^sys_idNOT IN6452e9a9535c101031cdddeeff7b12d9"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a6c2d293-54bf-4f8a-8b0b-3a9db603454b&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sn_customerservice_case&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;case_record&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Case Record&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Create Case Related Party Flow Data"&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/model&gt;&lt;model_id&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_6852e9a9535c101031cdddeeff7b12d7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sn_customerservice_case"&gt;sn_customerservice_case&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:46&lt;/sys_created_on&gt;&lt;sys_id&gt;6452e9a9535c101031cdddeeff7b12d9&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 02:03:46&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6452e9a9535c101031cdddeeff7b12d9"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=6852e9a9535c101031cdddeeff7b12d7^sys_idNOT IN2452e9a9535c101031cdddeeff7b12fc,e852e9a9535c101031cdddeeff7b12ed"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3a554eaa-e434-4868-81f9-85b022d373fd&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;list_query&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;List Query&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Create Case Related Party Flow Data"&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/model&gt;&lt;model_id&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:46&lt;/sys_created_on&gt;&lt;sys_id&gt;2452e9a9535c101031cdddeeff7b12fc&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 02:03:46&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2452e9a9535c101031cdddeeff7b12fc"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=aaad3fcf-d7a6-4f94-bcd5-83c44537beae&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;flow_data_record&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Flow Data Record&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Create Case Related Party Flow Data"&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/model&gt;&lt;model_id&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sys_flow_data"&gt;sys_flow_data&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:46&lt;/sys_created_on&gt;&lt;sys_id&gt;e852e9a9535c101031cdddeeff7b12ed&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 02:03:47&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e852e9a9535c101031cdddeeff7b12ed"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=6852e9a9535c101031cdddeeff7b12d7^sys_idNOT INd79627ad5394101031cdddeeff7b1219"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Create Case Related Party Flow Data"&gt;e4d56b6d5394101031cdddeeff7b125e&lt;/action_type&gt;&lt;action_type_parent display_value="Create Case Related Party Flow Data"&gt;4a25ef2d5394101031cdddeeff7b1240&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Create Case Related Party Flow Data"&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-21 02:03:46&lt;/sys_created_on&gt;&lt;sys_id&gt;d79627ad5394101031cdddeeff7b1219&lt;/sys_id&gt;&lt;sys_mod_count&gt;16&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 03:07:31&lt;/sys_updated_on&gt;&lt;ui_id&gt;72daffb3-d79f-446e-a1b3-8142403b53b5&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=d79627ad5394101031cdddeeff7b1219"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=d79627ad5394101031cdddeeff7b1219"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;case_record&lt;/field&gt;&lt;id&gt;d79627ad5394101031cdddeeff7b1219&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-21 02:03:46&lt;/sys_created_on&gt;&lt;sys_id&gt;179627ad5394101031cdddeeff7b121a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 02:03:46&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_e4d56b6d5394101031cdddeeff7b125e&lt;/table&gt;&lt;value&gt;{{subflow.case_record}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=d79627ad5394101031cdddeeff7b1219"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=d79627ad5394101031cdddeeff7b1219"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=6852e9a9535c101031cdddeeff7b12d7^sys_idNOT IN38522da9535c101031cdddeeff7b120c"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;795623ad5394101031cdddeeff7b12a6&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Create Case Related Party Flow Data"&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned&gt;flow_data_record,list_query&lt;/outputs_assigned&gt;&lt;outputs_to_assign/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:46&lt;/sys_created_on&gt;&lt;sys_id&gt;38522da9535c101031cdddeeff7b120c&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 03:07:31&lt;/sys_updated_on&gt;&lt;ui_id&gt;b02e62cd-656e-463d-a3cc-45b77c55537f&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=38522da9535c101031cdddeeff7b120c"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=38522da9535c101031cdddeeff7b120c"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;flow_data_record&lt;/field&gt;&lt;id&gt;38522da9535c101031cdddeeff7b120c&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:47&lt;/sys_created_on&gt;&lt;sys_id&gt;bc522da9535c101031cdddeeff7b120f&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 03:05:52&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7&lt;/table&gt;&lt;value&gt;{{72daffb3-d79f-446e-a1b3-8142403b53b5.flow_record}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;list_query&lt;/field&gt;&lt;id&gt;38522da9535c101031cdddeeff7b120c&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:47&lt;/sys_created_on&gt;&lt;sys_id&gt;f8522da9535c101031cdddeeff7b120f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 03:02:39&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7&lt;/table&gt;&lt;value&gt;case_record={{subflow.case_record}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=38522da9535c101031cdddeeff7b120c"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=38522da9535c101031cdddeeff7b120c"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;case_record&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Case Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_6852e9a9535c101031cdddeeff7b12d7&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:46&lt;/sys_created_on&gt;&lt;sys_id&gt;6852e9a9535c101031cdddeeff7b12e8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Case Record&lt;/sys_name&gt;&lt;sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_6852e9a9535c101031cdddeeff7b12d7_case_record_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:25:46&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;list_query&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;List Query&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:46&lt;/sys_created_on&gt;&lt;sys_id&gt;b8522da9535c101031cdddeeff7b1206&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;List Query&lt;/sys_name&gt;&lt;sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7_list_query_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:25:46&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;flow_data_record&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Flow Data Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:46&lt;/sys_created_on&gt;&lt;sys_id&gt;e452e9a9535c101031cdddeeff7b12f8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Flow Data Record&lt;/sys_name&gt;&lt;sys_package display_value="Playbooks for Customer Service Management" source="sn_csm_playbook"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Playbooks for Customer Service Management"&gt;7be17355874010108ef7a7da0acb0bb5&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7_flow_data_record_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-20 16:25:46&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_6852e9a9535c101031cdddeeff7b12d7"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;08116d69535c101031cdddeeff7b126a&lt;/sys_id&gt;&lt;latest_snapshot&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/latest_snapshot&gt;&lt;compiler_build&gt;latest&lt;/compiler_build&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=08116d69535c101031cdddeeff7b126a"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=08116d69535c101031cdddeeff7b126a^sys_idNOT INbc522da9535c101031cdddeeff7b122e"/&gt;&lt;sys_flow_subflow_plan action="INSERT_OR_UPDATE"&gt;&lt;plan&gt;com.snc.process_flow.engine.ProcessPlan@6d37a52c&lt;/plan&gt;&lt;plan_id display_value="Create Case Related Party Flow Data"&gt;08116d69535c101031cdddeeff7b126a&lt;/plan_id&gt;&lt;snapshot&gt;6852e9a9535c101031cdddeeff7b12d7&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-04-20 16:25:47&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;bc522da9535c101031cdddeeff7b122e&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-04-21 03:07:32&lt;/sys_updated_on&gt;&lt;/sys_flow_subflow_plan&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-615175851</payload_hash>
+        <record_name>Create Case Related Party Flow Data</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:29:23</sys_created_on>
+        <sys_id>52265836edee03107f44863610ff2199</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb384e060000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:29:23</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>922658360fee0310f15dd1500e66d398</update_guid>
+        <update_guid_history>922658360fee0310f15dd1500e66d398:-615175851,5e265836d8ee0310e1158148f5eb187d:297934050</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:35:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>4851bb34e1f34f809e2d35fbc11277c9</sys_id>
+        <sys_metadata>08116d69535c101031cdddeeff7b126a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Case Related Party Flow Data</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_08116d69535c101031cdddeeff7b126a</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_08116d69535c101031cdddeeff7b126a">52265836edee03107f44863610ff2199</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:35:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

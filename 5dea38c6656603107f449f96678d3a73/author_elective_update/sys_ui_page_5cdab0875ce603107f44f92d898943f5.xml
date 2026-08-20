@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_fresh_guard_360_x_fresh_guard_360_management_dashboard.do</endpoint>
+        <html><![CDATA[<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root { --bg-main: #f1f5f9; --header-bg: #0b1d3a; --card-bg: #ffffff; --text-main: #1e293b; --text-muted: #64748b; --border-color: #e2e8f0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Inter", sans-serif; background-color: var(--bg-main); color: var(--text-main); line-height: 1.5; padding-bottom: 80px; position: relative; min-height: 100vh; }
+        .app-header { background-color: var(--header-bg); color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; height: 56px; }
+        .header-title h1 { font-size: 1.15rem; font-weight: 600; }
+        .header-actions { display: flex; align-items: center; gap: 12px; }
+        .role-selector { background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 6px; padding: 6px 12px; font-size: 0.82rem; font-weight: 600; font-family: inherit; outline: none; cursor: pointer; }
+        .role-selector option { background: var(--header-bg); color: #ffffff; }
+        .dashboard-container { padding: 16px 24px; max-width: 1600px; margin: 0 auto; }
+        .alert-bar { background-color: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .alert-text strong { font-size: 0.9rem; color: #1e3a8a; display: block; }
+        .alert-text span { font-size: 0.78rem; color: #3b82f6; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 16px; }
+        .kpi-card { background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .kpi-top { display: flex; align-items: flex-start; gap: 12px; }
+        .kpi-icon { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem; }
+        .icon-blue { background-color: #dbeafe; color: #2563eb; }
+        .icon-green { background-color: #dcfce7; color: #16a34a; }
+        .icon-orange { background-color: #ffedd5; color: #ea580c; }
+        .icon-red { background-color: #fee2e2; color: #dc2626; }
+        .icon-purple { background-color: #f3e8ff; color: #9333ea; }
+        .icon-cyan { background-color: #e0f2fe; color: #0284c7; }
+        .kpi-label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); display: block; }
+        .kpi-value { font-size: 1.6rem; font-weight: 800; color: var(--text-main); line-height: 1.2; }
+        .kpi-trend { font-size: 0.7rem; font-weight: 600; display: block; margin-top: 2px; }
+        .trend-up, .trend-good { color: #16a34a; }
+        .trend-down-bad { color: #dc2626; }
+        .kpi-footer { margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9; }
+        .kpi-link { font-size: 0.75rem; color: #2563eb; text-decoration: none; font-weight: 600; }
+        .reports-row { display: grid; gap: 16px; margin-bottom: 16px; }
+        .row-3col { grid-template-columns: repeat(3, 1fr); }
+        .row-4col { grid-template-columns: repeat(4, 1fr); }
+        .card-report { background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); padding: 16px; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .card-header h3 { font-size: 0.9rem; font-weight: 700; color: var(--text-main); margin-bottom: 12px; }
+        .card-body { flex: 1; position: relative; }
+        .chart-body-donut { display: flex; align-items: center; gap: 12px; }
+        .chart-container { width: 140px; height: 140px; position: relative; flex-shrink: 0; }
+        .chart-container-full { width: 100%; height: 180px; position: relative; }
+        .custom-legend { display: flex; flex-direction: column; gap: 6px; font-size: 0.78rem; color: var(--text-main); width: 100%; }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-color { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+        .legend-item .pct { font-weight: 700; margin-left: auto; color: var(--text-muted); }
+        .table-body { overflow-x: auto; }
+        .report-table { width: 100%; border-collapse: collapse; font-size: 0.76rem; text-align: left; }
+        .report-table th { background-color: #f8fafc; color: var(--text-muted); font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--border-color); }
+        .report-table td { padding: 6px 8px; border-bottom: 1px solid #f1f5f9; color: var(--text-main); }
+        .badge { padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; display: inline-block; }
+        .badge-warning { background-color: #fef3c7; color: #d97706; }
+        .badge-danger { background-color: #fee2e2; color: #dc2626; }
+        .text-danger { color: #dc2626; }
+        .text-warning { color: #d97706; }
+        .font-semibold { font-weight: 600; }
+        .app-footer { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 8px; }
+        .footer-badge { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; }
+        .badge-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .green-icon { background-color: #dcfce7; color: #16a34a; }
+        .blue-icon { background-color: #dbeafe; color: #2563eb; }
+        .purple-icon { background-color: #f3e8ff; color: #9333ea; }
+        .orange-icon { background-color: #ffedd5; color: #ea580c; }
+        .ai-icon { background-color: #e0e7ff; color: #4f46e5; }
+        .badge-text .title { font-size: 0.72rem; color: var(--text-muted); display: block; }
+        .badge-text strong { font-size: 0.85rem; color: var(--text-main); }
+        .status-green { color: #16a34a !important; }
+        .ai-floating-btn { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #4f46e5); color: #ffffff; border: 3px solid #ffffff; box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4); font-weight: 800; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 9999; transition: transform 0.2s ease; }
+        .ai-floating-btn:hover { transform: scale(1.08); }
+        .ai-drawer { position: fixed; bottom: 96px; right: 24px; width: 420px; height: 580px; background: #ffffff; border-radius: 16px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25); border: 1px solid var(--border-color); display: none; flex-direction: column; overflow: hidden; z-index: 9999; }
+        .ai-drawer.active { display: flex; }
+        .ai-header { background: var(--header-bg); color: #ffffff; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; }
+        .ai-header h3 { font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .ai-close { background: none; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer; }
+        .ai-body { flex: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; background: #f8fafc; }
+        .chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 0.83rem; line-height: 1.45; white-space: pre-wrap; }
+        .msg-ai { background: #ffffff; border: 1px solid #e2e8f0; color: #1e293b; align-self: flex-start; border-bottom-left-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .msg-user { background: #2563eb; color: #ffffff; align-self: flex-end; border-bottom-right-radius: 2px; }
+        .suggested-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+        .chip-btn { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; padding: 5px 10px; border-radius: 16px; font-size: 0.74rem; font-weight: 600; cursor: pointer; }
+        .chip-btn:hover { background: #dbeafe; }
+        .ai-footer { padding: 12px; background: #ffffff; border-top: 1px solid #e2e8f0; display: flex; gap: 8px; }
+        .ai-input { flex: 1; border: 1px solid #cbd5e1; border-radius: 20px; padding: 8px 14px; font-size: 0.83rem; outline: none; }
+        .ai-send-btn { background: #2563eb; color: #ffffff; border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-weight: bold; }
+    </style>
+    <header class="app-header">
+        <div class="header-title"><h1>Fresh Guard 360 - Management Dashboard</h1></div>
+        <div class="header-actions">
+            <select id="activeRoleSelector" class="role-selector" title="Switch User Role Context">
+                <option value="Admin">Role: Admin</option>
+                <option value="Regional Manager">Role: Regional Manager</option>
+                <option value="Store Manager">Role: Store Manager (Store 1)</option>
+                <option value="Food Safety Officer">Role: Food Safety Officer</option>
+                <option value="Maintenance Team">Role: Maintenance Team</option>
+                <option value="Supplier">Role: Supplier (Dairy Best)</option>
+            </select>
+        </div>
+    </header>
+    <main class="dashboard-container">
+        <div class="alert-bar">
+            <div class="alert-info">
+                <div class="alert-icon-shield">]]>🛡<![CDATA[️</div>
+                <div class="alert-text">
+                    <strong>Real-time overview of food safety and operations across all stores</strong>
+                    <span>Data shown for selected date range and user accessible records</span>
+                </div>
+            </div>
+            <div class="alert-timestamp">Last Refreshed: <span>23 May 2025 10:30 AM</span></div>
+        </div>
+        <div class="kpi-grid">
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-blue">]]>🏪<![CDATA[</div><div class="kpi-details"><span class="kpi-label">Total Stores</span><span class="kpi-value">25</span></div></div><div class="kpi-footer"><a class="kpi-link" href="#">View Stores</a></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-green">✅</div><div class="kpi-details"><span class="kpi-label">Checklists Completed</span><span class="kpi-value">184</span><span class="kpi-trend trend-up">▲ 12% vs last 7 days</span></div></div><div class="kpi-footer"><a class="kpi-link" href="#">View Checklists</a></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-orange">⚠️</div><div class="kpi-details"><span class="kpi-label">Open Food Safety Issues</span><span class="kpi-value">32</span><span class="kpi-trend trend-down-bad">▲ 8% vs last 7 days</span></div></div><div class="kpi-footer"><a class="kpi-link" href="#">View Issues</a></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-red">]]>🛡<![CDATA[️</div><div class="kpi-details"><span class="kpi-label">High &amp; Critical Risks</span><span class="kpi-value">15</span><span class="kpi-trend trend-down-bad">▲ 5% vs last 7 days</span></div></div><div class="kpi-footer"><a class="kpi-link" href="#">View Risks</a></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-purple">]]>📋<![CDATA[</div><div class="kpi-details"><span class="kpi-label">Overdue CAPA</span><span class="kpi-value">9</span><span class="kpi-trend trend-down-bad">▲ 3% vs last 7 days</span></div></div><div class="kpi-footer"><a class="kpi-link" href="#">View CAPA</a></div></div>
+            <div class="kpi-card"><div class="kpi-top"><div class="kpi-icon icon-cyan">]]>🔧<![CDATA[</div><div class="kpi-details"><span class="kpi-label">Open Maintenance Tickets</span><span class="kpi-value">27</span><span class="kpi-trend trend-good">▼ 10% vs last 7 days</span></div></div><div class="kpi-footer"><a class="kpi-link" href="#">View Tickets</a></div></div>
+        </div>
+        <div class="reports-row row-3col">
+            <div class="card-report"><div class="card-header"><h3>1. Store Food Safety Status</h3></div><div class="card-body chart-body-donut"><div class="chart-container"><canvas id="c1"></canvas></div><div class="custom-legend"><div class="legend-item"><span class="legend-color" style="background:#22c55e"></span> Completed (184) <span class="pct">68%</span></div><div class="legend-item"><span class="legend-color" style="background:#ef4444"></span> Failed (32) <span class="pct">12%</span></div><div class="legend-item"><span class="legend-color" style="background:#f59e0b"></span> Pending (26) <span class="pct">10%</span></div><div class="legend-item"><span class="legend-color" style="background:#3b82f6"></span> Submitted (12) <span class="pct">10%</span></div></div></div></div>
+            <div class="card-report"><div class="card-header"><h3>2. Food Safety Issues by Store</h3></div><div class="card-body"><div class="chart-container-full"><canvas id="c2"></canvas></div></div></div>
+            <div class="card-report"><div class="card-header"><h3>3. Food Safety Risk Level</h3></div><div class="card-body chart-body-donut"><div class="chart-container"><canvas id="c3"></canvas></div><div class="custom-legend"><div class="legend-item"><span class="legend-color" style="background:#ef4444"></span> Critical (5) <span class="pct">20%</span></div><div class="legend-item"><span class="legend-color" style="background:#f97316"></span> High (10) <span class="pct">20%</span></div><div class="legend-item"><span class="legend-color" style="background:#f59e0b"></span> Medium (12) <span class="pct">24%</span></div><div class="legend-item"><span class="legend-color" style="background:#22c55e"></span> Low (18) <span class="pct">36%</span></div></div></div></div>
+        </div>
+        <div class="reports-row row-3col">
+            <div class="card-report"><div class="card-header"><h3>4. Near Expiry and Expired Products</h3></div><div class="card-body table-body"><table class="report-table"><thead><tr><th>Product</th><th>Batch</th><th>Store</th><th>Expiry</th><th>Status</th></tr></thead><tbody><tr><td>Milk 1L</td><td>BATCH-1001</td><td>Store 1</td><td>24 May 2025</td><td><span class="badge badge-warning">Near Expiry</span></td></tr><tr><td>Cheese 200g</td><td>BATCH-1002</td><td>Store 2</td><td>25 May 2025</td><td><span class="badge badge-warning">Near Expiry</span></td></tr><tr><td>Chicken Breast</td><td>BATCH-1004</td><td>Store 3</td><td>23 May 2025</td><td><span class="badge badge-danger">Expired</span></td></tr></tbody></table></div></div>
+            <div class="card-report"><div class="card-header"><h3>5. CAPA Status</h3></div><div class="card-body chart-body-donut"><div class="chart-container"><canvas id="c5"></canvas></div><div class="custom-legend"><div class="legend-item"><span class="legend-color" style="background:#ef4444"></span> Open (18) <span class="pct">30%</span></div><div class="legend-item"><span class="legend-color" style="background:#f97316"></span> In Progress (15) <span class="pct">25%</span></div><div class="legend-item"><span class="legend-color" style="background:#22c55e"></span> Completed (8) <span class="pct">13%</span></div></div></div></div>
+            <div class="card-report"><div class="card-header"><h3>6. CAPA Overdue</h3></div><div class="card-body table-body"><table class="report-table"><thead><tr><th>CAPA #</th><th>Store</th><th>Assigned</th><th>Priority</th><th>Status</th></tr></thead><tbody><tr><td>CAPA00023</td><td>Store 1</td><td>John Doe</td><td><span class="text-danger font-semibold">High</span></td><td><span class="text-danger">Overdue</span></td></tr><tr><td>CAPA00031</td><td>Store 2</td><td>Jane Smith</td><td><span class="text-danger font-semibold">High</span></td><td><span class="text-danger">Overdue</span></td></tr></tbody></table></div></div>
+        </div>
+        <footer class="app-footer">
+            <div class="footer-badge"><div class="badge-icon green-icon">✅</div><div class="badge-text"><span class="title">System Status</span><strong class="status-green">All Systems Operational</strong></div></div>
+            <div class="footer-badge"><div class="badge-icon blue-icon">]]>📅<![CDATA[</div><div class="badge-text"><span class="title">Last Data Update</span><strong>23 May 2025 10:30 AM</strong></div></div>
+            <div class="footer-badge"><div class="badge-icon purple-icon">]]>👥<![CDATA[</div><div class="badge-text"><span class="title">Total Users</span><strong>156 Active Users</strong></div></div>
+            <div class="footer-badge"><div class="badge-icon orange-icon">]]>🔔<![CDATA[</div><div class="badge-text"><span class="title">Notifications</span><strong>23 Unread</strong></div></div>
+            <div class="footer-badge"><div class="badge-icon ai-icon">]]>🤖<![CDATA[</div><div class="badge-text"><span class="title">AI Assistant</span><strong>Ask Fresh Guard AI</strong></div></div>
+        </footer>
+    </main>
+    <button class="ai-floating-btn" id="aiBtn">( AI )</button>
+    <div class="ai-drawer" id="aiDrawer">
+        <div class="ai-header"><h3>]]>🤖<![CDATA[ Fresh Guard AI</h3><button class="ai-close" id="aiClose">&times;</button></div>
+        <div class="ai-body" id="aiChatBody">
+            <div class="chat-msg msg-ai">Hello! I'm **Fresh Guard AI**. I can help you understand your Fresh Guard 360 food-safety and operational information.</div>
+            <div class="suggested-chips" id="suggestedChips"></div>
+        </div>
+        <div class="ai-footer"><input type="text" class="ai-input" id="aiInput" placeholder="Ask Fresh Guard AI a question..." /><button class="ai-send-btn" id="aiSend">➔</button></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const donutOpt = { responsive: true, maintainAspectRatio: false, cutout: "70%", plugins: { legend: { display: false } } };
+            new Chart(document.getElementById("c1"), { type: "doughnut", data: { labels: ["Completed","Failed","Pending","Submitted"], datasets: [{ data: [68,12,10,10], backgroundColor: ["#22c55e","#ef4444","#f59e0b","#3b82f6"] }] }, options: donutOpt });
+            new Chart(document.getElementById("c2"), { type: "bar", data: { labels: ["Store 1","Store 2","Store 3","Store 4","Store 5"], datasets: [{ label: "Issues", data: [12,8,6,4,2], backgroundColor: ["#ef4444","#f97316","#f59e0b","#22c55e","#3b82f6"] }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+            new Chart(document.getElementById("c3"), { type: "doughnut", data: { labels: ["Critical","High","Medium","Low"], datasets: [{ data: [20,20,24,36], backgroundColor: ["#ef4444","#f97316","#f59e0b","#22c55e"] }] }, options: donutOpt });
+            new Chart(document.getElementById("c5"), { type: "doughnut", data: { labels: ["Open","In Progress","Pending","Completed","Closed"], datasets: [{ data: [30,25,17,13,10], backgroundColor: ["#ef4444","#f97316","#f59e0b","#22c55e","#3b82f6"] }] }, options: donutOpt });
+            const aiBtn = document.getElementById("aiBtn");
+            const aiDrawer = document.getElementById("aiDrawer");
+            const aiClose = document.getElementById("aiClose");
+            const aiSend = document.getElementById("aiSend");
+            const aiInput = document.getElementById("aiInput");
+            const aiChatBody = document.getElementById("aiChatBody");
+            const roleSelect = document.getElementById("activeRoleSelector");
+            const chipsContainer = document.getElementById("suggestedChips");
+            const roleQuestions = {
+                "Admin": ["Give me today's overall summary", "Which stores are high risk?", "Show overdue CAPAs", "Show active product recalls"],
+                "Regional Manager": ["How is my region performing?", "Which store has the highest risk?", "Show overdue CAPAs", "Show Region B stores"],
+                "Store Manager": ["What is my store's status?", "Show near-expiry products", "Show open maintenance tickets", "Show Store 2 issues"],
+                "Food Safety Officer": ["Show critical food-safety issues", "Which CAPAs are overdue?", "Which stores failed checks?", "Show active recalls"],
+                "Maintenance Team": ["Show my open tickets", "Which ticket is highest priority?", "Show unresolved maintenance issues"],
+                "Supplier": ["Show my supplier performance", "Do I have complaints?", "Show recalls affecting my products", "Show Supplier B score"]
+            };
+            function renderChips(role) {
+                chipsContainer.innerHTML = "";
+                (roleQuestions[role] || roleQuestions["Admin"]).forEach(q => {
+                    const btn = document.createElement("button");
+                    btn.className = "chip-btn";
+                    btn.textContent = q;
+                    btn.onclick = () => { aiInput.value = q; handleSend(); };
+                    chipsContainer.appendChild(btn);
+                });
+            }
+            roleSelect.onchange = function() {
+                renderChips(this.value);
+                appendMessage("ai", "Switched active role context to **" + this.value + "**. How can I help you?");
+            };
+            renderChips("Admin");
+            aiBtn.onclick = () => aiDrawer.classList.toggle("active");
+            aiClose.onclick = () => aiDrawer.classList.remove("active");
+            function appendMessage(sender, text) {
+                const div = document.createElement("div");
+                div.className = "chat-msg " + (sender === "user" ? "msg-user" : "msg-ai");
+                div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br/>");
+                aiChatBody.appendChild(div);
+                aiChatBody.scrollTop = aiChatBody.scrollHeight;
+            }
+            function handleSend() {
+                const q = aiInput.value.trim();
+                if (!q) return;
+                appendMessage("user", q);
+                aiInput.value = "";
+                const role = roleSelect.value;
+                const qLower = q.toLowerCase();
+                if (role === "Store Manager" && (qLower.includes("store 2") || qLower.includes("other store"))) {
+                    setTimeout(() => appendMessage("ai", "]]>🛑<![CDATA[ **SECURITY RESTRICTION:** As a Store Manager for **NYC Store 101**, you are only authorized to access data for your assigned store. Access to Store 2 is restricted by ACLs."), 400);
+                    return;
+                }
+                if (role === "Supplier" && (qLower.includes("supplier b") || qLower.includes("other supplier") || qLower.includes("all supplier"))) {
+                    setTimeout(() => appendMessage("ai", "]]>🛑<![CDATA[ **SECURITY RESTRICTION:** As a Supplier for **Dairy Best**, you are only authorized to view your own supplier records. Access to other suppliers is restricted by ACLs."), 400);
+                    return;
+                }
+                setTimeout(() => {
+                    if (qLower.includes("risk") || qLower.includes("store")) {
+                        appendMessage("ai", "]]>🛡<![CDATA[️ **HIGH RISK STORES ANALYSIS (" + role + ")**\n\n• **Store 1 (NYC Downtown):** High Risk (12 Open Issues, 2 Critical Temp Breaches)\n• **Store 2 (Brooklyn North):** Medium-High Risk (8 Open Issues, 1 Overdue CAPA)\n• **Store 3 (Queens Central):** Medium Risk (6 Open Issues)\n\n]]>💡<![CDATA[ *Recommendation: Dispatch Food Safety Inspector to Store 1 immediately.*");
+                    } else if (qLower.includes("capa") || qLower.includes("overdue")) {
+                        appendMessage("ai", "]]>📋<![CDATA[ **OVERDUE CAPA REPORT (" + role + ")**\n\n• **CAPA00023** - Store 1 (Assignee: John Doe) - Priority: **High** (Target: 20 May 2025)\n• **CAPA00031** - Store 2 (Jane Smith) - Priority: **High** (Target: 21 May 2025)\n• **CAPA00045** - Store 3 (Mike Brown) - Priority: **Medium** (Target: 22 May 2025)");
+                    } else if (qLower.includes("expiry") || qLower.includes("product")) {
+                        appendMessage("ai", "⚠️ **NEAR-EXPIRY & EXPIRED PRODUCTS ALERT**\n\n• **Milk 1L** (BATCH-1001) - Store 1 - Expiry: 24 May 2025 - **Near Expiry**\n• **Cheese 200g** (BATCH-1002) - Store 2 - Expiry: 25 May 2025 - **Near Expiry**\n• **Chicken Breast** (BATCH-1004) - Store 3 - Expiry: 23 May 2025 - **EXPIRED** (Action Required)");
+                    } else if (qLower.includes("recall")) {
+                        appendMessage("ai", "]]>🚨<![CDATA[ **ACTIVE PRODUCT RECALLS**\n\n• **Recall RCL0001** - Dairy Best - Reason: Packaging Seal Defect (Status: **In Progress**)\n• **Recall RCL0002** - Fresh Dairy - Reason: Chiller Temp Spike (Status: **Pending Approval**)");
+                    } else if (qLower.includes("supplier") || qLower.includes("score")) {
+                        appendMessage("ai", "]]>🏭<![CDATA[ **SUPPLIER PERFORMANCE METRICS**\n\n• **Dairy Best:** 92% (Grade A - 0 Complaints)\n• **Fresh Dairy:** 85% (Grade A - 1 Minor Complaint)");
+                    } else if (qLower.includes("maintenance") || qLower.includes("ticket")) {
+                        appendMessage("ai", "]]>🔧<![CDATA[ **OPEN MAINTENANCE TICKETS QUEUE**\n\n• **MT000123** - Store 1: Walk-in Refrigerator Temperature Spike - **Critical Priority**");
+                    } else {
+                        appendMessage("ai", "]]>📊<![CDATA[ **FRESH GUARD 360 - " + role.toUpperCase() + " SUMMARY**\n\n• **Daily Checklists Logged:** 184\n• **Open Food Safety Issues:** 32\n• **Overdue CAPAs:** 9\n• **Near-Expiry Products:** 5\n• **Open Maintenance Tickets:** 27");
+                    }
+                }, 400);
+            }
+aiSend.onclick = handleSend;
+            aiInput.onkeypress = (e) => { if (e.key === "Enter") handleSend(); };
+        });
+    </script>
+</j:jelly>]]></html>
+        <name>x_fresh_guard_360_management_dashboard</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 07:48:01</sys_created_on>
+        <sys_id>5cdab0875ce603107f44f92d898943f5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>x_fresh_guard_360_management_dashboard</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_ui_page_5cdab0875ce603107f44f92d898943f5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 08:27:08</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_ui_page_5cdab0875ce603107f44f92d898943f5</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_fresh_guard_360_x_fresh_guard_360_management_dashboard.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" /&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;amp;display=swap" rel="stylesheet" /&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        :root { --bg-main: #f1f5f9; --header-bg: #0b1d3a; --card-bg: #ffffff; --text-main: #1e293b; --text-muted: #64748b; --border-color: #e2e8f0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Inter", sans-serif; background-color: var(--bg-main); color: var(--text-main); line-height: 1.5; padding-bottom: 80px; position: relative; min-height: 100vh; }
+        .app-header { background-color: var(--header-bg); color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; height: 56px; }
+        .header-title h1 { font-size: 1.15rem; font-weight: 600; }
+        .header-actions { display: flex; align-items: center; gap: 12px; }
+        .role-selector { background: rgba(255, 255, 255, 0.15); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 6px; padding: 6px 12px; font-size: 0.82rem; font-weight: 600; font-family: inherit; outline: none; cursor: pointer; }
+        .role-selector option { background: var(--header-bg); color: #ffffff; }
+        .dashboard-container { padding: 16px 24px; max-width: 1600px; margin: 0 auto; }
+        .alert-bar { background-color: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .alert-text strong { font-size: 0.9rem; color: #1e3a8a; display: block; }
+        .alert-text span { font-size: 0.78rem; color: #3b82f6; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 16px; }
+        .kpi-card { background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .kpi-top { display: flex; align-items: flex-start; gap: 12px; }
+        .kpi-icon { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem; }
+        .icon-blue { background-color: #dbeafe; color: #2563eb; }
+        .icon-green { background-color: #dcfce7; color: #16a34a; }
+        .icon-orange { background-color: #ffedd5; color: #ea580c; }
+        .icon-red { background-color: #fee2e2; color: #dc2626; }
+        .icon-purple { background-color: #f3e8ff; color: #9333ea; }
+        .icon-cyan { background-color: #e0f2fe; color: #0284c7; }
+        .kpi-label { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); display: block; }
+        .kpi-value { font-size: 1.6rem; font-weight: 800; color: var(--text-main); line-height: 1.2; }
+        .kpi-trend { font-size: 0.7rem; font-weight: 600; display: block; margin-top: 2px; }
+        .trend-up, .trend-good { color: #16a34a; }
+        .trend-down-bad { color: #dc2626; }
+        .kpi-footer { margin-top: 10px; padding-top: 6px; border-top: 1px solid #f1f5f9; }
+        .kpi-link { font-size: 0.75rem; color: #2563eb; text-decoration: none; font-weight: 600; }
+        .reports-row { display: grid; gap: 16px; margin-bottom: 16px; }
+        .row-3col { grid-template-columns: repeat(3, 1fr); }
+        .row-4col { grid-template-columns: repeat(4, 1fr); }
+        .card-report { background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); padding: 16px; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .card-header h3 { font-size: 0.9rem; font-weight: 700; color: var(--text-main); margin-bottom: 12px; }
+        .card-body { flex: 1; position: relative; }
+        .chart-body-donut { display: flex; align-items: center; gap: 12px; }
+        .chart-container { width: 140px; height: 140px; position: relative; flex-shrink: 0; }
+        .chart-container-full { width: 100%; height: 180px; position: relative; }
+        .custom-legend { display: flex; flex-direction: column; gap: 6px; font-size: 0.78rem; color: var(--text-main); width: 100%; }
+        .legend-item { display: flex; align-items: center; gap: 6px; }
+        .legend-color { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+        .legend-item .pct { font-weight: 700; margin-left: auto; color: var(--text-muted); }
+        .table-body { overflow-x: auto; }
+        .report-table { width: 100%; border-collapse: collapse; font-size: 0.76rem; text-align: left; }
+        .report-table th { background-color: #f8fafc; color: var(--text-muted); font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--border-color); }
+        .report-table td { padding: 6px 8px; border-bottom: 1px solid #f1f5f9; color: var(--text-main); }
+        .badge { padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; display: inline-block; }
+        .badge-warning { background-color: #fef3c7; color: #d97706; }
+        .badge-danger { background-color: #fee2e2; color: #dc2626; }
+        .text-danger { color: #dc2626; }
+        .text-warning { color: #d97706; }
+        .font-semibold { font-weight: 600; }
+        .app-footer { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 8px; }
+        .footer-badge { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; }
+        .badge-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .green-icon { background-color: #dcfce7; color: #16a34a; }
+        .blue-icon { background-color: #dbeafe; color: #2563eb; }
+        .purple-icon { background-color: #f3e8ff; color: #9333ea; }
+        .orange-icon { background-color: #ffedd5; color: #ea580c; }
+        .ai-icon { background-color: #e0e7ff; color: #4f46e5; }
+        .badge-text .title { font-size: 0.72rem; color: var(--text-muted); display: block; }
+        .badge-text strong { font-size: 0.85rem; color: var(--text-main); }
+        .status-green { color: #16a34a !important; }
+        .ai-floating-btn { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #4f46e5); color: #ffffff; border: 3px solid #ffffff; box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4); font-weight: 800; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 9999; transition: transform 0.2s ease; }
+        .ai-floating-btn:hover { transform: scale(1.08); }
+        .ai-drawer { position: fixed; bottom: 96px; right: 24px; width: 420px; height: 580px; background: #ffffff; border-radius: 16px; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25); border: 1px solid var(--border-color); display: none; flex-direction: column; overflow: hidden; z-index: 9999; }
+        .ai-drawer.active { display: flex; }
+        .ai-header { background: var(--header-bg); color: #ffffff; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; }
+        .ai-header h3 { font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .ai-close { background: none; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer; }
+        .ai-body { flex: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; background: #f8fafc; }
+        .chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 0.83rem; line-height: 1.45; white-space: pre-wrap; }
+        .msg-ai { background: #ffffff; border: 1px solid #e2e8f0; color: #1e293b; align-self: flex-start; border-bottom-left-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .msg-user { background: #2563eb; color: #ffffff; align-self: flex-end; border-bottom-right-radius: 2px; }
+        .suggested-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+        .chip-btn { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; padding: 5px 10px; border-radius: 16px; font-size: 0.74rem; font-weight: 600; cursor: pointer; }
+        .chip-btn:hover { background: #dbeafe; }
+        .ai-footer { padding: 12px; background: #ffffff; border-top: 1px solid #e2e8f0; display: flex; gap: 8px; }
+        .ai-input { flex: 1; border: 1px solid #cbd5e1; border-radius: 20px; padding: 8px 14px; font-size: 0.83rem; outline: none; }
+        .ai-send-btn { background: #2563eb; color: #ffffff; border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-weight: bold; }
+    &lt;/style&gt;
+    &lt;header class="app-header"&gt;
+        &lt;div class="header-title"&gt;&lt;h1&gt;Fresh Guard 360 - Management Dashboard&lt;/h1&gt;&lt;/div&gt;
+        &lt;div class="header-actions"&gt;
+            &lt;select id="activeRoleSelector" class="role-selector" title="Switch User Role Context"&gt;
+                &lt;option value="Admin"&gt;Role: Admin&lt;/option&gt;
+                &lt;option value="Regional Manager"&gt;Role: Regional Manager&lt;/option&gt;
+                &lt;option value="Store Manager"&gt;Role: Store Manager (Store 1)&lt;/option&gt;
+                &lt;option value="Food Safety Officer"&gt;Role: Food Safety Officer&lt;/option&gt;
+                &lt;option value="Maintenance Team"&gt;Role: Maintenance Team&lt;/option&gt;
+                &lt;option value="Supplier"&gt;Role: Supplier (Dairy Best)&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main class="dashboard-container"&gt;
+        &lt;div class="alert-bar"&gt;
+            &lt;div class="alert-info"&gt;
+                &lt;div class="alert-icon-shield"&gt;]]&gt;🛡&lt;![CDATA[️&lt;/div&gt;
+                &lt;div class="alert-text"&gt;
+                    &lt;strong&gt;Real-time overview of food safety and operations across all stores&lt;/strong&gt;
+                    &lt;span&gt;Data shown for selected date range and user accessible records&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="alert-timestamp"&gt;Last Refreshed: &lt;span&gt;23 May 2025 10:30 AM&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="kpi-grid"&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-blue"&gt;]]&gt;🏪&lt;![CDATA[&lt;/div&gt;&lt;div class="kpi-details"&gt;&lt;span class="kpi-label"&gt;Total Stores&lt;/span&gt;&lt;span class="kpi-value"&gt;25&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="kpi-footer"&gt;&lt;a class="kpi-link" href="#"&gt;View Stores&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-green"&gt;✅&lt;/div&gt;&lt;div class="kpi-details"&gt;&lt;span class="kpi-label"&gt;Checklists Completed&lt;/span&gt;&lt;span class="kpi-value"&gt;184&lt;/span&gt;&lt;span class="kpi-trend trend-up"&gt;▲ 12% vs last 7 days&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="kpi-footer"&gt;&lt;a class="kpi-link" href="#"&gt;View Checklists&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-orange"&gt;⚠️&lt;/div&gt;&lt;div class="kpi-details"&gt;&lt;span class="kpi-label"&gt;Open Food Safety Issues&lt;/span&gt;&lt;span class="kpi-value"&gt;32&lt;/span&gt;&lt;span class="kpi-trend trend-down-bad"&gt;▲ 8% vs last 7 days&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="kpi-footer"&gt;&lt;a class="kpi-link" href="#"&gt;View Issues&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-red"&gt;]]&gt;🛡&lt;![CDATA[️&lt;/div&gt;&lt;div class="kpi-details"&gt;&lt;span class="kpi-label"&gt;High &amp;amp; Critical Risks&lt;/span&gt;&lt;span class="kpi-value"&gt;15&lt;/span&gt;&lt;span class="kpi-trend trend-down-bad"&gt;▲ 5% vs last 7 days&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="kpi-footer"&gt;&lt;a class="kpi-link" href="#"&gt;View Risks&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-purple"&gt;]]&gt;📋&lt;![CDATA[&lt;/div&gt;&lt;div class="kpi-details"&gt;&lt;span class="kpi-label"&gt;Overdue CAPA&lt;/span&gt;&lt;span class="kpi-value"&gt;9&lt;/span&gt;&lt;span class="kpi-trend trend-down-bad"&gt;▲ 3% vs last 7 days&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="kpi-footer"&gt;&lt;a class="kpi-link" href="#"&gt;View CAPA&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="kpi-card"&gt;&lt;div class="kpi-top"&gt;&lt;div class="kpi-icon icon-cyan"&gt;]]&gt;🔧&lt;![CDATA[&lt;/div&gt;&lt;div class="kpi-details"&gt;&lt;span class="kpi-label"&gt;Open Maintenance Tickets&lt;/span&gt;&lt;span class="kpi-value"&gt;27&lt;/span&gt;&lt;span class="kpi-trend trend-good"&gt;▼ 10% vs last 7 days&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="kpi-footer"&gt;&lt;a class="kpi-link" href="#"&gt;View Tickets&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="reports-row row-3col"&gt;
+            &lt;div class="card-report"&gt;&lt;div class="card-header"&gt;&lt;h3&gt;1. Store Food Safety Status&lt;/h3&gt;&lt;/div&gt;&lt;div class="card-body chart-body-donut"&gt;&lt;div class="chart-container"&gt;&lt;canvas id="c1"&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;div class="custom-legend"&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#22c55e"&gt;&lt;/span&gt; Completed (184) &lt;span class="pct"&gt;68%&lt;/span&gt;&lt;/div&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#ef4444"&gt;&lt;/span&gt; Failed (32) &lt;span class="pct"&gt;12%&lt;/span&gt;&lt;/div&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#f59e0b"&gt;&lt;/span&gt; Pending (26) &lt;span class="pct"&gt;10%&lt;/span&gt;&lt;/div&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#3b82f6"&gt;&lt;/span&gt; Submitted (12) &lt;span class="pct"&gt;10%&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="card-report"&gt;&lt;div class="card-header"&gt;&lt;h3&gt;2. Food Safety Issues by Store&lt;/h3&gt;&lt;/div&gt;&lt;div class="card-body"&gt;&lt;div class="chart-container-full"&gt;&lt;canvas id="c2"&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="card-report"&gt;&lt;div class="card-header"&gt;&lt;h3&gt;3. Food Safety Risk Level&lt;/h3&gt;&lt;/div&gt;&lt;div class="card-body chart-body-donut"&gt;&lt;div class="chart-container"&gt;&lt;canvas id="c3"&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;div class="custom-legend"&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#ef4444"&gt;&lt;/span&gt; Critical (5) &lt;span class="pct"&gt;20%&lt;/span&gt;&lt;/div&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#f97316"&gt;&lt;/span&gt; High (10) &lt;span class="pct"&gt;20%&lt;/span&gt;&lt;/div&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#f59e0b"&gt;&lt;/span&gt; Medium (12) &lt;span class="pct"&gt;24%&lt;/span&gt;&lt;/div&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#22c55e"&gt;&lt;/span&gt; Low (18) &lt;span class="pct"&gt;36%&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="reports-row row-3col"&gt;
+            &lt;div class="card-report"&gt;&lt;div class="card-header"&gt;&lt;h3&gt;4. Near Expiry and Expired Products&lt;/h3&gt;&lt;/div&gt;&lt;div class="card-body table-body"&gt;&lt;table class="report-table"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Product&lt;/th&gt;&lt;th&gt;Batch&lt;/th&gt;&lt;th&gt;Store&lt;/th&gt;&lt;th&gt;Expiry&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Milk 1L&lt;/td&gt;&lt;td&gt;BATCH-1001&lt;/td&gt;&lt;td&gt;Store 1&lt;/td&gt;&lt;td&gt;24 May 2025&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-warning"&gt;Near Expiry&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Cheese 200g&lt;/td&gt;&lt;td&gt;BATCH-1002&lt;/td&gt;&lt;td&gt;Store 2&lt;/td&gt;&lt;td&gt;25 May 2025&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-warning"&gt;Near Expiry&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chicken Breast&lt;/td&gt;&lt;td&gt;BATCH-1004&lt;/td&gt;&lt;td&gt;Store 3&lt;/td&gt;&lt;td&gt;23 May 2025&lt;/td&gt;&lt;td&gt;&lt;span class="badge badge-danger"&gt;Expired&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="card-report"&gt;&lt;div class="card-header"&gt;&lt;h3&gt;5. CAPA Status&lt;/h3&gt;&lt;/div&gt;&lt;div class="card-body chart-body-donut"&gt;&lt;div class="chart-container"&gt;&lt;canvas id="c5"&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;div class="custom-legend"&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#ef4444"&gt;&lt;/span&gt; Open (18) &lt;span class="pct"&gt;30%&lt;/span&gt;&lt;/div&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#f97316"&gt;&lt;/span&gt; In Progress (15) &lt;span class="pct"&gt;25%&lt;/span&gt;&lt;/div&gt;&lt;div class="legend-item"&gt;&lt;span class="legend-color" style="background:#22c55e"&gt;&lt;/span&gt; Completed (8) &lt;span class="pct"&gt;13%&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="card-report"&gt;&lt;div class="card-header"&gt;&lt;h3&gt;6. CAPA Overdue&lt;/h3&gt;&lt;/div&gt;&lt;div class="card-body table-body"&gt;&lt;table class="report-table"&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;CAPA #&lt;/th&gt;&lt;th&gt;Store&lt;/th&gt;&lt;th&gt;Assigned&lt;/th&gt;&lt;th&gt;Priority&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;CAPA00023&lt;/td&gt;&lt;td&gt;Store 1&lt;/td&gt;&lt;td&gt;John Doe&lt;/td&gt;&lt;td&gt;&lt;span class="text-danger font-semibold"&gt;High&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class="text-danger"&gt;Overdue&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CAPA00031&lt;/td&gt;&lt;td&gt;Store 2&lt;/td&gt;&lt;td&gt;Jane Smith&lt;/td&gt;&lt;td&gt;&lt;span class="text-danger font-semibold"&gt;High&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span class="text-danger"&gt;Overdue&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;footer class="app-footer"&gt;
+            &lt;div class="footer-badge"&gt;&lt;div class="badge-icon green-icon"&gt;✅&lt;/div&gt;&lt;div class="badge-text"&gt;&lt;span class="title"&gt;System Status&lt;/span&gt;&lt;strong class="status-green"&gt;All Systems Operational&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="footer-badge"&gt;&lt;div class="badge-icon blue-icon"&gt;]]&gt;📅&lt;![CDATA[&lt;/div&gt;&lt;div class="badge-text"&gt;&lt;span class="title"&gt;Last Data Update&lt;/span&gt;&lt;strong&gt;23 May 2025 10:30 AM&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="footer-badge"&gt;&lt;div class="badge-icon purple-icon"&gt;]]&gt;👥&lt;![CDATA[&lt;/div&gt;&lt;div class="badge-text"&gt;&lt;span class="title"&gt;Total Users&lt;/span&gt;&lt;strong&gt;156 Active Users&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="footer-badge"&gt;&lt;div class="badge-icon orange-icon"&gt;]]&gt;🔔&lt;![CDATA[&lt;/div&gt;&lt;div class="badge-text"&gt;&lt;span class="title"&gt;Notifications&lt;/span&gt;&lt;strong&gt;23 Unread&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class="footer-badge"&gt;&lt;div class="badge-icon ai-icon"&gt;]]&gt;🤖&lt;![CDATA[&lt;/div&gt;&lt;div class="badge-text"&gt;&lt;span class="title"&gt;AI Assistant&lt;/span&gt;&lt;strong&gt;Ask Fresh Guard AI&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/main&gt;
+    &lt;button class="ai-floating-btn" id="aiBtn"&gt;( AI )&lt;/button&gt;
+    &lt;div class="ai-drawer" id="aiDrawer"&gt;
+        &lt;div class="ai-header"&gt;&lt;h3&gt;]]&gt;🤖&lt;![CDATA[ Fresh Guard AI&lt;/h3&gt;&lt;button class="ai-close" id="aiClose"&gt;&amp;times;&lt;/button&gt;&lt;/div&gt;
+        &lt;div class="ai-body" id="aiChatBody"&gt;
+            &lt;div class="chat-msg msg-ai"&gt;Hello! I'm **Fresh Guard AI**. I can help you understand your Fresh Guard 360 food-safety and operational information.&lt;/div&gt;
+            &lt;div class="suggested-chips" id="suggestedChips"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="ai-footer"&gt;&lt;input type="text" class="ai-input" id="aiInput" placeholder="Ask Fresh Guard AI a question..." /&gt;&lt;button class="ai-send-btn" id="aiSend"&gt;➔&lt;/button&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        document.addEventListener("DOMContentLoaded", function() {
+            const donutOpt = { responsive: true, maintainAspectRatio: false, cutout: "70%", plugins: { legend: { display: false } } };
+            new Chart(document.getElementById("c1"), { type: "doughnut", data: { labels: ["Completed","Failed","Pending","Submitted"], datasets: [{ data: [68,12,10,10], backgroundColor: ["#22c55e","#ef4444","#f59e0b","#3b82f6"] }] }, options: donutOpt });
+            new Chart(document.getElementById("c2"), { type: "bar", data: { labels: ["Store 1","Store 2","Store 3","Store 4","Store 5"], datasets: [{ label: "Issues", data: [12,8,6,4,2], backgroundColor: ["#ef4444","#f97316","#f59e0b","#22c55e","#3b82f6"] }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+            new Chart(document.getElementById("c3"), { type: "doughnut", data: { labels: ["Critical","High","Medium","Low"], datasets: [{ data: [20,20,24,36], backgroundColor: ["#ef4444","#f97316","#f59e0b","#22c55e"] }] }, options: donutOpt });
+            new Chart(document.getElementById("c5"), { type: "doughnut", data: { labels: ["Open","In Progress","Pending","Completed","Closed"], datasets: [{ data: [30,25,17,13,10], backgroundColor: ["#ef4444","#f97316","#f59e0b","#22c55e","#3b82f6"] }] }, options: donutOpt });
+            const aiBtn = document.getElementById("aiBtn");
+            const aiDrawer = document.getElementById("aiDrawer");
+            const aiClose = document.getElementById("aiClose");
+            const aiSend = document.getElementById("aiSend");
+            const aiInput = document.getElementById("aiInput");
+            const aiChatBody = document.getElementById("aiChatBody");
+            const roleSelect = document.getElementById("activeRoleSelector");
+            const chipsContainer = document.getElementById("suggestedChips");
+            const roleQuestions = {
+                "Admin": ["Give me today's overall summary", "Which stores are high risk?", "Show overdue CAPAs", "Show active product recalls"],
+                "Regional Manager": ["How is my region performing?", "Which store has the highest risk?", "Show overdue CAPAs", "Show Region B stores"],
+                "Store Manager": ["What is my store's status?", "Show near-expiry products", "Show open maintenance tickets", "Show Store 2 issues"],
+                "Food Safety Officer": ["Show critical food-safety issues", "Which CAPAs are overdue?", "Which stores failed checks?", "Show active recalls"],
+                "Maintenance Team": ["Show my open tickets", "Which ticket is highest priority?", "Show unresolved maintenance issues"],
+                "Supplier": ["Show my supplier performance", "Do I have complaints?", "Show recalls affecting my products", "Show Supplier B score"]
+            };
+            function renderChips(role) {
+                chipsContainer.innerHTML = "";
+                (roleQuestions[role] || roleQuestions["Admin"]).forEach(q =&gt; {
+                    const btn = document.createElement("button");
+                    btn.className = "chip-btn";
+                    btn.textContent = q;
+                    btn.onclick = () =&gt; { aiInput.value = q; handleSend(); };
+                    chipsContainer.appendChild(btn);
+                });
+            }
+            roleSelect.onchange = function() {
+                renderChips(this.value);
+                appendMessage("ai", "Switched active role context to **" + this.value + "**. How can I help you?");
+            };
+            renderChips("Admin");
+            aiBtn.onclick = () =&gt; aiDrawer.classList.toggle("active");
+            aiClose.onclick = () =&gt; aiDrawer.classList.remove("active");
+            function appendMessage(sender, text) {
+                const div = document.createElement("div");
+                div.className = "chat-msg " + (sender === "user" ? "msg-user" : "msg-ai");
+                div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, "&lt;strong&gt;$1&lt;/strong&gt;").replace(/\n/g, "&lt;br/&gt;");
+                aiChatBody.appendChild(div);
+                aiChatBody.scrollTop = aiChatBody.scrollHeight;
+            }
+            function handleSend() {
+                const q = aiInput.value.trim();
+                if (!q) return;
+                appendMessage("user", q);
+                aiInput.value = "";
+                const role = roleSelect.value;
+                const qLower = q.toLowerCase();
+                if (role === "Store Manager" &amp;&amp; (qLower.includes("store 2") || qLower.includes("other store"))) {
+                    setTimeout(() =&gt; appendMessage("ai", "]]&gt;🛑&lt;![CDATA[ **SECURITY RESTRICTION:** As a Store Manager for **NYC Store 101**, you are only authorized to access data for your assigned store. Access to Store 2 is restricted by ACLs."), 400);
+                    return;
+                }
+                if (role === "Supplier" &amp;&amp; (qLower.includes("supplier b") || qLower.includes("other supplier") || qLower.includes("all supplier"))) {
+                    setTimeout(() =&gt; appendMessage("ai", "]]&gt;🛑&lt;![CDATA[ **SECURITY RESTRICTION:** As a Supplier for **Dairy Best**, you are only authorized to view your own supplier records. Access to other suppliers is restricted by ACLs."), 400);
+                    return;
+                }
+                setTimeout(() =&gt; {
+                    if (qLower.includes("risk") || qLower.includes("store")) {
+                        appendMessage("ai", "]]&gt;🛡&lt;![CDATA[️ **HIGH RISK STORES ANALYSIS (" + role + ")**\n\n• **Store 1 (NYC Downtown):** High Risk (12 Open Issues, 2 Critical Temp Breaches)\n• **Store 2 (Brooklyn North):** Medium-High Risk (8 Open Issues, 1 Overdue CAPA)\n• **Store 3 (Queens Central):** Medium Risk (6 Open Issues)\n\n]]&gt;💡&lt;![CDATA[ *Recommendation: Dispatch Food Safety Inspector to Store 1 immediately.*");
+                    } else if (qLower.includes("capa") || qLower.includes("overdue")) {
+                        appendMessage("ai", "]]&gt;📋&lt;![CDATA[ **OVERDUE CAPA REPORT (" + role + ")**\n\n• **CAPA00023** - Store 1 (Assignee: John Doe) - Priority: **High** (Target: 20 May 2025)\n• **CAPA00031** - Store 2 (Jane Smith) - Priority: **High** (Target: 21 May 2025)\n• **CAPA00045** - Store 3 (Mike Brown) - Priority: **Medium** (Target: 22 May 2025)");
+                    } else if (qLower.includes("expiry") || qLower.includes("product")) {
+                        appendMessage("ai", "⚠️ **NEAR-EXPIRY &amp; EXPIRED PRODUCTS ALERT**\n\n• **Milk 1L** (BATCH-1001) - Store 1 - Expiry: 24 May 2025 - **Near Expiry**\n• **Cheese 200g** (BATCH-1002) - Store 2 - Expiry: 25 May 2025 - **Near Expiry**\n• **Chicken Breast** (BATCH-1004) - Store 3 - Expiry: 23 May 2025 - **EXPIRED** (Action Required)");
+                    } else if (qLower.includes("recall")) {
+                        appendMessage("ai", "]]&gt;🚨&lt;![CDATA[ **ACTIVE PRODUCT RECALLS**\n\n• **Recall RCL0001** - Dairy Best - Reason: Packaging Seal Defect (Status: **In Progress**)\n• **Recall RCL0002** - Fresh Dairy - Reason: Chiller Temp Spike (Status: **Pending Approval**)");
+                    } else if (qLower.includes("supplier") || qLower.includes("score")) {
+                        appendMessage("ai", "]]&gt;🏭&lt;![CDATA[ **SUPPLIER PERFORMANCE METRICS**\n\n• **Dairy Best:** 92% (Grade A - 0 Complaints)\n• **Fresh Dairy:** 85% (Grade A - 1 Minor Complaint)");
+                    } else if (qLower.includes("maintenance") || qLower.includes("ticket")) {
+                        appendMessage("ai", "]]&gt;🔧&lt;![CDATA[ **OPEN MAINTENANCE TICKETS QUEUE**\n\n• **MT000123** - Store 1: Walk-in Refrigerator Temperature Spike - **Critical Priority**");
+                    } else {
+                        appendMessage("ai", "]]&gt;📊&lt;![CDATA[ **FRESH GUARD 360 - " + role.toUpperCase() + " SUMMARY**\n\n• **Daily Checklists Logged:** 184\n• **Open Food Safety Issues:** 32\n• **Overdue CAPAs:** 9\n• **Near-Expiry Products:** 5\n• **Open Maintenance Tickets:** 27");
+                    }
+                }, 400);
+            }
+aiSend.onclick = handleSend;
+            aiInput.onkeypress = (e) =&gt; { if (e.key === "Enter") handleSend(); };
+        });
+    &lt;/script&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;x_fresh_guard_360_management_dashboard&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-08-11 07:48:01&lt;/sys_created_on&gt;&lt;sys_id&gt;5cdab0875ce603107f44f92d898943f5&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_fresh_guard_360_management_dashboard&lt;/sys_name&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_5cdab0875ce603107f44f92d898943f5&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-11 08:27:08&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2097715450</payload_hash>
+        <record_name>x_fresh_guard_360_management_dashboard</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 08:27:08</sys_created_on>
+        <sys_id>d9c3c9cb5c2a03107f44f92d8989432e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19fefeebc1c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 08:27:08</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>1dc3c9cb022a0310b571af597f03ca2d</update_guid>
+        <update_guid_history>1dc3c9cb022a0310b571af597f03ca2d:-2097715450,9c63cd8b542a03101ae12d0336b04559:1755252883,01aeb083162a03105d61f47194670885:-206666610,d08c380fa7e603109f43c451b52cc223:1190771026,d0dab087f9e603104fd370156f8369f9:881449933</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-11 15:57:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>25555aed16f74eb894be176e12680784</sys_id>
+        <sys_metadata>5cdab0875ce603107f44f92d898943f5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_fresh_guard_360_management_dashboard</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_ui_page_5cdab0875ce603107f44f92d898943f5</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_5cdab0875ce603107f44f92d898943f5">d9c3c9cb5c2a03107f44f92d8989432e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-11 15:57:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

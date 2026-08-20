@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_view_config">
+    <sys_sg_view_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <creation_method/>
+        <description>Card layout for active store records</description>
+        <name>FG360 Active Store Card</name>
+        <scratchpad_script/>
+        <sys_class_name>sys_sg_view_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 06:12:39</sys_created_on>
+        <sys_id>4328b663e96603107f44cf798e4159cc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FG360 Active Store Card</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_sg_view_config_4328b663e96603107f44cf798e4159cc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 06:16:44</sys_updated_on>
+        <table>x_fresh_guard_360_store</table>
+        <template display_value="Static Content">2cfb71b5777911109033bfeacf5a9926</template>
+    </sys_sg_view_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=4328b663e96603107f44cf798e4159cc"/>
+</record_update>

@@ -1,0 +1,1638 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="CMDB Delete">bb054c627331201045cadfcd3bf6a759</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This subflow deletes the CIs associated with the input task</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>delete_configuration_items</internal_name>
+        <label_cache>[{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"253321cd-9113-4e84-ac9e-3a71fc8874bb"}},{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.error","label":"1➛Error","reference_display":"Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6038b3ca-d5fd-4659-a01c-7a0c453d7b62"}},{"name":"subflow.task","label":"Input➛Task","reference":"cmdb_data_management_task","reference_display":"CMDB Data Management Task","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1571f946-804b-491a-ad54-72c2cac3f1f2","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"dad3163a-28b7-45f5-a67c-9f5c4811a07e"}}]</label_cache>
+        <master_snapshot>e047ae9373e2201026f6aa114df6a702</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Delete Configuration Items</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-02 20:11:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>037c691b7362201026f6aa114df6a743</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Delete Configuration Items</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_update_name>sys_hub_flow_037c691b7362201026f6aa114df6a743</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:29:02</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=037c691b7362201026f6aa114df6a743"/>
+    <sys_variable_value action="DELETE" query="document_key=037c691b7362201026f6aa114df6a743"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743^id=037c691b7362201026f6aa114df6a743"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=037c691b7362201026f6aa114df6a743"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=037c691b7362201026f6aa114df6a743^sys_idNOT IN4f7c691b7362201026f6aa114df6a744"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>037c691b7362201026f6aa114df6a743</id>
+        <name>Delete Configuration Items</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-02 20:11:57</sys_created_on>
+        <sys_id>4f7c691b7362201026f6aa114df6a744</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-02 20:11:57</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=4f7c691b7362201026f6aa114df6a744"/>
+    <sys_hub_flow_input action="DELETE" query="model=037c691b7362201026f6aa114df6a743^sys_idNOT IN7b05aa5373e2201026f6aa114df6a717"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1571f946-804b-491a-ad54-72c2cac3f1f2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>cmdb_data_management_task</choice_table>
+        <column_label>Task</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>task</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Task</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Delete Configuration Items">037c691b7362201026f6aa114df6a743</model>
+        <model_id>037c691b7362201026f6aa114df6a743</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_037c691b7362201026f6aa114df6a743</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="cmdb_data_management_task">cmdb_data_management_task</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:19:08</sys_created_on>
+        <sys_id>7b05aa5373e2201026f6aa114df6a717</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:19:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=7b05aa5373e2201026f6aa114df6a717"/>
+    <sys_hub_flow_output action="DELETE" query="model=037c691b7362201026f6aa114df6a743^sys_idNOT IN1742c99a7372601026f6aa114df6a776,4f03f6e37326201026f6aa114df6a7fd,b3052e5373e2201026f6aa114df6a707"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=63eeed8c-de14-4249-89cf-0fe606b240ef</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Notes</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>notes</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Notes</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Delete Configuration Items">037c691b7362201026f6aa114df6a743</model>
+        <model_id>037c691b7362201026f6aa114df6a743</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-12 00:49:26</sys_created_on>
+        <sys_id>1742c99a7372601026f6aa114df6a776</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-12 00:49:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=1742c99a7372601026f6aa114df6a776"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1e0939f8-3344-4ff5-8135-9111078617f3</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Error Message</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>error_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Error Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Delete Configuration Items">037c691b7362201026f6aa114df6a743</model>
+        <model_id>037c691b7362201026f6aa114df6a743</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 19:58:43</sys_created_on>
+        <sys_id>4f03f6e37326201026f6aa114df6a7fd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:58:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=4f03f6e37326201026f6aa114df6a7fd"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=88d0077d-51f6-4c2f-8d07-d80d8a0f7dea</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Error</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>error</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Delete Configuration Items">037c691b7362201026f6aa114df6a743</model>
+        <model_id>037c691b7362201026f6aa114df6a743</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:19:08</sys_created_on>
+        <sys_id>b3052e5373e2201026f6aa114df6a707</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:19:09</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=b3052e5373e2201026f6aa114df6a707"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=037c691b7362201026f6aa114df6a743"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=037c691b7362201026f6aa114df6a743"/>
+    <sys_hub_action_instance action="DELETE" query="flow=037c691b7362201026f6aa114df6a743^sys_idNOT IN27376e9373e2201026f6aa114df6a727,67376e9373e2201026f6aa114df6a731"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete CIs for Task">b9ef52df73a2201026f6aa114df6a74a</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Configuration Items">037c691b7362201026f6aa114df6a743</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>27376e9373e2201026f6aa114df6a727</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:18</sys_updated_on>
+        <ui_id>57e7a494-dbaa-4391-93ac-eb5b2b639d32</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=27376e9373e2201026f6aa114df6a727"/>
+    <sys_element_mapping action="DELETE" query="id=27376e9373e2201026f6aa114df6a727"/>
+    <sys_element_mapping action="DELETE">
+        <field>task</field>
+        <id>27376e9373e2201026f6aa114df6a727</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>2b376e9373e2201026f6aa114df6a728</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:40</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b9ef52df73a2201026f6aa114df6a74a</table>
+        <value>{{subflow.task}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=27376e9373e2201026f6aa114df6a727"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=27376e9373e2201026f6aa114df6a727"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update CMDB Data Management Task">102aa5d77362201026f6aa114df6a740</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Configuration Items">037c691b7362201026f6aa114df6a743</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>0468d393-7ca8-41d2-9c58-3c7382c0fa7c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>67376e9373e2201026f6aa114df6a731</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:18</sys_updated_on>
+        <ui_id>f1059709-41b2-4456-b889-5738bf5d1ebe</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=67376e9373e2201026f6aa114df6a731"/>
+    <sys_element_mapping action="DELETE" query="id=67376e9373e2201026f6aa114df6a731"/>
+    <sys_element_mapping action="DELETE">
+        <field>cmdb_task</field>
+        <id>67376e9373e2201026f6aa114df6a731</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>a3376e9373e2201026f6aa114df6a732</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:40</sys_updated_on>
+        <table>var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740</table>
+        <value>{{subflow.task}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>notes</field>
+        <id>67376e9373e2201026f6aa114df6a731</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-12 00:50:58</sys_created_on>
+        <sys_id>b1a201da7372601026f6aa114df6a7e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-12 00:50:58</sys_updated_on>
+        <table>var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740</table>
+        <value>{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=67376e9373e2201026f6aa114df6a731"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=67376e9373e2201026f6aa114df6a731"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=037c691b7362201026f6aa114df6a743^sys_idNOT IN6b376e9373e2201026f6aa114df6a732,e7376e9373e2201026f6aa114df6a729"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">90f4dc737323201026f6aa114df6a7d0</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Delete Configuration Items">037c691b7362201026f6aa114df6a743</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned>error,error_message,notes</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>6b376e9373e2201026f6aa114df6a732</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:18</sys_updated_on>
+        <ui_id>be4b15bd-2343-4090-8de9-dbf8336b2c6f</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=6b376e9373e2201026f6aa114df6a732"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>6b376e9373e2201026f6aa114df6a732</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>e7376e9373e2201026f6aa114df6a735</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:40</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Error">b3052e5373e2201026f6aa114df6a707</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=6b376e9373e2201026f6aa114df6a732"/>
+    <sys_element_mapping action="DELETE">
+        <field>error</field>
+        <id>6b376e9373e2201026f6aa114df6a732</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>67376e9373e2201026f6aa114df6a735</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:40</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743</table>
+        <value>{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>error_message</field>
+        <id>6b376e9373e2201026f6aa114df6a732</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-05 01:08:44</sys_created_on>
+        <sys_id>0693c588733e201026f6aa114df6a716</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-05 01:08:44</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743</table>
+        <value>{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>notes</field>
+        <id>6b376e9373e2201026f6aa114df6a732</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-06 01:26:28</sys_created_on>
+        <sys_id>218a75d67393201026f6aa114df6a7a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-06 01:26:28</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743</table>
+        <value>{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=6b376e9373e2201026f6aa114df6a732"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=6b376e9373e2201026f6aa114df6a732"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">5cf4dc737323201026f6aa114df6a7c7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Delete Configuration Items">037c691b7362201026f6aa114df6a743</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>e7376e9373e2201026f6aa114df6a729</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:18</sys_updated_on>
+        <ui_id>0468d393-7ca8-41d2-9c58-3c7382c0fa7c</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=e7376e9373e2201026f6aa114df6a729"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e7376e9373e2201026f6aa114df6a729</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>ef376e9373e2201026f6aa114df6a72d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:40</sys_updated_on>
+        <value>Check for error</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=e7376e9373e2201026f6aa114df6a729"/>
+    <sys_element_mapping action="DELETE">
+        <field>condition</field>
+        <id>e7376e9373e2201026f6aa114df6a729</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>6f376e9373e2201026f6aa114df6a72d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:40</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error}}=false</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>condition_name</field>
+        <id>e7376e9373e2201026f6aa114df6a729</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:40</sys_created_on>
+        <sys_id>ab376e9373e2201026f6aa114df6a72d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:40</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743^id=e7376e9373e2201026f6aa114df6a729"/>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=e7376e9373e2201026f6aa114df6a729"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=e7376e9373e2201026f6aa114df6a729"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=037c691b7362201026f6aa114df6a743"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=037c691b7362201026f6aa114df6a743"/>
+    <sys_hub_flow_variable action="DELETE" query="model=037c691b7362201026f6aa114df6a743"/>
+    <sys_documentation action="DELETE">
+        <element>task</element>
+        <help/>
+        <hint/>
+        <label>Task</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_037c691b7362201026f6aa114df6a743</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:19:08</sys_created_on>
+        <sys_id>bb052e5373e2201026f6aa114df6a704</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_037c691b7362201026f6aa114df6a743_task_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:19:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_037c691b7362201026f6aa114df6a743"/>
+    <sys_documentation action="DELETE">
+        <element>notes</element>
+        <help/>
+        <hint/>
+        <label>Notes</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-12 00:49:26</sys_created_on>
+        <sys_id>1742c99a7372601026f6aa114df6a77e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notes</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743_notes_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-12 00:49:26</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>error</element>
+        <help/>
+        <hint/>
+        <label>Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:19:08</sys_created_on>
+        <sys_id>b3052e5373e2201026f6aa114df6a70f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Error</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743_error_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:19:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>error_message</element>
+        <help/>
+        <hint/>
+        <label>Error Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 19:58:43</sys_created_on>
+        <sys_id>cb033ae37326201026f6aa114df6a705</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Error Message</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743_error_message_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:58:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="CMDB Delete">bb054c627331201045cadfcd3bf6a759</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This subflow deletes the CIs associated with the input task</description>
+        <flow_priority/>
+        <internal_name>delete_configuration_items</internal_name>
+        <label_cache>[{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"253321cd-9113-4e84-ac9e-3a71fc8874bb"}},{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.error","label":"1➛Error","reference_display":"Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6038b3ca-d5fd-4659-a01c-7a0c453d7b62"}},{"name":"subflow.task","label":"Input➛Task","reference":"cmdb_data_management_task","reference_display":"CMDB Data Management Task","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1571f946-804b-491a-ad54-72c2cac3f1f2","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"dad3163a-28b7-45f5-a67c-9f5c4811a07e"}}]</label_cache>
+        <master>true</master>
+        <name>Delete Configuration Items</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Delete Configuration Items">037c691b7362201026f6aa114df6a743</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>e047ae9373e2201026f6aa114df6a702</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:17</sys_updated_on>
+        <type>subflow</type>
+        <version/>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=e047ae9373e2201026f6aa114df6a702"/>
+    <sys_variable_value action="DELETE" query="document_key=e047ae9373e2201026f6aa114df6a702"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702^id=e047ae9373e2201026f6aa114df6a702"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=e047ae9373e2201026f6aa114df6a702"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=e047ae9373e2201026f6aa114df6a702^sys_idNOT IN2047ae9373e2201026f6aa114df6a703"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>e047ae9373e2201026f6aa114df6a702</id>
+        <name>Delete Configuration Items</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:44</sys_created_on>
+        <sys_id>2047ae9373e2201026f6aa114df6a703</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:44</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=2047ae9373e2201026f6aa114df6a703"/>
+    <sys_hub_flow_input action="DELETE" query="model=e047ae9373e2201026f6aa114df6a702^sys_idNOT INe447ae9373e2201026f6aa114df6a704"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1571f946-804b-491a-ad54-72c2cac3f1f2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>cmdb_data_management_task</choice_table>
+        <column_label>Task</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>task</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Task</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Delete Configuration Items">e047ae9373e2201026f6aa114df6a702</model>
+        <model_id>e047ae9373e2201026f6aa114df6a702</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e047ae9373e2201026f6aa114df6a702</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="cmdb_data_management_task">cmdb_data_management_task</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:44</sys_created_on>
+        <sys_id>e447ae9373e2201026f6aa114df6a704</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:58:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=e447ae9373e2201026f6aa114df6a704"/>
+    <sys_hub_flow_output action="DELETE" query="model=e047ae9373e2201026f6aa114df6a702^sys_idNOT IN33a281da7372601026f6aa114df6a79e,e8137ae37326201026f6aa114df6a78e,e847ae9373e2201026f6aa114df6a732"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=63eeed8c-de14-4249-89cf-0fe606b240ef</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Notes</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>notes</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Notes</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Delete Configuration Items">e047ae9373e2201026f6aa114df6a702</model>
+        <model_id>e047ae9373e2201026f6aa114df6a702</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-12 00:51:07</sys_created_on>
+        <sys_id>33a281da7372601026f6aa114df6a79e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-12 00:51:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=33a281da7372601026f6aa114df6a79e"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1e0939f8-3344-4ff5-8135-9111078617f3</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Error Message</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>error_message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Error Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Delete Configuration Items">e047ae9373e2201026f6aa114df6a702</model>
+        <model_id>e047ae9373e2201026f6aa114df6a702</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 19:58:50</sys_created_on>
+        <sys_id>e8137ae37326201026f6aa114df6a78e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:58:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=e8137ae37326201026f6aa114df6a78e"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=88d0077d-51f6-4c2f-8d07-d80d8a0f7dea</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Error</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>error</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Delete Configuration Items">e047ae9373e2201026f6aa114df6a702</model>
+        <model_id>e047ae9373e2201026f6aa114df6a702</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:44</sys_created_on>
+        <sys_id>e847ae9373e2201026f6aa114df6a732</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:58:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type/>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=e847ae9373e2201026f6aa114df6a732"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=e047ae9373e2201026f6aa114df6a702"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=e047ae9373e2201026f6aa114df6a702"/>
+    <sys_hub_action_instance action="DELETE" query="flow=e047ae9373e2201026f6aa114df6a702^sys_idNOT INa847ae9373e2201026f6aa114df6a75d,ec47ae9373e2201026f6aa114df6a762"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete CIs for Task">b9ef52df73a2201026f6aa114df6a74a</action_type>
+        <action_type_parent display_value="Delete CIs for Task">f36fe91b7362201026f6aa114df6a77b</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Configuration Items">e047ae9373e2201026f6aa114df6a702</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>a847ae9373e2201026f6aa114df6a75d</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:17</sys_updated_on>
+        <ui_id>57e7a494-dbaa-4391-93ac-eb5b2b639d32</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=a847ae9373e2201026f6aa114df6a75d"/>
+    <sys_element_mapping action="DELETE" query="id=a847ae9373e2201026f6aa114df6a75d"/>
+    <sys_element_mapping action="DELETE">
+        <field>task</field>
+        <id>a847ae9373e2201026f6aa114df6a75d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>e447ae9373e2201026f6aa114df6a75e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:45</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b9ef52df73a2201026f6aa114df6a74a</table>
+        <value>{{subflow.task}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=a847ae9373e2201026f6aa114df6a75d"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=a847ae9373e2201026f6aa114df6a75d"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update CMDB Data Management Task">102aa5d77362201026f6aa114df6a740</action_type>
+        <action_type_parent display_value="Update CMDB Data Management Task">e3b921d77362201026f6aa114df6a742</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Configuration Items">e047ae9373e2201026f6aa114df6a702</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>0468d393-7ca8-41d2-9c58-3c7382c0fa7c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>ec47ae9373e2201026f6aa114df6a762</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:17</sys_updated_on>
+        <ui_id>f1059709-41b2-4456-b889-5738bf5d1ebe</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=ec47ae9373e2201026f6aa114df6a762"/>
+    <sys_element_mapping action="DELETE" query="id=ec47ae9373e2201026f6aa114df6a762"/>
+    <sys_element_mapping action="DELETE">
+        <field>cmdb_task</field>
+        <id>ec47ae9373e2201026f6aa114df6a762</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>2c47ae9373e2201026f6aa114df6a763</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:45</sys_updated_on>
+        <table>var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740</table>
+        <value>{{subflow.task}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>notes</field>
+        <id>ec47ae9373e2201026f6aa114df6a762</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-12 00:51:07</sys_created_on>
+        <sys_id>0cb281da7372601026f6aa114df6a7b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-12 00:51:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740</table>
+        <value>{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=ec47ae9373e2201026f6aa114df6a762"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=ec47ae9373e2201026f6aa114df6a762"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=e047ae9373e2201026f6aa114df6a702^sys_idNOT IN2847ae9373e2201026f6aa114df6a753,ac47ae9373e2201026f6aa114df6a742"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">90f4dc737323201026f6aa114df6a7d0</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Delete Configuration Items">e047ae9373e2201026f6aa114df6a702</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned>error,error_message,notes</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>2847ae9373e2201026f6aa114df6a753</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:17</sys_updated_on>
+        <ui_id>be4b15bd-2343-4090-8de9-dbf8336b2c6f</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=2847ae9373e2201026f6aa114df6a753"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>2847ae9373e2201026f6aa114df6a753</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>2847ae9373e2201026f6aa114df6a756</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:45</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Error">e847ae9373e2201026f6aa114df6a732</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=2847ae9373e2201026f6aa114df6a753"/>
+    <sys_element_mapping action="DELETE">
+        <field>error</field>
+        <id>2847ae9373e2201026f6aa114df6a753</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>a447ae9373e2201026f6aa114df6a756</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:45</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702</table>
+        <value>{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>error_message</field>
+        <id>2847ae9373e2201026f6aa114df6a753</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-05 01:17:28</sys_created_on>
+        <sys_id>f99509c4737e201026f6aa114df6a7af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-05 01:17:28</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702</table>
+        <value>{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>notes</field>
+        <id>2847ae9373e2201026f6aa114df6a753</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-22 20:09:16</sys_created_on>
+        <sys_id>41f410b37323201026f6aa114df6a7a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:16</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702</table>
+        <value>{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=2847ae9373e2201026f6aa114df6a753"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=2847ae9373e2201026f6aa114df6a753"/>
+    <sys_hub_flow_logic action="DELETE">
+        <attributes/>
+        <block display_value="">5cf4dc737323201026f6aa114df6a7c7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Delete Configuration Items">e047ae9373e2201026f6aa114df6a702</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>ac47ae9373e2201026f6aa114df6a742</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:17</sys_updated_on>
+        <ui_id>0468d393-7ca8-41d2-9c58-3c7382c0fa7c</ui_id>
+        <updation_source/>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="DELETE" query="document_key=ac47ae9373e2201026f6aa114df6a742"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>ac47ae9373e2201026f6aa114df6a742</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>2047ae9373e2201026f6aa114df6a753</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:45</sys_updated_on>
+        <value>Check for error</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=ac47ae9373e2201026f6aa114df6a742"/>
+    <sys_element_mapping action="DELETE">
+        <field>condition</field>
+        <id>ac47ae9373e2201026f6aa114df6a742</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>ac47ae9373e2201026f6aa114df6a752</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:45</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error}}=false</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>condition_name</field>
+        <id>ac47ae9373e2201026f6aa114df6a742</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>e847ae9373e2201026f6aa114df6a752</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:45</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702^id=ac47ae9373e2201026f6aa114df6a742"/>
+    <sys_hub_flow_logic_ext_input action="DELETE" query="model=ac47ae9373e2201026f6aa114df6a742"/>
+    <sys_hub_input_scripts action="DELETE" query="instance=ac47ae9373e2201026f6aa114df6a742"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=e047ae9373e2201026f6aa114df6a702"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=e047ae9373e2201026f6aa114df6a702"/>
+    <sys_hub_flow_variable action="DELETE" query="model=e047ae9373e2201026f6aa114df6a702"/>
+    <sys_documentation action="DELETE">
+        <element>task</element>
+        <help/>
+        <hint/>
+        <label>Task</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e047ae9373e2201026f6aa114df6a702</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:44</sys_created_on>
+        <sys_id>e847ae9373e2201026f6aa114df6a72d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_e047ae9373e2201026f6aa114df6a702_task_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_e047ae9373e2201026f6aa114df6a702"/>
+    <sys_documentation action="DELETE">
+        <element>error_message</element>
+        <help/>
+        <hint/>
+        <label>Error Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 19:58:50</sys_created_on>
+        <sys_id>68137ae37326201026f6aa114df6a799</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Error Message</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702_error_message_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 19:58:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>notes</element>
+        <help/>
+        <hint/>
+        <label>Notes</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-12 00:51:07</sys_created_on>
+        <sys_id>b3a281da7372601026f6aa114df6a7a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notes</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702_notes_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-12 00:51:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>error</element>
+        <help/>
+        <hint/>
+        <label>Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_id>e447ae9373e2201026f6aa114df6a73d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Error</sys_name>
+        <sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager">8a16a30299f403107f4454352b402e0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702_error_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-03-03 00:28:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>037c691b7362201026f6aa114df6a743</sys_id>
+        <latest_snapshot>e047ae9373e2201026f6aa114df6a702</latest_snapshot>
+        <compiler_build>latest</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=037c691b7362201026f6aa114df6a743"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=037c691b7362201026f6aa114df6a743^sys_idNOT IN3847ae9373e2201026f6aa114df6a792"/>
+    <sys_flow_subflow_plan action="DELETE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@6201899f</plan>
+        <plan_id display_value="Delete Configuration Items">037c691b7362201026f6aa114df6a743</plan_id>
+        <snapshot>e047ae9373e2201026f6aa114df6a702</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-03-03 00:28:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>3847ae9373e2201026f6aa114df6a792</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-22 20:09:18</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</application>
+        <file_path/>
+        <instance_id>9bb1043093560750fb38f8284dba10af</instance_id>
+        <instance_name>dlt-hck-8017-0037</instance_name>
+        <name>sys_hub_flow_037c691b7362201026f6aa114df6a743</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category display_value="CMDB Delete"&gt;bb054c627331201045cadfcd3bf6a759&lt;/category&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;This subflow deletes the CIs associated with the input task&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority/&gt;&lt;generation_source/&gt;&lt;internal_name&gt;delete_configuration_items&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"253321cd-9113-4e84-ac9e-3a71fc8874bb"}},{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.error","label":"1➛Error","reference_display":"Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6038b3ca-d5fd-4659-a01c-7a0c453d7b62"}},{"name":"subflow.task","label":"Input➛Task","reference":"cmdb_data_management_task","reference_display":"CMDB Data Management Task","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1571f946-804b-491a-ad54-72c2cac3f1f2","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"dad3163a-28b7-45f5-a67c-9f5c4811a07e"}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;e047ae9373e2201026f6aa114df6a702&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Delete Configuration Items&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-02 20:11:57&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;037c691b7362201026f6aa114df6a743&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Delete Configuration Items&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Fresh Guard 360"&gt;5dea38c6656603107f449f96678d3a73&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_037c691b7362201026f6aa114df6a743&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-10 10:29:02&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;updation_source/&gt;&lt;version/&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743^id=037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=037c691b7362201026f6aa114df6a743^sys_idNOT IN4f7c691b7362201026f6aa114df6a744"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;037c691b7362201026f6aa114df6a743&lt;/id&gt;&lt;name&gt;Delete Configuration Items&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-02 20:11:57&lt;/sys_created_on&gt;&lt;sys_id&gt;4f7c691b7362201026f6aa114df6a744&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-02 20:11:57&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=4f7c691b7362201026f6aa114df6a744"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=037c691b7362201026f6aa114df6a743^sys_idNOT IN7b05aa5373e2201026f6aa114df6a717"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1571f946-804b-491a-ad54-72c2cac3f1f2&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;cmdb_data_management_task&lt;/choice_table&gt;&lt;column_label&gt;Task&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;task&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Task&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Delete Configuration Items"&gt;037c691b7362201026f6aa114df6a743&lt;/model&gt;&lt;model_id&gt;037c691b7362201026f6aa114df6a743&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_037c691b7362201026f6aa114df6a743&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="cmdb_data_management_task"&gt;cmdb_data_management_task&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:19:08&lt;/sys_created_on&gt;&lt;sys_id&gt;7b05aa5373e2201026f6aa114df6a717&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:19:08&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7b05aa5373e2201026f6aa114df6a717"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=037c691b7362201026f6aa114df6a743^sys_idNOT IN1742c99a7372601026f6aa114df6a776,4f03f6e37326201026f6aa114df6a7fd,b3052e5373e2201026f6aa114df6a707"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=63eeed8c-de14-4249-89cf-0fe606b240ef&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Notes&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;notes&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Delete Configuration Items"&gt;037c691b7362201026f6aa114df6a743&lt;/model&gt;&lt;model_id&gt;037c691b7362201026f6aa114df6a743&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;3&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-12 00:49:26&lt;/sys_created_on&gt;&lt;sys_id&gt;1742c99a7372601026f6aa114df6a776&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-12 00:49:27&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1742c99a7372601026f6aa114df6a776"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1e0939f8-3344-4ff5-8135-9111078617f3&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Error Message&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;error_message&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Error Message&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Delete Configuration Items"&gt;037c691b7362201026f6aa114df6a743&lt;/model&gt;&lt;model_id&gt;037c691b7362201026f6aa114df6a743&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 19:58:43&lt;/sys_created_on&gt;&lt;sys_id&gt;4f03f6e37326201026f6aa114df6a7fd&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 19:58:44&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4f03f6e37326201026f6aa114df6a7fd"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=88d0077d-51f6-4c2f-8d07-d80d8a0f7dea&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Error&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;error&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value=""&gt;boolean&lt;/internal_type&gt;&lt;label&gt;Error&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Delete Configuration Items"&gt;037c691b7362201026f6aa114df6a743&lt;/model&gt;&lt;model_id&gt;037c691b7362201026f6aa114df6a743&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:19:08&lt;/sys_created_on&gt;&lt;sys_id&gt;b3052e5373e2201026f6aa114df6a707&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:19:09&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b3052e5373e2201026f6aa114df6a707"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=037c691b7362201026f6aa114df6a743^sys_idNOT IN27376e9373e2201026f6aa114df6a727,67376e9373e2201026f6aa114df6a731"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Delete CIs for Task"&gt;b9ef52df73a2201026f6aa114df6a74a&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Delete Configuration Items"&gt;037c691b7362201026f6aa114df6a743&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;27376e9373e2201026f6aa114df6a727&lt;/sys_id&gt;&lt;sys_mod_count&gt;40&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:18&lt;/sys_updated_on&gt;&lt;ui_id&gt;57e7a494-dbaa-4391-93ac-eb5b2b639d32&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=27376e9373e2201026f6aa114df6a727"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=27376e9373e2201026f6aa114df6a727"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task&lt;/field&gt;&lt;id&gt;27376e9373e2201026f6aa114df6a727&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;2b376e9373e2201026f6aa114df6a728&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:40&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_b9ef52df73a2201026f6aa114df6a74a&lt;/table&gt;&lt;value&gt;{{subflow.task}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=27376e9373e2201026f6aa114df6a727"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=27376e9373e2201026f6aa114df6a727"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Update CMDB Data Management Task"&gt;102aa5d77362201026f6aa114df6a740&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Delete Configuration Items"&gt;037c691b7362201026f6aa114df6a743&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;0468d393-7ca8-41d2-9c58-3c7382c0fa7c&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;67376e9373e2201026f6aa114df6a731&lt;/sys_id&gt;&lt;sys_mod_count&gt;40&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:18&lt;/sys_updated_on&gt;&lt;ui_id&gt;f1059709-41b2-4456-b889-5738bf5d1ebe&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=67376e9373e2201026f6aa114df6a731"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=67376e9373e2201026f6aa114df6a731"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;cmdb_task&lt;/field&gt;&lt;id&gt;67376e9373e2201026f6aa114df6a731&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;a3376e9373e2201026f6aa114df6a732&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:40&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740&lt;/table&gt;&lt;value&gt;{{subflow.task}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;notes&lt;/field&gt;&lt;id&gt;67376e9373e2201026f6aa114df6a731&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-12 00:50:58&lt;/sys_created_on&gt;&lt;sys_id&gt;b1a201da7372601026f6aa114df6a7e6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-12 00:50:58&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740&lt;/table&gt;&lt;value&gt;{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=67376e9373e2201026f6aa114df6a731"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=67376e9373e2201026f6aa114df6a731"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=037c691b7362201026f6aa114df6a743^sys_idNOT IN6b376e9373e2201026f6aa114df6a732,e7376e9373e2201026f6aa114df6a729"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;90f4dc737323201026f6aa114df6a7d0&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Delete Configuration Items"&gt;037c691b7362201026f6aa114df6a743&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned&gt;error,error_message,notes&lt;/outputs_assigned&gt;&lt;outputs_to_assign/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;6b376e9373e2201026f6aa114df6a732&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:18&lt;/sys_updated_on&gt;&lt;ui_id&gt;be4b15bd-2343-4090-8de9-dbf8336b2c6f&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=6b376e9373e2201026f6aa114df6a732"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;6b376e9373e2201026f6aa114df6a732&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;e7376e9373e2201026f6aa114df6a735&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:40&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Error"&gt;b3052e5373e2201026f6aa114df6a707&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=6b376e9373e2201026f6aa114df6a732"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;error&lt;/field&gt;&lt;id&gt;6b376e9373e2201026f6aa114df6a732&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;67376e9373e2201026f6aa114df6a735&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:40&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743&lt;/table&gt;&lt;value&gt;{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;error_message&lt;/field&gt;&lt;id&gt;6b376e9373e2201026f6aa114df6a732&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-05 01:08:44&lt;/sys_created_on&gt;&lt;sys_id&gt;0693c588733e201026f6aa114df6a716&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-05 01:08:44&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743&lt;/table&gt;&lt;value&gt;{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error_message}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;notes&lt;/field&gt;&lt;id&gt;6b376e9373e2201026f6aa114df6a732&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-04-06 01:26:28&lt;/sys_created_on&gt;&lt;sys_id&gt;218a75d67393201026f6aa114df6a7a6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-06 01:26:28&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743&lt;/table&gt;&lt;value&gt;{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=6b376e9373e2201026f6aa114df6a732"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=6b376e9373e2201026f6aa114df6a732"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;5cf4dc737323201026f6aa114df6a7c7&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Delete Configuration Items"&gt;037c691b7362201026f6aa114df6a743&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;e7376e9373e2201026f6aa114df6a729&lt;/sys_id&gt;&lt;sys_mod_count&gt;21&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:18&lt;/sys_updated_on&gt;&lt;ui_id&gt;0468d393-7ca8-41d2-9c58-3c7382c0fa7c&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=e7376e9373e2201026f6aa114df6a729"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;e7376e9373e2201026f6aa114df6a729&lt;/document_key&gt;&lt;order&gt;10&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;ef376e9373e2201026f6aa114df6a72d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:40&lt;/sys_updated_on&gt;&lt;value&gt;Check for error&lt;/value&gt;&lt;variable display_value="Condition Label"&gt;f0af19c1c32632002841b63b12d3aea3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=e7376e9373e2201026f6aa114df6a729"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition&lt;/field&gt;&lt;id&gt;e7376e9373e2201026f6aa114df6a729&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;6f376e9373e2201026f6aa114df6a72d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:40&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value&gt;{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error}}=false&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition_name&lt;/field&gt;&lt;id&gt;e7376e9373e2201026f6aa114df6a729&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:40&lt;/sys_created_on&gt;&lt;sys_id&gt;ab376e9373e2201026f6aa114df6a72d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:40&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743^id=e7376e9373e2201026f6aa114df6a729"/&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e7376e9373e2201026f6aa114df6a729"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=e7376e9373e2201026f6aa114df6a729"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;task&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Task&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_037c691b7362201026f6aa114df6a743&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:19:08&lt;/sys_created_on&gt;&lt;sys_id&gt;bb052e5373e2201026f6aa114df6a704&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Task&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_037c691b7362201026f6aa114df6a743_task_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:19:08&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;notes&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-12 00:49:26&lt;/sys_created_on&gt;&lt;sys_id&gt;1742c99a7372601026f6aa114df6a77e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Notes&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743_notes_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-12 00:49:26&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;error&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Error&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:19:08&lt;/sys_created_on&gt;&lt;sys_id&gt;b3052e5373e2201026f6aa114df6a70f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Error&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743_error_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:19:08&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;error_message&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Error Message&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 19:58:43&lt;/sys_created_on&gt;&lt;sys_id&gt;cb033ae37326201026f6aa114df6a705&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Error Message&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743_error_message_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 19:58:43&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes/&gt;&lt;authored_on_release_version/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category display_value="CMDB Delete"&gt;bb054c627331201045cadfcd3bf6a759&lt;/category&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;This subflow deletes the CIs associated with the input task&lt;/description&gt;&lt;flow_priority/&gt;&lt;internal_name&gt;delete_configuration_items&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes","label":"1➛Notes","reference_display":"Notes","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"253321cd-9113-4e84-ac9e-3a71fc8874bb"}},{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.error","label":"1➛Error","reference_display":"Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6038b3ca-d5fd-4659-a01c-7a0c453d7b62"}},{"name":"subflow.task","label":"Input➛Task","reference":"cmdb_data_management_task","reference_display":"CMDB Data Management Task","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1571f946-804b-491a-ad54-72c2cac3f1f2","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"57e7a494-dbaa-4391-93ac-eb5b2b639d32.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"dad3163a-28b7-45f5-a67c-9f5c4811a07e"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Delete Configuration Items&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Delete Configuration Items"&gt;037c691b7362201026f6aa114df6a743&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:44&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;e047ae9373e2201026f6aa114df6a702&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:17&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;version/&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702^id=e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=e047ae9373e2201026f6aa114df6a702^sys_idNOT IN2047ae9373e2201026f6aa114df6a703"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;e047ae9373e2201026f6aa114df6a702&lt;/id&gt;&lt;name&gt;Delete Configuration Items&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:44&lt;/sys_created_on&gt;&lt;sys_id&gt;2047ae9373e2201026f6aa114df6a703&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:44&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2047ae9373e2201026f6aa114df6a703"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=e047ae9373e2201026f6aa114df6a702^sys_idNOT INe447ae9373e2201026f6aa114df6a704"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=1571f946-804b-491a-ad54-72c2cac3f1f2&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;cmdb_data_management_task&lt;/choice_table&gt;&lt;column_label&gt;Task&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;task&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Task&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Delete Configuration Items"&gt;e047ae9373e2201026f6aa114df6a702&lt;/model&gt;&lt;model_id&gt;e047ae9373e2201026f6aa114df6a702&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_e047ae9373e2201026f6aa114df6a702&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="cmdb_data_management_task"&gt;cmdb_data_management_task&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:44&lt;/sys_created_on&gt;&lt;sys_id&gt;e447ae9373e2201026f6aa114df6a704&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 19:58:51&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e447ae9373e2201026f6aa114df6a704"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=e047ae9373e2201026f6aa114df6a702^sys_idNOT IN33a281da7372601026f6aa114df6a79e,e8137ae37326201026f6aa114df6a78e,e847ae9373e2201026f6aa114df6a732"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=63eeed8c-de14-4249-89cf-0fe606b240ef&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Notes&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;notes&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Delete Configuration Items"&gt;e047ae9373e2201026f6aa114df6a702&lt;/model&gt;&lt;model_id&gt;e047ae9373e2201026f6aa114df6a702&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;3&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-12 00:51:07&lt;/sys_created_on&gt;&lt;sys_id&gt;33a281da7372601026f6aa114df6a79e&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-12 00:51:07&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=33a281da7372601026f6aa114df6a79e"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1e0939f8-3344-4ff5-8135-9111078617f3&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Error Message&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;error_message&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Error Message&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Delete Configuration Items"&gt;e047ae9373e2201026f6aa114df6a702&lt;/model&gt;&lt;model_id&gt;e047ae9373e2201026f6aa114df6a702&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 19:58:50&lt;/sys_created_on&gt;&lt;sys_id&gt;e8137ae37326201026f6aa114df6a78e&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 19:58:51&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e8137ae37326201026f6aa114df6a78e"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=88d0077d-51f6-4c2f-8d07-d80d8a0f7dea&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice&gt;3&lt;/choice&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Error&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;error&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value=""&gt;boolean&lt;/internal_type&gt;&lt;label&gt;Error&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Delete Configuration Items"&gt;e047ae9373e2201026f6aa114df6a702&lt;/model&gt;&lt;model_id&gt;e047ae9373e2201026f6aa114df6a702&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:44&lt;/sys_created_on&gt;&lt;sys_id&gt;e847ae9373e2201026f6aa114df6a732&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 19:58:51&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type/&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e847ae9373e2201026f6aa114df6a732"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=e047ae9373e2201026f6aa114df6a702^sys_idNOT INa847ae9373e2201026f6aa114df6a75d,ec47ae9373e2201026f6aa114df6a762"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Delete CIs for Task"&gt;b9ef52df73a2201026f6aa114df6a74a&lt;/action_type&gt;&lt;action_type_parent display_value="Delete CIs for Task"&gt;f36fe91b7362201026f6aa114df6a77b&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Delete Configuration Items"&gt;e047ae9373e2201026f6aa114df6a702&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;a847ae9373e2201026f6aa114df6a75d&lt;/sys_id&gt;&lt;sys_mod_count&gt;26&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:17&lt;/sys_updated_on&gt;&lt;ui_id&gt;57e7a494-dbaa-4391-93ac-eb5b2b639d32&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=a847ae9373e2201026f6aa114df6a75d"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=a847ae9373e2201026f6aa114df6a75d"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;task&lt;/field&gt;&lt;id&gt;a847ae9373e2201026f6aa114df6a75d&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;e447ae9373e2201026f6aa114df6a75e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:45&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_b9ef52df73a2201026f6aa114df6a74a&lt;/table&gt;&lt;value&gt;{{subflow.task}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=a847ae9373e2201026f6aa114df6a75d"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=a847ae9373e2201026f6aa114df6a75d"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Update CMDB Data Management Task"&gt;102aa5d77362201026f6aa114df6a740&lt;/action_type&gt;&lt;action_type_parent display_value="Update CMDB Data Management Task"&gt;e3b921d77362201026f6aa114df6a742&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Delete Configuration Items"&gt;e047ae9373e2201026f6aa114df6a702&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;0468d393-7ca8-41d2-9c58-3c7382c0fa7c&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;ec47ae9373e2201026f6aa114df6a762&lt;/sys_id&gt;&lt;sys_mod_count&gt;26&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:17&lt;/sys_updated_on&gt;&lt;ui_id&gt;f1059709-41b2-4456-b889-5738bf5d1ebe&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=ec47ae9373e2201026f6aa114df6a762"/&gt;&lt;sys_element_mapping action="delete_multiple" query="id=ec47ae9373e2201026f6aa114df6a762"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;cmdb_task&lt;/field&gt;&lt;id&gt;ec47ae9373e2201026f6aa114df6a762&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;2c47ae9373e2201026f6aa114df6a763&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:45&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740&lt;/table&gt;&lt;value&gt;{{subflow.task}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;notes&lt;/field&gt;&lt;id&gt;ec47ae9373e2201026f6aa114df6a762&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-12 00:51:07&lt;/sys_created_on&gt;&lt;sys_id&gt;0cb281da7372601026f6aa114df6a7b2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-12 00:51:07&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_102aa5d77362201026f6aa114df6a740&lt;/table&gt;&lt;value&gt;{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=ec47ae9373e2201026f6aa114df6a762"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=ec47ae9373e2201026f6aa114df6a762"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=e047ae9373e2201026f6aa114df6a702^sys_idNOT IN2847ae9373e2201026f6aa114df6a753,ac47ae9373e2201026f6aa114df6a742"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;90f4dc737323201026f6aa114df6a7d0&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Delete Configuration Items"&gt;e047ae9373e2201026f6aa114df6a702&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned&gt;error,error_message,notes&lt;/outputs_assigned&gt;&lt;outputs_to_assign/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;2847ae9373e2201026f6aa114df6a753&lt;/sys_id&gt;&lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:17&lt;/sys_updated_on&gt;&lt;ui_id&gt;be4b15bd-2343-4090-8de9-dbf8336b2c6f&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=2847ae9373e2201026f6aa114df6a753"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;2847ae9373e2201026f6aa114df6a753&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;2847ae9373e2201026f6aa114df6a756&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:45&lt;/sys_updated_on&gt;&lt;value&gt;0&lt;/value&gt;&lt;variable display_value="Error"&gt;e847ae9373e2201026f6aa114df6a732&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=2847ae9373e2201026f6aa114df6a753"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;error&lt;/field&gt;&lt;id&gt;2847ae9373e2201026f6aa114df6a753&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;a447ae9373e2201026f6aa114df6a756&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:45&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702&lt;/table&gt;&lt;value&gt;{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;error_message&lt;/field&gt;&lt;id&gt;2847ae9373e2201026f6aa114df6a753&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-05 01:17:28&lt;/sys_created_on&gt;&lt;sys_id&gt;f99509c4737e201026f6aa114df6a7af&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-05 01:17:28&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702&lt;/table&gt;&lt;value&gt;{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error_message}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;notes&lt;/field&gt;&lt;id&gt;2847ae9373e2201026f6aa114df6a753&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-04-22 20:09:16&lt;/sys_created_on&gt;&lt;sys_id&gt;41f410b37323201026f6aa114df6a7a6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:16&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702&lt;/table&gt;&lt;value&gt;{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.notes}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=2847ae9373e2201026f6aa114df6a753"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=2847ae9373e2201026f6aa114df6a753"/&gt;&lt;sys_hub_flow_logic action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;5cf4dc737323201026f6aa114df6a7c7&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;decision_table_inputs/&gt;&lt;display_text/&gt;&lt;extended_inputs/&gt;&lt;flow display_value="Delete Configuration Items"&gt;e047ae9373e2201026f6aa114df6a702&lt;/flow&gt;&lt;flow_variable/&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;inputs/&gt;&lt;inputs/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;outputs_to_assign/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;ac47ae9373e2201026f6aa114df6a742&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:17&lt;/sys_updated_on&gt;&lt;ui_id&gt;0468d393-7ca8-41d2-9c58-3c7382c0fa7c&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;workflow_inputs/&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=ac47ae9373e2201026f6aa114df6a742"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_flow_logic&lt;/document&gt;&lt;document_key&gt;ac47ae9373e2201026f6aa114df6a742&lt;/document_key&gt;&lt;order&gt;10&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;2047ae9373e2201026f6aa114df6a753&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:45&lt;/sys_updated_on&gt;&lt;value&gt;Check for error&lt;/value&gt;&lt;variable display_value="Condition Label"&gt;f0af19c1c32632002841b63b12d3aea3&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=ac47ae9373e2201026f6aa114df6a742"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition&lt;/field&gt;&lt;id&gt;ac47ae9373e2201026f6aa114df6a742&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;ac47ae9373e2201026f6aa114df6a752&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:45&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value&gt;{{57e7a494-dbaa-4391-93ac-eb5b2b639d32.error}}=false&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;condition_name&lt;/field&gt;&lt;id&gt;ac47ae9373e2201026f6aa114df6a742&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;e847ae9373e2201026f6aa114df6a752&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:45&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702^id=ac47ae9373e2201026f6aa114df6a742"/&gt;&lt;sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ac47ae9373e2201026f6aa114df6a742"/&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=ac47ae9373e2201026f6aa114df6a742"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;task&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Task&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_e047ae9373e2201026f6aa114df6a702&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:44&lt;/sys_created_on&gt;&lt;sys_id&gt;e847ae9373e2201026f6aa114df6a72d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Task&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_input_e047ae9373e2201026f6aa114df6a702_task_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:44&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;error_message&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Error Message&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 19:58:50&lt;/sys_created_on&gt;&lt;sys_id&gt;68137ae37326201026f6aa114df6a799&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Error Message&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702_error_message_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 19:58:50&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;notes&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Notes&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-12 00:51:07&lt;/sys_created_on&gt;&lt;sys_id&gt;b3a281da7372601026f6aa114df6a7a9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Notes&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702_notes_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-12 00:51:07&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;error&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Error&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;e447ae9373e2201026f6aa114df6a73d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Error&lt;/sys_name&gt;&lt;sys_package display_value="CMDB Data Manager" source="com.snc.cmdb.ci_lifecycle_manager"&gt;8a16a30299f403107f4454352b402e0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_documentation_var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702_error_en&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-03 00:28:45&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_e047ae9373e2201026f6aa114df6a702"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;037c691b7362201026f6aa114df6a743&lt;/sys_id&gt;&lt;latest_snapshot&gt;e047ae9373e2201026f6aa114df6a702&lt;/latest_snapshot&gt;&lt;compiler_build&gt;latest&lt;/compiler_build&gt;&lt;version_record/&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=037c691b7362201026f6aa114df6a743"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=037c691b7362201026f6aa114df6a743^sys_idNOT IN3847ae9373e2201026f6aa114df6a792"/&gt;&lt;sys_flow_subflow_plan action="INSERT_OR_UPDATE"&gt;&lt;plan&gt;com.snc.process_flow.engine.ProcessPlan@6201899f&lt;/plan&gt;&lt;plan_id display_value="Delete Configuration Items"&gt;037c691b7362201026f6aa114df6a743&lt;/plan_id&gt;&lt;snapshot&gt;e047ae9373e2201026f6aa114df6a702&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-03 00:28:45&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;3847ae9373e2201026f6aa114df6a792&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-22 20:09:18&lt;/sys_updated_on&gt;&lt;/sys_flow_subflow_plan&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-719196116</payload_hash>
+        <record_name>Delete Configuration Items</record_name>
+        <reverted_from/>
+        <source>59ea38c6656603107f449f96678d3a77</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 10:29:04</sys_created_on>
+        <sys_id>21165036edee03107f44863610ff216c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19feb3801840000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 10:29:04</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>61165036c7ee031018497a4c5b77f86b</update_guid>
+        <update_guid_history>61165036c7ee031018497a4c5b77f86b:-719196116,a9165036a4ee0310e8cd70331583303e:1299408228</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-10 15:35:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>1f2315b922914b448139985c95f19444</sys_id>
+        <sys_metadata>037c691b7362201026f6aa114df6a743</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Delete Configuration Items</sys_name>
+        <sys_package display_value="Fresh Guard 360" source="x_fresh_guard_360">5dea38c6656603107f449f96678d3a73</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Fresh Guard 360">5dea38c6656603107f449f96678d3a73</sys_scope>
+        <sys_scope_delete display_value="">2aac0d7e49df469993b7f8f0b7518761</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_037c691b7362201026f6aa114df6a743</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_037c691b7362201026f6aa114df6a743">21165036edee03107f44863610ff216c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-10 15:35:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
